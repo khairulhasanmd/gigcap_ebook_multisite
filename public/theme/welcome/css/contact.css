@@ -1,0 +1,250 @@
+/* Contact section */
+
+.contact-top{
+    padding: 80px 0 50px;
+    position: relative;
+    background-color: #fff;
+}
+.info h2{
+    font-size: 50px;
+}
+.info p{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* contact-form section  */
+
+.contact-form{
+    position: relative;
+    background-color: #fff;
+}
+.contact-bg {
+    background-image: url('../images/contact-img.png');
+    background-repeat: no-repeat;
+    background-size: 45% 40%;
+    background-position-x: right;
+    background-position-y: bottom;
+}
+.contact-info {
+    border-radius: 12px;
+    padding: 40px;
+    border: 1px solid #000;
+    border-top: 4px solid #000;
+}
+.contact-h{
+    margin-bottom: 60px;
+}
+.contact-h h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    font-family: 'Darker Grotesque', sans-serif !important;
+}
+.contact-h p {
+    font-size: 20px;
+    font-weight: 600;
+}
+.phone span i,
+.email span i,
+.address span i {
+    font-size: 18px;
+    color: #55C79A;
+    margin-right: 10px;
+}
+.email span i {
+    color: #F5BE27;
+}
+.address span i {
+    color: #728A7C;
+}
+.phone span a,
+.email span a,
+.address span {
+    font-size: 20px;
+    color: #000;
+    font-weight: 600;
+}
+.c-social ul li a i{
+    border: none !important;
+}
+.form {
+	overflow: hidden;
+	padding: 50px 0 50px 20px;
+}
+.common label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.common {
+    width: 48%;
+    float: left;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.f-name, .email{
+    margin-right: 2%;
+}
+.l-name, .phone-no{
+    margin-left: 2%;
+}
+.common input, .message textarea {
+    border: 2px solid transparent;
+    border-bottom: 2px solid rgba(0,0,0,0.3);
+    color: #000;
+    background-color: transparent;
+    outline: none;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+.common input::placeholder,
+.message textarea::placeholder {
+    color: rgba(255,255,255, 0.4);
+}
+.f-check h4{
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-family: 'Darker Grotesque', sans-serif;
+}
+.checkbox ul li {
+    display: inline-block;
+}
+.checkbox input{
+    margin-right: 5px;
+    accent-color: #F5BE27;
+}
+.checkbox label{
+    margin-right: 15px;
+    font-size: 18px;
+}
+.message{
+    width: 100%;
+}
+.submit-btn input {
+    font-size: 18px;
+    border: 1px solid #000;
+    background-color: #fff;
+    color: #000;
+    padding: 11px 24px;
+    border-radius: 3px 0 0 3px;
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.submit-btn label {
+    font-size: 25px;
+    padding: 9px 20px 15px;
+    background-color: #000;
+    color: #fff;
+    line-height: 1;
+    margin-left: -5px;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    border: 1px solid #000;
+    border-left: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Responsive */
+
+@media all and (max-width: 1400px){
+    .contact-bg {
+        background-size: 42% 33%;
+    }
+}
+@media all and (max-width: 1200px){
+    .contact-bg {
+        background-size: 40% 26%;
+    }
+}
+@media all and (max-width: 991px){
+    .contact-bg {
+        background-size: 50% 55%;
+    }
+    .form {
+        padding: 50px 0;
+    }
+}
+@media all and (max-width: 767px){
+    /* Contact Section */
+    .info h2 {
+        font-size: 40px;
+    }
+    .contact-bg {
+        background-size: 45% 40%;
+    }
+}
+@media all and (max-width: 575px){
+    /* Contact section */
+    .info h2 {
+        font-size: 34px;
+    }
+    .info p {
+        font-size: 18px;
+    }
+    .contact-bg {
+        background-size: 45% 38%;
+    }
+    .contact-h h3 {
+        font-size: 22px;
+    }
+    .contact-h p {
+        font-size: 16px;
+    }
+    .phone span i, .email span i, .address span i {
+        font-size: 14px;
+    }
+    .phone span a, .email span a, .address span {
+        font-size: 16px;
+    }
+    .c-social ul li {
+        margin-right: 0px !important;
+    }
+    .form {
+        overflow: hidden;
+        padding: 50px 0;
+    }
+}
+@media all and (max-width: 480px){
+    .contact-top {
+        padding: 50px 0;
+    }
+    .info h2 {
+        font-size: 26px;
+    }
+	.contact-info {
+		padding: 20px;
+	}
+    .common {
+        width: 100%;
+        float: none;
+    }
+    .f-name, .email {
+        margin-right: 0;
+    }
+    .l-name, .phone-no {
+        margin-left: 0;
+    }
+    .checkbox label {
+        font-size: 16px;
+    }
+}
+@media all and (max-width: 460px){
+    .contact-bg {
+        background-size: 40% 27%;
+    }
+}
+@media all and (max-width: 360px){
+    .contact-bg {
+        background-size: 38% 22%;
+    }
+}
