@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\View\View;
 
 class BasicController extends GlobalController
 {
@@ -30,28 +29,20 @@ class BasicController extends GlobalController
         parent::__construct();
         $this->domain = env('PC_DOMAIN');
         $this->secret = env('PC_SECRET');
-        // dd($this->concept);
         $this->cmp = new CmpApi($this->concept);
     }
 
 
-    public function welcome(): View
+    public function welcome()
     {
         $clickPricing = $this->cmp->getProducts();
-        // dd($clickPricing);
-        return view('templates.'.$this->concept->template.'.index', [
+        return view($this->template.'pages.index', [
             'prices' => $clickPricing->data->products,
         ]);
-        // return view('index')->with('themes');
     }
 
     public function about(){
-        $clickPricing = $this->cmp->getProducts();
-        // dd($clickPricing);
-        return view('templates.'.$this->concept->template.'.pages.about-us', [
-            'prices' => $clickPricing->data->products,
-        ]);
-        // return view('templates.'.$this->concept->template.'.pages.about-us');
+        return view($this->template.'pages.about', []);
     }
 
 
@@ -64,7 +55,7 @@ class BasicController extends GlobalController
     }
 
     public function contact(){
-        return view('pages.contact-us');
+        return view($this->template.'pages.contact', []);
     }
 
     public function comingSoon(){
