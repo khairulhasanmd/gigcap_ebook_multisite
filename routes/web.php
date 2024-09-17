@@ -38,15 +38,15 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
     Route::get('/', [BasicController::class, 'welcome'])->name('welcome');
     Route::get('/return-policy', [BasicController::class, 'returnPolicy'])->name('return');
     Route::get('/coming-soon', [BasicController::class, 'comingSoon'])->name('coming-soon');
-    // Route::get('/terms', [BasicController::class, 'terms'])->name('terms');
-    Route::get('/terms', [BasicController::class, 'termsLocale'])->name('terms.locale');
+// Route::get('/terms', [BasicController::class, 'terms'])->name('terms');
+    Route::get('/terms', [BasicController::class, 'termsLocale'])->name('terms');
     Route::get('/subscription-policy', [BasicController::class, 'subscription'])->name('subscription');
     Route::get('/privacy-policy', [BasicController::class, 'privacy'])->name('privacy');
     Route::get('/service', [BasicController::class, 'typeOfService'])->name('type.of.service');
     Route::get('/about-us', [BasicController::class, 'about'])->name('about');
     Route::get('/contact', [BasicController::class, 'contact'])->name('contact');
-    Route::get('/signin', [UserLoginController::class, 'signin'])->name('signin');
-    Route::post('/signin', [UserLoginController::class, 'signinVerfication'])->name('signin.post');
+    Route::get('/signin', [UserLoginController::class, 'signin'])->name('login');
+    Route::post('/signin', [LoginController::class, 'login'])->name('signin.post');
     Route::get('/signout', [UserLoginController::class, 'signout'])->name('signout');
     Route::get('/signup', [BasicController::class, 'signup'])->name('signup');
     Route::get('/courses-info', [BasicController::class, 'courses_info'])->name('courses-info');
@@ -67,6 +67,10 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
     Route::get('/mydashboard', [UserController::class, 'financeDashboard'])->name('finance-dashboard');
     Route::get('/mycvdashboard', [UserController::class, 'cvdashboard'])->name('cv-dashboard');
     Route::get('/service/{service}', [BasicController::class, 'typeOfService'])->name('service');
+    Route::get('/products',  [UserController::class, 'products'])->name('products');
+    Route::get('/products/{id}',  [UserController::class, 'productsDownload'])->name('products.download');
+
+
 
 
 

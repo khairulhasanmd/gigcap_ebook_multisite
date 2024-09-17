@@ -19,7 +19,7 @@
 						<ul>
 							<li><a href="{{ route('about') }}" class="animate__animated animate__fadeInRight wow"> About Us</a></li>
 							<li><a href="{{ route('contact') }}" class="animate__animated animate__fadeInRight animate__delay-300ms wow"> Contact Us</a></li>
-							<li><a href="{{ route('terms.locale') }}" class="animate__animated animate__fadeInRight animate__delay-600ms wow"> Terms of service</a></li>
+							<li><a href="{{ route('terms') }}" class="animate__animated animate__fadeInRight animate__delay-600ms wow"> Terms of service</a></li>
 						</ul>
 					</div>
 				</div>

@@ -64,7 +64,7 @@ class BasicController extends GlobalController
     }
 
     public function contact(){
-        return view('pages.contact-us');
+        return view('templates.'.$this->concept->template.'.pages.contact-us');
     }
 
     public function comingSoon(){

@@ -94,6 +94,8 @@ class CmpApi {
         }
         curl_close($ch);
         $responseData = json_decode($responseData);
+        // dd($responseData);
+
         return $responseData;
     }
 

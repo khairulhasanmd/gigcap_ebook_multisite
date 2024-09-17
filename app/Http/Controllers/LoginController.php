@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
+
 
 class LoginController extends Controller
 {
@@ -58,11 +60,13 @@ class LoginController extends Controller
                 return Redirect::back()->withErrors(['error' => $response['error']]);
             }
         }
+        dd('Not working');
     }
 
     public function signout(){
-        Session::forget('user');
-        // dd(redirect()->route($this->locale.'/welcome'));
-        return redirect()->route('welcome');
+        Auth::logout();
+        return redirect()->route('login');
     }
+
+    
 }
