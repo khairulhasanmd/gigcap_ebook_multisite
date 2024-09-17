@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+body{
+    background-color: #fff;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: 600;
+    font-family: 'Signika', sans-serif;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+p{
+    margin: 0;
+}
+ul{
+    margin-bottom: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}
+::selection {
+    background-color: #212121;
+    color: #fff;
+}
+.primary-color {
+    color: #212121;
+}
+.secondary-color {
+    color: #697386;
+}
+
+/* Header-area Section */
+
+.header-area {
+    background-color: #fff;
+    padding: 24px 0;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 998;
+}
+.logo img {
+    width: 120px;
+}
+.nav-left ul li{
+    display: inline-block;
+    margin-left: 24px;
+}
+.nav-left ul li a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #212121;
+    padding: 10px 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.nav-left ul li a:hover {
+    color: #00a78e;
+}
+/* .nav-left ul li:nth-child(3) a {
+    background-color: #eee;
+    color: #212121;
+}
+.nav-left ul li:nth-child(3) a:hover {
+    background-color: #1F5063;
+    color: #fff;
+} */
+.nav-left ul li:last-child a {
+    background-color: #1F5063;
+    color: #fff;
+}
+.nav-left ul li:last-child a:hover {
+    background-color: #eee;
+    color: #212121;
+}
+
+.sidebar-toggle-icon{
+    height: 24px;
+    width: 24px;
+    margin-left: auto;
+    background-color: transparent;
+    padding-top: 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 9;
+}
+.line {
+    height: 2px;
+    width: 80%;
+    background-color: #212121;
+    margin-bottom: 4px;
+}
+.top-bars{
+    transform: rotate(45deg);
+    margin-top: 5px;
+}
+.middle-bars{
+    opacity: 0;
+}
+.bottom-bars {
+    transform: rotate(-45deg);
+    margin-top: -12px;
+}
+.menu-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+	z-index: 999;
+    background-color: #fff;
+    padding: 12px 0;
+}
+/* bdr  */
+.bdr-1 {
+    background-color: #F8F8F7;
+}
+.bdr ul li {
+    border-bottom: 1px solid rgba(43, 80, 85, 0.2);
+    margin-bottom: 8px;
+}
+.bdr-1 ul li {
+    margin-bottom: 0;
+    margin-top: 8px;
+}
+
+/* footer  */
+
+.footer{
+    padding-top: 80px;
+    background-color: #f8f8f7;
+    border-bottom: 1px solid rgba(43, 80, 85, 0.2);
+}
+.footer-logo {
+	margin-bottom: 24px;
+}
+.footer-logo img {
+    width: 120px;
+}
+.footer-info h4 {
+    font-size: 30px;
+}
+.footer-info p {
+    font-size: 14px;
+}
+.footer-link h4,
+.footer-contact h4,
+.news-letter h4 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    text-transform: capitalize;
+}
+.footer-menu ul li, 
+.footer-address ul li{
+    line-height: 2;
+}
+.footer-address .adds{
+    font-size: 14px;
+    font-weight: 500;
+    color: #212121;
+}
+.footer-link ul li a,
+.footer-address ul li a{
+    display: inline-block;
+    font-size: 14px;
+    color: #212121;
+    font-weight: 500;
+    transition: all 0.3s linear;
+
+}
+.footer-link ul li a:hover,
+.footer-address ul li a:hover {
+    color: #00a78e;
+}
+.footer-address ul li i{
+    margin-right: 5px;
+}
+.c-card{
+    padding-bottom: 50px;    
+}
+.master-card img,
+.visa-card img{
+    width: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    /* filter: grayscale(100%); */
+}
+.master-card img:hover,
+.visa-card img:hover{
+    filter: grayscale(0);
+}
+.footer-end{
+    background-color: #f8f8f7;
+}
+.footer-end-content p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #212121;
+}
+.footer-social ul li {
+    display: inline-block;
+    margin-left: 16px;
+}
+.footer-social ul li a {
+    font-size: 20px;
+    color: #212121;
+    transition: all 0.3s ease-in-out;
+}
+.footer-social ul li a:hover {
+    color: #00a78e;
+}
+
+
+/* Default CSS  */
+
+.animate__animated.animate__delay-100ms {
+    animation-delay: 0.1s;
+}
+.animate__animated.animate__delay-200ms {
+    animation-delay: 0.2s;
+}
+.animate__animated.animate__delay-300ms {
+    animation-delay: 0.3s;
+}
+.animate__animated.animate__delay-400ms {
+    animation-delay: 0.4s;
+}
+.animate__animated.animate__delay-500ms {
+    animation-delay: 0.5s;
+}
+.animate__animated.animate__delay-600ms {
+    animation-delay: 0.6s;
+}
+.animate__animated.animate__delay-700ms {
+    animation-delay: 0.7s;
+}
+.animate__animated.animate__delay-800ms {
+    animation-delay: 0.8s;
+}
+.animate__animated.animate__delay-900ms {
+    animation-delay: 0.9s;
+}
+.animate__animated.animate__delay-1s {
+    animation-delay: 1s;
+}
+.animate__animated.animate__delay-1200ms {
+    animation-delay: 1.2s;
+}
+.animate__animated.animate__delay-1400ms {
+    animation-delay: 1.4s;
+}
+.animate__animated.animate__delay-1600ms {
+    animation-delay: 1.6s;
+}
+
+/* Responsive  */
+
+@media all and (max-width: 1400px){
+    .bdr ul li {
+        margin-bottom: 7px;
+    }
+    .bdr-1 ul li {
+        margin-bottom: 0;
+        margin-top: 7px;
+    }
+}
+@media all and (max-width: 1200px){
+    .bdr ul li {
+        margin-bottom: 6px;
+    }
+    .bdr-1 ul li {
+        margin-bottom: 0;
+        margin-top: 6px;
+    }
+    .footer-info h4 {
+        font-size: 28px;
+    }
+}
+@media all and (max-width: 991px){
+    .our-navbar {
+        position: fixed;
+        left: -240px;
+        top: 86px;
+        padding-top: 16px;
+        width: 240px;
+        background-color: #fff;
+        height: 100vh;
+        z-index: 9999999;
+        transition: all 0.3s ease-in-out;
+    }
+    .leftt {
+        left: 0;
+    }
+    .pt-80 {
+        top: 62px;
+    }
+    .nav-left ul li {
+        display: block;
+        margin-left: 0;
+    }
+    .nav-left ul li a {
+        font-size: 14px;
+    }
+    .nav-left ul li:last-child {
+        margin-top: 16px;
+    }
+    .nav-left ul li:nth-child(2) {
+        margin-bottom: 16px;
+    }
+    .footer-info h4 {
+        font-size: 26px;
+    }
+    .footer-social ul li:first-child {
+        margin-left: 0;
+    }
+}
+@media all and (max-width: 767px){
+    .bdr ul li {
+        margin-bottom: 5px;
+    }
+    .bdr-1 ul li {
+        margin-bottom: 0;
+        margin-top: 5px;
+    }
+}
+@media all and (max-width: 575px){
+    .footer {
+        padding-top: 50px;
+    }
+    .master-card img, .visa-card img {
+        width: 45px;
+    }
+}
+@media all and (max-width: 480px){
+    .footer-link h4, .footer-contact h4, .news-letter h4 {
+        font-size: 16px;
+    }
+    .footer-info h4 {
+        font-size: 22px;
+    }
+}
+

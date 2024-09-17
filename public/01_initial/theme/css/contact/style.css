@@ -1,0 +1,139 @@
+/* :root {
+    --white-color : #fff;
+    --body-bg-color : #181818;
+    --primary-color : rgba(255,255,255, 0.8);
+    --secondary-color : rgba(255,255,255, 0.4);
+    --menu-bg-color : rgba(255,255,255,0.1);
+    --tg-item-hover-color : rgba(255,255,255, .12);
+    --footer-border-color : rgba(255,255,255, .2);
+    --modal-bg-color : #2A2A2A;
+    --modal-heading-p-color : rgba(255,255,255,0.5);
+    --menu-sticky-color : #303030;
+    --box-menu-border-color : rgba(255,255,255,0.15);
+    --form-bg-color : rgba(255,255,255,0.05);
+}
+.light-mode {
+    --white-color : #000;
+    --body-bg-color : rgba(231,231,231,1);
+    --primary-color : rgba(0,0,0, 0.8);
+    --secondary-color : rgba(0,0,0, 0.4);
+    --menu-bg-color : rgba(0,0,0,0.1);
+    --tg-item-hover-color : rgba(0,0,0, .12);
+    --footer-border-color : rgba(0,0,0, .2);
+    --modal-bg-color : rgba(213,213,213,1);
+    --modal-heading-p-color : rgba(0,0,0,0.5);
+    --menu-sticky-color : rgba(207,207,207,1);
+    --box-menu-border-color : rgba(0,0,0,0.15);
+    --effect-color : rgba(255,255,255,0.8);
+    --form-bg-color : rgba(0,0,0,0.05);
+} */
+
+.contact {
+    padding-left: 270px;
+    padding-right: 24px;
+    padding-top: 24px;
+    padding-bottom: 80px;
+}
+.form-bg{
+    padding: 48px;
+    border-radius: 8px;
+    background-color: var(--form-bg-color);
+}
+.contact-heading {
+    margin-bottom: 80px;
+}
+.contact-heading h3 {
+    color: var(--white-color);
+    font-size: 20px;
+}
+.contact-heading p {
+    color: var(--primary-color);
+    font-size: 13px;
+}
+.c-info h4 {
+    color: var(--white-color);
+    font-size: 18px;
+}
+.c-info p{
+    color: var(--primary-color);
+    font-size: 13px;
+}
+.c-img img {
+    width: 40px;
+}
+.c-des h5 {
+    color: var(--white-color);
+    font-size: 14px;
+}
+.c-des p{
+    color: var(--primary-color);
+    font-size: 12px;
+}
+
+.fst .name,
+.fst .mail{
+    float: left;
+    overflow: hidden;
+    width: 50%;
+}
+.name label,
+.mail label,
+.subject label,
+.message label {
+    display: block;
+    color: var(--secondary-color);
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+.name input,
+.mail input,
+.subject input,
+.message textarea {
+    display: block;
+    color: var(--white-color);
+    font-size: 14px;
+    width: 100%;
+    background-color: transparent;
+    outline: 0;
+    border: 1px solid var(--secondary-color);
+    box-shadow: 0 0 3px var(--secondary-color);
+    border-radius: 5px;
+    padding: 10px;
+}
+input#name:focus,
+input#mail:focus,
+input#subject:focus,
+textarea#message:focus {
+    box-shadow: 0px 0px 1px 1px #4CB47E;
+    border: 1px solid #4CB47E;
+}
+.send input, .send button {
+    background-color: #4CB47E;
+    color: #fff;
+    font-weight: 600;
+    padding: 15px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+.send input:hover {
+    background-color: #409A7B;
+}
+
+/* Responsive  */
+
+@media all and (max-width: 575px){
+    .contact {
+        padding-left: 24px !important;
+    }
+    .form-bg{
+        padding: 30px 16px;
+    }
+    .fst .name,
+    .fst .mail{
+        float: none;
+        width: 100%;
+    }
+}

@@ -39,7 +39,7 @@ class GlobalController extends Controller
         //     app()->setLocale($locale);
         //     session()->put('locale', $locale);
         // }
-        $this->template = 'templates.'.$this->concept->template.'.';
+        $this->template = 'concept::templates.'.$this->concept->template.'.';
         $this->asset = 'templates/'.$this->concept->template;
         View::share('concept', $this->concept);
         View::share('asset', $this->asset);

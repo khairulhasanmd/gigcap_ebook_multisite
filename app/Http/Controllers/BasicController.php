@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\View\View;
 
 class BasicController extends GlobalController
 {
@@ -29,6 +30,7 @@ class BasicController extends GlobalController
         parent::__construct();
         $this->domain = env('PC_DOMAIN');
         $this->secret = env('PC_SECRET');
+        // dd($this->concept);
         $this->cmp = new CmpApi($this->concept);
     }
 
@@ -36,14 +38,20 @@ class BasicController extends GlobalController
     public function welcome(): View
     {
         $clickPricing = $this->cmp->getProducts();
-        return view($this->template.'pages.home', [
+        // dd($clickPricing);
+        return view('templates.'.$this->concept->template.'.index', [
             'prices' => $clickPricing->data->products,
         ]);
-        return view('index')->with('themes');
+        // return view('index')->with('themes');
     }
 
     public function about(){
-        return view('pages.about-us');
+        $clickPricing = $this->cmp->getProducts();
+        // dd($clickPricing);
+        return view('templates.'.$this->concept->template.'.pages.about-us', [
+            'prices' => $clickPricing->data->products,
+        ]);
+        // return view('templates.'.$this->concept->template.'.pages.about-us');
     }
 
 

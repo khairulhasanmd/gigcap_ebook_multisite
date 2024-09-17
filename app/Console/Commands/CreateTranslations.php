@@ -1,0 +1,1 @@
+php artisan ui bootstrap --aut

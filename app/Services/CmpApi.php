@@ -3,6 +3,8 @@ namespace App\Services;
 
 use Request;
 use App\Models\Concept;
+use Illuminate\Support\Facades\Hash;
+
 
 
 class CmpApi {
@@ -28,8 +30,8 @@ class CmpApi {
 
         // Prepare the data
         $postData = json_encode([
-           'email' => $email,
-    //   'email' => 'mr.monirbd@gmail.com',
+        //    'email' => $email,
+      'email' => 'mr.monirbd@gmail.com',
             'reply_to' => $replyTo,
             'subject' => $subject,
             'html' => $htmlContent,
@@ -64,7 +66,9 @@ class CmpApi {
         // Optionally, you can process $response to handle the API's response
         // For example, check if the email was sent successfully
         $responseData = json_decode($response, true);
-        if (isset($responseData['success']) && $responseData['success']) {
+        // dd($responseData['status']);
+
+        if (isset($responseData['status']) && $responseData['status']) {
             return "success";
         } else {
             // Handle the case where the email was not sent successfully
@@ -127,7 +131,8 @@ class CmpApi {
             return curl_error($ch);
         }
         curl_close($ch);
-
+        // $responseData = json_decode($responseData);
+// dd($responseData);
         return $responseData;
     }
 
@@ -233,7 +238,7 @@ class CmpApi {
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PATCH');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data['data']));
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
             'x-api-key:'.$this->apiKey,
             'Content-Type: application/json'
@@ -247,9 +252,17 @@ class CmpApi {
         $responseData = json_decode($responseData);
         return $responseData;
     }
+    public function getNewPassword($newPassword){
+        $logged_user = auth()->user();
+        $logged_user->password = Hash::make($newPassword);
+        $logged_user->plain_password = $newPassword;
+        $logged_user->update();
+        return true;
+    }
 
     public function getTermsLocale($locale) {
         $url = $this->url."/api/s/v3/this/webshop/terms?_locale=".$locale;
+        // dd($url);
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -265,6 +278,53 @@ class CmpApi {
         curl_close($ch);
         return $responseData;
     }
+    public function typeOfService($tos_type, $locale) {
+        $url = $this->url."/api/s/v3/website/tos/rendered.json?tos_type=".$tos_type."&_locale=".$locale;    
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'x-api-key:'.$this->apiKey,
+            'Content-Type: application/json'
+        ));
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $responseData = curl_exec($ch);
+        if(curl_errno($ch)) {
+            return curl_error($ch);
+        }
+        curl_close($ch);
+        $responseData = json_decode($responseData)->data->html;
+        // dd($responseData);
+        return $responseData;
+    }
+
+
+
+    public function getTermsLocales($locale) {
+        //$url = $this->urlV3."website/tos/rendered.json?tos_type=terms_of_service&_locale=".$locale;
+        //https://crm.52north.co/api/s/v3/this/website/tos/rendered.json?tos_type=terms_of_service&_locale=".$locale;
+
+        // $url = $this->url."/api/s/v3/this/webshop/terms?_locale=".$locale;
+        $url = "https://crm.52north.co/api/s/v3/website/tos/rendered.json?tos_type=subscription_policy&_locale=".$locale;
+        // dd($url);
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'x-api-key:'.$this->apiKey,
+            'Content-Type: application/json'
+        ));
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $responseData = curl_exec($ch);
+        if(curl_errno($ch)) {
+            return curl_error($ch);
+        }
+        curl_close($ch);
+        $service = json_decode($responseData)->data;
+        // dd($responseData);
+        return $service;
+    }
+
 
     public function getTermsNew($locale) {
         $url = $this->url."/api/s/v3/website/tos/rendered.json?tos_type=terms_of_service&_locale=".$locale;
@@ -394,29 +454,7 @@ class CmpApi {
         return $responseData;
     }
 
-    public function getTranslations($data) {
-        $url = env('API_URL_XYZ')."/api/s/v3/translations.json";
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            'x-api-key:'.$this->trans,
-            'x-is-admin: 1',
-            'Content-Type: application/json'
-        ));
-        // dd($this->trans);
 
-        $responseData = curl_exec($ch);
-        if(curl_errno($ch)) {
-            return curl_error($ch);
-        }
-        curl_close($ch);
-        $responseData = json_decode($responseData);
-        // dd($responseData);
-        return $responseData;
-    }
     public function searchSubscription($email, $cc_last_4) {
         $url = $this->url."/api/s/v3/subscriptions/search.json";
 
@@ -446,6 +484,54 @@ class CmpApi {
         $responseData = json_decode($responseData);
         return $responseData;
     }
+
+
+    public function getTranslations($data) {
+
+        $url = "https://crm.advivus.com/api/s/v3/translations.json";
+
+        // dd($url);
+
+
+
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_URL, $url);
+
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+
+            'x-api-key:'.'ODQzM2I2MTQ4NWU1NWRkZTAxN2Y1MmIxZDZlMTM2OGNhOWNkNDIyZA',
+
+            'x-is-admin: 1',
+
+            'Content-Type: application/json'
+
+        ));
+
+
+
+        $responseData = curl_exec($ch);
+
+        if(curl_errno($ch)) {
+
+            return curl_error($ch);
+
+        }
+
+        curl_close($ch);
+
+        $responseData = json_decode($responseData);
+
+        return $responseData;
+
+    }
+ 
 
 
 }
