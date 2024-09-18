@@ -198,9 +198,9 @@ class UserController extends Controller
 
             $subscription_passed = 'not_active';
         }
-       
+        
         $orders = $this->cmp->getOrders($subscription->data->customer_id);
-        return view('pages.profile')->with([ 'user' => $userInfo, 'orders' => $orders, 'subscription_passed' => $subscription_passed, 'subscription' => $subscription]);
+        return view('templates.'.$this->concept->template.'.pages.profile')->with([ 'user' => $userInfo, 'orders' => $orders, 'subscription_passed' => $subscription_passed, 'subscription' => $subscription]);
     }
 
     public function updateProfile(Request $request){
@@ -237,7 +237,7 @@ class UserController extends Controller
     }
 
     public function changePassword(){
-        return view('pages.change-password');
+        return view('templates.'.$this->concept->template.'.pages.change-password');
     }
 
     public function saveChangePassword(Request $request){
@@ -261,7 +261,7 @@ class UserController extends Controller
         if($subscription->data->status != "active"){
             $subscription_passed = 'not_active';
         }
-        return view('pages.cancel-membership')->with([ 'user' => $userInfo, 'orders' => $orders, 'subscription_passed' => $subscription_passed, 'subscription' => $subscription]);;
+        return view('templates.'.$this->concept->template.'.pages.cancel-membership')->with([ 'user' => $userInfo, 'orders' => $orders, 'subscription_passed' => $subscription_passed, 'subscription' => $subscription]);;
     }
 
     public function cancelSubscription(){

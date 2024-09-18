@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\View\View;
 
 class BasicController extends GlobalController
 {
@@ -30,33 +29,55 @@ class BasicController extends GlobalController
         parent::__construct();
         $this->domain = env('PC_DOMAIN');
         $this->secret = env('PC_SECRET');
-        // dd($this->concept);
+        $this->locale = app()->getLocale();
+
         $this->cmp = new CmpApi($this->concept);
     }
 
 
-    public function welcome(): View
+    public function welcome()
     {
         $clickPricing = $this->cmp->getProducts();
-        // dd($clickPricing);
-        return view('templates.'.$this->concept->template.'.index', [
+        return view($this->template.'pages.index', [
             'prices' => $clickPricing->data->products,
         ]);
-        // return view('index')->with('themes');
     }
 
     public function about(){
         $clickPricing = $this->cmp->getProducts();
-        // dd($clickPricing);
-        return view('templates.'.$this->concept->template.'.pages.about-us', [
+        return view($this->template.'pages.about-us', [
             'prices' => $clickPricing->data->products,
         ]);
-        // return view('templates.'.$this->concept->template.'.pages.about-us');
+        // return view($this->template.'pages.about-us', []);
+    }
+    public function unsubscribe(){
+        return view($this->template.'.'.'pages.unsubscribe');
+    }
+
+    public function subscription() {
+        // $cmpRequest = new CmpApi();
+
+        $policy = $this->cmp->getPolicy();
+        return view($this->template.'.pages.policy', compact('policy'));
+    }
+
+    public function termsLocale(){
+
+        // $data = $this->crmApi->get(CrmApi::$routes['webshop_get']);
+        // $company = $data->getCompany();
+        $terms = $this->cmp->getTermsLocale($this->locale);
+        if(!is_null($terms)){
+            $this->createTerms($terms);
+            return view($this->template.'.pages.terms')->with(['terms' => $terms]);
+        }else{
+            $terms = Storage::disk('local')->get('terms.txt');
+            return view($this->template.'.pages.terms')->with('terms', $terms);
+        }
     }
 
 
     public function privacy(){
-        return view('pages.privacy');
+        return view($this->template.'pages.privacy');
     }
 
     public function returnPolicy(){
@@ -64,6 +85,7 @@ class BasicController extends GlobalController
     }
 
     public function contact(){
+        
         return view('templates.'.$this->concept->template.'.pages.contact-us');
     }
 
@@ -167,6 +189,27 @@ class BasicController extends GlobalController
     }
 
 
+    public function unsubscribeMembership(Request $request){
+        $this->validate($request, [
+            'email' => 'required|email',
+            'last4' => 'required|max:4',
+        ]);
+
+        $response = $this->cmp->unsubscribe($request->all());
+
+        if($response->status == "success") {
+            $canceled_subscription = $this->cmp->cancelSubscription($response->data[0]->id);
+            if($canceled_subscription->status == "success"){
+                return Redirect::back()->with('success', $canceled_subscription->data);
+            } else if($canceled_subscription->status == 'error'){
+                return Redirect::back()->withErrors(['error' => $canceled_subscription->errors]);
+            }else{
+                return Redirect::back()->withErrors(['error' => 'Something went wrong. Please try later or contact our support team.']);
+            }
+        } else {
+            return Redirect::back()->withErrors(['error' => $response->errors]);
+        }
+    }
 
 
 

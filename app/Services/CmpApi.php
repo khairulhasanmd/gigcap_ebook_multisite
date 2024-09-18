@@ -19,6 +19,28 @@ class CmpApi {
         // dd($this->url);
     }
 
+    public function getCompanyInfo() {
+        $url = $this->url."/api/s/v3/this/webshop.json";
+        // dd($url);
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'x-api-key:'.$this->apiKey,
+            'Content-Type: application/json'
+        ));
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $responseData = curl_exec($ch);
+        if(curl_errno($ch)) {
+            return curl_error($ch);
+        }
+        curl_close($ch);
+        $responseData = json_decode($responseData);
+        // dd($responseData);
+        return $responseData;
+    }
+
+
     function sendEmailViaAPI($email, $replyTo, $subject, $htmlContent, $locale = 'en') {
 
         $apiKey = $this->apiKey; // Replace with your API key
@@ -30,8 +52,7 @@ class CmpApi {
 
         // Prepare the data
         $postData = json_encode([
-        //    'email' => $email,
-      'email' => 'mr.monirbd@gmail.com',
+           'email' => $email,
             'reply_to' => $replyTo,
             'subject' => $subject,
             'html' => $htmlContent,
@@ -236,11 +257,12 @@ class CmpApi {
 
     public function updateCustomer($data) {
         $url = $this->url."/api/s/v3/customers/".$data['customer_id'].".json";
+        // dd($data);
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PATCH');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data['data']));
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
             'x-api-key:'.$this->apiKey,
             'Content-Type: application/json'

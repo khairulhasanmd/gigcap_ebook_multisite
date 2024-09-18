@@ -41,10 +41,10 @@
 			</div>
 			<div class="col-lg-6 about_left_content pr-lg-0 pl-lg-5">
 				<div class="section-title no-bg">
-					<h1>A Few Words About Us</h1>
+					<h1>Here’s a brief introduction about us:</h1>
 				</div>
-				<p>Our first ambition is to get people excited about learning and improving their intellect. We drive in a frenetic state, and our lack of time makes us not able to find personal space or indulge in quiet contemplation. However, if we don't have dedicated time to pamper ourselves and think deeply about our inner being, we will not be adequate in every area of life.</p>
-				<p>We believe that we succeeded in gathering the most liked, easily digestible titles, establishing an exclusive online catalog that will keep on hosting many book lovers. Each individual member makes our group a better one, and supporting us is timely and appreciated.</p>
+				<p>Our primary goal is to ignite a passion for learning and intellectual growth. In our fast-paced lives, finding personal space and time for quiet reflection can be challenging. Yet, without dedicated moments for self-care and deep contemplation, we may struggle to excel in all areas of life.</p>
+				<p>We take pride in curating a collection of highly regarded, easily digestible titles, creating a unique online catalog that continues to attract avid readers. Each member enriches our community, and your support is both timely and valued.</p>
 				<a href="{{ config('api.CAMPAIGN_DOMAIN') }}" class="theme-btn mt-35"> JOIN NOW<i class="fal fa-long-arrow-right"></i></a>
 			</div>
 		</div>

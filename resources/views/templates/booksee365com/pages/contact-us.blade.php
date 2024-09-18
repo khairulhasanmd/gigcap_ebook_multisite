@@ -46,7 +46,7 @@
                     </div>
                     <div class="bottom-part">
                         <div class="info">
-                            <p><a href="mailto:{{ config('api.SUPPORT_EMAIL') }}">{{ config('api.SUPPORT_EMAIL') }}</a></p>
+                            <p><a href="mailto:{{ config('booksee365com.SUPPORT_EMAIL') }}">{{ config('booksee365com.SUPPORT_EMAIL') }}</a></p>
                         </div>
                         <div class="icon">
                             <i class="fal fa-arrow-right"></i>
@@ -66,7 +66,7 @@
                     </div>
                     <div class="bottom-part">
                         <div class="info">
-                            <p><a href="mailto:{{ config('api.SUPPORT_PHONE') }}">{{ config('api.SUPPORT_PHONE') }}</a></p>
+                            <p><a href="mailto:{{ config('booksee365com.SUPPORT_PHONE') }}">{{ config('booksee365com.SUPPORT_PHONE') }}</a></p>
                         </div>
                         <div class="icon">
                             <i class="fal fa-arrow-right"></i>
@@ -86,7 +86,7 @@
                     </div>
                     <div class="bottom-part">
                         <div class="info">
-                            <p>{{ config('api.COMPANY_NAME') }}, {{ config('api.COMPANY_ADDRESS') }}, <br> {{ config('api.COMPANY_CITY') }}, {{ config('api.COMPANY_POSTCODE')}} {{ config('api.COMPANY_COUNTRY') }}</p>
+                            <p>{{ config('booksee365com.COMPANY_NAME') }}, {{ config('booksee365com.COMPANY_ADDRESS') }}, <br> {{ config('booksee365com.COMPANY_CITY') }}, {{ config('booksee365com.COMPANY_POSTCODE')}} {{ config('booksee365com.COMPANY_COUNTRY') }}</p>
                         </div>
                         <div class="icon">
                             <i class="fal fa-arrow-right"></i>
@@ -106,7 +106,7 @@
                     </div>
                     <div class="bottom-part">
                         <div class="info">
-                            <p>Monday - Friday 08-24, Weekends 10-18</p>
+                            <p>{{ config('booksee365com.SUPPORT_HOURS') }}</p>
                         </div>
                         <div class="icon">
                             <i class="fal fa-arrow-right"></i>
@@ -126,7 +126,7 @@
                     </div>
                     <div class="bottom-part">
                         <div class="info">
-                            <p>{{ config('api.COMPANY_BUSINESS_NUMBER') }}</p>
+                            <p>{{ config('booksee365com.COMPANY_BUSINESS_NUMBER') }}</p>
                         </div>
                         <div class="icon">
                             <i class="fal fa-arrow-right"></i>
@@ -146,7 +146,7 @@
                     </div>
                     <div class="bottom-part">
                         <div class="info">
-                            <p>{{ config('api.COMPANY_VAT_NUMBER') }}</p>
+                            <p>{{ config('booksee365com.COMPANY_VAT_NUMBER') }}</p>
                         </div>
                         <div class="icon">
                             <i class="fal fa-arrow-right"></i>

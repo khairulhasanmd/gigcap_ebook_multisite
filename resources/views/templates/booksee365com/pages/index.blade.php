@@ -16,17 +16,17 @@
 			<div class="row align-items-center">
 				<div class="col-xl-6">
 					<div class="slide-contents">
-						<h1 class="fs-lg">An Enjoyable Way To Learn New Things Is To Visit Our Book Library Every Day</h1>
-						<p>Download our extensive library every day and discover new books.</p>
+						<h1 class="fs-lg">A great way to discover new knowledge is by visiting our book library daily</h1>
+						<p>Access our vast library daily and explore a world of new books.</p>
 						<a href="#pricing-section" class="theme-btn">Sign Up <i class="fal fa-long-arrow-right"></i></a>
 					</div>
 				</div>
 				<div class="col-xl-6 pr-xl-0">
 					<div class="hero-carousel-wrap">
 						<div class="carousel-active owl-carousel">
-							<div class="single-carousel-item bg-cover" style="background-image: url('booksee365com/theme/img/home1/hero1.jpg')"></div>
-							<div class="single-carousel-item bg-cover" style="background-image: url('booksee365com/theme/img/home1/hero2.jpg')"></div>
-							<div class="single-carousel-item bg-cover" style="background-image: url('booksee365com/theme/img/home1/hero3.jpg')"></div>
+							<div class="single-carousel-item bg-cover" style="background-image: url('booksee365com/theme/img/hero1.jpg')"></div>
+							<div class="single-carousel-item bg-cover" style="background-image: url('booksee365com/theme/img/hero2.jpg')"></div>
+							<div class="single-carousel-item bg-cover" style="background-image: url('booksee365com/theme/img/hero3.jpg')"></div>
 						</div>
 						<div class="hero-carousel-nav"></div>
 						<div class="dots"></div>
@@ -47,9 +47,9 @@
 			</div>
 			<div class="col-lg-6 about_left_content pr-lg-0 pl-lg-5">
 				<div class="section-title no-bg">
-					<h1>Many Positive Benefits You Will Experience From Reading Regularly</h1>
+					<h1>Regular reading brings numerous positive benefits you'll enjoy.</h1>
 				</div>
-				<p>Reading is not only a relaxing pastime and a source of new knowledge and knowledge. It affects our mind in a number of contrasting ways. Did you know that regular reading increases communicative abilities and strengthens memory? Books allow us to enter various universes by poring over the pages in them, and their interpretations can influence our creative thinking and memory.</p>
+				<p>Reading offers more than just relaxation and knowledge. It profoundly affects our cognitive functions in various ways. For example, consistent reading can boost your communication skills and improve memory retention. As you delve into different narratives and perspectives, you stimulate your creativity and enhance your ability to recall information. Immersing yourself in diverse literary worlds not only entertains but also challenges and refines your mental faculties.</p>
 				<a href="#pricing-section" class="theme-btn mt-35">Join Now <i class="fal fa-long-arrow-right"></i></a>
 			</div>
 		</div>
@@ -78,7 +78,7 @@
 						<div class="post-meta">
 							<a href="#" class="post-author"> Active Life</a>
 						</div>
-						<h3><a href="#">We designed our website with busy individuals like you in mind, so we provide the option to read any of our titles wherever you happen to get spare time.</a></h3>
+						<h3><a href="#">We’ve designed our website with your busy lifestyle in mind, allowing you to read any of our titles whenever you find a moment of free time.</a></h3>
 					</div>
 				</div>
 			</div>
@@ -93,7 +93,7 @@
 						<div class="post-meta">
 							<a href="#" class="post-author"> Active Care</a>
 						</div>
-						<h3><a href="#">Our extensive library of self-help books will offer useful insights for taking care of yourself. Further, you will save the environment as our library is entirely digital.</a></h3>
+						<h3><a href="#">Our extensive collection of self-help books provides valuable insights for self-care. Plus, by using our entirely digital library, you’re also contributing to environmental conservation.</a></h3>
 					</div>
 				</div>
 			</div>
@@ -108,7 +108,7 @@
 						<div class="post-meta">
 							<a href="#" class="post-author">Active Relaxation</a>
 						</div>
-						<h3><a href="#">By reading in our library, you will have the ability to relax while simultaneously furthering yourself and working on personal development and your motivation.</a></h3>
+						<h3><a href="#">Reading in our library allows you to unwind while also advancing your personal development and boosting your motivation.</a></h3>
 					</div>
 				</div>
 			</div>

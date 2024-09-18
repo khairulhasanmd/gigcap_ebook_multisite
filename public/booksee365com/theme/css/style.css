@@ -2336,7 +2336,7 @@ a img.aligncenter {
     color: #FFF;
     font-size: 16px;
     padding: 24px 37px;
-    background-color: #111111;
+    background-color: #64db2a;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     -webkit-box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.06);
@@ -2396,7 +2396,7 @@ a img.aligncenter {
 }
 
 .theme-btn:hover {
-    background-color: #1d44f9;
+    background-color: #000;
     color: #FFF;
 }
 
@@ -2773,7 +2773,7 @@ header.header-1 .main-menu ul>li>a::before {
     top: 0;
     left: 0;
     height: 4px;
-    background-color: #111111;
+    background-color: #64db2a;
     width: 100%;
     content: "";
     opacity: 0;
@@ -7356,7 +7356,7 @@ header.header-2 .main-menu ul>li>ul ul {
 .contact-form input[type='submit']:hover,
 .contact-form .submit-btn.active,
 .contact-form .submit-btn:hover {
-    background-color: #2744fa;
+    background-color: #64db2a;
 }
 
 .contact-form input[type='submit'] i,
@@ -7372,11 +7372,12 @@ header.header-2 .main-menu ul>li>ul ul {
 }
 
 .single-contact-card {
-    background-color: #f8f8f8;
+    background-color: #daffcb;
     padding: 40px;
     margin-bottom: 30px;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+    color: #000;
 }
 
 @media (max-width: 585px) {
@@ -7386,7 +7387,7 @@ header.header-2 .main-menu ul>li>ul ul {
 }
 
 .single-contact-card:hover {
-    background-color: #202426;
+    background-color: #64db2a;
 }
 
 .single-contact-card:hover .icon {
@@ -7399,14 +7400,14 @@ header.header-2 .main-menu ul>li>ul ul {
     background-color: #fff !important;
 }
 
-.single-contact-card:hover p,
+/* .single-contact-card:hover p,
 .single-contact-card:hover span {
-    color: #c5c7c8;
-}
+    color: #1111;
+} */
 
-.single-contact-card:hover h4 {
-    color: #fff;
-}
+/* .single-contact-card:hover h4 {
+    color: #ac010111;
+} */
 
 .single-contact-card .top-part {
     overflow: hidden;
@@ -7464,7 +7465,7 @@ header.header-2 .main-menu ul>li>ul ul {
 }
 
 .footer-1 .footer-widgets {
-    background: #f8f8f8;
+    background: #daffcb;
     padding: 85px 0px 40px;
     overflow: hidden;
 }
@@ -7486,7 +7487,7 @@ header.header-2 .main-menu ul>li>ul ul {
 }
 
 .footer-wrap .footer-bottom {
-    background-color: #f0f0f0;
+    background-color: #64db2a;
     padding: 24px 0px;
 }
 
@@ -7856,7 +7857,7 @@ header.header-2 .main-menu ul>li>ul ul {
 
 
 .bg-color {
-    background-color: #f7f7f7;
+    background-color: #daffcb;
 }
 
 /* Refund section  */
@@ -7912,7 +7913,7 @@ header.header-2 .main-menu ul>li>ul ul {
   }
   .cards{
     padding: 50px 30px;
-    background-color: #f7f7f7;
+    background-color: #daffcb;
   }
   .price-f p {
     font-size: 16px;
@@ -7958,7 +7959,7 @@ header.header-2 .main-menu ul>li>ul ul {
     transition: all 0.3s ease-in-out;
   }
   .price-btn a:hover {
-    background-color: #2744FA;
+    background-color: #64db2a;
   }
   
   

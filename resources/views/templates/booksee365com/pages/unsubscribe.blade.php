@@ -1,4 +1,4 @@
-@extends('welcome.main')
+@extends('templates.booksee365com.welcome.main')
 
 @section('styles-files')
     

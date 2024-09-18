@@ -1,9 +1,9 @@
-@extends('layouts.main')
+@extends('templates.booksee365com.layouts.main')
 
 @section('styles-files')
- 	<link href="{{ asset ('theme_backup/css/subscription/style.css') }}" rel="stylesheet">
-    <link href="{{ asset ('theme_backup/css/customer-product/style.css') }}" rel="stylesheet"> 
-    <link href="{{ asset ('theme_backup/common/default.css') }}" rel="stylesheet">
+<link href="{{ asset ('booksee365com/theme_backup/css/subscription/style.css') }}" rel="stylesheet">
+<link href="{{ asset ('booksee365com/theme_backup/css/customer-product/style.css') }}" rel="stylesheet"> 
+<link href="{{ asset ('booksee365com/theme_backup/common/default.css') }}" rel="stylesheet">
 @endsection
 
 @section('content')

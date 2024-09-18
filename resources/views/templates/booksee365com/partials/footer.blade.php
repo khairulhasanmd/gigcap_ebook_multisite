@@ -5,8 +5,8 @@
 				<div class="col-lg-4">
 					<div class="single-footer-wid site_info_widget">
 						<div class="site-logo">
-							<a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest"><img src="{{ asset('theme//img/w_logo.png') }}" alt="w_logo"></a>
-							<p>That's the thing about books. They let you travel without moving your feet.</p>
+							<a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest"><img src="{{ asset('booksee365com/theme//img/w_logo.png') }}" alt="w_logo"></a>
+							<p>That's the magic of books—they let you journey to far-off places without ever leaving your seat.</p>
 						</div>
 					</div>
 				</div>
@@ -34,11 +34,11 @@
 						</div>
 						<div class="special-menu">
 							<ul>
-								<li><a href="mailto:{{ config('api.SUPPORT_EMAIL') }}" style="text-transform:none!important;">Email: {{ config('api.SUPPORT_EMAIL') }}</a></li>
-								<li><a href="tel:{{ config('api.SUPPORT_PHONE') }}">Call: {{ config('api.SUPPORT_PHONE') }}</a></li>
+								<li><a href="mailto:{{ config('booksee365com.SUPPORT_EMAIL') }}" style="text-transform:none!important;">Email: {{ config('booksee365com.SUPPORT_EMAIL') }}</a></li>
+								<li><a href="tel:{{ config('booksee365com.SUPPORT_PHONE') }}">Call: {{ config('booksee365com.SUPPORT_PHONE') }}</a></li>
 								<li><p class="mb-3">Working Hours: Monday - Friday 08-24, Weekends 10-18</p></li>
-								<li><p>Address: {{ config('api.COMPANY_ADDRESS') }}
-									{{ config('api.COMPANY_CITY') }}, {{ config('api.COMPANY_POSTCODE')}}, {{ config('api.COMPANY_COUNTRY') }}</p></li>
+								<li><p>Address: {{ config('booksee365com.COMPANY_ADDRESS') }}
+									{{ config('booksee365com.COMPANY_CITY') }}, {{ config('booksee365com.COMPANY_POSTCODE')}}, {{ config('booksee365com.COMPANY_COUNTRY') }}</p></li>
 							</ul>
 						</div>
 					</div>
@@ -48,12 +48,12 @@
 						<div class="row">
 							<div class="col-6">
 								<div class="master-card text-right">
-									<img src="{{ asset('theme//img/master.png') }}" alt="master-card">
+									<img src="{{ asset('booksee365com/theme//img/master.png') }}" alt="master-card">
 								</div>
 							</div>
 							<div class="col-6">
 								<div class="visa-card text-left">
-									<img src="{{ asset('theme//img/visa.png') }}" alt="visa-card">
+									<img src="{{ asset('booksee365com/theme//img/visa.png') }}" alt="visa-card">
 								</div>
 							</div>
 						</div>
@@ -67,8 +67,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 col-12 text-center">
-					<div class="copyright-info">
-						<p>Copyright &copy; {{ env('APP_NAME') }} {{ date('Y') }}. {{ config('api.COMPANY_NAME') }} - {{ config('api.COMPANY_BUSINESS_NUMBER') }} - {{ config('api.COMPANY_ADDRESS') }}, {{ config('api.COMPANY_CITY') }} {{ config('api.COMPANY_POSTCODE')}},  {{ config('api.COMPANY_COUNTRY') }} | @lang('All rights reserved.')</p>
+					<div class="copyright-info text-white">
+						<p >Copyright &copy; {{ CONFIG('booksee365com.CONCEPT_NAME') }} {{ date('Y') }}. {{ config('booksee365com.COMPANY_NAME') }} - {{ config('booksee365com.COMPANY_BUSINESS_NUMBER') }} - {{ config('booksee365com.COMPANY_ADDRESS') }}, {{ config('booksee365com.COMPANY_CITY') }} {{ config('booksee365com.COMPANY_POSTCODE')}},  {{ config('booksee365com.COMPANY_COUNTRY') }} | @lang('All rights reserved.')</p>
 					</div>
 				</div>
 			</div>

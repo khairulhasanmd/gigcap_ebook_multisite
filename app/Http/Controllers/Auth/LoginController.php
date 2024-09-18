@@ -138,7 +138,9 @@ class LoginController extends Controller
         $password = request()->get('password');
         if (Auth::attempt(['email' => request()->get('email'), 'password' => request()->get('password'), 'domain_name' => $this->currentDomain])) {
 
-            return view('templates.'.$this->concept->template.'.pages.products');
+            // return view('templates.'.$this->concept->template.'.pages.products');
+            return redirect()->route('products');
+
             // dd('ok');
 
 
@@ -154,19 +156,8 @@ class LoginController extends Controller
             if ($user->status == 'success') {
                 $this->isWebUserId($user->data, $username, $password);
                 if (Auth::attempt(['email' => request()->get('email'), 'password' => request()->get('password'), 'domain_name' => $this->currentDomain])) {
-                    if ($this->concept->concept_type == "coding") {
-                        return redirect()->route('courses');
-                    } else  if ($this->concept->concept_type == "bbt") { 
-                        return redirect()->route('dashboard');
-                    } else if ($this->concept->concept_type == "gaming") {
-                        return redirect()->route('dashboard');
-                    }else if ($this->concept->concept_type == "finance") {
-                        return redirect()->route('finance-dashboard');
-                    }else if ($this->concept->concept_type == "cv") {
-                        return redirect()->route('cv-dashboard');
-                    } else {
-                        return redirect()->route('login')->with('error','Something went wrong');
-                    }
+                    return redirect()->route('products');
+
                 }
             } else {
                 return redirect()->intended('login')

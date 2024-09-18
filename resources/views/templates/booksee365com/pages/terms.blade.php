@@ -1,4 +1,6 @@
-@extends('welcome.main')
+{{-- @extends('welcome.main') --}}
+@extends('templates.booksee365com.welcome.main')
+
 <style>
 	h1 {
 		font-size:40px!important;

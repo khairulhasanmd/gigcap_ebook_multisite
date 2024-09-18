@@ -38,7 +38,8 @@
                             <ul class="toggle-item">
                                 <li><a class="ipp" href="{{ route('terms') }}"> <span>Terms & Conditions</span></a></li>
                                 <li><a class="ipp" href="{{ route('privacy') }}"><span>Privacy Policy</span></a></li>
-                                <li><a class="ipp" href="{{ route('profile') }}"> <i class="fas fa-cog"></i> <span>Setting</span></a></li>
+                                <li><a class="ipp" href="{{ route('subscription') }}"><span>Subscription Packages</span></a></li>
+                                {{-- <li><a class="ipp" href="{{ route('profile') }}"> <i class="fas fa-cog"></i> <span>Setting</span></a></li> --}}
                             </ul>
                         </nav>
                     </div>
@@ -49,7 +50,7 @@
                         </ul>
                     </nav>
                     <div class="copyright">
-                        <p>&copy; {{ env('APP_NAME') }} {{ date('Y') }}. {{ config('api.COMPANY_NAME') }}, {{ config('api.COMPANY_COUNTRY') }}.</p>
+                        <p>&copy; {{ config('booksee365com.CONCEPT_NAME') }} {{ date('Y') }}. {{ config('booksee365com.COMPANY_NAME') }}, {{ config('booksee365com.COMPANY_COUNTRY') }}.</p>
                     </div>
                 </div>
             </div>
