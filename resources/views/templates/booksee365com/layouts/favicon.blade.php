@@ -1,1 +1,1 @@
-<link rel="shortcut icon" href="{{ asset('theme/img/favicon.png') }}">
+<link rel="shortcut icon" href="{{ asset('booksee365com/theme/img/favicon.png') }}">
