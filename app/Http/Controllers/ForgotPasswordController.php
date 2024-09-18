@@ -35,13 +35,17 @@ class ForgotPasswordController extends Controller
     {
         $this->middleware('guest');
         $this->currentDomain = request()->getHttpHost();
+        $domain = url()->current();
+        $this->domain = parse_url($domain)['host'];
+        $this->concept = Concept::where('domain_name', $this->domain)->first();
         // $this->concept = Concept::where('domain', '=', $this->currentDomain)->first();
+        // dd($this->concept->template);
        
     }
 
     public function showLinkRequestForm()
     {
-        return view($this->concept->concept_type.'.'.$this->theme.'.auth.passwords.email');
+        return view('templates.'.$this->concept->template.'.auth.passwords.email');
     }
 
     public function sendResetLinkEmail(Request $request)

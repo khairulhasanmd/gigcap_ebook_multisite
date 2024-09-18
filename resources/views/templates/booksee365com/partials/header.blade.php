@@ -11,7 +11,7 @@
                     <div class="menu-logo">
                         <a href="@guest {{ route('welcome') }} @else
                             {{ route('products') }}
-                            @endguest"><img src="{{ asset('theme/img/logo.png') }}" alt="Pixer"></a>
+                            @endguest"><img src="{{ asset('booksee365com/theme/img/logo.png') }}" alt="Pixer"></a>
                     </div>
                 </div>
                 <div class="right-area">

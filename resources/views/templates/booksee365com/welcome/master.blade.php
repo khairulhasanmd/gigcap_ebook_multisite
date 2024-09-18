@@ -69,6 +69,6 @@
             // ]
             // });
         </script>
-<script src="{{ asset('theme/js/getdata.js') }}"></script>
+<script src="{{ asset('js/getdata.js') }}"></script>
     </body>
 </html>

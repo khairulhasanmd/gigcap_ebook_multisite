@@ -197,7 +197,6 @@
                                 <textarea id="message" name="message" aria-invalid="false"></textarea>
                             </div>
                         </div>
-                        @captcha()
                         <div class="col-md-12 col-12 text-center">
                             <input class="submit-btn" type="submit" value="Send Message">
                         </div>

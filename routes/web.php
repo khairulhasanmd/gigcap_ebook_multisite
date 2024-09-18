@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BasicController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\PropelController;
 use App\Http\Controllers\Admin\DashboardController;
