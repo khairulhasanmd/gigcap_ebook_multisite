@@ -113,9 +113,9 @@ class BasicController extends GlobalController
 
             try {
                 Mail::send([], [], function ($message) use ($request) {
-                    $message->to(config('api.SUPPORT_EMAIL'));
-                    $message->from(config('api.SUPPORT_EMAIL'), env('MAIL_FROM_NAME'));
-                    $message->subject('Contact form ' . env('APP_NAME'));
+                    $message->to(config('booksee365com.SUPPORT_EMAIL'));
+                    $message->from(config('booksee365com.SUPPORT_EMAIL'), config('booksee365com.CONCEPT_NAME'));
+                    $message->subject('Contact form ' . config('booksee365com.CONCEPT_NAME'));
                     $message->setBody('Email: ' . $request->email . '<br> Name: ' . $request->firstname . ' ' . $request->lastname . '<br> Message: ' . $request->message, 'text/html');
 
                 });
