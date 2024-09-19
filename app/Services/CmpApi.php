@@ -555,6 +555,47 @@ class CmpApi {
         return $responseData;
 
     }
+
+    public function sendEmailMessage(EmailMessage $message)
+    {
+        if (!$message->getEmail() && !$message->getCustomerId()) {
+            throw new \Exception('You must provide either customerId or email.');
+        }
+
+        $postData = [
+            'email'  => $message->getEmail(),
+            'subject' => $message->getSubject(),
+            'html' => $message->getHtml(),
+            'locale' => $message->getLocale()
+        ];
+
+        if ($message->getCustomerId()) {
+            $postData['customer_id'] = $message->getCustomerId();
+        }
+
+        if ($message->getEmail()) {
+            $postData['email'] = $message->getEmail();
+        }
+
+        if ($message->getReplyTo()) {
+            $postData['reply_to'] = $message->getReplyTo();
+        }
+
+        $response = $this->post(self::$routes['email_send'], [], $postData);
+
+        if (!$response instanceof StringResponse) {
+            throw new \Exception('Unexpected response from send email.');
+        }
+
+        return $response;
+    }
+
+    public function setEmail($email): self
+    {
+        $this->email = $email;
+        return $this;
+    }
+
  
 
 
