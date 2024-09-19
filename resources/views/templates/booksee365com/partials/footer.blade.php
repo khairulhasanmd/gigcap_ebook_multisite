@@ -17,11 +17,13 @@
 						</div>
 						<div class="special-menu">
 							<ul>
+	
+
 								<li><a href="{{ route('about') }}">About Us</a></li>
 								<li><a href="{{ route('contact') }}">Contact Us</a></li>
-								<li><a href="{{ route('privacy') }}">Privacy Policy</a></li>
-								<li><a href="{{ route('terms') }}">Terms & Conditions</a></li>
-								<li><a href="{{ route('subscription') }}">Subscription Packages</a></li>
+								<li><a href="{{ route('service', 'privacy_policy') }}">Privacy Policy</a></li>
+								<li><a href="{{ route('service', 'terms_of_service') }}">Terms & Conditions</a></li>
+								<li><a href="{{ route('service', 'subscription_policy') }}">Subscription Packages</a></li>
                                                                 <li><a href="{{ route('unsubscribe') }}">Cancel Subscription</a></li>
 							</ul>
 						</div>

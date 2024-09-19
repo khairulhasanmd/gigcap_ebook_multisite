@@ -133,13 +133,13 @@
 				<div class="col-lg-4">
 					<div class="phone mb-4 mb-lg-0 text-center text-lg-left">
 						<h4><i class="fas fa-phone"></i> Phone</h4>
-						<p><a href="tel:{{ config('api.SUPPORT_PHONE') }}">{{ config('api.SUPPORT_PHONE') }}</a></p>
+						<p><a href="tel:{{ config('booksee365com.SUPPORT_PHONE') }}">{{ config('booksee365com.SUPPORT_PHONE') }}</a></p>
 					</div>
 				</div>
 				<div class="col-lg-4">
 					<div class="email mb-4 mb-lg-0 text-center text-lg-left">
 						<h4><i class="fas fa-envelope"></i> Email</h4>
-						<p><a href="mailto:{{ config('api.SUPPORT_EMAIL') }}">{{ config('api.SUPPORT_EMAIL') }}</a></p>
+						<p><a href="mailto:{{ config('booksee365com.SUPPORT_EMAIL') }}">{{ config('booksee365com.SUPPORT_EMAIL') }}</a></p>
 					</div>
 				</div>
 				<div class="col-lg-4">

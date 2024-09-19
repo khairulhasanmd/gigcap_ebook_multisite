@@ -87,6 +87,8 @@ Route::post('password/email', [App\Http\Controllers\Auth\ForgotPasswordControlle
 Route::get('password/reset/{token}', [App\Http\Controllers\Auth\ResetPasswordController::class, 'showResetForm'])->name('password.reset');
 Route::post('password/reset', [App\Http\Controllers\Auth\ResetPasswordController::class, 'reset'])->name('password.update');
 Route::get('/check-lang-file', [BasicController::class, 'checkLangFile'])->name('checkLangFile');
+Route::get('/service/{service}', [BasicController::class, 'typeOfService'])->name('service');
+
 
 // Route::get('/send-forgot-password', [PropelController::class, 'forgotPassword'])->name('forgotPassword');
 // Route::post('/send-forgot-password', [PropelController::class, 'sendForgotPassword'])->name('sendForgotPassword');
