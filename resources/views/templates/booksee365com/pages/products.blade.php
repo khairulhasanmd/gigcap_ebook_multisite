@@ -1,63 +1,84 @@
-@extends('templates.booksee365com.layouts.main')
+@extends('templates.booksee365com.welcome.main')
+
 
 @section('styles-files')
  	<link href="{{ asset ('booksee365com/theme_backup/courses/css/main.css') }}" rel="stylesheet">
-    <link href="{{ asset ('booksee365com/theme_backup/common/default.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset ('booksee365com/theme_backup/common/default.css') }}" rel="stylesheet"> --}}
  @endsection
+<style>
+    h4{
+        color: #b1b1b1 !important;
+    }
+</style>
 
 @section('content')
+@section('content')
+
+<section class="about-us-section section-padding">
+	<div class="container-fluid">
+		<div class="row align-items-center">
+			<div class="col-12 about_left_content pr-lg-0 pl-lg-5">
+                @if($subscription->data->status != "active")
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="hero-content">
+                                <h3 class="hero-subtitle mb-5">Dear {{ $user->data->first_name}} {{ $user->data->last_name}}</h3>
+                                <h1 class="hero-title">Your subscription has expired.</h1>
+                            </div>
+                        </div>
+                        <div class="offset-md-7"></div>
+                    </div>
+                </div>
+            @else 
+                <div class="work-box">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="box-menu py-3">
+                                    <ul class="slick-carousal">
+                                        <li class="mixitup-control-active"><a href="{{ route('products')}}" style="color:#b1b1b1">All</a></li>
+                                        @foreach($productTags as $productTag)
+                                            <li><a href="{{ route('products', ['tag' => $productTag->tag->name])}}" style="color:#b1b1b1">{{$productTag->tag->name}}</a></li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row box-list">
+                            <!-- Products -->
+                        </div>
+    
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="more-btn text-center mt-4 mb-5">
+                                    <button id="load-more" data-paginate="2">Load More</button>
+                                    <button id="load-more-loading" type="button" disabled style="display:none">
+                                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                        Loading...
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- <div class="auto-load text-center">
+                            <div class="spinner-border text-success" style="width: 3rem; height: 3rem;" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
     <!-- <section class="hero hero__ifreme"></section> -->
 
-        @if($subscription->data->status != "active")
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-5">
-                        <div class="hero-content">
-                            <h3 class="hero-subtitle mb-5">Dear {{ $user->data->first_name}} {{ $user->data->last_name}}</h3>
-                            <h1 class="hero-title">Your subscription has expired.</h1>
-                        </div>
-                    </div>
-                    <div class="offset-md-7"></div>
-                </div>
-            </div>
-        @else 
-            <div class="work-box">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="box-menu py-3">
-                                <ul class="slick-carousal">
-                                    <li class="mixitup-control-active"><a href="{{ route('products')}}" style="color:black">All</a></li>
-                                    @foreach($productTags as $productTag)
-                                        <li><a href="{{ route('products', ['tag' => $productTag->tag->name])}}" style="color:black">{{$productTag->tag->name}}</a></li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row box-list">
-                        <!-- Products -->
-                    </div>
-
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="more-btn text-center mt-4 mb-5">
-                                <button id="load-more" data-paginate="2">Load More</button>
-                                <button id="load-more-loading" type="button" disabled style="display:none">
-                                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                    Loading...
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- <div class="auto-load text-center">
-                        <div class="spinner-border text-success" style="width: 3rem; height: 3rem;" role="status">
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
+  
         @endif
 @endsection
 
