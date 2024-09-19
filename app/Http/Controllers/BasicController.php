@@ -103,7 +103,7 @@ class BasicController extends GlobalController
         return view('pages.signup');
     }
 
-    public function contactUs(Req $request){
+    public function contactUs(Request $request){
         $this->validate($request, [
             'g-recaptcha-response' => ['required', new RecaptchaRule($this->concept->site_key, $this->concept->secret_key)],
         ]);
