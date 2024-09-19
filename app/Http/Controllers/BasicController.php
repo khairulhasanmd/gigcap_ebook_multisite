@@ -105,9 +105,9 @@ class BasicController extends GlobalController
 
     public function contactUs(Request $request){
 
-        $this->validate($request, [
-            'g-recaptcha-response' => 'required|captcha'
-        ]);
+        // $this->validate($request, [
+        //     'g-recaptcha-response' => 'required|captcha'
+        // ]);
 
         if(isset($request->firstname) && isset($request->lastname) && isset($request->message)) {
 

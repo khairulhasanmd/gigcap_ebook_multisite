@@ -1,7 +1,7 @@
 (function($){
     $(document).ready(function(){
         $('.sidebar-toggle-icon').click(function(){
-            $('.main-menu').toggleClass('leftt');
+            $('.main-menu').toggleClass('');
             $('.middle-line').toggleClass('middle-bars');          
             $('.toggle-item li a span').toggle();      
             $('.footer').toggle();

@@ -3,6 +3,8 @@
 @section('main')
     <header>
         @include('templates.booksee365com.partials.header')
+        {{-- @include('templates.booksee365com.partials.navigation') --}}
+
     </header>
     <!-- @yield('subheader') -->
     <main>

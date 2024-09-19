@@ -1,3 +1,44 @@
+<style>
+    @media screen and (max-width: 576px) {
+        .work-box{
+            padding-left: 100px !important;
+            padding-right: 24px;
+        }
+        .menu-item {
+            width: 50px !important;
+            /* display: none; */
+        }
+        .toggle-item li i {
+            
+            display: none;
+        }
+        .toggle-item li i a{
+            
+            display: none;
+        }
+       
+        .toggle-item li a span {
+            font-weight: 800;
+            font-size: 8px !important;
+            }
+        .toggle-item li {
+            padding-left: 5px !important;
+            margin-bottom: 6px;
+            transition: all 0.3s ease-in-out;
+            }
+           
+     }
+
+    .leftt{
+        width: 140px !important;
+    }
+    .work-box {
+        padding-left: 140px !important;
+        padding-right: 24px;
+    }
+    
+</style>
+
 <div class="menu-area">
     <div class="container-fluid">
         <div class="row">
@@ -18,19 +59,18 @@
                 </div>
 
             </div>
-            <div class="main-menu">
+            <div class="main-menu leftt">
                 <div class="menu-item h-100 w-100">
                     <div class="our-menu h-100 w-100">
                         <nav>
                             <ul class="toggle-item list-unstyled pt-1">
                                     <li><a class="ipp {{Route::current()->getName() == 'products' ? 'active' : ''}}" href="@guest {{ route('welcome') }} @else
                                         {{ route('products') }}
-                                        @endguest"> <i class="fas fa-home"></i> <span>Home</span></a></li>
-                                    <li><a class="ipp {{Route::current()->getName() == 'profile' ? 'active' : ''}}" href="{{ route('profile') }}">
-                                    <i class="fas fa-compass"></i></i> <span>Profile</span></a> </li>
-                                    <li><a class="ipp {{Route::current()->getName() == 'cancelMembership' ? 'active' : ''}}" href="{{ route('cancelMembership') }}"> <i class="fas fa-compass"></i></i> <span>Cancel Membership</span></a> </li>
-                                    <li><a class="ipp" href="{{ route('contact') }}"> <i class="fas fa-paper-plane"></i> <span>Contact</span></a> </li>
-                                    <li><a class="ipp" href="{{ route('logout') }}"> <i class="fas fa-compass"></i></i> <span>Signout</span></a> </li>
+                                        @endguest"> <span>Home</span></a></li>
+                                    <li><a class="ipp {{Route::current()->getName() == 'profile' ? 'active' : ''}}" href="{{ route('profile') }}"> <span>Profile</span></a> </li>
+                                    <li><a class="ipp {{Route::current()->getName() == 'cancelMembership' ? 'active' : ''}}" href="{{ route('cancelMembership') }}"> <span>Cancel Membership</span></a> </li>
+                                    <li><a class="ipp" href="{{ route('contact') }}">  <span>Contact</span></a> </li>
+                                    <li><a class="ipp" href="{{ route('logout') }}"> </i> <span>Signout</span></a> </li>
                                
                             </ul>
                         </nav>
