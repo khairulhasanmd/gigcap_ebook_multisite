@@ -36,9 +36,9 @@
                         </nav>
                         <nav class="s-menu">
                             <ul class="toggle-item">
-                                <li><a class="ipp" href="{{ route('terms') }}"> <span>Terms & Conditions</span></a></li>
-                                <li><a class="ipp" href="{{ route('privacy') }}"><span>Privacy Policy</span></a></li>
-                                <li><a class="ipp" href="{{ route('subscription') }}"><span>Subscription Packages</span></a></li>
+                                <li><a class="ipp" href="{{ route('service', 'terms_of_service') }}"> <span>Terms & Conditions</span></a></li>
+                                <li><a class="ipp" href="{{ route('service', 'privacy_policy') }}"><span>Privacy Policy</span></a></li>
+                                <li><a class="ipp" href="{{ route('service', 'subscription_policy') }}"><span>Subscription Packages</span></a></li>
                                 {{-- <li><a class="ipp" href="{{ route('profile') }}"> <i class="fas fa-cog"></i> <span>Setting</span></a></li> --}}
                             </ul>
                         </nav>

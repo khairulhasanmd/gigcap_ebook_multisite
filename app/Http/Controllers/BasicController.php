@@ -74,7 +74,13 @@ class BasicController extends GlobalController
             return view($this->template.'.pages.terms')->with('terms', $terms);
         }
     }
+    public function typeOfService(Request $request, $service){
 
+        $result = $this->cmp->typeOfService($service , $this->locale);
+        // $this->createService($service, $result->data->html);
+        return view($this->template.'.pages.services')->with(['service' => $result, 'pageName' => $service]);
+     
+    }
 
     public function privacy(){
         return view($this->template.'pages.privacy');
