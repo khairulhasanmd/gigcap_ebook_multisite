@@ -32,10 +32,9 @@
                 </div>
             @else 
                 <div class="work-box">
-                    <div class="container-fluid">
-                        <div class="row">
+                  
                             <div class="col-12">
-                                <div class="box-menu py-3">
+                                <div class="box-menu ">
                                     <ul class="slick-carousal">
                                         <li class="mixitup-control-active"><a href="{{ route('products')}}" style="color:#b1b1b1">All</a></li>
                                         @foreach($productTags as $productTag)
