@@ -104,34 +104,23 @@ class BasicController extends GlobalController
     }
 
     public function contactUs(Request $request){
+
         // $this->validate($request, [
-        //     'g-recaptcha-response' => ['required', new RecaptchaRule($this->concept->site_key, $this->concept->secret_key)],
+        //     'g-recaptcha-response' => 'required|captcha'
         // ]);
 
         if(isset($request->firstname) && isset($request->lastname) && isset($request->message)) {
+
             try {
-                $customerEmail = $request->email;
+                Mail::send([], [], function ($message) use ($request) {
+                    $message->to(config('booksee365com.SUPPORT_EMAIL'));
+                    $message->from(config('booksee365com.SUPPORT_EMAIL'), (config('booksee365com.SUPPORT_EMAIL')));
+                    $message->subject('Contact form ' . (config('booksee365com.SUPPORT_EMAIL')));
+                    $message->setBody('Email: ' . $request->email . '<br> Name: ' . $request->firstname . ' ' . $request->lastname . '<br> Message: ' . $request->message, 'text/html');
 
-                // Skip test if no e-mail added
-                if (!$customerEmail)
-                    return;
+                });
 
-                $message = $this->cmp;
-
-                $message->setEmail(config('concept.'.$this->concept->template_name.'.SUPPORT_EMAIL'))
-                    ->setReplyTo($customerEmail)
-                    ->setSubject($request->subject)
-                    ->setHtml($request->message)
-                    ->setHtml('Email: ' . $customerEmail . '<br> Name: ' . $request->firstname . ' ' . $request->lastname . '<br> Message: ' . $request->message, 'text/html')
-                    ->setLocale(app()->getLocale());
-
-                $stringResponse = $this->cmp->sendEmailMessage($message);
-
-                if($stringResponse instanceof StringResponse) {
-                    return redirect()->back()->with('success', 'Message sent');
-                } else {
-                    return Redirect::back()->withErrors(['error' => 'Something went wrong. Please try later']);
-                }
+                return redirect()->back()->with('success', 'Message sent');
             } catch (\Exception $e) {
                 dd($e->getMessage());
                 return Redirect::back()->withErrors(['error' => 'Something went wrong. Please try later']);
@@ -139,6 +128,7 @@ class BasicController extends GlobalController
         }else{
             return Redirect::back()->withErrors(['error' => 'Something went wrong. Please try later']);
         }
+
     }
 
     public function sendForgotPassword(Request $request){

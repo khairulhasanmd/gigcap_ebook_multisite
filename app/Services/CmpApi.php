@@ -558,6 +558,7 @@ class CmpApi {
 
     public function sendEmailMessage(EmailMessage $message)
     {
+        dd($message);
         if (!$message->getEmail() && !$message->getCustomerId()) {
             throw new \Exception('You must provide either customerId or email.');
         }
@@ -590,13 +591,128 @@ class CmpApi {
         return $response;
     }
 
+    public function getCustomerId()
+    {
+        return $this->customerId;
+    }
+
+    /**
+     * @param mixed $customerId
+     * @return $this
+     */
+    public function setCustomerId($customerId): self
+    {
+        $this->customerId = $customerId;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param mixed $email
+     * @return $this
+     */
     public function setEmail($email): self
     {
         $this->email = $email;
         return $this;
     }
 
- 
+    /**
+     * @return mixed
+     */
+    public function getReplyTo()
+    {
+        return $this->replyTo;
+    }
+
+    /**
+     * @param mixed $replyTo
+     * @return $this
+     */
+    public function setReplyTo($replyTo): self
+    {
+        $this->replyTo = $replyTo;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTemplateId()
+    {
+        return $this->templateId;
+    }
+
+    /**
+     * @param mixed $templateId
+     * @return $this
+     */
+    public function setTemplateId($templateId): self
+    {
+        $this->templateId = $templateId;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSubject()
+    {
+        return $this->subject;
+    }
+
+    /**
+     * @param mixed $subject
+     * @return $this
+     */
+    public function setSubject($subject): self
+    {
+        $this->subject = $subject;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getHtml()
+    {
+        return $this->html;
+    }
+
+    /**
+     * @param mixed $html
+     * @return $this
+     */
+    public function setHtml($html): self
+    {
+        $this->html = $html;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLocale()
+    {
+        return $this->locale;
+    }
+
+    /**
+     * @param mixed $locale
+     * @return $this
+     */
+    public function setLocale($locale): self
+    {
+        $this->locale = $locale;
+        return $this;
+    }
 
 
 }
