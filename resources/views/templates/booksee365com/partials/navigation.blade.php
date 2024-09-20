@@ -1,3 +1,8 @@
+<style>
+    .mobile-nav{
+        background-color: #65db2b !important;
+    }
+</style>
 <header class="header-wrap header-1">
     <div class="container-fluid">
         <div class="row align-items-center">
