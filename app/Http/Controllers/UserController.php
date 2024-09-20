@@ -109,7 +109,7 @@ class UserController extends Controller
         if ($request->ajax()) {
             $productEbook = new ProductEbook();
             foreach ($products as $product) {
-                $articles.='<div class="col-lg-3 col-md-6 col-xxl-3 mix box-item '.$productEbook->getTags($product->productTags).'">
+                $articles.='<div class="col-lg-4 col-md-6 col-xxl-3 mix box-item '.$productEbook->getTags($product->productTags).'">
                                 <div class="mx-box">
                                     <div class="mix-img mb-3"><img src="images/'.$product->image.'" alt="responsive-web-design">
 
