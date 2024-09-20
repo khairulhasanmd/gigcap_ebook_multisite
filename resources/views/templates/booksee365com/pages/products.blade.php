@@ -9,6 +9,12 @@
     h4{
         color: #b1b1b1 !important;
     }
+    .work-box {
+  padding-left: 0px !important;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 </style>
 
 @section('content')
