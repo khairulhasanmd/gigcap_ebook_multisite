@@ -70,7 +70,7 @@
 			<div class="row">
 				<div class="col-lg-12 col-12 text-center">
 					<div class="copyright-info text-white">
-						<p >Copyright &copy; {{ CONFIG('booksee365com.CONCEPT_NAME') }} {{ date('Y') }}. {{ config('booksee365com.COMPANY_NAME') }} - {{ config('booksee365com.COMPANY_BUSINESS_NUMBER') }} - {{ config('booksee365com.COMPANY_ADDRESS') }}, {{ config('booksee365com.COMPANY_CITY') }} {{ config('booksee365com.COMPANY_POSTCODE')}},  {{ config('booksee365com.COMPANY_COUNTRY') }} | @lang('All rights reserved.')</p>
+						<p >Copyright &copy; {{ config('booksee365com.CONCEPT_NAME') }} {{ date('Y') }}. {{ config('booksee365com.COMPANY_NAME') }} - {{ config('booksee365com.COMPANY_BUSINESS_NUMBER') }} - {{ config('booksee365com.COMPANY_ADDRESS') }}, {{ config('booksee365com.COMPANY_CITY') }} {{ config('booksee365com.COMPANY_POSTCODE')}},  {{ config('booksee365com.COMPANY_COUNTRY') }} | @lang('All rights reserved.')</p>
 					</div>
 				</div>
 			</div>
