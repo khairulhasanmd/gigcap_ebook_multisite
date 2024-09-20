@@ -45,7 +45,7 @@
 				</div>
 				<p>Our primary goal is to ignite a passion for learning and intellectual growth. In our fast-paced lives, finding personal space and time for quiet reflection can be challenging. Yet, without dedicated moments for self-care and deep contemplation, we may struggle to excel in all areas of life.</p>
 				<p>We take pride in curating a collection of highly regarded, easily digestible titles, creating a unique online catalog that continues to attract avid readers. Each member enriches our community, and your support is both timely and valued.</p>
-				<a href="{{ config('api.CAMPAIGN_DOMAIN') }}" class="theme-btn mt-35"> JOIN NOW<i class="fal fa-long-arrow-right"></i></a>
+				<a href="@guest {{ route('welcome') }}#pricing-section @else {{ route('products') }} @endguest" class="theme-btn mt-35"> JOIN NOW<i class="fal fa-long-arrow-right"></i></a>
 			</div>
 		</div>
 	</div>
