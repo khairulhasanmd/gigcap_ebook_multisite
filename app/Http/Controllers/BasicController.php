@@ -104,50 +104,28 @@ class BasicController extends GlobalController
     }
 
 
-    public function contactUs(Request $request){
+     public function contactUs(Request $request) {
         // $this->validate($request, [
-        //     'g-recaptcha-response' => ['required', new RecaptchaRule($this->concept->site_key, $this->concept->secret_key)],
+        //     'g-recaptcha-response' => 'required|captcha'
         // ]);
 
         if(isset($request->firstname) && isset($request->lastname) && isset($request->message)) {
-            try {
-                $customerEmail = $request->email;
-
-                // Skip test if no e-mail added
-                if (!$customerEmail)
-                    return;
-
-                $message = $this->cmp;
-
-                // $message->setEmail(config('concept.'.$this->concept->template_name.'.SUPPORT_EMAIL'))
-                //     ->setReplyTo($customerEmail)
-                //     ->setSubject($request->subject)
-                //     ->setHtml($request->message)
-                //     ->setHtml('Email: ' . $customerEmail . '<br> Name: ' . $request->firstname . ' ' . $request->lastname . '<br> Message: ' . $request->message, 'text/html')
-                //     ->setLocale(app()->getLocale());
-                $email = config('booksee365com.CONCEPT_NAME');
-                $replyTo = $customerEmail;
-                $subject = $request->subject;
-                $htmlContent = 'Email: ' . $customerEmail . '<br> Name: ' . $request->firstname . ' ' . $request->lastname . '<br> Message: ' . $request->message . 'text/html';
-                
-
-
-                $stringResponse = $this->cmp->sendEmailViaAPI($email, $replyTo, $subject, 'Email: ' . $customerEmail . '<br> Name: ' . $request->firstname . ' ' . $request->lastname . '<br> Message: ' . $request->message, 'text/html');
-
-                if($stringResponse instanceof StringResponse) {
-                    return redirect()->back()->with('success', 'Message sent');
-                } else {
-                    return Redirect::back()->withErrors(['error' => 'Something went wrong. Please try later']);
-                }
-            } catch (\Exception $e) {
-                dd($e->getMessage());
+   	  $response = $this->cmp->sendEmailViaAPI(
+                config('booksee365com.SUPPORT_EMAIL'),
+                config('booksee365com.SUPPORT_EMAIL'),
+                $request->subject,
+                'Email: ' . $request->email . '<br> Name: ' . $request->firstname . ' ' . $request->lastname . '<br> Message: ' . $request->message,
+                app()->getLocale()
+            );
+            if($response == 'success'){
+                return redirect()->back()->with('success', 'Message sent');
+            }else{
                 return Redirect::back()->withErrors(['error' => 'Something went wrong. Please try later']);
             }
-        }else{
+        } else {
             return Redirect::back()->withErrors(['error' => 'Something went wrong. Please try later']);
         }
     }
-
 
 
     public function sendForgotPassword(Request $request){

@@ -41,7 +41,7 @@ class CmpApi {
     }
 
 
-    function sendEmailViaAPI($email, $replyTo, $subject, $htmlContent, $locale = 'en') {
+    function sendEmailViaAPI($email, $replyTo, $subject, $htmlContent, $locale) {
 
         $apiKey = $this->apiKey; // Replace with your API key
         $baseDomain = $this->url; // Replace with your base domain
