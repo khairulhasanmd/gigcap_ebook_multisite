@@ -11,7 +11,7 @@
 <style>
     .member {
   background-color: #fff;
-  padding-left: 270px;
+  padding-left: 24px;
   padding-right: 24px;
   padding-top: 20px;
   padding-bottom: 80px;
@@ -28,6 +28,11 @@ color: #8f8989;
 }
 .member-table td{
     color: #8f8989;
+}
+.member-name h2 {
+  font-size: 40px;
+  color: black;
+  margin-top: 100px;
 }
 </style>
 
