@@ -11,7 +11,7 @@
 <style>
     .member {
   background-color: #fff;
-  padding-left: 270px;
+  padding-left: 24px;
   padding-right: 24px;
   padding-top: 20px;
   padding-bottom: 80px;
@@ -34,7 +34,7 @@ color: #8f8989;
 
 <section>
     <div class="member pb-5">
-        <div class="container-fluid background">
+        <div class="container background">
             <div class="row">
                 <div class="col-12">
                     <div class="customer py-4">
