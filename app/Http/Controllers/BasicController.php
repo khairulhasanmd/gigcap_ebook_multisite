@@ -116,7 +116,7 @@ class BasicController extends GlobalController
                 if (!$customerEmail)
                     return;
 
-                $message = new CmpApi();
+                $message = $this->cmp;
 
                 $message->setEmail(config('concept.'.$this->concept->template_name.'.SUPPORT_EMAIL'))
                     ->setReplyTo($customerEmail)
