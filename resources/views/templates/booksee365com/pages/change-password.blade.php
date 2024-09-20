@@ -29,6 +29,11 @@ color: #8f8989;
 .member-table td{
     color: #8f8989;
 }
+.member-name h2 {
+  font-size: 40px;
+  color: black;
+  margin-top: 100px;
+}
 </style>
 
 
