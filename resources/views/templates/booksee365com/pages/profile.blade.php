@@ -33,7 +33,7 @@ color: #8f8989;
 </style>
 
 <section>
-    <div class="member pb-5">
+    <div class="member pb-5 pt-5">
         <div class="container-fluid background">
             <div class="row">
                 <div class="col-12">
