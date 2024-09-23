@@ -29,6 +29,10 @@
 
 
         }
+
+ .fa-download::before {
+  padding-right: 10px;
+}
  </style>
 
         <!-- Start breadcrumb area -->

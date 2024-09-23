@@ -6,6 +6,7 @@
 
 @section('content')
 
+
 <div class="breadcrumb-wrapper">
     <div class="book1">
         <img src="img/book3.png" alt="book">
@@ -55,7 +56,7 @@
 
     <div class="row py-5">
 
-        <div class="col-lg-6 col-lg-offset-2 mx-auto">   
+        <div class="col-lg-6 col-lg-offset-2 mx-auto" id="contact-form">   
        
           <form  method="post" action="{{ route('contact-us') }}" role="form">
             @csrf
@@ -105,7 +106,7 @@
                 </div>
               </div>
               <div class="col-md-12">
-                <input type="submit" class="btn theme-btn mt-3" value="Send message">
+                <input type="submit" class=" theme-btn mt-3" value="Send message">
               </div>
             </div>
            
