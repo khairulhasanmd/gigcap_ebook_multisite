@@ -9,7 +9,9 @@
     </button>
 
 
-<header class="header navbar_fixed menu-sticky" id="header">
+<header class="header  menu-sticky" id="header" style="  position: fixed;top: 0; left: 0;  width: 100%; height: 130px !important; z-index: 999; 
+ 
+">
     <nav class="navbar navbar-expand-lg menu_one">
         <div class="container-fluid">
             <a class="navbar-brand sticky_logo" href="index.html">
@@ -33,7 +35,7 @@
                             <li class="nav-item "><a href="{{ route('login') }}" class="nav-link login-btn"><i class="bi bi-person"></i> Log In</a></li>
                             <li><a href="{{ route('welcome') }}#pricing" class="nav_btn btn_hover">Sign Up</a></li>
                         @else
-                        <li><a href="{{ route('signout') }}#pricing" class="nav_btn btn_hover">Sign Up</a></li>
+                        <li><a href="{{ route('signout') }}#pricing" class="nav_btn btn_hover">Sign Out</a></li>
 
                         @endguest
                         

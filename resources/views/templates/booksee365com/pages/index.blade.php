@@ -67,21 +67,22 @@
 		</div>
 
 		<div class="row">
-			<div class="col-lg-4 col-md-6 col-12">
-				<div class="single-blog-card">
-					<div class="featured-img bg-cover">
-						<a href="#">
-							<img src="{{ asset('booksee365com/theme/img/blog/active-ife.jpg') }}" alt="" style="width:100%;"> 
-						</a>
-					</div>
-					<div class="post-content">
-						<div class="post-meta">
-							<a href="#" class="post-author"> Active Life</a>
+			
+				<div class="col-lg-4 col-md-6 col-12">
+					<div class="single-blog-card">
+						<div class="featured-img bg-cover">
+							<a href="#">
+								<img src="{{ asset('booksee365com/theme/img/blog/active-ife.jpg') }}" alt="" style="width:100%;"> 
+							</a>
 						</div>
-						<h3><a href="#">We’ve designed our website with your busy lifestyle in mind, allowing you to read any of our titles whenever you find a moment of free time.</a></h3>
+						<div class="post-content">
+							<div class="post-meta">
+								<a href="#" class="post-author"> Active Life</a>
+							</div>
+							<h3><a href="#">We’ve designed our website with your busy lifestyle in mind, allowing you to read any of our titles whenever you find a moment of free time.</a></h3>
+						</div>
 					</div>
 				</div>
-			</div>
 			<div class="col-lg-4 col-md-6 col-12">
 				<div class="single-blog-card">
 					<div class="featured-img bg-cover">

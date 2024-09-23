@@ -11,7 +11,7 @@
         @yield('main')
 
         @include('templates.mentoringlibrarycom.layouts.scripts')
-
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.all.min.js"></script>
         <script type="text/javascript">
             @if ($errors->any())
                 Swal.fire({title:"Ooops", html: "@php echo implode("<br>", $errors->all()) @endphp" , type: "error"});

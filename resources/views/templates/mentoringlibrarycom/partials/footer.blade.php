@@ -103,7 +103,7 @@
 			<div class="container">
 				<div class="footer-wrapper align-items-center">
 					<p class="wow fadeInLeft p-3 m-0 text-center" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-						Copyright &copy; {{ CONFIG('booksee365com.CONCEPT_NAME') }} {{ date('Y') }}. {{ config('booksee365com.COMPANY_NAME') }} - {{ config('booksee365com.COMPANY_BUSINESS_NUMBER') }} - {{ config('booksee365com.COMPANY_ADDRESS') }}, {{ config('booksee365com.COMPANY_CITY') }} {{ config('booksee365com.COMPANY_POSTCODE')}},  {{ config('booksee365com.COMPANY_COUNTRY') }} | @lang('All rights reserved.')
+						Copyright &copy; {{ CONFIG('mentoringlibrarycom.CONCEPT_NAME') }} {{ date('Y') }}. {{ config('mentoringlibrarycom.COMPANY_NAME') }} - {{ config('mentoringlibrarycom.COMPANY_BUSINESS_NUMBER') }} - {{ config('mentoringlibrarycom.COMPANY_ADDRESS') }}, {{ config('mentoringlibrarycom.COMPANY_CITY') }} {{ config('mentoringlibrarycom.COMPANY_POSTCODE')}},  {{ config('mentoringlibrarycom.COMPANY_COUNTRY') }} | @lang('All rights reserved.')
 					</p>
 				</div>
 			</div>

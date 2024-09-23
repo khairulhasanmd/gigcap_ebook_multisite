@@ -6,6 +6,8 @@
 
 @section('content')
 
+
+
 <section class="page-banner-wrap bg-cover">
     <div class="container">
         <div class="row align-items-center">
