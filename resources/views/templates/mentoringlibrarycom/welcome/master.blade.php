@@ -5,12 +5,19 @@
         @include('templates.mentoringlibrarycom.layouts.favicon')
         @include('templates.mentoringlibrarycom.welcome.styles')
         @include('templates.mentoringlibrarycom.layouts.head-scripts')
+        <style>
+            .swal2-select{
+                display: none;
+            }
+        </style>
     </head>
 
     <body>
         @yield('main')
 
         @include('templates.mentoringlibrarycom.welcome.scripts')
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.all.min.js"></script>
+
 
         <script type="text/javascript">
             @if ($errors->any())

@@ -19,7 +19,7 @@
                     <div class="page-header">
                         <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                             <li>
-                                <a href="index.html">
+                                <a href=@guest {{ route('welcome')}} @else {{route('products')}} @endguest">
                                     Home
                                 </a>
                             </li>
@@ -49,10 +49,11 @@
                             <img src="{{ asset ('mentoringlibrarycom/') }}/img/about2.jpg" class="img-fluid about_img" alt="">
                             <div class="book-section-info">
                             
-                                <h1>Empowering Entrepreneurs and Businesses to Achieve Success</h1>
-                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque nisi enim vitae facilis dicta, corporis asperiores cum deserunt animi porro, minima, optio voluptate expedita delectus eligendi nihil ipsa repellat earum?</p>
-    
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente accusantium eius omnis veritatis, quasi nulla modi inventore ratione asperiores unde provident delectus, vel reiciendis tempora? Nostrum qui molestiae consectetur saepe.</p>
+                                <h1>Enabling Entrepreneurs and Businesses to Reach Their Goals</h1>
+                                <p>Our primary goal is to inspire entrepreneurs to embrace continuous learning and enhance their intellectual growth. In today’s fast-paced environment, finding time for personal reflection and strategic thinking can be challenging. However, without dedicated moments to nurture our minds and explore our inner thoughts, we risk falling short in all aspects of our business.</p>
+
+                                <p>We take pride in curating a collection of highly regarded, accessible resources designed for modern entrepreneurs. Our exclusive online catalog serves as a hub for business enthusiasts, fostering a community of like-minded individuals. Each member contributes to our collective success, and your support is invaluable and greatly appreciated.</p>
+                                   
                                 </div>
                         </div>
                            
@@ -62,10 +63,10 @@
                         <div class="about_wrap">
                             <div class="book-section-info">
                             
-                            <h1>Empowering Entrepreneurs and Businesses to Achieve Success</h1>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque nisi enim vitae facilis dicta, corporis asperiores cum deserunt animi porro, minima, optio voluptate expedita delectus eligendi nihil ipsa repellat earum?</p>
-
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente accusantium eius omnis veritatis, quasi nulla modi inventore ratione asperiores unde provident delectus, vel reiciendis tempora? Nostrum qui molestiae consectetur saepe.</p>
+                            <h1>What We Offer</h1>
+                            <p>We are committed to providing a carefully curated selection of valuable resources specifically designed for today’s entrepreneurs. Our team has handpicked a diverse range of highly regarded titles that are both accessible and relevant to the fast-paced business landscape. Each resource is chosen to help you grow, innovate, and stay ahead in your entrepreneurial journey.</p>
+    
+                            <p>Our exclusive online catalog offers a wealth of knowledge aimed at enhancing your skills and expertise. Whether you're seeking insights on leadership, marketing, or financial management, our collection is tailored to meet your needs, empowering you to reach your full potential as a business leader.</p>
                             </div>
                             <img src="{{ asset ('mentoringlibrarycom/') }}/img/about1.jpg" class="img-fluid about_img" alt="">
                         </div>
@@ -91,21 +92,21 @@
                                 <div id="mission" class="col-lg-4">
                                     <div class="about_content">
                                         <h4 class="mt-3">Our Mission</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ipsum cumque tempora magnam impedit consequuntur nobis veritatis, sequi adipisci inventore. Illo eaque tenetur ipsa corrupti ipsam aut totam sunt. Quidem.</p>
+                                    <p>At Mentoringlibrary, our mission is to inspire and empower entrepreneurs through continuous learning. We provide accessible resources that foster both personal and professional growth, helping individuals navigate the challenges of the modern business landscape.</p>
                                     </div>
                                 </div>
                                
                                 <div id="vision" class="col-lg-4">
                                     <div class="about_content">
                                     <h4 class="mt-3">Our Vision</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos exercitationem, hic eligendi quam fugit maiores asperiores magni, unde nihil officiis eveniet nulla est? Sequi voluptatibus minima voluptatem aperiam. Similique, aliquid.</p>
+                                    <p>We envision a vibrant community of innovative business leaders who thrive through shared knowledge and collaboration. By connecting like-minded individuals, we aim to cultivate an environment where everyone can succeed together.</p>
                                     </div>
                                    
                                 </div>
                                 <div id="history" class="col-lg-4">
                                     <div class="about_content">
                                     <h4 class="mt-3">Our History</h4>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda omnis similique placeat labore tenetur, quidem mollitia quisquam natus reiciendis possimus, impedit perferendis adipisci vero sunt ex accusamus in laboriosam! Nobis!</p>
+                                    <p>Founded with a passion for supporting entrepreneurs, we have diligently curated a diverse collection of valuable resources. Our journey began with a commitment to elevate the entrepreneurial experience, and we continue to evolve to meet your needs.</p>
                                     </div>
                                 </div>
                             

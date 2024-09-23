@@ -1,10 +1,95 @@
-@extends('templates.mentoringlibrarycom.layouts.main')
+@extends('templates.mentoringlibrarycom.welcome.main')
 
 
 @section('styles-files')
- 	<link href="{{ asset ('booksee365com/theme_backup/courses/css/main.css') }}" rel="stylesheet">
-    <link href="{{ asset ('booksee365com/theme_backup/common/default.css') }}" rel="stylesheet">
+ 	{{-- <link href="{{ asset ('booksee365com/theme_backup/courses/css/main.css') }}" rel="stylesheet"> --}}
+    {{-- <link href="{{ asset ('booksee365com/theme_backup/common/default.css') }}" rel="stylesheet"> --}}
  @endsection
+ <style>
+    .download-button{
+        /* display: block !important; */
+    }
+    .mix-img img {
+        width: 100%;
+        height: 250px;
+        object-fit: contain;
+        }
+        h4{
+            font-size: 18px !important;
+        }
+        #load-more{
+            background: #012e4a;
+            padding: 6px 16px;
+            color: #fff;
+
+        }
+        #load-more:hover{
+            color: #fff;
+            background: #036280;
+
+
+        }
+ </style>
+
+        <!-- Start breadcrumb area -->
+        <div class="breadcrumb-wrapper">
+            <div class="book1">
+                <img src="{{ asset ('mentoringlibrarycom/') }}/img/book3.png" alt="book">
+            </div>
+            <div class="book2">
+                <img src="{{ asset ('mentoringlibrarycom/') }}/img/book4.png" alt="book">
+            </div>
+            <div class="container">
+                <div class="page-heading">
+                    <h1>Library</h1>
+                    <div class="page-header">
+                        <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                            <li>
+                                <a href="@guest {{ route('welcome')}} @else {{route('products')}} @endguest">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                            </li>
+                            <li>
+                                Library
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End breadcrumb area -->
+
+
+
+        <section class="library-page py-5 my-5">
+            <div class="container">
+                <div class="row">
+                    <div class="tab-product-navigation">
+
+                        <div class="nav nav-tabs justify-content-center"  role="tablist">
+                            <a class="nav-item nav-link"  href="{{ route('products')}}">All</a>
+
+                            @foreach($productTags as $productTag)
+                            <a class="nav-item nav-link"  href="{{ route('products', ['tag' => $productTag->tag->name])}}">{{$productTag->tag->name}}</a>
+
+                            @endforeach
+                          
+                        </div>
+                        <div>
+                    
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
 
 @section('content')
     <!-- <section class="hero hero__ifreme"></section> -->
@@ -23,19 +108,8 @@
             </div>
         @else 
             <div class="work-box">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="box-menu py-3">
-                                <ul class="slick-carousal">
-                                    <li class="mixitup-control-active"><a href="{{ route('products')}}" style="color:black">All</a></li>
-                                    @foreach($productTags as $productTag)
-                                        <li><a href="{{ route('products', ['tag' => $productTag->tag->name])}}" style="color:black">{{$productTag->tag->name}}</a></li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <div class="container">
+               
                     <div class="row box-list">
                         <!-- Products -->
                     </div>
@@ -45,7 +119,7 @@
                             <div class="more-btn text-center mt-4 mb-5">
                                 <button id="load-more" data-paginate="2">Load More</button>
                                 <button id="load-more-loading" type="button" disabled style="display:none">
-                                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                    <span  class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                                     Loading...
                                 </button>
                             </div>

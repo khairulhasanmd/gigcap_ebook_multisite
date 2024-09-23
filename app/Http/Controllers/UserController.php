@@ -109,13 +109,14 @@ class UserController extends Controller
         if ($request->ajax()) {
             $productEbook = new ProductEbook();
             foreach ($products as $product) {
-                $articles.='<div class="col-lg-3 col-md-6 col-xxl-3 mix box-item '.$productEbook->getTags($product->productTags).'">
+                $articles.='
+                <div class="col-lg-3 col-md-6 col-xxl-3 mix box-item '.$productEbook->getTags($product->productTags).'">
                                 <div class="mx-box">
                                     <div class="mix-img mb-3"><img src="images/'.$product->image.'" alt="responsive-web-design">
 
                                         <div class="effect d-flex justify-content-center align-items-center">
                                             <div class="preview text-center pe-2">
-                                                <a href="products/'.$product->id.'"><i class="fas fa-download"></i><span>Download</span></a>
+                                                <a href="products/'.$product->id.'"><i class="fas fa-download"></i><span >Download</span></a>
                                             </div>
                                         </div>
 
@@ -123,16 +124,16 @@ class UserController extends Controller
                                     <div class="mix-content d-flex justify-content-center align-items-start">
                                         <div class="theme-info ps-2">
                                             <h4 style="margin-top:9px;" data-toggle="tooltip" data-placement="bottom" title="'.$product->product_name.'">'.substr($product->product_name, 0, 25).'</h4>
+                                            <div style="display:none;" class="download-button"> <a href="products/'.$product->id.'"><i class="fas fa-download"></i><span>Download</span></a></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>';
             }
             return $articles;
-            //return $articles;
         }
         // dd($products);
-        return view('templates.'.$this->concept->template.'.pages.products')->with(['user' => $userInfo, 'user_id' => $user->id, 'orders' => $orders, 'subscription_passed' => $subscription_passed, 'subscription' => $subscription, 'url' => $codeSchoolUrl, 'products' => $products, 'productTags' => $productTags, 'tags' => $tags]);
+        return view('templates.'.$this->concept->template.'.pages.products')->with(['user' => $userInfo, 'user_id' => $user->id, 'orders' => $orders, 'subscription_passed' => $subscription_passed, 'subscription' => $subscription, 'url' => $codeSchoolUrl, 'products' => $products, 'productTags' => $productTags, 'tags' => $tags,'products' => $products]);
 
     }
 

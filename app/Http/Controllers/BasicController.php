@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
+use App\Models\Admin\Product;
 
 class BasicController extends GlobalController
 {
@@ -38,8 +39,10 @@ class BasicController extends GlobalController
     public function welcome()
     {
         $clickPricing = $this->cmp->getProducts();
+        $products = Product::all();
         return view($this->template.'pages.index', [
             'prices' => $clickPricing->data->products,
+            'products' => $products,
         ]);
     }
 
@@ -108,14 +111,13 @@ class BasicController extends GlobalController
         // $this->validate($request, [
         //     'g-recaptcha-response' => 'required|captcha'
         // ]);
-
-        if(isset($request->firstname) && isset($request->lastname) && isset($request->message)) {
-   	  $response = $this->cmp->sendEmailViaAPI(
-                config('booksee365com.SUPPORT_EMAIL'),
-                config('booksee365com.SUPPORT_EMAIL'),
-                $request->subject,
-                'Email: ' . $request->email . '<br> Name: ' . $request->firstname . ' ' . $request->lastname . '<br> Message: ' . $request->message,
-                app()->getLocale()
+            if(isset($request->firstname) && isset($request->lastname) && isset($request->message)&& isset($request->email)) {
+                $response = $this->cmp->sendEmailViaAPI(
+                    config($this->concept->template.'.SUPPORT_EMAIL'),
+                    $request->email,
+                    $request->subject,
+                    'Email: ' . $request->email . '<br> Name: ' . $request->firstname . ' ' . $request->lastname . '<br> Message: ' . $request->message,
+                    app()->getLocale()
             );
             if($response == 'success'){
                 return redirect()->back()->with('success', 'Message sent');

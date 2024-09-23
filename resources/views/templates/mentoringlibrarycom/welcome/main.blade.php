@@ -3,7 +3,7 @@
 @extends('templates.mentoringlibrarycom.welcome.master')
 
 @section('main')
-    <header>
+    <header style="height: 130px !important">
         @include('templates.mentoringlibrarycom.partials.navigation')
     </header>
     <!-- @yield('subheader') -->

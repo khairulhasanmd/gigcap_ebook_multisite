@@ -49,8 +49,6 @@ class CmpApi {
         $endpoint = $baseDomain.'/api/s/v3/emails/sends.json';
 
         $url = $endpoint;
-        // dd($baseDomain);
-
         // Prepare the data
         $postData = json_encode([
            'email' => $email,

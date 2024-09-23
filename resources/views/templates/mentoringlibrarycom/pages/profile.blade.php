@@ -11,7 +11,7 @@
             <div class="page-header">
                 <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                     <li>
-                        <a href="index.html">
+                        <a href="@guest {{ route('welcome')}} @else {{route('products')}} @endguest">
                             Home
                         </a>
                     </li>
@@ -93,7 +93,7 @@
                                                 <input type="text" class="form-control" id="phoneNumber" name="phone" placeholder="Phone number" value="294715398" required>
                                             </div>
                                             <div class="d-flex justify-content-start">
-                                                <a href="reset.html" class="theme-btn mt-4">Change Password</a>
+                                                <a href="{{ route('changePassword') }}" class="theme-btn mt-4">Change Password</a>
                                                 <button class="theme-btn mx-3 mt-4" type="submit">Edit Profile</button>
                                             </div>
                                         </form>
