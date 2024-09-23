@@ -142,7 +142,7 @@
                     <div class="latest-contact-us-2-media-content-contact-text">
                         <span>E-mail</span>
                         <a href="mailto:{{ config('mentoringlibrarycom.SUPPORT_EMAIL') }}">
-                            <h6>{{ config('mentoringlibrarycom.SUPPORT_EMAIL') }}</h6>
+                            <h6  style="text-transform: lowercase;">{{ config('mentoringlibrarycom.SUPPORT_EMAIL') }}</h6>
                         </a>
                     </div>
                 </div>
