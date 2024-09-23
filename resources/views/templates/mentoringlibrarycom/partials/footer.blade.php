@@ -62,8 +62,8 @@
 							</div>
 							<div class="footer-content text-center">
 								<p>
-									Phasellus ultricies aliquam volutpat ullamcorper laoreet neque, a lacinia curabitur
-									lacinia mollis
+									Explore our catalog for leadership, marketing, and financial management insights.
+
 								</p>
 								
 							</div>
@@ -92,8 +92,8 @@
 					</div>
 					<div class="col-lg-12 pt-md-5 pt-lg-0">
 						<div class="social-icon d-flex align-items-center justify-content-center">
-							<img src="img/visa.png" alt="">
-							<img src="img/master.png" alt="">
+							<img src="{{ asset ('mentoringlibrarycom/') }}/img/visa.png" alt="">
+							<img src="{{ asset ('mentoringlibrarycom/') }}/img/master.png" alt="">
 						</div>
 					</div>
 				</div>

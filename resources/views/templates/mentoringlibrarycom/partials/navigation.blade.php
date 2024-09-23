@@ -1,3 +1,10 @@
+<style>
+.header.navbar_fixed .navbar {
+  background: #fff;
+  box-shadow: 0px 4px 6px 0px rgba(12, 0, 46, 0.17);
+}    
+</style>    
+    
     <!-- Cursor follower -->
     <div class="cursor-follower" style="top: 540px; left: 1212px;"></div>
 
