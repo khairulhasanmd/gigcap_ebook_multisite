@@ -1,4 +1,4 @@
-@extends('templates.booksee365com.welcome.main')
+@extends('templates.mentoringlibrarycom.welcome.main')
 
 @section('styles-files')
     
@@ -6,65 +6,74 @@
 
 @section('content')
 
-
-
-<section class="page-banner-wrap bg-cover">
+  <!-- Start breadcrumb area -->
+  <div class="breadcrumb-wrapper">
+    <div class="book1">
+        <img src="{{ asset ('mentoringlibrarycom/') }}/img/book3.png" alt="book">
+    </div>
+    <div class="book2">
+        <img src="{{ asset ('mentoringlibrarycom/') }}/img/book4.png" alt="book">
+    </div>
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-8">
-                <div class="page-heading">
-                    <div class="sub-title">
-                        <p>Welcome to our company</p>
-                    </div>
-                    <div class="page-title">
-                        <h1>Forgot Password</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Forgot Password</li>
-                    </ol>
-                </nav>
+        <div class="page-heading">
+            <h1>Forgot your password ?</h1>
+            <div class="page-header">
+                <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                    <li>
+                        <a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <i class="bi bi-chevron-right"></i>
+                    </li>
+                    <li>
+                        Forgot password
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-</section>
+</div>
+<!-- End breadcrumb area -->
 
-<section class="contact-page-wrap section-padding">
-    <div class="container">
-        <div class="row pb-0">
-            <div class="col-12 text-center mb-20">
-                <div class="section-title no-bg">
-                    <h1>Enter your email</h1>
-                </div>
-            </div>
 
-            <div class="col-12 col-lg-12">
-                <div class="contact-form">
-                    <form method="post" action="{{ route('password.email') }}" class="row conact-form">
-                        @csrf
-                        <div class="col-12">
-                            <div class="single-personal-info">
-                                <label for="email">Email</label>
-								<input class="{{ $errors->has('email') ? ' is-invalid' : '' }}" type="email" name="email" id="email" value="{{ old('email') }}" required autofocus>
-								@if ($errors->has('email'))
+
+
+<section class="login-page ">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 order-2 px-5 my-auto">
+                <div class="login-page__left">
+                    {{-- <h1>Welcome back!</h1> --}}
+                    {{-- <h3 class="login-page__title">Cancel Subscription</h3> --}}
+                    <div class="login-page__form-box">
+                        <form method="post" action="{{ route('password.email') }}" class="row conact-form">
+                            @csrf                          
+                            <div class="mb-3">
+                              <label for="email" class="form-label">Email*</label>
+                              <input type="email" class="form-control" id="email" name="email" placeholder="Email*" autocomplete="email" autofocus required>
+                              @if ($errors->has('email'))
 									<span class="invalid-feedback" role="alert">
 										<strong>{{ $errors->first('email') }}</strong>
 									</span>
 								@endif
                             </div>
-                        </div>
-                        <div class="col-md-12 col-12 text-center">
-                            <input class="submit-btn" type="submit" value="Reset Password">
-                        </div>
-                    </form>
+            
+                          
+                            <div class="justify-content-between mt-5">
+                              <input class="theme-btn px-4 me-2" type="submit" value="Send Reset Password Link" >
+
+                            </div>
+                          </form>
+                          
+                    </div>
                 </div>
             </div>
+        
         </div>
     </div>
 </section>
+
 
 @endsection
