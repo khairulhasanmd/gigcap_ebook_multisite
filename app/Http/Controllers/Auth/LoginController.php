@@ -35,7 +35,7 @@ class LoginController extends Controller
      * @var string
      */
     // protected $redirectTo = '/administrator/dashboard';
-    protected $redirectTo = '/courses';
+    protected $redirectTo = '/products';
 
     /**
      * Create a new controller instance.
@@ -132,39 +132,55 @@ class LoginController extends Controller
     }
 
     protected function login()
-    {  
+{  
+    $username = request()->get('email');
+    $password = request()->get('password');
+    
+    // First attempt with domain_name check
+    if (Auth::attempt(['email' => $username, 'password' => $password, 'domain_name' => $this->currentDomain])) { 
 
-        $username = request()->get('email');
-        $password = request()->get('password');
-        if (Auth::attempt(['email' => request()->get('email'), 'password' => request()->get('password'), 'domain_name' => $this->currentDomain])) {
+        // dd((Auth::user()->is_admin));
 
-            // return view('templates.'.$this->concept->template.'.pages.products');
-            return redirect()->route('products');
-
-            // dd('ok');
-
-
-        } else if (Auth::attempt(['email' => request()->get('email'), 'password' => request()->get('password'), 'is_admin' => 1])) {
-            // if (auth()->user()->is_admin) {
-            //     return redirect()->route('admin.dashboard');
-            // } 
-            dd('ok');
+        if(Auth::user()->is_admin == 1){
+            dd('redirect to dashbord');
             return redirect()->route('admin.dashboard');
+        }else{
+        $user = $this->cmp->authenticateUser(request(), $username, $password);
+        if ($user->status == 'success') {
+            return redirect()->route('products');
         } else {
-            $user = $this->cmp->authenticateUser(request(), $username, $password);
-            // dd($user);
-            if ($user->status == 'success') {
-                $this->isWebUserId($user->data, $username, $password);
-                if (Auth::attempt(['email' => request()->get('email'), 'password' => request()->get('password'), 'domain_name' => $this->currentDomain])) {
-                    return redirect()->route('products');
+            return redirect()->back()->withErrors(['error' => 'Email-Address And Password Are Wrong']);
 
-                }
-            } else {
-                return redirect()->intended('login')
-                ->with('error','Email-Address And Password Are Wrong.');
-            }
         }
     }
+
+    }else if (Auth::attempt(['email' => $username, 'password' => $password, 'is_admin' => 1])) {
+
+       
+
+    // Third attempt for other cases
+    } else if ($this->cmp->authenticateUser(request(), $username, $password)->status == 'success') {
+
+        $user = $this->cmp->authenticateUser(request(), $username, $password);
+        $this->isWebUserId($user->data, $username, $password);
+            
+        if (Auth::attempt(['email' => $username, 'password' => $password, 'domain_name' => $this->currentDomain])) {
+            return redirect()->route('products');
+        }
+
+    // Third attempt for other cases
+    } 
+     else {
+        // dd('wrong');
+        // return redirect()->intended('login')
+        //     ->withErrors('error', 'Email-Address And Password Are Wrong.');
+        return redirect()->back()->withErrors(['error' => 'Email-Address And Password Are Wrong']);
+    }
+}
+    
+
+// return redirect()->back()->withErrors(['error' => 'New password is not repeated twice']);
+
 
     public function isWebUserId($data, $username, $password) {
         $existingUser = User::where('customer_id', $data->customer_id)->where('domain_name', '=', $this->currentDomain)->first();
