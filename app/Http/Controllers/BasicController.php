@@ -401,8 +401,12 @@ class BasicController extends GlobalController
     // }
 
 
+    public function getOlarkCode(Request $request) {
 
+        return response()->json(['id' => "8276-975-10-7863"]);
+    }
 
+  
 
 
 
