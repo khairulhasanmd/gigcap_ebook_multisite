@@ -6,6 +6,7 @@ $.ajax({
     data: JSON.stringify(data),
     success: function(response) {
         Id = response.id;
+        console.log('fine');
         olarkc(Id);
     },
     error: function(xhr, status, error) {

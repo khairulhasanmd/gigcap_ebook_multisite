@@ -53,7 +53,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
     Route::get('/courses', [UserController::class, 'courses'])->name('courses');
     Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboard');
     Route::get('/profile', [UserController::class, 'profile'])->name('profile');
-    Route::get('/file/{filename}', [FileController::class, 'getFile'])->where('filename', '^[^/]+$');
+    // Route::get('/file/{filename}', [FileController::class, 'getFile'])->where('filename', '^[^/]+$');
     Route::get('/cancel-membership', [UserController::class, 'cancelMembership'])->name('cancelMembership');
     Route::get('/change-password', [UserController::class, 'changePassword'])->name('changePassword');
     Route::get('password/reset', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
@@ -64,11 +64,11 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
     Route::post('/save-change-password', [UserController::class, 'saveChangePassword'])->name('saveChangePassword');
     Route::get('/unsubscribe', [BasicController::class, 'unsubscribe'])->name('unsubscribe');
     Route::post('/unsubscribe-membership', [BasicController::class, 'unsubscribeMembership'])->name('unsubscribeMembership');
-    Route::get('/mydashboard', [UserController::class, 'financeDashboard'])->name('finance-dashboard');
-    Route::get('/mycvdashboard', [UserController::class, 'cvdashboard'])->name('cv-dashboard');
     Route::get('/service/{service}', [BasicController::class, 'typeOfService'])->name('service');
     Route::get('/products',  [UserController::class, 'products'])->name('products');
     Route::get('/products/{id}',  [UserController::class, 'productsDownload'])->name('products.download');
+   
+
 
 
 
@@ -94,8 +94,8 @@ Route::get('/service/{service}', [BasicController::class, 'typeOfService'])->nam
 // Route::post('/send-forgot-password', [PropelController::class, 'sendForgotPassword'])->name('sendForgotPassword');
 
 Route::group(['prefix' => '/api'], function () {
-    Route::any('/s/v1/subscription/success.json', [PropelController::class, 'postSubscriptionSuccessAction']);
-    Route::post('/s/v1/subscription/cancel', [PropelController::class, 'cancelSubscriptionAction']);
+    // Route::any('/s/v1/subscription/success.json', [PropelController::class, 'postSubscriptionSuccessAction']);
+    // Route::post('/s/v1/subscription/cancel', [PropelController::class, 'cancelSubscriptionAction']);
 });
 
 // Route::group(['prefix' => '/administrator'], function () {
@@ -110,14 +110,14 @@ Route::group(['prefix' => '/api'], function () {
 
 Route::prefix('/administrator')->namespace('App\\Http\\Controllers')->group(function () {
     Route::get('/login',[LoginController::class,'showAdminLoginForm'])->name('admin.login-view');
-    Route::get('/dashboard', [DashboardController::class, 'home'])->name('admin.dashboard');
-    Route::resource('companies', CompanyController::class);
-    Route::resource('crm', CrmController::class);
-    Route::resource('concept', ConceptController::class);
-    Route::get('concept/info/{id}',  [ConceptController::class, 'getInfo'])->name('concept.company.info');
-    Route::get('concept/clone/{id}',  [ConceptController::class, 'cloneInfo'])->name('concept.clone');
-    Route::get('concept/translate/{id}',  [ConceptController::class, 'getTranslationLang'])->name('concept.company.translate.lang');
-    Route::post('concept/translate/{id}',  [ConceptController::class, 'getTranslation'])->name('concept.company.translate');
+    // Route::get('/dashboard', [DashboardController::class, 'home'])->name('admin.dashboard');
+    // Route::resource('companies', CompanyController::class);
+    // Route::resource('crm', CrmController::class);
+    // Route::resource('concept', ConceptController::class);
+    // Route::get('concept/info/{id}',  [ConceptController::class, 'getInfo'])->name('concept.company.info');
+    // Route::get('concept/clone/{id}',  [ConceptController::class, 'cloneInfo'])->name('concept.clone');
+    // Route::get('concept/translate/{id}',  [ConceptController::class, 'getTranslationLang'])->name('concept.company.translate.lang');
+    // Route::post('concept/translate/{id}',  [ConceptController::class, 'getTranslation'])->name('concept.company.translate');
 })->middleware(['auth', 'admin']);
 
 
