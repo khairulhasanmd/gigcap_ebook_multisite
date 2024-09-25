@@ -2,7 +2,7 @@
 
 return array (
   'SUPPORT_EMAIL' => 'support@booksee365.com',
-  'SUPPORT_PHONE' => '+4444444444',
+  'SUPPORT_PHONE' => '+357 24 021763',
   'SUPPORT_HOURS' => 'Monday - Friday 08:00-24:00 (CET), Weekends 10:00 - 18:00 (CET)',
   'CONCEPT_NAME' => 'booksee365',
   'COMPANY_NAME' => 'ALPINE WAY GLOBAL LTD',

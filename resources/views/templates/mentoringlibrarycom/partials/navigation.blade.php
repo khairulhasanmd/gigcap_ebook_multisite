@@ -11,7 +11,7 @@
    
 
     <!-- Back To Top start -->
-    <button id="back-top" class="back-to-top show">
+    <button id="back-top" class="back-to-top show" style="margin-bottom: 50px;">
         <i class="bi bi-chevron-up"></i>
     </button>
 
