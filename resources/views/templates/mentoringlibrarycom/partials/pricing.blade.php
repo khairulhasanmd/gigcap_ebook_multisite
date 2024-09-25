@@ -24,12 +24,10 @@
                     @foreach ($products->all_benefits as $benefit)
                     <li>{{ $benefit }}</li>
 
-                        <li> {{ $benefit }}</li>
-
                     @endforeach
                
                 </ul>
-                <a href="#" class="btn-buy">Buy Now</a>
+                <a href="{{ $products->purchase_url }}" class="btn-buy">Buy Now</a>
             </div>
             </div><!-- End Pricing Item -->
         @endforeach

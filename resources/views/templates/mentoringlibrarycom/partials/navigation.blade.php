@@ -40,7 +40,7 @@
                     <div class="modified-buttons">
                         @guest
                             <li class="nav-item "><a href="{{ route('login') }}" class="nav-link login-btn"><i class="bi bi-person"></i> Log In</a></li>
-                            <li><a href="{{ route('welcome') }}#pricing" class="nav_btn btn_hover">Sign Up</a></li>
+                            <li><a href=" @if(Route::is('about'))  {{ route('about') }}#pricing @else  {{ route('welcome') }}#pricing @endif" class="nav_btn btn_hover">Sign Up</a></li>
                         @else
                         <li><a href="{{ route('signout') }}#pricing" class="nav_btn btn_hover">Sign Out</a></li>
 

@@ -129,14 +129,14 @@
                 <div class="col-lg-6">
                     <div class="book_wrap1">
                          <h1>Blueprint for Business Growth, A Comprehensive Guide</h1>
-            <p>Blueprint for Business Growth: This comprehensive guide presents a detailed framework for entrepreneurs and business leaders seeking to drive sustainable growth. It covers essential strategies, practical insights, and innovative methods to overcome challenges, seize opportunities, and enhance operational efficiency, all while fostering a culture of adaptability and resilience to thrive in a competitive landscape and ensure long-term success.</p>
+                         <p>Blueprint for Business Growth: This comprehensive guide presents a detailed framework for entrepreneurs and business leaders seeking to drive sustainable growth. It covers essential strategies, practical insights, and innovative methods to overcome challenges, seize opportunities, and enhance operational efficiency, all while fostering a culture of adaptability and resilience to thrive in a competitive landscape and ensure long-term success.</p>
        
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="book_wrap2">
                          <h1>Entrepreneurial Growth Hacks, Mastering the Art of Expansion</h1>
-            <p>Entrepreneurial Growth Hacks: Mastering the Art of Expansion is your go-to guide for accelerating business growth. This resource offers innovative strategies for optimizing resources, leveraging technology, and improving customer engagement. Learn to identify market opportunities, make data-driven decisions, and effectively navigate challenges to ensure your business thrives and achieves sustainable success in a competitive landscape.</p>
+                         <p>Entrepreneurial Growth Hacks: Mastering the Art of Expansion is your go-to guide for accelerating business growth. This resource offers innovative strategies for optimizing resources, leveraging technology, and improving customer engagement. Learn to identify market opportunities, make data-driven decisions, and effectively navigate challenges to ensure your business thrives and achieves sustainable success in a competitive landscape.</p>
        
                     </div>
                 </div>
@@ -183,9 +183,9 @@
                             </div>
                             <div class="news-content">
                             
-                                <h3><a href="@guest {{route('welcome')}}#pricing-section @else {{route('products')}} @endguest">Developing Emotional Inte</a></h3>
+                                <h3><a href="@guest {{route('welcome')}}#pricing @else {{route('products')}} @endguest">Developing Emotional Inte</a></h3>
                                 <p>Enhance emotional intelligence by increasing self-awareness, managing emotions, fostering empathy, and building deeper, more meaningful relationships.</p>
-                                <a href="@guest {{ route('welcome')}}#pricing-section @else {{route('products')}} @endguest" class="theme-btn-2">Read More <i class="bi bi-arrow-right"></i></a>
+                                <a href="@guest {{ route('welcome')}}#pricing @else {{route('products')}} @endguest" class="theme-btn-2">Read More <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -200,9 +200,9 @@
                         </div>
                         <div class="news-content">
                            
-                            <h3><a href="@guest {{route('welcome')}}#pricing-section @else {{route('products')}} @endguest">Refine Oneself</a></h3>
+                            <h3><a href="@guest {{route('welcome')}}#pricing @else {{route('products')}} @endguest">Refine Oneself</a></h3>
                             <p>Refine yourself by cultivating self-awareness, enhancing strengths, and embracing growth to become the best version of who you are.</p>
-                             <a href="@guest {{route('welcome')}}#pricing-section @else {{route('products')}} @endguest" class="theme-btn-2">Read More <i class="bi bi-arrow-right"></i></a>
+                             <a href="@guest {{route('welcome')}}#pricing @else {{route('products')}} @endguest" class="theme-btn-2">Read More <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -214,9 +214,9 @@
                            
                         </div>
                         <div class="news-content">
-                            <h3><a href="@guest {{route('welcome')}}#pricing-section @else {{route('products')}} @endguest">Appease Your Anger</a></h3>
+                            <h3><a href="@guest {{route('welcome')}}#pricing @else {{route('products')}} @endguest">Appease Your Anger</a></h3>
                             <p>Calm your anger by practicing patience, understanding its roots, and channeling emotions into constructive and peaceful actions.</p>
-                             <a href="@guest {{route('welcome')}}#pricing-section @else {{route('products')}} @endguest" class="theme-btn-2">Read More <i class="bi bi-arrow-right"></i></a>
+                             <a href="@guest {{route('welcome')}}#pricing @else {{route('products')}} @endguest" class="theme-btn-2">Read More <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -228,9 +228,9 @@
                             
                         </div>
                         <div class="news-content">
-                            <h3><a href="@guest {{route('welcome')}}#pricing-section @else {{route('products')}} @endguest">Advance Mental Wellness</a></h3>
+                            <h3><a href="@guest {{route('welcome')}}#pricing @else {{route('products')}} @endguest">Advance Mental Wellness</a></h3>
                             <p>Elevate your mental wellness through mindfulness, self-care, and positive habits that nurture emotional balance and inner peace.</p>
-                            <a href="@guest {{route('welcome')}}#pricing-section @else {{route('products')}} @endguest" class="theme-btn-2">Read More <i class="bi bi-arrow-right"></i></a>
+                            <a href="@guest {{route('welcome')}}#pricing @else {{route('products')}} @endguest" class="theme-btn-2">Read More <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
