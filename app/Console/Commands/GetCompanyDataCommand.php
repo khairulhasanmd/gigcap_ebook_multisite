@@ -1,16 +1,10 @@
 <?php
 
 namespace App\Console\Commands;
-
-use App\Http\Controllers\Auth\LoginController;
-use App\Models\PropelConversions;
 use App\Services\CmpApi;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Artisan;
-use Illuminate\Support\Facades\Config;
-use MetricaloClientSdkCrm\CrmApi;
 use App\Models\Concept;
 
 

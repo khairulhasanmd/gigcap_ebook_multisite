@@ -2,15 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\CodeSchool;
 use App\Models\Admin\SubTopic;
 use App\Models\Admin\UserPerformance;
-use Barryvdh\Snappy\Facades\SnappyPdf as PDF;
 use App\Mail\ForgotPasswordMail;
-use App\Resume;
 use App\User;
 use App\UserManager;
-use Carbon\Carbon;
 use App\Services\CmpApi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;

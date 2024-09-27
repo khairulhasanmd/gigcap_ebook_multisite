@@ -1354,7 +1354,7 @@ a{
 
   .alter_nav li a {
     font-size: 15px;
-    display: none;
+    /* display: none; */
   }
 
   .alter_nav li a.btn_hover {
