@@ -30,11 +30,11 @@
 	                            	@endforeach
                                     </div>
                                     <div class="price-btn">
-                                    @if ($products->pricing_plan->subscription_interval_days == 14)
+                                   {{-- @if ($products->pricing_plan->subscription_interval_days == 14)
                                                     <a href="{{ $products->purchase_url }}" style="pointer-events: none; cursor: default;" class="text-center">Unavailable</a>
-                                    @else
+                                    @else --}}
                                         <a href="{{ $products->purchase_url }}" class="text-center">Get Started</a>
-                                    @endif 
+                                  {{--  @endif --}}
                                     </div>
                                 </div>
                             </div>
