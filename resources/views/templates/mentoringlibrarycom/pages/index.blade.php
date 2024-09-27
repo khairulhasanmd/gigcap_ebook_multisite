@@ -45,7 +45,7 @@
                             <h2>Key insights and strategies for today’s successful modern entrepreneur.</h2>
                             <div class="form-clt wow fadeInUp" data-wow-delay=".9s" style="visibility: visible; animation-delay: 0.9s; animation-name: fadeInUp;">
                                 <button type="submit" class="theme-btn mt-5">
-                                    <a style="color: #fff" href="@guest {{ route('welcome')}} @else {{route('products')}} @endguest">Get Now </a><i class="bi bi-arrow-right"></i>
+                                    <a style="color: #fff" href="@guest #pricing @else {{ route('products') }} @endguest">Get Now </a><i class="bi bi-arrow-right"></i>
                                 </button>
                             </div>
                         </div>

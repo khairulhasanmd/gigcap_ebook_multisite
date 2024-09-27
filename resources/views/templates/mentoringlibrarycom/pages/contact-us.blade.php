@@ -9,10 +9,10 @@
 
 <div class="breadcrumb-wrapper">
     <div class="book1">
-        <img src="img/book3.png" alt="book">
+        <img src="{{ asset ('mentoringlibrarycom/') }}/img/book3.png" alt="book">
     </div>
     <div class="book2">
-        <img src="img/book4.png" alt="book">
+        <img src="{{ asset ('mentoringlibrarycom/') }}/img/book4.png" alt="book">
     </div>
     <div class="container">
         <div class="page-heading">

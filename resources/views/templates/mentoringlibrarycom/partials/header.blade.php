@@ -23,9 +23,7 @@
                     <div class="our-menu h-100 w-100">
                         <nav>
                             <ul class="toggle-item list-unstyled pt-1">
-                                    <li><a class="ipp {{Route::current()->getName() == 'products' ? 'active' : ''}}" href="@guest {{ route('welcome') }} @else
-                                        {{ route('products') }}
-                                        @endguest"> <i class="fas fa-home"></i> <span>Home</span></a></li>
+                                    <li><a class="ipp {{Route::current()->getName() == 'products' ? 'active' : ''}}" href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest"> <i class="fas fa-home"></i> <span>Home</span></a></li>
                                     <li><a class="ipp {{Route::current()->getName() == 'profile' ? 'active' : ''}}" href="{{ route('profile') }}">
                                     <i class="fas fa-compass"></i></i> <span>Profile</span></a> </li>
                                     <li><a class="ipp {{Route::current()->getName() == 'cancelMembership' ? 'active' : ''}}" href="{{ route('cancelMembership') }}"> <i class="fas fa-compass"></i></i> <span>Cancel Membership</span></a> </li>
