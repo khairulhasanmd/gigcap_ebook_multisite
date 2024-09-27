@@ -21,7 +21,7 @@
 ">
     <nav class="navbar navbar-expand-lg menu_one">
         <div class="container-fluid">
-            <a class="navbar-brand sticky_logo" href="index.html">
+            <a class="navbar-brand sticky_logo" href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">
                 <img src="{{ asset ('mentoringlibrarycom/') }}/img/logo.png" alt="logo">
                 
             </a>

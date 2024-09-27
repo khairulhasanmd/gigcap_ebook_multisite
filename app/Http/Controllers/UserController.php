@@ -3,25 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Models\CodeSchool;
-use App\Models\Resume;
-use App\Models\User;
-use App\Models\UserManager;
-use Carbon\Models\Carbon;
+
 use App\Services\CmpApi;
 use App\Services\ProductEbook;
 use App\Models\Admin\Product;
 use App\Models\Admin\Tag;
 use App\Models\Admin\ProductTag;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Cookie;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Redirect;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Concept;
 
