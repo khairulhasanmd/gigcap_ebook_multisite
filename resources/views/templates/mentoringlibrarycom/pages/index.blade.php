@@ -54,7 +54,7 @@
                 </div>
                 <div class="col-12 col-xl-4 col-lg-6">
                     <div class="girl-image">
-                        <img class=" float-bob-x img-fluid b-0" src="{{ asset ('mentoringlibrarycom/') }}/img/hero_girl.png"  alt="img">
+                        <img class=" float-bob-x img-fluid b-0" src="{{ asset ('mentoringlibrarycom/') }}/img/hero_girl.png"  alt="img" style="bottom: -116px;">
                     </div>
                 </div>
             </div>
