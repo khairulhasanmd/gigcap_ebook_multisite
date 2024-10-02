@@ -23,8 +23,8 @@
     }
 
     .blur-img {
-        filter: blur(8px);
-        -webkit-filter: blur(8px);
+        filter: blur(8px) !important;
+        -webkit-filter: blur(8px) !important;
     }
 
 </style>
