@@ -61,36 +61,36 @@
                         <!-- My Profile Tab Content -->
                         <div class="tab-pane fade show active" id="myprofile" role="tabpanel" aria-labelledby="myprofile-tab">
                             <div class="profile-section">
-                                <small class="sub-number"><b>Subscription number:</b> SUBLNUYUA6MZUHJARBRQHN5QWMWE</small>
+                                <small class="sub-number"><b>Subscription number:</b> {{$subscription->data->id}}</small>
                                 <div class="row pt-3">
                                     <div class="col-md-6">
-                                        <form action="https://learncode.com/update-profile" method="post" id="edit-form">
-                                            <input type="hidden" name="_token" value="pEmeSj9nesW8OxmtmsXPjq9grsqp7etBk1edBPRl">
+                                        <form action="{{ route( 'update-profile' )}}" method="post" >
+                                            {{ csrf_field() }}                                            
                                             <div class="mb-3">
                                                 <label for="name" class="form-label">First name</label>
-                                                <input type="text" class="form-control" id="name" name="first_name" placeholder="First Name" value="John" required>
+                                                <input type="text" class="form-control" id="name" name="first_name" placeholder="First Name" value="{{ $user->data->first_name }}" required>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="lastName" class="form-label">Last name</label>
-                                                <input type="text" class="form-control" id="lastName" name="last_name" placeholder="Last Name" value="Doe" required>
+                                                <input type="text" class="form-control" id="lastName" name="last_name" placeholder="Last Name" value="{{ $user->data->last_name }}" required>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="address" class="form-label">Address</label>
-                                                <input type="text" class="form-control" id="address" name="address" placeholder="Address" value="Bakerstreet 455064" required>
+                                                <input type="text" class="form-control" id="address" name="address" placeholder="Address" value="{{ $user->data->address }}" required>
                                             </div>
                                             <div class="row mb-3">
                                                 <div class="col-sm-8">
                                                     <label for="city" class="form-label">City</label>
-                                                    <input type="text" class="form-control" id="city" name="city" placeholder="City" value="London" required>
+                                                    <input type="text" class="form-control" id="city" name="city" placeholder="City" value="{{ $user->data->city }}" required>
                                                 </div>
                                                 <div class="col-sm-4">
                                                     <label for="postcode" class="form-label">Postcode</label>
-                                                    <input type="text" class="form-control" id="postcode" name="postcode" placeholder="Postcode" value="34567" required>
+                                                    <input type="text" class="form-control" id="postcode" name="postcode" placeholder="Postcode" value="{{ $user->data->postcode }}" required>
                                                 </div>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="phoneNumber" class="form-label">Phone number</label>
-                                                <input type="text" class="form-control" id="phoneNumber" name="phone" placeholder="Phone number" value="294715398" required>
+                                                <input type="text" class="form-control" id="phoneNumber" name="phone" placeholder="Phone number" value="{{ $user->data->phone }}" required>
                                             </div>
                                             <div class="d-flex justify-content-start">
                                                 <a href="{{ route('changePassword') }}" class="theme-btn mt-4">Change Password</a>
@@ -102,25 +102,25 @@
                                         <form>
                                             <div class="mb-3">
                                                 <label for="membershipName" class="form-label">Name</label>
-                                                <input type="text" class="form-control" id="membershipName" value="Gold Membership" disabled>
+                                                <input type="text" class="form-control" id="membershipName" value="{{$subscription->data->name}}" disabled>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="membershipType" class="form-label">Type</label>
-                                                <input type="text" class="form-control" id="membershipType" value="trial" disabled>
+                                                <input type="text" class="form-control" id="membershipType" value="{{$subscription->data->type}}" disabled>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="status" class="form-label">Status</label>
-                                                <input type="text" class="form-control" id="status" value="active" disabled>
+                                                <input type="text" class="form-control" id="status" value="{{$subscription->data->status}}" disabled>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="price" class="form-label">Price</label>
-                                                <input type="text" class="form-control" id="price" value="62.00 GBP" disabled>
+                                                <input type="text" class="form-control" id="price" value="{{$subscription->data->price}}" disabled>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="interval" class="form-label">Interval</label>
-                                                <input type="text" class="form-control" id="interval" value="30 days" disabled>
+                                                <input type="text" class="form-control" id="interval" value="{{$subscription->data->interval}}" disabled>
                                             </div>
-                                            <a href="/cancel-subscription" class="theme-btn bg-danger text-white mt-4 text-end">Cancel Subscription</a>
+                                            <a href="{{ route('cancelMembership') }}" class="theme-btn bg-danger text-white mt-4 text-end">Cancel Subscription</a>
                                         </form>
                                     </div>
                                 </div>

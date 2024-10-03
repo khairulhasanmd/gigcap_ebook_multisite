@@ -115,7 +115,9 @@ class UserController extends Controller
                                     <div class="mix-content d-flex justify-content-center align-items-start">
                                         <div class="theme-info ps-2">
                                             <h4 style="margin-top:9px;" data-toggle="tooltip" data-placement="bottom" title="'.$product->product_name.'">'.substr($product->product_name, 0, 25).'</h4>
-                                            <div style="display:none;" class="download-button"> <a href="products/'.$product->id.'"><i class="fas fa-download"></i><span>Download</span></a></div>
+                                            <div style="display:none; padding-bottom:20px;" class="download-button text-center"> <a href="products/'.$product->id.'"><i class="fas fa-download"></i><span>Download</span></a></div>
+
+
                                         </div>
                                     </div>
                                 </div>
