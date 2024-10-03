@@ -76,16 +76,16 @@
 							</div>
 							<ul class="list-area text-end text-white">
 								<li>
-									<i class="bi bi-geo-alt me-1"></i> Location: Sotiri Tsangari, 2 MELANDRINA 2, BLOCK D, Flat/Office 101 Agioi omologites, Nicosia 1095, Cyprus.
+									<i class="bi bi-geo-alt me-1"></i> Location: {{ config('mentoringlibrarycom.COMPANY_ADDRESS') }}
 								</li>
 								<li>
-									<i class="bi bi-clock me-1"></i> Opening Hours: Monday - Friday 00:00-24:00 (CET), Weekends 9:00 - 17:00 (CET)
+									<i class="bi bi-clock me-1"></i> Opening Hours: {{ config('mentoringlibrarycom.SUPPORT_HOURS') }}
 								</li>
 								<li>
-									<i class="bi bi-envelope me-1"></i> Mail Us: <a href="mailto:info@mentoringlibrary.com"> info@mentoringlibrary.com</a>
+									<i class="bi bi-envelope me-1"></i> Mail Us: <a href="mailto:{{ config('mentoringlibrarycom.SUPPORT_EMAIL') }}"> {{ config('mentoringlibrarycom.SUPPORT_EMAIL') }}</a>
 								</li>
 								<li>
-									<i class="bi bi-telephone me-1"></i> Call Us: <a href="tel:+012 345 6789">+012 345 6789</a> 
+									<i class="bi bi-telephone me-1"></i> Call Us: <a href="tel:{{ config('mentoringlibrarycom.SUPPORT_PHONE') }}">{{ config('mentoringlibrarycom.SUPPORT_PHONE') }}</a> 
 								</li>                              
 							</ul>
 						</div>
