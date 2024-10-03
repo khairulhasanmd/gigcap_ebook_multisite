@@ -1,5 +1,5 @@
            <!-- Price area start -->
-           <section class="price__area pt-130 pb-140">
+           <section class="price__area pt-130 pb-140 pricing-section" id="pricing-section">
             <div class="container">
               <div class="row">
                 <div class="col-xxl-6 col-xl-6 col-lg-6">
