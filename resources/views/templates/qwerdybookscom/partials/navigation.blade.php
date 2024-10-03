@@ -1,3 +1,8 @@
+<style>
+  .offcanvas__menu-wrapper.mean-container .mean-nav ul li a{
+    font-size: 16px !important;
+  }
+</style>
 
 <body class="dark">
 
@@ -98,18 +103,26 @@
       <div class="offcanvas__body">
         <div class="offcanvas__left">
           <div class="offcanvas__logo">
-            <a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest"><img src="{{ asset ('qwerdybookscom/') }}/assets/imgs/logo/site-logo-white-2.png" alt="Offcanvas Logo"></a>
+            <a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest"><img src="{{ asset ('qwerdybookscom/') }}/assets/imgs/logo/site-logo-white-2.png" alt="Offcanvas Logo" style="width: 80px"></a>
           </div>
         </div>
         <div class="offcanvas__mid">
           <div class="offcanvas__menu-wrapper">
             <nav class="offcanvas__menu">
               <ul class="menu-anim">
+                @guest
                 <li><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">home</a></li>
                 <li><a href="{{ route('about') }}">about</a></li>
                 <li><a href="{{ route('contact') }}">contact</a></li>
                 <li><a href="{{ route('login') }}">Log In</a></li>
-                <li><a href="#">Sign Up</a></li>
+                <li><a  href="@if(Route::is('about'))  {{ route('about') }}#pricing-section @else  {{ route('welcome') }}#pricing-section @endif" onclick="handleSignUpClick()">Sign Up</a></li>
+            @else
+                <li><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">home</a></li>
+                <li><a href="@guest {{ route('welcome') }} @else {{ route('profile') }} @endguest">Profile</a></li>
+                <li><a href="{{ route('about') }}">about</a></li>
+                <li><a href="{{ route('contact') }}">contact</a></li>
+                <li><a href="{{ route('logout') }}">Log Out</a></li>
+            @endguest
               </ul>
             </nav>
           </div>

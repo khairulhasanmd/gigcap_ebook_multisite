@@ -1,93 +1,56 @@
-@extends('templates.qwerdybookscom.welcome.main')
-
-@section('styles-files')
-    
-@endsection
+@extends('templates.qwerdybookscom.layouts.app')
 
 @section('content')
-
-  <!-- Start breadcrumb area -->
-  <div class="breadcrumb-wrapper">
-    <div class="book1">
-        <img src="{{ asset ('qwerdybookscom/') }}/img/book3.png" alt="book">
-    </div>
-    <div class="book2">
-        <img src="{{ asset ('qwerdybookscom/') }}/img/book4.png" alt="book">
-    </div>
-    <div class="container">
-        <div class="page-heading">
-            <h1>Cancel Subscription</h1>
-            <div class="page-header">
-                <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-                    <li>
-                        <a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <i class="bi bi-chevron-right"></i>
-                    </li>
-                    <li>
-                        Cancel Subscription
-                    </li>
-                </ul>
-            </div>
+<div id="smooth-wrapper">
+  <div id="smooth-content">
+<section class="contact__area-6 margin-top-100">
+  <div class="container g-0 line pt-150 pb-110">
+    <span class="line-3"></span>
+      {{-- <h1 class="title-head-1">Password Reset</h1> --}}
+    <div class="row contact__btm">
+      <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5">
+        <div class="contact__info">
+          <h1 class="sub-title-anim-top animation__word_come text-white">Find Your <br>Membership</h1>
         </div>
-    </div>
-</div>
-<!-- End breadcrumb area -->
-
-
-
-
-<section class="login-page ">
-    <div class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 order-2 px-5 my-auto">
-                <div class="login-page__left">
-                    {{-- <h1>Welcome back!</h1> --}}
-                    {{-- <h3 class="login-page__title">Cancel Subscription</h3> --}}
-                    <div class="login-page__form-box">
-                        <form method="POST" action="{{ route('unsubscribeMembership') }}" class="row conact-form">
-                            @csrf                          
-                            <div class="mb-3">
-                              <label for="email" class="form-label">Email*</label>
-                              <input type="email" class="form-control" id="email" name="email" placeholder="Email*"autofocus required>
-                              @if ($errors->has('email'))
-									<span class="invalid-feedback" role="alert">
-										<strong>{{ $errors->first('email') }}</strong>
-									</span>
-								@endif
-                            </div>
-                          
-                            <div class="mb-3">
-                              <label for="password" class="form-label">
-                                Last 4 digits of your card
-                                </label>
-                              <input type="password" class="form-control" id="password" name="last4" placeholder="Password"  maxlength="4" required>
-                              @if ($errors->has('password'))
-									<span class="invalid-feedback" role="alert">
-										<strong>{{ $errors->first('password') }}</strong>
-									</span>
-								@endif
-                            </div>
-                          
-                  
-                          
-                            <div class="justify-content-between mt-5">
-                              <input class="theme-btn px-1 me-2" type="submit" value="Unsubscribe" >
-
-                            </div>
-                          </form>
-                          
-                    </div>
+      </div>
+      <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7">
+        <div class="contact__form">
+          <form method="post" action="{{ route('unsubscribeMembership') }}">
+            @csrf
+            <div class="row g-3">
+              <div class="col-12">
+                
+                  <input type="email" placeholder="Email" name="email" class=" "   autocomplete="off"  required >
+                  @if ($errors->has('email'))
+                  <span class="invalid-feedback" role="alert">
+                      <strong>{{ $errors->first('email') }}</strong>
+                  </span>
+              @endif
+              </div>
+            </div>
+            <div class="row g-3">
+              <div class="col-12">
+                  <input type="password" placeholder=" Last 4 digits of your card" name="last4" maxlength="4" class=" "  autocomplete="off"  required >
+              </div>
+            </div>
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="btn_wrapper">
+                  <button type="submit" class="wc-btn-pink btn-hover btn-item"><span></span> Search <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
+              </div>
+             
             </div>
-        
+          </form>
         </div>
+      </div>
     </div>
-</section>
+  </div>
 
+    </main>
+
+
+</section>
 
 @endsection
 
