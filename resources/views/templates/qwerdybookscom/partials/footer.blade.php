@@ -22,7 +22,7 @@
                 <div class="footer__item-6">
                   <h2 class="footer__item-title">Address</h2>
                   <ul class="footer__info-6">
-                    <li> {{ config('qwerdybookscom.COMPANY_ADDRESS') }}</li>
+                    <li>{{ config('qwerdybookscom.COMPANY_ADDRESS') }}, <br> {{ config('qwerdybookscom.COMPANY_CITY') }}, {{ config('qwerdybookscom.COMPANY_POSTCODE')}} {{ config('qwerdybookscom.COMPANY_COUNTRY') }} </li>
                   </ul>
                 </div>
               </div>
@@ -56,43 +56,31 @@
                   <div class="col-md-6">
                     <div class="footer__nav">
                       <ul class="footer-menu menu-anim">
-						<li>
-							<a href="{{ route('about') }}">
-								<i class="bi bi-chevron-right"></i>
-								About Us
-							</a>
-						</li>
-						
-						<li>
-							<a href="{{ route('contact') }}">
-								<i class="bi bi-chevron-right"></i>
-								Contact Us
-							</a>
-						</li>
-						<li>
-							<a href="{{ route('service', 'privacy_policy') }}">
-								<i class="bi bi-chevron-right"></i>
-								Privacy Policy
-							</a>
-						</li>
-						<li>
-							<a href="{{ route('service', 'terms_of_service') }}">
-								<i class="bi bi-chevron-right"></i>
-								Terms & Conditions
-							</a>
-						</li>
-						<li>
-							<a href="{{ route('service', 'subscription_policy') }}">
-								<i class="bi bi-chevron-right"></i>
-								Subscription Packages
-							</a>
-						</li>
-						<li>
-							<a href="{{ route('unsubscribe') }}">
-								<i class="bi bi-chevron-right"></i>
-								Cancel Subscription
-							</a>
-						</li>
+                   
+                        <li>
+                          <a href="{{ route('service', 'privacy_policy') }}">
+                            <i class="bi bi-chevron-right"></i>
+                            Privacy Policy
+                          </a>
+                        </li>
+                        <li>
+                          <a href="{{ route('service', 'terms_of_service') }}">
+                            <i class="bi bi-chevron-right"></i>
+                            Terms & Conditions
+                          </a>
+                        </li>
+                        <li>
+                          <a href="{{ route('service', 'subscription_policy') }}">
+                            <i class="bi bi-chevron-right"></i>
+                            Subscription Packages
+                          </a>
+                        </li>
+                        <li>
+                          <a href="{{ route('unsubscribe') }}">
+                            <i class="bi bi-chevron-right"></i>
+                            Cancel Subscription
+                          </a>
+                        </li>
                       </ul>
                     </div>
                   </div>
