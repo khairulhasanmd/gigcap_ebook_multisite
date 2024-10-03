@@ -4,7 +4,30 @@
 
 
  @section('styles-files')
- 	
+ <style>
+
+    .blur-txt {
+        color: transparent !important;
+        text-shadow: 0 0 8px #343a40;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+    }
+
+    .blur-txt-blue {
+        color: transparent !important;
+        text-shadow: 0 0 8px #0d6efd;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+    }
+
+    .blur-img {
+        filter: blur(8px) !important;
+        -webkit-filter: blur(8px) !important;
+    }
+
+</style>
  @endsection
 
 
@@ -177,15 +200,15 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
                         <div class="news-card-items">
                             <div class="news-image">
-                                <img src="{{ asset ('') }}images/1687404605.jpg" alt="img">
-                                <img src="{{ asset ('') }}images/1687404605.jpg" alt="img">
+                                <img class="@guest blur-img @else @endguest" src="{{ asset ('') }}images/1687404605.jpg" alt="img">
+                                <img class="@guest blur-img @else @endguest" src="{{ asset ('') }}images/1687404605.jpg" alt="img">
                             
                             </div>
                             <div class="news-content">
                             
-                                <h3><a href="@guest {{route('welcome')}}#pricing @else {{route('products')}} @endguest">Developing Emotional Inte</a></h3>
-                                <p>Enhance emotional intelligence by increasing self-awareness, managing emotions, fostering empathy, and building deeper, more meaningful relationships.</p>
-                                <a href="@guest {{ route('welcome')}}#pricing @else {{route('products')}} @endguest" class="theme-btn-2">Read More <i class="bi bi-arrow-right"></i></a>
+                                <h3><a class="@guest blur-txt-blue @else @endguest" href="@guest {{route('welcome')}}#pricing @else {{route('products')}} @endguest">Developing Emotional Inte</a></h3>
+                                <p class="@guest blur-txt @else @endguest">Enhance emotional intelligence by increasing self-awareness, managing emotions, fostering empathy, and building deeper, more meaningful relationships.</p>
+                                <a class="@guest blur-txt @else @endguest" href="@guest {{ route('welcome')}}#pricing @else {{route('products')}} @endguest" class="theme-btn-2">Read More <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -194,43 +217,43 @@
                 <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
                     <div class="news-card-items">
                         <div class="news-image">
-                            <img src="{{ asset ('') }}images/1687405019.jpg" alt="img">
-                            <img src="{{ asset ('') }}images/1687405019.jpg" alt="img">
+                            <img class="@guest blur-img @else @endguest" src="{{ asset ('') }}images/1687405019.jpg" alt="img">
+                            <img class="@guest blur-img @else @endguest" src="{{ asset ('') }}images/1687405019.jpg" alt="img">
                             
                         </div>
                         <div class="news-content">
                            
-                            <h3><a href="@guest {{route('welcome')}}#pricing @else {{route('products')}} @endguest">Refine Oneself</a></h3>
-                            <p>Refine yourself by cultivating self-awareness, enhancing strengths, and embracing growth to become the best version of who you are.</p>
-                             <a href="@guest {{route('welcome')}}#pricing @else {{route('products')}} @endguest" class="theme-btn-2">Read More <i class="bi bi-arrow-right"></i></a>
+                            <h3><a class="@guest blur-txt-blue @else @endguest" href="@guest {{route('welcome')}}#pricing @else {{route('products')}} @endguest">Refine Oneself</a></h3>
+                            <p class="@guest blur-txt @else @endguest">Refine yourself by cultivating self-awareness, enhancing strengths, and embracing growth to become the best version of who you are.</p>
+                             <a class="@guest blur-txt @else @endguest" href="@guest {{route('welcome')}}#pricing @else {{route('products')}} @endguest" class="theme-btn-2">Read More <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
                     <div class="news-card-items">
                         <div class="news-image">
-                            <img src="{{ asset ('') }}images/16874041566493be7c87aba.jpg" alt="img">
-                            <img src="{{ asset ('') }}images/16874041566493be7c87aba.jpg" alt="img">
+                            <img class="@guest blur-img @else @endguest" src="{{ asset ('') }}images/16874041566493be7c87aba.jpg" alt="img">
+                            <img class="@guest blur-img @else @endguest" src="{{ asset ('') }}images/16874041566493be7c87aba.jpg" alt="img">
                            
                         </div>
                         <div class="news-content">
-                            <h3><a href="@guest {{route('welcome')}}#pricing @else {{route('products')}} @endguest">Appease Your Anger</a></h3>
-                            <p>Calm your anger by practicing patience, understanding its roots, and channeling emotions into constructive and peaceful actions.</p>
-                             <a href="@guest {{route('welcome')}}#pricing @else {{route('products')}} @endguest" class="theme-btn-2">Read More <i class="bi bi-arrow-right"></i></a>
+                            <h3><a class="@guest blur-txt-blue @else @endguest" href="@guest {{route('welcome')}}#pricing @else {{route('products')}} @endguest">Appease Your Anger</a></h3>
+                            <p class="@guest blur-txt @else @endguest">Calm your anger by practicing patience, understanding its roots, and channeling emotions into constructive and peaceful actions.</p>
+                             <a class="@guest blur-txt @else @endguest" href="@guest {{route('welcome')}}#pricing @else {{route('products')}} @endguest" class="theme-btn-2">Read More <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
                     <div class="news-card-items">
                         <div class="news-image">
-                            <img src="{{ asset ('') }}images/1687404100.jpg" alt="img">
-                            <img src="{{ asset ('') }}images/1687404100.jpg" alt="img">
+                            <img class="@guest blur-img @else @endguest" src="{{ asset ('') }}images/1687404100.jpg" alt="img">
+                            <img class="@guest blur-img @else @endguest" src="{{ asset ('') }}images/1687404100.jpg" alt="img">
                             
                         </div>
                         <div class="news-content">
-                            <h3><a href="@guest {{route('welcome')}}#pricing @else {{route('products')}} @endguest">Advance Mental Wellness</a></h3>
-                            <p>Elevate your mental wellness through mindfulness, self-care, and positive habits that nurture emotional balance and inner peace.</p>
-                            <a href="@guest {{route('welcome')}}#pricing @else {{route('products')}} @endguest" class="theme-btn-2">Read More <i class="bi bi-arrow-right"></i></a>
+                            <h3><a class="@guest blur-txt-blue @else @endguest" href="@guest {{route('welcome')}}#pricing @else {{route('products')}} @endguest">Advance Mental Wellness</a></h3>
+                            <p class="@guest blur-txt @else @endguest">Elevate your mental wellness through mindfulness, self-care, and positive habits that nurture emotional balance and inner peace.</p>
+                            <a class="@guest blur-txt @else @endguest" href="@guest {{route('welcome')}}#pricing @else {{route('products')}} @endguest" class="theme-btn-2">Read More <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
