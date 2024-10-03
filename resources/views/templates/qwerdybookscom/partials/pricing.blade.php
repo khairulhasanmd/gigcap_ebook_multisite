@@ -10,7 +10,7 @@
                 </div>
               </div>
 
-              <div class="col-xxl-6 col-xl-6 col-lg-6  col-sm-12">
+              <div class="col-xxl-6 col-xl-6 col-lg-6 col-sm-12 col-12">
 
                 @foreach($prices as $products)
                   <div class="price__table">
@@ -27,7 +27,7 @@
                             {{ $products->pricing_plan->price }} {{ $products->pricing_plan->currency }}</p>
                         </div>
                       </div>
-                      <div class="col-xxl-6 col-xl-6 col-lg-6  col-sm-12">
+                      <div class="col-6">
                         <div class="price__amount text-white ">
                           @if( $products->pricing_plan->subscription_interval_days > 14)
                           <h4 class="best-value">Best Value</h4>
