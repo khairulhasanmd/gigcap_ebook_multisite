@@ -65,7 +65,7 @@
                                     </div>
                                     <div class="c-des ps-2">
                                         <h5>Office Hours</h5>
-                                        <p>Monday - Friday 08-24, Weekends 10-18</p>
+                                        <p>{{ config('api.SUPPORT_HOURS') }}</p>
                                     </div>
                                 </div>
                             </div>
