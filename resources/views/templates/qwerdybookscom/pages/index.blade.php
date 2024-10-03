@@ -143,7 +143,7 @@
                     <p>Reading provides more than just relaxation and knowledge; it significantly influences our cognitive abilities in numerous ways. For instance, regular reading can enhance your communication skills and improve memory retention. Engaging with various narratives and perspectives stimulates creativity and strengthens your recall abilities. By immersing yourself in diverse literary worlds, you not only find entertainment but also challenge and refine your mental faculties.</p>
 
                     <div class="cursor-btn btn_wrapper">
-                      <a class="btn-item wc-btn-primary btn-hover" href="about.html"><span></span> More About <i
+                      <a class="btn-item wc-btn-primary btn-hover" href="@guest #pricing-section @else {{ route('products') }} @endguest"><span></span> More About <i
                           class="fa-solid fa-arrow-right"></i></a>
 
                     </div>
