@@ -2,6 +2,17 @@
   .offcanvas__menu-wrapper.mean-container .mean-nav ul li a{
     font-size: 16px !important;
   }
+  .offcanvas__mid{
+    margin-top: 120px;
+    margin-left: 30px;
+  }
+  .offcanvas__menu >ul >li>a{
+    font-size: 18px;
+    color: #fff !important;
+    text-transform: capitalize !important;
+    padding-top: 10px;
+
+  }
 </style>
 
 <body class="dark">
@@ -106,11 +117,11 @@
             <a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest"><img src="{{ asset ('qwerdybookscom/') }}/assets/imgs/logo/site-logo-white-2.png" alt="Offcanvas Logo" style="width: 80px"></a>
           </div>
         </div>
-        <div class="offcanvas__mid">
+        <div class="offcanvas__mid" >
           <div class="offcanvas__menu-wrapper">
             <nav class="offcanvas__menu">
               <ul class="menu-anim">
-                @guest
+                 @guest
                 <li><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">home</a></li>
                 <li><a href="{{ route('about') }}">about</a></li>
                 <li><a href="{{ route('contact') }}">contact</a></li>

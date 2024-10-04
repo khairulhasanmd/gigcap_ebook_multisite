@@ -266,45 +266,8 @@
         </section>
         <!-- Service area end -->
 
-
-        <!-- Counter area start -->
-        {{-- <section class="counter__area py-5">
-          <div class="container g-0 line">
-            <span class="line-3"></span>
-
-            <div class="row">
-              <div class="col-xxl-12">
-                <div class="counter__wrapper counter_animation">
-                  <div class="counter__item counter__anim">
-                    <h2 class="counter__number">25k+</h2>
-                    <p>Books <br>Store</p>
-                    <span class="counter__border"></span>
-                  </div>
-                  <div class="counter__item counter__anim">
-                    <h2 class="counter__number">8k+</h2>
-                    <p>Happy <br>customers</p>
-                    <span class="counter__border"></span>
-                  </div>
-                  <div class="counter__item counter__anim">
-                    <h2 class="counter__number">15</h2>
-                    <p>Years <br>experiences</p>
-                    <span class="counter__border"></span>
-                  </div>
-                  <div class="counter__item counter__anim">
-                    <h2 class="counter__number">98</h2>
-                    <p>Awards <br>achievement</p>
-                    <span class="counter__border"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> --}}
-        <!-- Counter area end -->
-
-
         <!-- Portfolio area start -->
-        <section class="portfolio__area pb-140">
+        {{-- <section class="portfolio__area pb-140">
           <div class="container">
             <div class="row top_row">
 
@@ -366,7 +329,7 @@
               </div>
             </div>
           </div>
-        </section>
+        </section> --}}
         <!-- Portfolio area end -->
 
 

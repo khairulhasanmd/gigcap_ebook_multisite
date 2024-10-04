@@ -15,7 +15,7 @@
                 @foreach($prices as $products)
 
                     <div class="price__table">
-                      <div class="price__item animation_from_bottom">
+                      <div class="price__item ">
                         <div class="price__icon"><span><i class="fa-solid fa-check"></i></span></div>
                         <div class="price__info">
                           <h2 class="price__type">{{ strtoupper($products->external_product_id) }}</h2>
@@ -29,6 +29,7 @@
                           @endif                          
                           <p>{{ $products->pricing_plan->currency }}  {{ $products->pricing_plan->subscription_price }}</p>
                         </div>
+                        
                       </div>
     
                       <div class="price__item animation_from_top">
