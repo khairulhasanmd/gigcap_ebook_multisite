@@ -22,7 +22,7 @@
                 <div class="footer__item-6">
                   <h2 class="footer__item-title">Address</h2>
                   <ul class="footer__info-6">
-                    <li>{{ config('qwerdybookscom.COMPANY_ADDRESS') }}, <br> {{ config('qwerdybookscom.COMPANY_CITY') }}, {{ config('qwerdybookscom.COMPANY_POSTCODE')}} {{ config('qwerdybookscom.COMPANY_COUNTRY') }} </li>
+                    <li>{{ config('qwerdybookscom.COMPANY_ADDRESS') }}, <br>  {{ config('qwerdybookscom.COMPANY_POSTCODE')}},{{ config('qwerdybookscom.COMPANY_CITY') }}, {{ config('qwerdybookscom.COMPANY_COUNTRY') }} </li>
                   </ul>
                 </div>
               </div>
