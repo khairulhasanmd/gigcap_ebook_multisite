@@ -139,7 +139,7 @@
           </div>
         </div>
         <div class="offcanvas__close">
-          <button type="button" id="close_offcanvass"><a href="{{url('/')}}"> <i class="fa-solid fa-xmark"></i></a></button>
+          <button type="button" id="close_offcanvass"><a href="{{url('/')}}"> <i class="fa-solid fa-xmark text-white"></i></a></button>
         </div>
       </div>
     </div>
