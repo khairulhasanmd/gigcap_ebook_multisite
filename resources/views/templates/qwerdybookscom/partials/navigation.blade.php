@@ -110,7 +110,7 @@
   
   
     <!-- Offcanvas area start -->
-    <div class="offcanvas__area">
+    <div class="offcanvas__area offcanvas__areas">
       <div class="offcanvas__body">
         <div class="offcanvas__left">
           <div class="offcanvas__logo">
@@ -126,7 +126,7 @@
                 <li><a href="{{ route('about') }}">about</a></li>
                 <li><a href="{{ route('contact') }}">contact</a></li>
                 <li><a href="{{ route('login') }}">Log In</a></li>
-                <li><a  href="@if(Route::is('about'))  {{ route('about') }}#pricing-section @else #pricing-section @endif"  id="close_offcanvass">Sign Up</a></li>
+                <li><a  href="@if(Route::is('about'))  {{ route('about') }}#pricing-section @else #pricing-section @endif"  id="close_offcanvas">Sign Up</a></li>
             @else
                 <li><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">home</a></li>
                 <li><a href="@guest {{ route('welcome') }} @else {{ route('profile') }} @endguest">Profile</a></li>
@@ -139,7 +139,7 @@
           </div>
         </div>
         <div class="offcanvas__close">
-          <button type="button" id="close_offcanvas"><i class="fa-solid fa-xmark"></i></button>
+          <button type="button" id="close_offcanvass"><i class="fa-solid fa-xmark"></i></button>
         </div>
       </div>
     </div>
