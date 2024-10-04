@@ -272,6 +272,10 @@
     $('.offcanvas__area').css('opacity', '0');
     $('.offcanvas__area').css('visibility', 'hidden');
   });
+  $("#close_offcanvass").click(function () {
+    $('.offcanvas__area').css('opacity', '0');
+    $('.offcanvas__area').css('visibility', 'hidden');
+  });
   /////////////////////////////////////////////////////
 
 
