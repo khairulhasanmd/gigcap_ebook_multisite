@@ -48,7 +48,7 @@
 <script src="{{asset('qwerdybookscom/') }}/assets/js/gsap.min.js"></script>
 <script src="{{asset('qwerdybookscom/') }}/assets/js/ScrollTrigger.min.js"></script>
 <script src="{{asset('qwerdybookscom/') }}/assets/js/ScrollToPlugin.min.js"></script>
-<script src="{{asset('qwerdybookscom/') }}/assets/js/ScrollSmoother.min.js"></script>
+{{-- <script src="{{asset('qwerdybookscom/') }}/assets/js/ScrollSmoother.min.js"></script> --}}
 <script src="{{asset('qwerdybookscom/') }}/assets/js/SplitText.min.js"></script>
 <script src="{{asset('qwerdybookscom/') }}/assets/js/chroma.min.js"></script>
 <script src="{{asset('qwerdybookscom/') }}/assets/js/mixitup.min.js"></script>
