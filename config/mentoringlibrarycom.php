@@ -2,7 +2,7 @@
 
 return array (
   'SUPPORT_EMAIL' => 'support@mentoringlibrary.com',
-  'SUPPORT_PHONE' => '+0123456789',
+  'SUPPORT_PHONE' => '+44 800 069 8742',
   'SUPPORT_HOURS' => 'Monday - Friday 08:00-24:00 (CET), Weekends 10:00 - 18:00 (CET)',
   'CONCEPT_NAME' => 'Mentoringlibrary',
   'COMPANY_NAME' => 'DALMARKO TECHNOLOGY LTD',
