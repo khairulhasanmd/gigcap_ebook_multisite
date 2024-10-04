@@ -126,7 +126,7 @@
                 <li><a href="{{ route('about') }}">about</a></li>
                 <li><a href="{{ route('contact') }}">contact</a></li>
                 <li><a href="{{ route('login') }}">Log In</a></li>
-                <li><a  href="@if(Route::is('about'))  {{ route('about') }}#pricing-section @else  {{ route('welcome') }}#pricing-section @endif">Sign Up</a></li>
+                <li><a  href="@if(Route::is('about'))  {{ route('about') }}#pricing-section @else  {{ url('/') }}/#pricing-section @endif"  id="close_offcanvas">Sign Up</a></li>
             @else
                 <li><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">home</a></li>
                 <li><a href="@guest {{ route('welcome') }} @else {{ route('profile') }} @endguest">Profile</a></li>
@@ -213,3 +213,9 @@
     </nav>
 </header>
  --}}
+ <script>
+  document.getElementById("signUpLink").addEventListener("click", function() {
+      // Hide the offcanvas area
+      document.getElementById("offcanvas__area").style.display = "none";
+  });
+  </script>
