@@ -87,5 +87,7 @@
     }
   };
 </script>
+<script src="{{ asset('js/getdata.js') }}"></script>
+
         
 </body>

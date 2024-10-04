@@ -69,3 +69,5 @@
         
 </body>
 <script src="{{asset('qwerdybookscom/') }}/assets/js/main.js"></script>
+<script src="{{ asset('js/getdata.js') }}"></script>
+
