@@ -1,4 +1,18 @@
-           <!-- Price area start -->
+<style>
+  /* @media only screen and (max-width: 767px) {
+  .bottom-price {
+    display: none !important;
+  }
+}
+  @media only screen and (min-width: 768px) {
+  .bottom-price {
+    display: none !important;
+  }
+} */
+</style>          
+          
+          
+          <!-- Price area start -->
            <section class="price__area pt-130 pb-140 pricing-section" id="pricing-section">
             <div class="container">
               <div class="row">
@@ -19,7 +33,7 @@
                         <div class="price__icon"><span><i class="fa-solid fa-check"></i></span></div>
                         <div class="price__info">
                           <h2 class="price__type">{{ strtoupper($products->external_product_id) }}</h2>
-                          <h3 class="price__title">{{ $products->pricing_plan->subscription_interval_days }} days days for</h3>
+                          <h3 class="price__title">{{ $products->pricing_plan->subscription_interval_days }} days days for <div class="main-price"> {{ $products->pricing_plan->currency }}  {{ $products->pricing_plan->subscription_price }} </div></h3>
                           <p>{{ $products->pricing_plan->subscription_trial_days }}-day trial period / 
                             {{ $products->pricing_plan->price }} {{ $products->pricing_plan->currency }}</p>
                         </div>
@@ -27,7 +41,7 @@
                           @if( $products->pricing_plan->subscription_interval_days > 14)
                             <h4 class="best-value">Best Value</h4>
                           @endif                          
-                          <p>{{ $products->pricing_plan->currency }}  {{ $products->pricing_plan->subscription_price }}</p>
+                          <p class="bottom-price pt-5 d-none">{{ $products->pricing_plan->currency }}  {{ $products->pricing_plan->subscription_price }}</p>
                         </div>
                         
                       </div>

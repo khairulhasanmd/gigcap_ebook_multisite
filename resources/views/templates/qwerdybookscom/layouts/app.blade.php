@@ -68,24 +68,6 @@
             @endif
         </script>
 
-
-<script>
-  const scrollToPricing = document.getElementById('scroll-to-pricing');
-  
-  scrollToPricing.addEventListener('click', function(event) {
-    event.preventDefault();
-    
-    // Redirect to the welcome page with the section hash
-    window.location.href = "{{ route('welcome') }}#pricing-section";
-  });
-
-  // Once the welcome page is loaded, scroll to the target section
-  window.onload = function() {
-    if (window.location.hash === "#pricing-section") {
-      gsap.to(window, {duration: 1, scrollTo: "#pricing-section"});
-    }
-  };
-</script>
 <script>
   // Define the function for handling the click event
   function handleSignUpClick(event) {
