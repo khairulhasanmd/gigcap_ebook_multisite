@@ -30,7 +30,7 @@
                 <ul>
                   <li><a href="tel:{{ config('qwerdybookscom.SUPPORT_PHONE') }}">{{ config('qwerdybookscom.SUPPORT_PHONE') }}</a></li>
                   <li><a href="mailto:{{ config('qwerdybookscom.SUPPORT_EMAIL') }}">{{ config('qwerdybookscom.SUPPORT_EMAIL') }}</a></li>
-                  <li><span>{{ config('qwerdybookscom.COMPANY_NAME') }}, {{ config('qwerdybookscom.COMPANY_ADDRESS') }}, <br> {{ config('qwerdybookscom.COMPANY_CITY') }}, {{ config('qwerdybookscom.COMPANY_POSTCODE')}} {{ config('qwerdybookscom.COMPANY_COUNTRY') }}</span></li>
+                  <li><span>{{ config('qwerdybookscom.COMPANY_NAME') }}, {{ config('qwerdybookscom.COMPANY_ADDRESS') }}, <br>{{ config('qwerdybookscom.COMPANY_POSTCODE')}}, {{ config('qwerdybookscom.COMPANY_CITY') }},  {{ config('qwerdybookscom.COMPANY_COUNTRY') }}</span></li>
                   <li><span>Business Number : {{ config('qwerdybookscom.COMPANY_BUSINESS_NUMBER') }}</span></a></li>
                   <li><span>VAT Number : {{ config('qwerdybookscom.COMPANY_VAT_NUMBER') }}</span></a></li>
 
