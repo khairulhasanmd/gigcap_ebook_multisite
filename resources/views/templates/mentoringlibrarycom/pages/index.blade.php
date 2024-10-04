@@ -95,7 +95,7 @@
                     </div>
                     <div class="content">
                         <h3>Mail Us</h3>
-                        <p><a href="mailto:support@example.com">support@example.com</a></p>
+                        <p><a href="mailto:{{ config('mentoringlibrarycom.SUPPORT_EMAIL') }}">{{ config('mentoringlibrarycom.SUPPORT_EMAIL') }}</a></p>
                     </div>
                 </div>
                 <div class="feature-box-items wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
@@ -104,7 +104,7 @@
                     </div>
                     <div class="content">
                         <h3>Call Us</h3>
-                        <p><a href="tel:+012 345 6789">+012 345 6789</a></p>
+                        <p><a href="tel:{{ config('mentoringlibrarycom.SUPPORT_PHONE') }}">{{ config('mentoringlibrarycom.SUPPORT_PHONE') }}</a></p>
                     </div>
                 </div>
                 <div class="feature-box-items wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
