@@ -49,7 +49,7 @@
                                                                 </div>
                                                                 <div class="prf-info mb-5">
                                                                     {{-- <img src="{{ asset ('qwerdybookscom/') }}/assets/imgs/user.png" alt="Fitsebook"> --}}
-                                                                    <h4>{{ $user->data->first_name }}{{ $user->data->last_name }}</h4>
+                                                                    <h4>{{ $user->data->first_name }} {{ $user->data->last_name }}</h4>
                                                                     {{-- <span><i class="fa-solid fa-pen"></i></span> --}}
                                                                     {{-- <div class="str-ico d-flex">
                                                                         <p><i class="fa-solid fa-star"></i> 4.8</p>
