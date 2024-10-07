@@ -59,7 +59,7 @@
                   @if ($pageName == 'terms_of_service')    
                   <h1 class="pt-5 mt-5">Terms & Conditions</h1>
                     @elseif ($pageName == 'privacy_policy') 
-                      <h1>Privacy Policy</h1>
+                    <h1 class="pt-5 mt-5">Privacy Policy</h1>
                     @else
                       {{-- <h1>Subscription Policy</h1> --}}
                     @endif                      
