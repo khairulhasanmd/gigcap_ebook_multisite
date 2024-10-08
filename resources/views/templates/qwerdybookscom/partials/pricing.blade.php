@@ -34,8 +34,13 @@
                         <div class="price__info">
                           <h2 class="price__type">{{ strtoupper($products->external_product_id) }}</h2>
                           <h3 class="price__title">{{ $products->pricing_plan->subscription_interval_days }} days days for <div class="main-price"> {{ $products->pricing_plan->currency }}  {{ $products->pricing_plan->subscription_price }} </div></h3>
-                          <p>{{ $products->pricing_plan->subscription_trial_days }}-day trial period / 
-                            {{ $products->pricing_plan->price }} {{ $products->pricing_plan->currency }}</p>
+                          <p>
+                            @if (app()->getLocale() === 'fr')
+                              période d'essai de {{ $products->pricing_plan->subscription_trial_days }} jours {{ $products->pricing_plan->price }} {{ $products->pricing_plan->currency }}
+                            @else
+                              {{ $products->pricing_plan->subscription_trial_days }}-day trial period / 
+                              {{ $products->pricing_plan->price }} {{ $products->pricing_plan->currency }}</p>
+                            @endif
                         </div>
                         <div class="price__amount">
                           @if( $products->pricing_plan->subscription_interval_days > 14)
