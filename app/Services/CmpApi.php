@@ -511,46 +511,24 @@ class CmpApi {
 
     public function getTranslations($data) {
 
-        $url = "https://crm.advivus.com/api/s/v3/translations.json";
-
-        // dd($url);
-
-
-
+        $url = env('TRANSLATION_API_URL')."/api/s/v3/translations.json";
         $ch = curl_init();
-
         curl_setopt($ch, CURLOPT_URL, $url);
-
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-
-            'x-api-key:'.'ODQzM2I2MTQ4NWU1NWRkZTAxN2Y1MmIxZDZlMTM2OGNhOWNkNDIyZA',
-
+            'x-api-key:'.env('TRANSLATION_API_KEY'),
             'x-is-admin: 1',
-
             'Content-Type: application/json'
-
         ));
-
-
-
         $responseData = curl_exec($ch);
-
         if(curl_errno($ch)) {
-
             return curl_error($ch);
-
         }
-
         curl_close($ch);
-
         $responseData = json_decode($responseData);
-
+        // dd($responseData);
         return $responseData;
 
     }

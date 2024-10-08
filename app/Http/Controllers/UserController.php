@@ -103,11 +103,11 @@ class UserController extends Controller
                 $articles.='
                 <div class="col-lg-3 col-md-6 col-xxl-3 mix box-item '.$productEbook->getTags($product->productTags).'">
                                 <div class="mx-box">
-                                    <div class="mix-img mb-3"><img src="images/'.$product->image.'" alt="responsive-web-design">
+                                    <div class="mix-img mb-3"><img src="' . asset('images/' . $product->image) . '" alt="responsive-web-design">
 
                                         <div class="effect d-flex justify-content-center align-items-center">
                                             <div class="preview text-center pe-2">
-                                                <a href="products/'.$product->id.'"><i class="fas fa-download"></i><span >Download</span></a>
+                                                <a href="products/'.$product->id.'"><i class="fas fa-download"></i><span >' . __('trans_clovereadercom.Download') . '</span></a>
                                             </div>
                                         </div>
 
@@ -115,7 +115,7 @@ class UserController extends Controller
                                     <div class="mix-content d-flex justify-content-center align-items-start">
                                         <div class="theme-info ps-2">
                                             <h4 style="margin-top:9px;" data-toggle="tooltip" data-placement="bottom" title="'.$product->product_name.'">'.substr($product->product_name, 0, 25).'</h4>
-                                            <div style="display:none; padding-bottom:20px;" class="download-button text-center"> <a href="products/'.$product->id.'"><i class="fas fa-download"></i><span>Download</span></a></div>
+                                            <div style="display:none; padding-bottom:20px;" class="download-button text-center"> <a href="products/'.$product->id.'"><i class="fas fa-download"></i><span>' . __('trans_clovereadercom.Download') . '</span></a></div>
 
 
                                         </div>
@@ -139,7 +139,7 @@ class UserController extends Controller
         $user = auth()->user();
         $product = Product::find($product_id);
         if(!$user || !$product || !$product->pdf_url) {
-            return redirect('/products');
+            return redirect(app()->getLocale().'/products');
         }
         $fileNameArr = explode('?', basename($product->pdf_url));
         $mediaName = $fileNameArr[0];
@@ -243,7 +243,7 @@ class UserController extends Controller
         $logged_user->plain_password = $request->password;
         $logged_user->update();
 
-        return redirect('/profile')->with('success', 'Password changed');
+        return redirect(app()->getLocale().'/profile')->with('success', 'Password changed');
     }
 
     public function cancelMembership(){
@@ -264,11 +264,11 @@ class UserController extends Controller
         $canceled_subscription = $this->cmp->cancelSubscription($logged_user->subscription_id);
         
         if(strtolower($canceled_subscription->status) == 'success'){
-            return redirect('/profile')->with('success', $canceled_subscription->data);
+            return redirect(app()->getLocale().'/profile')->with('success', $canceled_subscription->data);
         }else if(strtolower($canceled_subscription->status) == 'error'){
-            return redirect('/profile')->withErrors(['error' => $canceled_subscription->errors]);
+            return redirect(app()->getLocale().'/profile')->withErrors(['error' => $canceled_subscription->errors]);
         }else{
-            return redirect('/profile')->withErrors(['error' => 'Something went wrong. Please try later or contact our support team.']);
+            return redirect(app()->getLocale().'/profile')->withErrors(['error' => 'Something went wrong. Please try later or contact our support team.']);
         }
     }
 
