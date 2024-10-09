@@ -45,14 +45,14 @@
                     <h1 class="hero__title">Reading Best Book</h1>
                     <p class="hero__sub-title">Unlock daily access to <span>our extensive library</span>, where you can explore a diverse selection of new books. Immerse yourself in countless stories and expand your knowledge with every turn of the page!</p>
                   </div>
-                  <img src="{{ asset ('qwerdybookscom/') }}/assets/imgs/icon/arrow-down-big.png" alt="Arrow Down Icon">
+                  <img src="{{ asset ('clovereadercom/') }}/assets/imgs/icon/arrow-down-big.png" alt="Arrow Down Icon">
                  
                 </div>
               </div>
             </div>
           </div>
 
-          <img src="{{ asset ('qwerdybookscom/') }}/assets/imgs/hero/1/1-bg.png" alt="image" class="hero1_bg">
+          <img src="{{ asset ('clovereadercom/') }}/assets/imgs/hero/1/1-bg.png" alt="image" class="hero1_bg">
         </section> --}}
         <!-- Hero area end -->
 
@@ -195,7 +195,7 @@
                   </div>
                   <div class="content">
                       <h3>@lang('trans_clovereadercom.Mail Us')</h3>
-                      <p><a href="mailto:{{ config('qwerdybookscom.SUPPORT_EMAIL') }}">{{ config('qwerdybookscom.SUPPORT_EMAIL') }}</a></p>
+                      <p><a href="mailto:{{ config('clovereadercom.SUPPORT_EMAIL') }}">{{ config('clovereadercom.SUPPORT_EMAIL') }}</a></p>
                   </div>
               </div>
               <div class="feature-box-items wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
@@ -204,7 +204,7 @@
                   </div>
                   <div class="content">
                       <h3>@lang('trans_clovereadercom.Call Us')</h3>
-                      <p><a href="tel:{{ config('qwerdybookscom.SUPPORT_PHONE') }}">{{ config('qwerdybookscom.SUPPORT_PHONE') }}</a></p>
+                      <p><a href="tel:{{ config('clovereadercom.SUPPORT_PHONE') }}">{{ config('clovereadercom.SUPPORT_PHONE') }}</a></p>
                   </div>
               </div>
               <div class="feature-box-items wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
