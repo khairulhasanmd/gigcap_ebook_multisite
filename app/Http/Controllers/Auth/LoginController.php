@@ -226,8 +226,10 @@ class LoginController extends Controller
                 $existingUserEmail->subscription_id = $subscription->id;
                 $existingUserEmail->customer_id = $data->customer_id;
                 $existingUserEmail->domain = $this->currentDomain;
+
+                return redirect()->route('products');
+
             }
-            return redirect()->route('products');
 
         }
 
