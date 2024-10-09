@@ -24,6 +24,50 @@
     -webkit-filter: blur(15px);
 }
 
+.hero__content {
+  padding-top: 158px;
+}
+
+.hero__content a {
+  max-width: 316px; 
+}
+
+.hero__sub-title {
+  right: -287px;
+  top: 308px;
+}
+
+@media only screen and (max-width: 1199px) {
+  .hero__title {
+    font-size: 95px;
+  }
+
+  .hero__sub-title {
+  /* right: -182px; */
+    top: 150px;
+  }
+
+  .hero__title-wrapper {
+    max-width: 640px;
+  }
+
+}
+
+@media only screen and (max-width: 991px) {
+  .hero__title-wrapper {
+    max-width: 480px;
+  }
+
+  .hero__title {
+    font-size: 74px;
+  }
+
+  .hero__sub-title {
+    max-width: 310px;
+  }
+
+}
+
 </style>
 
 <div id="smooth-wrapper">
@@ -36,10 +80,10 @@
             <div class="row">
               <div class="col-xxl-12">
                 <div class="hero__content animation__hero_one">
-                  <a href="@guest #pricing-section @else {{ route('products') }} @endguest">Learning, Study, Knowledge, Reading Books <span><i
-                        class="fa-solid fa-arrow-right"></i></span></a>
+                  <a href="@guest #pricing-section @else {{ route('products') }} @endguest">Increase Your Intellectual Growth With Our Library!<span>
+                    <i class="fa-solid fa-arrow-right"></i></span></a>
                   <div class="hero__title-wrapper">
-                    <h1 class="hero__title">Reading Best Book</h1>
+                    <h1 class="hero__title">Reading best Book with Explore our top digital literature </h1>
                     <p class="hero__sub-title">Unlock daily access to <span>our extensive library</span>, where you can explore a diverse selection of new books. Immerse yourself in countless stories and expand your knowledge with every turn of the page!</p>
                   </div>
                   <img src="{{ asset ('qwerdybookscom/') }}/assets/imgs/icon/arrow-down-big.png" alt="Arrow Down Icon">
@@ -203,10 +247,10 @@
                       <div class="service__item animation_home1_service" data-service="1">
                         <div class="service__number"><span>01</span></div>
                         <div class="service__title-wrapper">
-                          <h4 class="service__title  @guest blur-txt @endguest">7 Best Kettlebell</br> Exercis</h4>
+                          <h4 class="service__title  @guest blur-txt @endguest">7 Best Kettlebell</br> Exercise</h4>
                         </div>
                         <div class="service__text">
-                          <p>Kettlebell Exercises for Strength and Fitness: Enhance your workout routine with these effective moves for optimal results!</p>
+                          <p>Discover the seven best kettlebell exercises to enhance strength, improve flexibility, and boost overall fitness levels effectively.</p>
                         </div>
                         <div class="service__link">
                           <p><i class="fa-solid fa-arrow-right"></i></p>
