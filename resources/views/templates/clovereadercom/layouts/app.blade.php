@@ -128,25 +128,7 @@
         @endif
 </script>
 
-<script>
-  // Define the function for handling the click event
-  function handleSignUpClick(event) {
-    event.preventDefault();  // Prevent the default behavior (navigation)
 
-    // Log or perform any other action you want on click
-    console.log('Sign Up link clicked');
-
-    // Optionally, you can redirect manually after a delay or perform additional actions
-    window.location.href = document.getElementById('scroll-to-pricing').href;
-  }
-
-  // Handle smooth scrolling once the page is loaded
-  window.onload = function() {
-    if (window.location.hash === "#pricing-section") {
-      gsap.to(window, {duration: 1, scrollTo: "#pricing-section"});
-    }
-  };
-</script>
 <script src="{{ asset('js/getdata.js') }}"></script>
 
         

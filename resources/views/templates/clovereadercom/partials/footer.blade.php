@@ -75,13 +75,13 @@
                                       <i class="bi bi-geo-alt me-1"></i> @lang('trans_clovereadercom.Location:') {{ config('clovereadercom.COMPANY_ADDRESS') }}, <br>  {{ config('clovereadercom.COMPANY_POSTCODE')}},{{ config('clovereadercom.COMPANY_CITY') }}, {{ config('clovereadercom.COMPANY_COUNTRY') }}
                                   </li>
                                   <li>
-                                      <i class="bi bi-clock me-1"></i> @lang('trans_clovereadercom.Opening Hours:') {{ config('clovereadercom.SUPPORT_HOUR') }}
+                                      <i class="bi bi-clock me-1"></i> @lang('trans_clovereadercom.Opening Hours:') {{ config('clovereadercom.SUPPORT_HOURS') }}
                                   </li>
                                   <li>
-                                      <i class="bi bi-envelope me-1"></i> @lang('trans_clovereadercom.Mail Us:') <a href="mailto::{{ config('clovereadercom.SUPPORT_EMAIL') }}"> :{{ config('clovereadercom.SUPPORT_EMAIL') }}</a>
+                                      <i class="bi bi-envelope me-1"></i> @lang('trans_clovereadercom.Mail Us:') <a href="mailto::{{ config('clovereadercom.SUPPORT_EMAIL') }}"> {{ config('clovereadercom.SUPPORT_EMAIL') }}</a>
                                   </li>
                                   <li>
-                                      <i class="bi bi-telephone me-1"></i> @lang('trans_clovereadercom.Call Us:') <a href="tel::{{ config('clovereadercom.SUPPORT_PHONE') }}">:{{ config('clovereadercom.SUPPORT_PHONE') }}</a>
+                                      <i class="bi bi-telephone me-1"></i> @lang('trans_clovereadercom.Call Us:') <a href="tel::{{ config('clovereadercom.SUPPORT_PHONE') }}">{{ config('clovereadercom.SUPPORT_PHONE') }}</a>
                                   </li>
                               </ul>
                           </div>

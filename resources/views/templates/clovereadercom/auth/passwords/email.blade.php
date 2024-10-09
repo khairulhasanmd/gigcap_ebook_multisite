@@ -10,20 +10,20 @@
 
           <div class="container">
               <div class="page-heading">
-                  <h1>Forgot your password ?
+                  <h1>@lang('trans_clovereadercom.Forgot your password ?')
                   </h1>
                   <div class="page-header">
                       <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp; padding-left: 0px;">
                           <li>
                               <a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">
-                                  Home
+                                  @lang('trans_clovereadercom.Home')
                               </a>
                           </li>
                           <li>
                               <i class="bi bi-chevron-right"></i>
                           </li>
                           <li>
-                            Reset Password
+                            @lang('trans_clovereadercom.Reset Password')
                           </li>
                       </ul>
                   </div>
@@ -40,21 +40,21 @@
               <div class="row justify-content-center">
                   <div class="col-lg-6 order-2 px-5 my-auto">
                       <div class="login-page__left">
-                          <h3 class="login-page__title">Reset Your Password</h3>
+                          <h3 class="login-page__title">@lang('trans_clovereadercom.Reset Your Password')</h3>
                           <div class="login-page__form-box">
                               <form action="{{ route('password.email') }}" method="post" class="login-page__form mt-5">
                                 @csrf
 
                                   <div class="mb-3">
-                                    <label for="email" class="form-label">Email*</label>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email*" autocomplete="email" autofocus required>
+                                    <label for="email" class="form-label">@lang('trans_clovereadercom.Email')*</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="@lang('trans_clovereadercom.Email')*" autocomplete="email" autofocus required>
                                   </div>
 
                               
 
                                   <div class="justify-content-between mt-5">
-                                    <input type="submit" class="nav_btn btn_hover px-1 py-2 me-2" value="Send Reset Password Link">
-                                    <a href="{{ route('login') }}" class=" px-4">Login ?</a>
+                                    <input type="submit" class="nav_btn btn_hover px-1 py-2 me-2" value="@lang('trans_clovereadercom.Send Reset Password Link')">
+                                    {{-- <a href="{{ route('login') }}" class=" pl-4">@lang('trans_clovereadercom.Login ?')</a> --}}
                                   </div>
                                 </form>
 
