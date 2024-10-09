@@ -41,6 +41,7 @@ return array (
   'Type' => 'Type',
   'days' => 'dagen',
   'Name' => 'Naam',
+  'Experience the Future of Reading at CloveReader.' => 'Ervaar de toekomst van lezen bij CloveReader.',
   'day trial period' => 'proefperiode van een dag',
   'Color Book' => 'Kleurenboek',
   'Contacts' => 'Contacten',

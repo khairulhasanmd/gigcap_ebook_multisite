@@ -41,6 +41,7 @@ return array (
   'Type' => 'Típus',
   'days' => 'napok',
   'Name' => 'Név',
+  'Experience the Future of Reading at CloveReader.' => 'Tapasztalja meg az olvasás jövőjét a CloveReaderben.',
   'day trial period' => 'egynapos próbaidőszak',
   'Color Book' => 'Színes könyv',
   'Contacts' => 'Kapcsolat',

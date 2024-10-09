@@ -41,6 +41,7 @@ return array (
   'Type' => 'Tips',
   'days' => 'dienas',
   'Name' => 'Nosaukums',
+  'Experience the Future of Reading at CloveReader.' => 'Izbaudiet lasīšanas nākotni CloveReader.',
   'day trial period' => 'dienu izmēģinājuma periods',
   'Color Book' => 'Krāsu grāmata',
   'Contacts' => 'Kontakti',

@@ -41,6 +41,7 @@ return array (
   'Type' => 'Tyyppi',
   'days' => 'päivät',
   'Name' => 'Nimi',
+  'Experience the Future of Reading at CloveReader.' => 'Koe lukemisen tulevaisuus CloveReaderissa.',
   'day trial period' => 'päivän koeaika',
   'Color Book' => 'Värikirja',
   'Contacts' => 'Yhteystiedot',

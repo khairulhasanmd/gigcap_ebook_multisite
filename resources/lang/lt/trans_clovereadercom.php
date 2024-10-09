@@ -41,6 +41,7 @@ return array (
   'Type' => 'Tipas',
   'days' => 'dienos',
   'Name' => 'Pavadinimas',
+  'Experience the Future of Reading at CloveReader.' => 'Patirkite skaitymo ateitį "CloveReader".',
   'day trial period' => 'dienos bandomasis laikotarpis',
   'Color Book' => 'Spalvų knyga',
   'Contacts' => 'Kontaktai',

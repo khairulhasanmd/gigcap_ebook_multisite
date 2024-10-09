@@ -41,6 +41,7 @@ return array (
   'Type' => 'タイプ',
   'days' => '日',
   'Name' => '名称',
+  'Experience the Future of Reading at CloveReader.' => 'CloveReaderで読書の未来を体験してください。',
   'day trial period' => '日間の試用期間',
   'Color Book' => 'カラーブック',
   'Contacts' => '連絡先',
