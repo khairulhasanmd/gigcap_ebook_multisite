@@ -83,7 +83,7 @@
                   <a href="@guest #pricing-section @else {{ route('products') }} @endguest">Increase Your Intellectual Growth With Our Library!<span>
                     <i class="fa-solid fa-arrow-right"></i></span></a>
                   <div class="hero__title-wrapper">
-                    <h1 class="hero__title">Reading best Book with Explore our top digital literature </h1>
+                    <h1 class="hero__title">Explore our top digital literature </h1>
                     <p class="hero__sub-title">Unlock daily access to <span>our extensive library</span>, where you can explore a diverse selection of new ebooks. Immerse yourself in countless stories and expand your knowledge with every turn of the page!</p>
                   </div>
                   <img src="{{ asset ('qwerdybookscom/') }}/assets/imgs/icon/arrow-down-big.png" alt="Arrow Down Icon">
@@ -250,7 +250,7 @@
                           <h4 class="service__title  @guest blur-txt @endguest">7 Best Kettlebell</br> Exercise</h4>
                         </div>
                         <div class="service__text">
-                          <p>Discover the seven best kettlebell exercises to enhance strength, improve flexibility, and boost overall fitness levels effectively.</p>
+                          <p>Discover the seven best kettlebell exercises to enhance strength, improve flexibility, and boost overall performance effectively.</p>
                         </div>
                         <div class="service__link">
                           <p><i class="fa-solid fa-arrow-right"></i></p>
