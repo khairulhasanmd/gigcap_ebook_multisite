@@ -51,7 +51,7 @@
                             <p class="text-justify">@lang('trans_clovereadercom.By equipping you with the right resources, we empower you to realize your full potential as a business leader. Discover inspiration and innovation to stay ahead in your field!')</p>
                         </div>
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12 col-12 mx-auto text-center mb-5 py-lg-5 pt-sm-0 py-md-5 d-flex">
-                            <h5 class="text-center justify-content-center d-block mx-auto"><i class="bi bi-palette-fill"></i> Color Book</h5>
+                            <h5 class="text-center justify-content-center d-block mx-auto"><i class="bi bi-palette-fill"></i> @lang('trans_clovereadercom.Color Book')</h5>
                         </div>
                         <div class="col-lg-4 col-md-4 col-xl-4 col-sm-12 col-12 mx-auto text-center mb-5 py-lg-5 py-sm-0 py-md-5 d-flex">
                             <h5 class="text-center justify-content-center d-block mx-auto"><i class="bi bi-images"></i> @lang('trans_clovereadercom.High Graphic')</h5>
