@@ -46,7 +46,7 @@
 
               <div class="row">
                 <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5">
-                  <h2 class="sec-sub-title title-anim">About Book Store</h2>
+                  <h2 class="sec-sub-title title-anim">About Ebook Store</h2>
                   <h3 class="sec-title title-anim">Our story</h3>
                 </div>
                 <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7">

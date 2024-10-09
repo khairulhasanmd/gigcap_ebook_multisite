@@ -24,6 +24,50 @@
     -webkit-filter: blur(15px);
 }
 
+.hero__content {
+  padding-top: 158px;
+}
+
+.hero__content a {
+  max-width: 316px; 
+}
+
+.hero__sub-title {
+  right: -287px;
+  top: 308px;
+}
+
+@media only screen and (max-width: 1199px) {
+  .hero__title {
+    font-size: 95px;
+  }
+
+  .hero__sub-title {
+  /* right: -182px; */
+    top: 150px;
+  }
+
+  .hero__title-wrapper {
+    max-width: 640px;
+  }
+
+}
+
+@media only screen and (max-width: 991px) {
+  .hero__title-wrapper {
+    max-width: 480px;
+  }
+
+  .hero__title {
+    font-size: 74px;
+  }
+
+  .hero__sub-title {
+    max-width: 310px;
+  }
+
+}
+
 </style>
 
 <div id="smooth-wrapper">
@@ -36,11 +80,11 @@
             <div class="row">
               <div class="col-xxl-12">
                 <div class="hero__content animation__hero_one">
-                  <a href="@guest #pricing-section @else {{ route('products') }} @endguest">Learning, Study, Knowledge, Reading Books <span><i
-                        class="fa-solid fa-arrow-right"></i></span></a>
+                  <a href="@guest #pricing-section @else {{ route('products') }} @endguest">Increase Your Intellectual Growth With Our Library!<span>
+                    <i class="fa-solid fa-arrow-right"></i></span></a>
                   <div class="hero__title-wrapper">
-                    <h1 class="hero__title">Reading Best Book</h1>
-                    <p class="hero__sub-title">Unlock daily access to <span>our extensive library</span>, where you can explore a diverse selection of new books. Immerse yourself in countless stories and expand your knowledge with every turn of the page!</p>
+                    <h1 class="hero__title">Explore our top digital literature </h1>
+                    <p class="hero__sub-title">Unlock daily access to <span>our extensive library</span>, where you can explore a diverse selection of new ebooks. Immerse yourself in countless stories and expand your knowledge with every turn of the page!</p>
                   </div>
                   <img src="{{ asset ('qwerdybookscom/') }}/assets/imgs/icon/arrow-down-big.png" alt="Arrow Down Icon">
                   {{-- <div class="experience">
@@ -71,7 +115,7 @@
                 <h2>Knowledge</h2>
               </div>
               <div class="swiper-slide roll__slide">
-                <h2>Books</h2>
+                <h2>Ebooks</h2>
               </div>
               <div class="swiper-slide roll__slide">
                 <h2>Script</h2>
@@ -104,7 +148,7 @@
                 <h2>Learn</h2>
               </div>
               <div class="swiper-slide roll__slide">
-                <h2>Exercise Book</h2>
+                <h2>Exercise Ebook</h2>
               </div>
             </div>
           </div>
@@ -163,8 +207,8 @@
             <div class="row">
               <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
                 <div class="sec-title-wrapper wrap">
-                  <h2 class="sec-sub-title title-anim">Favorite Books</h2>
-                  <h3 class="sec-title title-anim">Best Book <br>All Time</h3>
+                  <h2 class="sec-sub-title title-anim">Favorite Ebooks</h2>
+                  <h3 class="sec-title title-anim">Top Ebook Collection Of All Time</h3>
                 </div>
               </div>
               <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5">
@@ -186,7 +230,7 @@
               <div class="row">
                 <div class="col-xxl-4 col-xl-4 col-lg-0 col-md-0">
                   <div class="service__img-wrapper">
-                    <img src="{{ asset ('qwerdybookscom/') }}/assets/imgs/books/1.png" alt="Service Image" class="service__img @guest blur-img @endguest img-1 active">
+                    <img src="{{ asset ('qwerdybookscom/') }}/assets/imgs/books/Ebbok44555.png" alt="Service Image" class="service__img @guest blur-img @endguest img-1 active">
                     <img src="{{ asset ('qwerdybookscom/') }}/assets/imgs/books/book9.png" alt="Service Image" class="service__img @guest blur-img @endguest img-2 ">
                     <img src="{{ asset ('qwerdybookscom/') }}/assets/imgs/books/2.png" alt="Service Image" class="service__img @guest blur-img @endguest img-3">
                     <img src="{{ asset ('qwerdybookscom/') }}/assets/imgs/books/3.png" alt="Service Image" class="service__img @guest blur-img @endguest img-4">
@@ -203,10 +247,10 @@
                       <div class="service__item animation_home1_service" data-service="1">
                         <div class="service__number"><span>01</span></div>
                         <div class="service__title-wrapper">
-                          <h4 class="service__title  @guest blur-txt @endguest">7 Best Kettlebell</br> Exercis</h4>
+                          <h4 class="service__title  @guest blur-txt @endguest">Personal Enrichment</h4>
                         </div>
                         <div class="service__text">
-                          <p>Kettlebell Exercises for Strength and Fitness: Enhance your workout routine with these effective moves for optimal results!</p>
+                          <p>Discover practical strategies to boost self-growth, expand knowledge, enhance skills, and achieve personal fulfillment.</p>
                         </div>
                         <div class="service__link">
                           <p><i class="fa-solid fa-arrow-right"></i></p>
