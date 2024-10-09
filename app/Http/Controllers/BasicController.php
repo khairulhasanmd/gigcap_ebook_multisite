@@ -76,7 +76,10 @@ class BasicController extends GlobalController
     public function typeOfService(Request $request, $service){
 
         $result = $this->cmp->typeOfService($service , $this->locale);
-        // $this->createService($service, $result->data->html);
+        // dd($service);
+        // return redirect(app()->getLocale().'/pages/services')->with(['service' => $result, 'pageName' => $service]);
+        // return redirect('/service/'.$service)->with(['service' => $result, 'pageName' => $service]);
+
         return view($this->template.'.pages.services')->with(['service' => $result, 'pageName' => $service]);
      
     }
