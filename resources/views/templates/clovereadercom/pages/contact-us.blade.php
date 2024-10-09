@@ -1,3 +1,5 @@
+
+
 @extends('templates.clovereadercom.layouts.app')
 
 @section('content')
@@ -83,7 +85,7 @@
                 <form id="contact-form" method="post" action="{{ route('contact-us') }}" role="form">
                   @csrf
                     <div class="messages"></div>
-                    <div class="controls p-5">
+                    <div class="controls py-5">
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="row">

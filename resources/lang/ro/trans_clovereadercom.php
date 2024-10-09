@@ -41,6 +41,7 @@ return array (
   'Type' => 'Tip',
   'days' => 'zile',
   'Name' => 'Nume și prenume',
+  'Experience the Future of Reading at CloveReader.' => 'Experimentați viitorul lecturii la CloveReader.',
   'day trial period' => 'perioadă de probă de o zi',
   'Color Book' => 'Carte color',
   'Contacts' => 'Contacte',

@@ -142,16 +142,12 @@ class LoginController extends Controller
         // dd((Auth::user()->is_admin));
 
         if(Auth::user()->is_admin == 1){
-            dd('redirect to dashbord');
+            // dd('redirect to dashbord');
             return redirect()->route('admin.dashboard');
         }else{
-        $user = $this->cmp->authenticateUser(request(), $username, $password);
-        if ($user->status == 'success') {
-            return redirect()->route('products');
-        } else {
-            return redirect()->back()->withErrors(['error' => 'Email-Address And Password Are Wrong']);
 
-        }
+            return redirect()->route('products');
+        
     }
 
     }else if (Auth::attempt(['email' => $username, 'password' => $password, 'is_admin' => 1])) {
