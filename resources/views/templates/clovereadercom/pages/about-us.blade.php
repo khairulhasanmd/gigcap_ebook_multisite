@@ -12,7 +12,7 @@
             <div class="page-header">
                 <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp; padding-left: 0px;">
                     <li>
-                        <a href="index.html">
+                        <a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">
                             @lang('trans_clovereadercom.Home')
                         </a>
                     </li>
