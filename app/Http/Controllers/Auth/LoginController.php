@@ -206,7 +206,7 @@ class LoginController extends Controller
 
             $user->save();
         } else {
-            $existingUserEmail = User::where('email', $username)->where('domain', '=', $this->currentDomain)->first();
+            $existingUserEmail = User::where('email', $username)->where('domain_name', '=', $this->currentDomain)->first();
             if ($existingUserEmail) {
                 $userInfo = $this->cmp->getCustomer($data->customer_id);
                 $subData = $this->cmp->getSubscriptionDetailByCustomerId($data->customer_id);
