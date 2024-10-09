@@ -1,23 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Request;
 use Session;
-use App\Models\CodeSchool;
-use Barryvdh\Snappy\Facades\SnappyPdf as PDF;
-use App\Mail\ForgotPasswordMail;
-use App\Resume;
-use App\Models\User;
 use App\Models\Concept;
-use Carbon\Carbon;
 use App\Service\CrmApiSDK\LoginUserSDK;
 use Illuminate\Http\Request as Req;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
+use App\Services\CmpApi;
+
 
 
 class LoginController extends Controller
@@ -25,6 +15,7 @@ class LoginController extends Controller
     public function __construct()
     {   
         $domain = url()->current();
+        $this->currentDomain = parse_url($domain)['host'];
         $this->domain = parse_url($domain)['host'];
         $this->concept = Concept::where('domain_name', $this->domain)->first();
         $this->api_url = env('CRM_API_URL');
@@ -45,28 +36,59 @@ class LoginController extends Controller
         return view('templates.'.$this->concept->template.'.auth.login');
     }
 
-    public function signinVerfication(Req $request) {
-        if ($this->version == "sdk") {
-            $response = $this->sdk->loginVerfication($request);
-             if ($response['status']) {
-                if ($this->concept->concept_type == "coding") {
-                    return redirect($this->locale.'/courses');
-                } else  if ($this->concept->concept_type == "bbt") { 
-                    return redirect($this->locale.'/dashboard');
-                } else  if ($this->concept->concept_type == "gaming") { 
-                return redirect($this->locale.'/dashboard');
-                }
-            } else {
-                return Redirect::back()->withErrors(['error' => $response['error']]);
-            }
-        }
-        dd('Not working');
-    }
 
     public function signout(){
         Auth::logout();
         return redirect()->route('login');
     }
+    protected function login()
+{  
+    $username = request()->get('email');
+    $password = request()->get('password');
+    
+    // First attempt with domain_name check
+    if (Auth::attempt(['email' => $username, 'password' => $password, 'domain_name' => $this->currentDomain])) { 
+
+        // dd((Auth::user()->is_admin));
+
+        if(Auth::user()->is_admin == 1){
+            dd('redirect to dashbord');
+            return redirect()->route('admin.dashboard');
+        }else{
+        $user = $this->cmp->authenticateUser(request(), $username, $password);
+        if ($user->status == 'success') {
+            return redirect()->route('products');
+        } else {
+            return redirect()->back()->withErrors(['error' => 'Email-Address And Password Are Wrong']);
+
+        }
+    }
+
+    }else if (Auth::attempt(['email' => $username, 'password' => $password, 'is_admin' => 1])) {
+
+       
+
+    // Third attempt for other cases
+    } else if ($this->cmp->authenticateUser(request(), $username, $password)->status == 'success') {
+
+        $user = $this->cmp->authenticateUser(request(), $username, $password);
+        $this->isWebUserId($user->data, $username, $password);
+            
+        if (Auth::attempt(['email' => $username, 'password' => $password, 'domain_name' => $this->currentDomain])) {
+            return redirect()->route('products');
+        }
+
+    // Third attempt for other cases
+    } 
+     else {
+        // dd('wrong');
+        // return redirect()->intended('login')
+        //     ->withErrors('error', 'Email-Address And Password Are Wrong.');
+        return redirect()->back()->withErrors(['error' => 'Email-Address And Password Are Wrong']);
+    }
+}
+    
+        
 
     
 }

@@ -43,6 +43,8 @@ return array (
   'Type' => 'Type',
   'days' => 'days',
   'Name' => 'Name',
+  'Experience the Future of Reading at CloveReader.' => 'Experience the Future of Reading at CloveReader.',
+  'Experience the Future of Reading at CloveReader.' => 'Experience the Future of Reading at CloveReader.',
   'day trial period' => 'day trial period',
   'Color Book' => 'Color Book',
   'Contacts' => 'Contacts',
