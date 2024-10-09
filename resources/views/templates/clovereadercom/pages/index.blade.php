@@ -1,13 +1,10 @@
+@guest
+@else
+    <script>
+        window.location.href = "{{ route('products') }}";
+    </script>
+@endguest
  @extends('templates.clovereadercom.layouts.app')
- {{-- @extends('templates.01_initial.welcome.main') --}}
-
-
-{{-- 
- @section('styles-files')
- 	
- @endsection --}}
-
-
 @section('content')
 
   <style>
