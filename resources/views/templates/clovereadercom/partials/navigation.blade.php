@@ -39,7 +39,7 @@
                                     <img class="flag" src="{{asset("flags/languages/language_".LaravelLocalization::getCurrentLocale().".svg")}}" alt="flags">
                                     {{ LaravelLocalization::getCurrentLocale() }}
                                     <i class="fa-solid fa-angle-down" style="color: #fff;"></i>
-                                    <ul class="dropdown-content " style="margin-top:10px; padding: 10px; width:230px; overflow-y:scroll;overflow-x:hidden;max-height:600px;  box-shadow: 3px 5px 4px 5px #888888; ">
+                                    <ul class="dropdown-content " style="margin-top:10px; padding: 10px; width:200px; overflow-y:scroll;overflow-x:hidden;max-height:600px;  box-shadow: 3px 5px 4px 5px #888888; ">
                                         @foreach (config('laravellocalization.supportedLocales') as $lng => $lngval)
                                         <?php $localeCode = $lng   ?>
                                             <li style="padding:0px 10px 0px 10px; border-radius: 25px;">
