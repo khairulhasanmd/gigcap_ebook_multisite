@@ -152,7 +152,7 @@
                                         @foreach($orders->data as $order)
                                             <tr class="border-bm">
                                                 <td> {{$order->id}}</td>
-                                                <td> {{ config('qwerdybookscom.CONCEPT_NAME') }}</td>
+                                                <td> {{ config('clovereadercom.CONCEPT_NAME') }}</td>
                                                 <td> {{$order->type}}</td>
                                                 <td> {{$order->total}} {{$order->currency}}</td>
                                                 <td> {{$order->status}}</td>
