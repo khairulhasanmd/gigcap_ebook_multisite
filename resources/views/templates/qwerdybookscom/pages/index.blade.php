@@ -208,7 +208,7 @@
               <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
                 <div class="sec-title-wrapper wrap">
                   <h2 class="sec-sub-title title-anim">Favorite Ebooks</h2>
-                  <h3 class="sec-title title-anim">Best Ebook <br>All Time</h3>
+                  <h3 class="sec-title title-anim">Top Ebook Collection Of All Time</h3>
                 </div>
               </div>
               <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5">
@@ -230,7 +230,7 @@
               <div class="row">
                 <div class="col-xxl-4 col-xl-4 col-lg-0 col-md-0">
                   <div class="service__img-wrapper">
-                    <img src="{{ asset ('qwerdybookscom/') }}/assets/imgs/books/1.png" alt="Service Image" class="service__img @guest blur-img @endguest img-1 active">
+                    <img src="{{ asset ('qwerdybookscom/') }}/assets/imgs/books/Ebbok44555.png" alt="Service Image" class="service__img @guest blur-img @endguest img-1 active">
                     <img src="{{ asset ('qwerdybookscom/') }}/assets/imgs/books/book9.png" alt="Service Image" class="service__img @guest blur-img @endguest img-2 ">
                     <img src="{{ asset ('qwerdybookscom/') }}/assets/imgs/books/2.png" alt="Service Image" class="service__img @guest blur-img @endguest img-3">
                     <img src="{{ asset ('qwerdybookscom/') }}/assets/imgs/books/3.png" alt="Service Image" class="service__img @guest blur-img @endguest img-4">
@@ -247,10 +247,10 @@
                       <div class="service__item animation_home1_service" data-service="1">
                         <div class="service__number"><span>01</span></div>
                         <div class="service__title-wrapper">
-                          <h4 class="service__title  @guest blur-txt @endguest">7 Best Kettlebell</br> Exercise</h4>
+                          <h4 class="service__title  @guest blur-txt @endguest">Personal Enrichment</h4>
                         </div>
                         <div class="service__text">
-                          <p>Discover the seven best kettlebell exercises to enhance strength, improve flexibility, and boost overall performance effectively.</p>
+                          <p>Discover practical strategies to boost self-growth, expand knowledge, enhance skills, and achieve personal fulfillment.</p>
                         </div>
                         <div class="service__link">
                           <p><i class="fa-solid fa-arrow-right"></i></p>
