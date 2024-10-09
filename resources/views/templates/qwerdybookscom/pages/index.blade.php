@@ -208,7 +208,7 @@
               <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
                 <div class="sec-title-wrapper wrap">
                   <h2 class="sec-sub-title title-anim">Favorite Ebooks</h2>
-                  <h3 class="sec-title title-anim">Best Ebook <br>All Time</h3>
+                  <h3 class="sec-title title-anim">Top Ebook Collection Of All Time</h3>
                 </div>
               </div>
               <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5">
