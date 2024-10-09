@@ -4453,7 +4453,7 @@ span {
 }
 .breadcrumb-wrapper {
   background: url(../img/breadcrumb-1.jpg) no-repeat center center !important;
-  background-size: cover;
+  background-size: cover !important;
   position: relative;
   overflow: hidden;
   background: #E6EFF2;
