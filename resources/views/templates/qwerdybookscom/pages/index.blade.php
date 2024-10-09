@@ -84,7 +84,7 @@
                     <i class="fa-solid fa-arrow-right"></i></span></a>
                   <div class="hero__title-wrapper">
                     <h1 class="hero__title">Reading best Book with Explore our top digital literature </h1>
-                    <p class="hero__sub-title">Unlock daily access to <span>our extensive library</span>, where you can explore a diverse selection of new books. Immerse yourself in countless stories and expand your knowledge with every turn of the page!</p>
+                    <p class="hero__sub-title">Unlock daily access to <span>our extensive library</span>, where you can explore a diverse selection of new ebooks. Immerse yourself in countless stories and expand your knowledge with every turn of the page!</p>
                   </div>
                   <img src="{{ asset ('qwerdybookscom/') }}/assets/imgs/icon/arrow-down-big.png" alt="Arrow Down Icon">
                   {{-- <div class="experience">
@@ -115,7 +115,7 @@
                 <h2>Knowledge</h2>
               </div>
               <div class="swiper-slide roll__slide">
-                <h2>Books</h2>
+                <h2>Ebooks</h2>
               </div>
               <div class="swiper-slide roll__slide">
                 <h2>Script</h2>
@@ -148,7 +148,7 @@
                 <h2>Learn</h2>
               </div>
               <div class="swiper-slide roll__slide">
-                <h2>Exercise Book</h2>
+                <h2>Exercise Ebook</h2>
               </div>
             </div>
           </div>
@@ -207,8 +207,8 @@
             <div class="row">
               <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
                 <div class="sec-title-wrapper wrap">
-                  <h2 class="sec-sub-title title-anim">Favorite Books</h2>
-                  <h3 class="sec-title title-anim">Best Book <br>All Time</h3>
+                  <h2 class="sec-sub-title title-anim">Favorite Ebooks</h2>
+                  <h3 class="sec-title title-anim">Best Ebook <br>All Time</h3>
                 </div>
               </div>
               <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5">
