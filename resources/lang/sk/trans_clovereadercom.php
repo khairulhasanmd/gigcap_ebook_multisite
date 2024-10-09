@@ -39,6 +39,7 @@ return array (
   'Please enter your email' => 'Zadajte svoj e-mail',
   'Email' => 'E-mail',
   'Type' => 'Typ',
+  'Contacts' => 'Kontakty',
   'Mail Us:' => 'Pošlite nám e-mail:',
   'Login ?' => 'Prihlásenie ?',
   'Send Reset Password Link' => 'Odoslať prepojenie na obnovenie hesla',

@@ -39,6 +39,7 @@ return array (
   'Please enter your email' => 'Silakan masukkan email Anda',
   'Email' => 'Email',
   'Type' => 'Jenis',
+  'Contacts' => 'Kontak',
   'Mail Us:' => 'Kirimkan surat kepada kami:',
   'Login ?' => 'Login?',
   'Send Reset Password Link' => 'Kirim Tautan Atur Ulang Kata Sandi',

@@ -39,6 +39,7 @@ return array (
   'Please enter your email' => 'Eメールを入力してください',
   'Email' => '電子メール',
   'Type' => 'タイプ',
+  'Contacts' => '連絡先',
   'Mail Us:' => 'メールでのお問い合わせ',
   'Login ?' => 'ログインは？',
   'Send Reset Password Link' => 'パスワード再設定リンクの送信',

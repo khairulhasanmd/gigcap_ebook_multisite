@@ -68,7 +68,7 @@
                       <div class="col-xl-4 col-lg-4 col-md-12 pe-lg-5 wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
                           <div class="single-footer-widget">
                               <div class="widget-head text-end">
-                                  <h3>Contacts</h3>
+                                  <h3>@lang('trans_clovereadercom.Contacts')</h3>
                               </div>
                               <ul class="list-area text-end text-white">
                                   <li>

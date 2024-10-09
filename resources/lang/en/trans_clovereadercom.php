@@ -41,7 +41,7 @@ return array (
   'Please enter your email' => 'Please enter your email',
   'Email' => 'Email',
   'Type' => 'Type',
-  'Type' => 'Type',
+  'Contacts' => 'Contacts',
   'Mail Us:' => 'Mail Us:',
   'Login ?' => 'Login ?',
   'Send Reset Password Link' => 'Send Reset Password Link',

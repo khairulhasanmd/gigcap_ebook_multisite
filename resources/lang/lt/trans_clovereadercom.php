@@ -39,6 +39,7 @@ return array (
   'Please enter your email' => 'Įveskite savo el. pašto adresą',
   'Email' => 'El. paštas',
   'Type' => 'Tipas',
+  'Contacts' => 'Kontaktai',
   'Mail Us:' => 'Rašykite mums paštu:',
   'Login ?' => 'Prisijungti ?',
   'Send Reset Password Link' => 'Siųsti slaptažodžio atstatymo nuorodą',

@@ -39,6 +39,7 @@ return array (
   'Please enter your email' => 'Voer uw e-mailadres in',
   'Email' => 'Email',
   'Type' => 'Type',
+  'Contacts' => 'Contacten',
   'Mail Us:' => 'Mail ons:',
   'Login ?' => 'Inloggen?',
   'Send Reset Password Link' => 'Stuur wachtwoord opnieuw instellen link',
