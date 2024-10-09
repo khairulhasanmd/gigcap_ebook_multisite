@@ -1,8 +1,11 @@
+<style>
+   
+</style>
 
-    <!-- Back To Top start -->
-    <button id="back-top" class="back-to-top show" style="margin-bottom: 50px;">
+<!-- Back To Top start -->
+<button id="back-top" class="back-to-top show" style="margin-bottom: 50px;">
       <i class="bi bi-chevron-up"></i>
-  </button>
+</button>
 
  <!-- Sticky Header -->
   <header class="header navbar_fixed menu-sticky" id="header">
@@ -118,4 +121,10 @@
 .single-lang ul li ul li:hover a{
     background-color: rgba(0, 0, 0, .15);
 }
+@media (max-width: 991px) {
+    #toggle {
+        width: 100% !important;
+        padding-left: 5px !important;
+    }
+    }
 </style>
