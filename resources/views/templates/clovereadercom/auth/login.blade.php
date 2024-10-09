@@ -47,7 +47,7 @@
 
                                   <div class="mb-3">
                                     <label for="email" class="form-label">@lang('trans_clovereadercom.Email')</label>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder=">@lang('trans_clovereadercom.Email')*" autocomplete="email" autofocus required>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="@lang('trans_clovereadercom.Email')*" autocomplete="email" autofocus required>
                                   </div>
 
                                   <div class="mb-3">
