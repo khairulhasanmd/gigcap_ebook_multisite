@@ -8,7 +8,7 @@
 
     <div class="container">
         <div class="page-heading">
-            <h1>About Us</h1>
+            <h1>@lang('trans_clovereadercom.About Us')</h1>
             <div class="page-header">
                 <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp; padding-left: 0px;">
                     <li>
