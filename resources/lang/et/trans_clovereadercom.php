@@ -39,6 +39,7 @@ return array (
   'Please enter your email' => 'Palun sisestage oma e-posti aadress',
   'Email' => 'E-post',
   'Type' => 'Tüüp',
+  'Contacts' => 'Kontaktid',
   'Mail Us:' => 'Kirjutage meile:',
   'Login ?' => 'Sisene ?',
   'Send Reset Password Link' => 'Saada salasõna lähtestamise link',

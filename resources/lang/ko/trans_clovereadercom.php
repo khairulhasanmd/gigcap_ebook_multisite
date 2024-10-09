@@ -39,6 +39,7 @@ return array (
   'Please enter your email' => '이메일을 입력하세요.',
   'Email' => '이메일',
   'Type' => '유형',
+  'Contacts' => '연락처',
   'Mail Us:' => '메일 보내기:',
   'Login ?' => '로그인 ?',
   'Send Reset Password Link' => '비밀번호 재설정 링크 보내기',

@@ -39,6 +39,7 @@ return array (
   'Please enter your email' => 'Lūdzu, ievadiet savu e-pasta adresi',
   'Email' => 'E-pasts',
   'Type' => 'Tips',
+  'Contacts' => 'Kontakti',
   'Mail Us:' => 'Nosūtiet mums e-pastu:',
   'Login ?' => 'Pieteikšanās ?',
   'Send Reset Password Link' => 'Nosūtīt paroles atiestatīšanas saiti',

@@ -39,6 +39,7 @@ return array (
   'Please enter your email' => 'Vă rugăm să introduceți adresa dvs. de e-mail',
   'Email' => 'E-mail',
   'Type' => 'Tip',
+  'Contacts' => 'Contacte',
   'Mail Us:' => 'Trimiteți-ne o scrisoare:',
   'Login ?' => 'Autentificare ?',
   'Send Reset Password Link' => 'Trimiteți linkul de resetare a parolei',

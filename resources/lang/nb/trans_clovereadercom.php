@@ -39,6 +39,7 @@ return array (
   'Please enter your email' => 'Vennligst skriv inn e-postadressen din',
   'Email' => 'E-post',
   'Type' => 'Type',
+  'Contacts' => 'Kontaktpersoner',
   'Mail Us:' => 'Send oss en e-post:',
   'Login ?' => 'Logg inn?',
   'Send Reset Password Link' => 'Send lenke for tilbakestilling av passord',

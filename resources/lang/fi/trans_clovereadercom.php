@@ -39,6 +39,7 @@ return array (
   'Please enter your email' => 'Kirjoita sähköpostiosoitteesi',
   'Email' => 'Sähköposti',
   'Type' => 'Tyyppi',
+  'Contacts' => 'Yhteystiedot',
   'Mail Us:' => 'Lähetä meille sähköpostia:',
   'Login ?' => 'Login ?',
   'Send Reset Password Link' => 'Lähetä Nollaa salasana -linkki',

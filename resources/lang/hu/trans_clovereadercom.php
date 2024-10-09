@@ -39,6 +39,7 @@ return array (
   'Please enter your email' => 'Kérjük, adja meg az e-mail címét',
   'Email' => 'E-mail',
   'Type' => 'Típus',
+  'Contacts' => 'Kapcsolat',
   'Mail Us:' => 'Írjon nekünk:',
   'Login ?' => 'Bejelentkezés ?',
   'Send Reset Password Link' => 'Jelszó-visszaállítási link elküldése',

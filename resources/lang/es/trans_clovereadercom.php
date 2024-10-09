@@ -39,6 +39,7 @@ return array (
   'Please enter your email' => 'Introduzca su dirección de correo electrónico',
   'Email' => 'Correo electrónico',
   'Type' => 'Tipo',
+  'Contacts' => 'Contactos',
   'Mail Us:' => 'Envíenos un correo:',
   'Login ?' => '¿Iniciar sesión?',
   'Send Reset Password Link' => 'Enviar enlace para restablecer contraseña',

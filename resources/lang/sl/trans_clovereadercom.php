@@ -39,6 +39,7 @@ return array (
   'Please enter your email' => 'Vnesite svoj e-poštni naslov',
   'Email' => 'E-pošta',
   'Type' => 'Tip',
+  'Contacts' => 'Kontakti',
   'Mail Us:' => 'Pošljite nam pošto:',
   'Login ?' => 'Prijava ?',
   'Send Reset Password Link' => 'Pošlji povezavo za ponastavitev gesla',

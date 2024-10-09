@@ -39,6 +39,7 @@ return array (
   'Please enter your email' => 'Моля, въведете вашия имейл',
   'Email' => 'Имейл',
   'Type' => 'Тип',
+  'Contacts' => 'Контакти',
   'Mail Us:' => 'Изпратете ни поща:',
   'Login ?' => 'Вход?',
   'Send Reset Password Link' => 'Изпращане на връзка за нулиране на паролата',
