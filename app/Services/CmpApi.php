@@ -275,6 +275,62 @@ class CmpApi {
         $responseData = json_decode($responseData);
         return $responseData;
     }
+    public function updatepassword( $siteuser, $newpassword){
+        $url = $this->url."/api/s/v3/users/".$siteuser.".json";
+        // dd($data);
+        $postData = [
+            "password" => $newpassword,
+       ];
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PATCH');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postData));
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'x-api-key:'.$this->apiKey,
+            'Content-Type: application/json'
+        ));
+        $responseData = curl_exec($ch);
+
+        if(curl_errno($ch)) {
+            return curl_error($ch);
+        }
+        curl_close($ch);
+        $responseData = json_decode($responseData);
+        // dd($responseData);
+        return $responseData;
+    }
+
+    public function updatepasswords( $siteuser, $newpassword){
+
+        $url = $this->url."/api/s/v3/users/".$siteuser.".json";
+        // dd($newpassword);
+
+        $postData = [
+            "password" => $newpassword,
+       ];
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postData));
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'x-api-key:'.$this->apiKey,
+            'Content-Type: application/json'
+        ));
+        $responseData = curl_exec($ch);
+
+        if(curl_errno($ch)) {
+            return curl_error($ch);
+        }
+        curl_close($ch);
+        // $responseData = json_decode($responseData);
+        dd($responseData);
+
+        return $responseData;
+    }
+
+
     public function getNewPassword($newPassword){
         $logged_user = auth()->user();
         $logged_user->password = Hash::make($newPassword);
@@ -476,6 +532,7 @@ class CmpApi {
         $responseData = json_decode($responseData);
         return $responseData;
     }
+
 
 
     public function searchSubscription($email, $cc_last_4) {

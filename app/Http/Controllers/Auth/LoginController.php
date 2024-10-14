@@ -135,7 +135,6 @@ class LoginController extends Controller
 {  
     $username = request()->get('email');
     $password = request()->get('password');
-    
     // First attempt with domain_name check
     if (Auth::attempt(['email' => $username, 'password' => $password, 'domain_name' => $this->currentDomain])) { 
 
@@ -145,6 +144,7 @@ class LoginController extends Controller
             // dd('redirect to dashbord');
             return redirect()->route('admin.dashboard');
         }else{
+            // dd($password);
 
             return redirect()->route('products');
         
@@ -158,11 +158,14 @@ class LoginController extends Controller
     } else if ($this->cmp->authenticateUser(request(), $username, $password)->status == 'success') {
 
         $user = $this->cmp->authenticateUser(request(), $username, $password);
+        // dd($password);
         $this->isWebUserId($user->data, $username, $password);
+        // dd($this->currentDomain);
             
         if (Auth::attempt(['email' => $username, 'password' => $password, 'domain_name' => $this->currentDomain])) {
             return redirect()->route('products');
         }
+        // dd('testing');
 
     // Third attempt for other cases
     } 

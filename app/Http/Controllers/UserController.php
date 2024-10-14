@@ -236,14 +236,26 @@ class UserController extends Controller
 
     public function saveChangePassword(Request $request){
         $logged_user = auth()->user();
+        $siteuserid = $logged_user->site_user_id;
+        $newpassword = $request->password;
+        // dd($logged_user->site_user_id);
         if($request->password != $request->password_confirmation){
             return redirect()->back()->withErrors(['error' => 'New password is not repeated twice']);
         }
         $logged_user->password = Hash::make($request->password);
         $logged_user->plain_password = $request->password;
         $logged_user->update();
+        // $this->cmp->updatepassword($siteuserid,$newpassword);
+        $status = $this->cmp->updatepassword($siteuserid,$newpassword)->status;
+        // dd($status);
+        if($status == 'success'){
+            return redirect(app()->getLocale().'/profile')->with('success', 'Password changed');
 
-        return redirect(app()->getLocale().'/profile')->with('success', 'Password changed');
+        }else{
+            return redirect()->back()->withErrors(['error' => 'New password is not repeated twice']);
+
+        }
+
     }
 
     public function cancelMembership(){
