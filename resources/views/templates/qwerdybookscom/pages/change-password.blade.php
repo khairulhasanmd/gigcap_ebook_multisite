@@ -10,7 +10,7 @@
     <div class="row contact__btm">
       <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5">
         <div class="contact__info">
-          <h1 class="sub-title-anim-top animation__word_come text-white">Change Your <br>Password</h1>
+          <h1 class="sub-title-anim-top animation__word_come text-white">@lang('trans_qwerdybookscom.Change Your') <br>@lang('trans_qwerdybookscom.Password')</h1>
         </div>
       </div>
       <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7">
@@ -19,23 +19,23 @@
             @csrf
             <div class="row g-3">
               <div class="col-12">
-                  <input type="password" placeholder="Enter Your New Password" name="password" class=" "  autofocus required >
+                  <input type="password" placeholder="@lang('trans_qwerdybookscom.Enter Your New Password')" name="password" class=" "  autofocus required >
               </div>
             </div>
             <div class="row g-3">
               <div class="col-12">
-                  <input type="password" placeholder="Repeat Your New Password" name="password_confirmation" class=" "  autofocus required >
+                  <input type="password" placeholder="@lang('trans_qwerdybookscom.Repeat Your New Password')" name="password_confirmation" class=" "  autofocus required >
               </div>
             </div>
             <div class="row g-3">
               <div class="col-6">
                 <div class="btn_wrapper">
-                  <button type="submit" class="wc-btn-pink btn-hover btn-item"><span></span> Change</br> Password <i class="fa-solid fa-arrow-right"></i></button>
+                  <button type="submit" class="wc-btn-pink btn-hover btn-item"><span></span> @lang('trans_qwerdybookscom.Change')</br> @lang('trans_qwerdybookscom.Password') <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
               </div>
               <div class="col-6">
                   <div class="btn_wrapper">
-                      <a class="forget-pass text-white" href="{{ route('profile') }}"><U>Bact To Profile</u></a>
+                      <a class="forget-pass text-white" href="{{ route('profile') }}"><U>@lang('trans_qwerdybookscom.Back To Profile')</u></a>
                     
                   </div>
                 </div>

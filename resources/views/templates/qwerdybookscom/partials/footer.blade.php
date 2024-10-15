@@ -20,7 +20,7 @@
             </div>
             <div class="col-lg-4">
                 <div class="footer__item-6">
-                  <h2 class="footer__item-title">Address</h2>
+                  <h2 class="footer__item-title">@lang('trans_qwerdybookscom.Address')</h2>
                   <ul class="footer__info-6">
                     <li>{{ config('qwerdybookscom.COMPANY_ADDRESS') }}, <br>  {{ config('qwerdybookscom.COMPANY_POSTCODE')}},{{ config('qwerdybookscom.COMPANY_CITY') }}, {{ config('qwerdybookscom.COMPANY_COUNTRY') }} </li>
                   </ul>
@@ -28,7 +28,7 @@
               </div>
             <div class="col-lg-4">
                 <div class="footer__item-6">
-                  <h2 class="footer__item-title">Contact Us</h2>
+                  <h2 class="footer__item-title">@lang('trans_qwerdybookscom.Contact Us')</h2>
                   <ul class="footer__info-6">
                     <li><a href="tel:{{ config('qwerdybookscom.SUPPORT_PHONE') }}" class="phone">{{ config('qwerdybookscom.SUPPORT_PHONE') }} </a></li>
                     <li><a href="mailto:{{ config('qwerdybookscom.SUPPORT_EMAIL') }}">{{ config('qwerdybookscom.SUPPORT_EMAIL') }}</a></li>
@@ -60,25 +60,25 @@
                         <li>
                           <a href="{{ route('service', 'privacy_policy') }}">
                             <i class="bi bi-chevron-right"></i>
-                            Privacy Policy
+                            @lang('trans_qwerdybookscom.Privacy Policy')
                           </a>
                         </li>
                         <li>
                           <a href="{{ route('service', 'terms_of_service') }}">
                             <i class="bi bi-chevron-right"></i>
-                            Terms & Conditions
+                            @lang('trans_qwerdybookscom.Terms & Conditions')
                           </a>
                         </li>
                         <li>
                           <a href="{{ route('service', 'subscription_policy') }}">
                             <i class="bi bi-chevron-right"></i>
-                            Subscription Packages
+                           @lang('trans_qwerdybookscom.Subscription Packages')
                           </a>
                         </li>
                         <li>
                           <a href="{{ route('unsubscribe') }}">
                             <i class="bi bi-chevron-right"></i>
-                            Cancel Subscription
+                            @lang('trans_qwerdybookscom.Cancel Subscription')
                           </a>
                         </li>
                       </ul>
@@ -86,7 +86,7 @@
                   </div>
                   <div class="col-md-6">
                     <div class="footer__copyright-6 text-md-end text-center">
-                      <p>Copyright &copy; {{ CONFIG('qwerdybookscom.CONCEPT_NAME') }} {{ date('Y') }}. {{ config('qwerdybookscom.COMPANY_NAME') }} - {{ config('qwerdybookscom.COMPANY_BUSINESS_NUMBER') }} - {{ config('qwerdybookscom.COMPANY_ADDRESS') }}, {{ config('qwerdybookscom.COMPANY_CITY') }} {{ config('qwerdybookscom.COMPANY_POSTCODE')}},  {{ config('qwerdybookscom.COMPANY_COUNTRY') }} | @lang('All rights reserved.')
+                      <p>@lang('trans_qwerdybookscom.Copyright') &copy; {{ CONFIG('qwerdybookscom.CONCEPT_NAME') }} {{ date('Y') }}. {{ config('qwerdybookscom.COMPANY_NAME') }} - {{ config('qwerdybookscom.COMPANY_BUSINESS_NUMBER') }} - {{ config('qwerdybookscom.COMPANY_ADDRESS') }}, {{ config('qwerdybookscom.COMPANY_CITY') }} {{ config('qwerdybookscom.COMPANY_POSTCODE')}},  {{ config('qwerdybookscom.COMPANY_COUNTRY') }} | @lang('trans_qwerdybookscom.All rights reserved.')
 
                       </p>
                     </div>
