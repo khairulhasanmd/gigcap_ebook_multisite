@@ -63,7 +63,7 @@
                               @foreach (config('laravellocalization.supportedLocales') as $lng => $lngval)
                               <?php $localeCode = $lng   ?>
                                   <li style="padding:0px 10px 0px 10px; border-radius: 25px;">
-                                      <a class="nav-link nav-under d-flex justify-content-center" href="{{ LaravelLocalization::getLocalizedURL($lng, url(str_replace('/'.app()->getLocale(),'', Request::url()))) }}" style="border-radius: 25px;">
+                                      <a class="nav-link nav-under d-flex " href="{{ LaravelLocalization::getLocalizedURL($lng, url(str_replace('/'.app()->getLocale(),'', Request::url()))) }}" style="border-radius: 25px;">
                                           <img class="flag" style="max-width:30px;" src="{{asset("flags/languages/language_".$lng.".svg")}}" alt="flags">
                                               @if (config('laravellocalization.supportedLocales')[$lng]['name'] == 'Chinese (Simplified)')
                                               @lang('trans_clovereadercom.Chinese')
@@ -108,13 +108,41 @@
                 <li><a href="{{ route('contact') }}">@lang('trans_qwerdybookscom.Contact')</a></li>
                 <li><a href="{{ route('login') }}">@lang('trans_qwerdybookscom.Sign In')</a></li>
                 <li><a  href="@if(Route::is('about'))  {{ route('about') }}#pricing-section @else {{ route('welcome') }}#pricing-section @endif"  id="close_offcanvas">@lang('trans_qwerdybookscom.Sign Up')</a></li>
-            @else
-                <li><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">@lang('trans_qwerdybookscom.Home')</a></li>
-                <li><a href="@guest {{ route('welcome') }} @else {{ route('profile') }} @endguest">(tr.)</a></li>
-                <li><a href="{{ route('about') }}">@lang('trans_qwerdybookscom.About Us')</a></li>
-                <li><a href="{{ route('contact') }}">@lang('trans_qwerdybookscom.Contact Us')</a></li>
-                <li><a href="{{ route('logout') }}">@lang('trans_qwerdybookscom.Sign Out')</a></li>
-            @endguest
+                @else
+                    <li><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">@lang('trans_qwerdybookscom.Home')</a></li>
+                    <li><a href="@guest {{ route('welcome') }} @else {{ route('profile') }} @endguest">(tr.)</a></li>
+                    <li><a href="{{ route('about') }}">@lang('trans_qwerdybookscom.About Us')</a></li>
+                    <li><a href="{{ route('contact') }}">@lang('trans_qwerdybookscom.Contact Us')</a></li>
+                    <li><a href="{{ route('logout') }}">@lang('trans_qwerdybookscom.Sign Out')</a></li>
+                @endguest
+                <li class="single-lang py-1">
+                  <div  id="toggle"  style="width: 130px;"> 
+                      <ul id="toggle" style=" list-style: none;">
+                          <li class="toggle header-btn text-uppercase" id="toggle" style="color: #fff; margin-left:-7px">
+                              <img class="flag" src="{{asset("flags/languages/language_".LaravelLocalization::getCurrentLocale().".svg")}}" alt="flags">
+                              {{ LaravelLocalization::getCurrentLocale() }}
+                              <i class="fa-solid fa-angle-down" style="color: #fff;"></i>
+                              <ul class="dropdown-content " style="margin-top:10px; padding: 10px; width:180px; overflow-y:scroll;overflow-x:hidden;max-height:400px; border:1px solid rgb(49, 48, 48) ">
+                                  @foreach (config('laravellocalization.supportedLocales') as $lng => $lngval)
+                                  <?php $localeCode = $lng   ?>
+                                      <li style="padding:0px 10px 0px 10px; border-radius: 25px;">
+                                          <a class="nav-link nav-under d-flex justify-content-center; " href="{{ LaravelLocalization::getLocalizedURL($lng, url(str_replace('/'.app()->getLocale(),'', Request::url()))) }}" style="color:#fff;">
+                                              <img class="flag" style="max-width:30px;" src="{{asset("flags/languages/language_".$lng.".svg")}}" alt="flags">
+                                                  @if (config('laravellocalization.supportedLocales')[$lng]['name'] == 'Chinese (Simplified)')
+                                                  @lang('trans_clovereadercom.Chinese')
+                                                  @elseif((config('laravellocalization.supportedLocales')[$lng]['name'] == 'Norwegian Bokmål'))
+                                                  @lang('trans_clovereadercom.Norwegian')
+                                                  @else
+                                                  {{ __('trans_clovereadercom.'.config('laravellocalization.supportedLocales')[$lng]['name']) }}
+                                                  @endif
+                                          </a>
+                                      </li>
+                                  @endforeach
+                              </ul>
+                          </li>
+                      </ul>
+                  </div>
+              </li>
               </ul>
             </nav>
           </div>
@@ -248,7 +276,7 @@
   @media (max-width: 991px) {
       #toggle {
           width: 100% !important;
-          padding-left: 5px !important;
+          /* padding-left: 5px !important; */
       }
       }
   @media (max-width: 1182px) {
