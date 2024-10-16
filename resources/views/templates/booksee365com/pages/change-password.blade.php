@@ -44,7 +44,7 @@ color: #8f8989;
                 <div class="col-12">
                     <div class="customer py-4">
                         <div class="member-name mb-4">
-                            <h2>Change Password</h2>
+                            <h2>@lang('trans_booksee365.Change Password')</h2>
                         </div>
                         
                     </div>
@@ -56,8 +56,8 @@ color: #8f8989;
                                     <form method="POST" action="{{ route('saveChangePassword') }}" aria-label="{{ __('Change  Password') }}">
                                         @csrf
                                         <div class="mb-3 common">
-                                            <label for="password">Enter Your New Password</label>
-                                            <input id="password" type="password" class=" form-control{{ $errors->has('password') ? 'is-invalid' : '' }}" name="password" required placeholder="New Password">
+                                            <label for="password">@lang('trans_booksee365.Enter Your New Password')</label>
+                                            <input id="password" type="password" class=" form-control{{ $errors->has('password') ? 'is-invalid' : '' }}" name="password" required placeholder="@lang('trans_booksee365.Enter Your New Password')">
 
                                             @if ($errors->has('password'))
                                                 <span class="invalid-feedback" role="alert">
@@ -66,11 +66,11 @@ color: #8f8989;
                                             @endif
                                         </div>
                                         <div class="mb-3 common">
-                                            <label for="password-confirm">Repeat Your New Password</label>
-                                            <input id="password-confirm" title="" type="password" class="form-username form-control" name="password_confirmation" required placeholder="Repeat New Password">
+                                            <label for="password-confirm">@lang('trans_booksee365.Repeat Your New Password')</label>
+                                            <input id="password-confirm" title="" type="password" class="form-username form-control" name="password_confirmation" required placeholder="@lang('trans_booksee365.Repeat Your New Password')">
                                         </div>
                                         <div class="s-submit">
-                                            <button type="submit">Change Password</button>
+                                            <button type="submit">@lang('trans_booksee365.Change Password')</button>
                                         </div>
                                     </form>
                                 </div>

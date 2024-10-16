@@ -42,8 +42,8 @@ color: #8f8989;
                             <h2>Hi, {{ $user->data->first_name }}</h2>
                         </div>
                         <div class="profile-btn mb-4">
-                            <a id="profile-button"> My Profile</a>
-                            <a id="order-button"> My Order</a>
+                            <a id="profile-button"> @lang('trans_booksee365.My Profile')</a>
+                            <a id="order-button"> @lang('trans_booksee365.My Order')</a>
                         </div>
                     </div>
 
@@ -54,32 +54,32 @@ color: #8f8989;
                                     <form action="{{ route( 'update-profile' )}}" method="post" id="edit-form">
                                     {{ csrf_field() }}
                                         <div class="first-name common">
-                                            <label for="fn">First Name</label>
+                                            <label for="fn">@lang('trans_booksee365.First Name')</label>
                                             <input type="text" placeholder="@lang('First Name')" id="fn" name="first_name" value="{{ $user->data->first_name }}" required>
                                         </div>
                                         <div class="last-name common">
-                                            <label for="ln">Last Name</label>
+                                            <label for="ln">@lang('trans_booksee365.Last Name')</label>
                                             <input type="text" placeholder="@lang('Last Name')" id="ln" name="last_name" value="{{ $user->data->last_name }}" required>
                                         </div>
                                         <div class="address common">
-                                            <label for="add">Address</label>
+                                            <label for="add">@lang('trans_booksee365.Address')</label>
                                             <input type="text" placeholder="@lang('Address')" id="add"  name="address" value="{{ $user->data->address }}" required>
                                         </div>
                                         <div class="city common">
-                                            <label for="ci">City</label>
+                                            <label for="ci">@lang('trans_booksee365.City')</label>
                                             <input type="text" placeholder="@lang('City')" id="ci"  name="city" value="{{ $user->data->city }}" required>
                                         </div>
                                         <div class="postcode common">
-                                            <label for="pin">Postcode</label>
+                                            <label for="pin">@lang('trans_booksee365.Postcode')</label>
                                             <input type="text" placeholder="@lang('Postcode')" id="pin" name="postcode" value="{{ $user->data->postcode }}" required>
                                         </div>
                                         <div class="phone common">
-                                            <label for="fon">Phone Number</label>
+                                            <label for="fon">@lang('trans_booksee365.Phone Number')</label>
                                             <input type="text" placeholder="@lang('Phone number')" id="fon" name="phone" value="{{ $user->data->phone }}" required>
                                         </div>
                                         <div class="s-submit">
-                                            <a href="{{ route('changePassword') }}"> Change password </a>
-                                            <button type="submit">Edit profile</button>
+                                            <a href="{{ route('changePassword') }}"> @lang('trans_booksee365.Change Password') </a>
+                                            <button type="submit">@lang('trans_booksee365.Edit Profile')</button>
                                         </div>
                                     </form>
                                 </div>
@@ -87,31 +87,31 @@ color: #8f8989;
                             <div class="col-lg-6">
                                 <div class="cancel-form our-form py-5">
                                     <div class="s-number mb-2">
-                                        <p>Subscription number:</p>
+                                        <p>@lang('trans_booksee365.Subscription number'):</p>
                                         <p>{{$subscription->data->id}}</p>
                                     </div>
                                     <div class="name common">
-                                        <label for="nn">Name</label>
+                                        <label for="nn">@lang('trans_booksee365.Name')</label>
                                         <input type="text" placeholder="@lang('Name')" value="{{$subscription->data->name}}" id="nn" disabled>
                                     </div>
                                     <div class="type common">
-                                        <label for="tp">Type</label>
+                                        <label for="tp">@lang('trans_booksee365.Type')</label>
                                         <input type="text" placeholder="@lang('Subscriber')" value="{{$subscription->data->type}}" id="tp" disabled>
                                     </div>
                                     <div class="status common">
-                                        <label for="sts">Status</label>
+                                        <label for="sts">@lang('trans_booksee365.Status')</label>
                                         <input type="text" placeholder="@lang('Active')" value="{{$subscription->data->status}}" id="sts" disabled>
                                     </div>
                                     <div class="price common">
-                                        <label for="pr">Price</label>
-                                        <input type="text" placeholder="@lang('Price')" value="{{$subscription->data->price}}" id="pr"> disabled
+                                        <label for="pr">@lang('trans_booksee365.Price')</label>
+                                        <input type="text" placeholder="@lang('Price')" value="{{$subscription->data->price}}" id="pr" disabled> 
                                     </div>
                                     <div class="interval common">
-                                        <label for="int">Interval</label>
+                                        <label for="int">@lang('trans_booksee365.Interval')</label>
                                         <input type="text" placeholder="@lang('Monthly')" value="{{$subscription->data->interval}}" id="int" class="cnsb-spc" disabled>
                                     </div>
                                     <div class="c-submit">
-                                        <a href="{{ route('cancelMembership') }}">Cancel subscription</a>
+                                        <a href="{{ route('cancelMembership') }}">@lang('trans_booksee365.Cancel Subscription')</a>
                                     </div>
                                 </div>
                             </div>
@@ -122,12 +122,12 @@ color: #8f8989;
                         <table class="table text-center p-5">
                             <tbody>
                                 <tr>
-                                    <td class="llh"> Order Id</td>
-                                    <td> Product</td>
-                                    <td> Type</td>
-                                    <td> Total</td>
-                                    <td> Status</td>
-                                    <td> Created at</td>
+                                    <td class="llh"> @lang('trans_booksee365.Order Id')</td>
+                                    <td> @lang('trans_booksee365.Product')</td>
+                                    <td> @lang('trans_booksee365.Type')</td>
+                                    <td> @lang('trans_booksee365.Total')</td>
+                                    <td> @lang('trans_booksee365.Status')</td>
+                                    <td> @lang('trans_booksee365.Created at')</td>
                                     <td> </td>
                                 </tr>
                                 @foreach($orders->data as $order)
@@ -138,7 +138,7 @@ color: #8f8989;
                                         <td> {{$order->total}} {{$order->currency}}</td>
                                         <td> {{$order->status}}</td>
                                         <td> {{\Carbon\Carbon::parse($order->created_at)->format('d/m/Y H:i:s')}}</td>
-                                        <td> <a href="{{\Illuminate\Support\Facades\URL::to('/get-order/'.$order->id)}}"> Get Invoice</a></td>
+                                        <td> <a href="{{\Illuminate\Support\Facades\URL::to('/get-order/'.$order->id)}}"> @lang('trans_booksee365.Get Invoice')</a></td>
                                     </tr>
                                 @endforeach
                             </tbody>

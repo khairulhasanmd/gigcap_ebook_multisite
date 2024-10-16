@@ -19,11 +19,11 @@
 				<div class="page-heading">
 					<div class="page-title">
 						@if ($pageName == 'terms_of_service')    
-							<h1>Terms & Conditions</h1>
+							<h1>@lang('trans_booksee365.Terms & Conditions')</h1>
 						@elseif ($pageName == 'privacy_policy') 
-						<h1>Privacy Policy</h1>
+						<h1>@lang('trans_booksee365.Privacy Policy')</h1>
 						@else
-						<h1>Subscription Policy</h1>
+						<h1>@lang('trans_booksee365.Subscription Policy')</h1>
 						@endif                      
 					</div>
 				</div>
@@ -33,12 +33,12 @@
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item"><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">Home</a></li>
 						<li class="breadcrumb-item active" aria-current="page">
-							@if ($pageName == 'terms_of_service')    
-							Terms & Conditions
+						@if ($pageName == 'terms_of_service')    
+							@lang('trans_booksee365.Terms & Conditions')
 						@elseif ($pageName == 'privacy_policy') 
-							privacy Policy
+							@lang('trans_booksee365.Privacy Policy')
 						@else
-							Subscription Policy
+							@lang('trans_booksee365.Subscription Policy')
 						@endif                    
 						</li>
 					</ol>

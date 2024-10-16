@@ -29,8 +29,8 @@
                     <div class="row">
                         <div class="col-md-5">
                             <div class="hero-content">
-                                <h3 class="hero-subtitle mb-5">Dear {{ $user->data->first_name}} {{ $user->data->last_name}}</h3>
-                                <h1 class="hero-title">Your subscription has expired.</h1>
+                                <h3 class="hero-subtitle mb-5">@lang('trans_booksee365.Dear') {{ $user->data->first_name}} {{ $user->data->last_name}}</h3>
+                                <h1 class="hero-title">@lang('trans_booksee365.Your subscription has expired.')</h1>
                             </div>
                         </div>
                         <div class="offset-md-7"></div>
@@ -42,9 +42,9 @@
                             <div class="col-12">
                                 <div class="box-menu ">
                                     <ul class="slick-carousal">
-                                        <li class="mixitup-control-active"><a href="{{ route('products')}}" style="color:#b1b1b1">All</a></li>
+                                        <li class="mixitup-control-active"><a href="{{ route('products')}}" style="color:#b1b1b1">@lang('trans_booksee365.All')</a></li>
                                         @foreach($productTags as $productTag)
-                                            <li><a href="{{ route('products', ['tag' => $productTag->tag->name])}}" style="color:#b1b1b1">{{$productTag->tag->name}}</a></li>
+                                            <li><a href="{{ route('products', ['tag' => $productTag->tag->name])}}" style="color:#b1b1b1">{{__('trans_booksee365.' . $productTag->tag->name)}}</a></li>
                                         @endforeach
                                     </ul>
                                 </div>
@@ -57,10 +57,10 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="more-btn text-center mt-4 mb-5">
-                                    <button id="load-more" data-paginate="2">Load More</button>
+                                    <button id="load-more" data-paginate="2">@lang('trans_booksee365.Load More')</button>
                                     <button id="load-more-loading" type="button" disabled style="display:none">
                                         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                        Loading...
+                                        @lang('trans_booksee365.Loading...')
                                     </button>
                                 </div>
                             </div>

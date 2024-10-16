@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="default-heading text-center mb-5">
-                        <h3> Pricing</h3>
+                        <h3> @lang('trans_booksee365.Pricing')</h3>
                     </div>
                 </div>
                 <div class="col-12 d-lg-flex">
@@ -19,8 +19,8 @@
                                         <h2><span>{{ $products->pricing_plan->currency }}</span>
                                             {{ $products->pricing_plan->subscription_price }}
                                         </h2>
-                                        <h3> / {{ $products->pricing_plan->subscription_interval_days }} days</h3>
-                                        <p class="price-txt mb-4 mt-3"> {{ $products->pricing_plan->subscription_trial_days }}-day trial period / 
+                                        <h3> / {{ $products->pricing_plan->subscription_interval_days }} @lang('trans_booksee365.days')</h3>
+                                        <p class="price-txt mb-4 mt-3"> {{ $products->pricing_plan->subscription_trial_days }}-@lang('trans_booksee365.day trial period') / 
                                             {{ $products->pricing_plan->price }} {{ $products->pricing_plan->currency }}
                                         </p>
                                     </div>
@@ -33,7 +33,7 @@
                                     {{-- @if ($products->pricing_plan->subscription_interval_days == 14) --}}
                                                     {{-- <a href="{{ $products->purchase_url }}" style="pointer-events: none; cursor: default;" class="text-center">Unavailable</a> --}}
                                     {{-- @else --}}
-                                        <a href="{{ $products->purchase_url }}" class="text-center">Get Started</a>
+                                        <a href="{{ $products->purchase_url }}" class="text-center">@lang('trans_booksee365.Get Started')</a>
                                     {{-- @endif  --}}
                                     </div>
                                 </div>
