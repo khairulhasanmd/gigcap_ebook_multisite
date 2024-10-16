@@ -12,18 +12,18 @@
             <div class="col-md-8">
                 <div class="page-heading">
                     <div class="sub-title">
-                        <p>Welcome to our company</p>
+                        <p>@lang('trans_booksee365.Welcome to our company')</p>
                     </div>
                     <div class="page-title">
-                        <h1>Cancel Subscription</h1>
+                        <h1>@lang('trans_booksee365.Cancel Subscription')</h1>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Cancel Subscription</li>
+                        <li class="breadcrumb-item"><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">@lang('trans_booksee365.Home')</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">@lang('trans_booksee365.Cancel Subscription')</li>
                     </ol>
                 </nav>
             </div>
@@ -36,7 +36,7 @@
         <div class="row pb-0">
             <div class="col-12 text-center mb-20">
                 <div class="section-title no-bg">
-                    <h1>Are you truly interested in canceling the subscription?</h1>
+                    <h1>@lang('trans_booksee365.Are you truly interested in canceling the subscription?')</h1>
                 </div>
             </div>
 
@@ -46,7 +46,7 @@
                         @csrf
                         <div class="col-12">
                             <div class="single-personal-info">
-                                <label for="email">Email</label>
+                                <label for="email">@lang('trans_booksee365.Email')</label>
 								<input type="email" class="{{ $errors->has('email') ? ' is-invalid' : '' }}" id="login_email" name="email" placeholder="@lang('Enter Your Email')" required>
 								@if ($errors->has('email'))
 									<span class="invalid-feedback" role="alert">
@@ -57,7 +57,7 @@
                         </div>
                         <div class="col-12">
                             <div class="single-personal-info">
-                                <label for="last4">Last 4 digits of your card</label>
+                                <label for="last4">@lang('trans_booksee365.Last 4 digits of your card')</label>
 								<input type="password" class="{{ $errors->has('password') ? ' is-invalid' : '' }}" id="last4" name="last4" maxlength="4" placeholder="@lang('Last 4 digits of your card')" required>
 								@if ($errors->has('password'))
 									<span class="invalid-feedback" role="alert">
@@ -67,7 +67,7 @@
                             </div>
                         </div>
                         <div class="col-md-12 col-12 mb-4">
-                            <input class="submit-btn" type="submit" value="Unsubscribe" style="width:100%;">
+                            <input class="submit-btn" type="submit" value="@lang('trans_booksee365.Unsubscribe')" style="width:100%;">
                         </div>                  
                     </form>
                 </div>

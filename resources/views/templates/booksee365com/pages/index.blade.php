@@ -16,9 +16,9 @@
 			<div class="row align-items-center">
 				<div class="col-xl-6">
 					<div class="slide-contents">
-						<h1 class="fs-lg">A great way to discover new knowledge is by visiting our book library daily</h1>
-						<p>Access our vast library daily and explore a world of new books.</p>
-						<a href="#pricing-section" class="theme-btn">Sign Up <i class="fal fa-long-arrow-right"></i></a>
+						<h1 class="fs-lg">@lang('trans_booksee365.A great way to discover new knowledge is by visiting our book library daily')</h1>
+						<p>@lang('trans_booksee365.Access our vast library daily and explore a world of new books.')</p>
+						<a href="#pricing-section" class="theme-btn">@lang('trans_booksee365.Sign Up') <i class="fal fa-long-arrow-right"></i></a>
 					</div>
 				</div>
 				<div class="col-xl-6 pr-xl-0">
@@ -47,10 +47,10 @@
 			</div>
 			<div class="col-lg-6 about_left_content pr-lg-0 pl-lg-5">
 				<div class="section-title no-bg">
-					<h1>Regular reading brings numerous positive benefits you'll enjoy.</h1>
+					<h1>@lang('trans_booksee365.Regular reading brings numerous positive benefits you\'ll enjoy.')</h1>
 				</div>
-				<p>Reading offers more than just relaxation and knowledge. It profoundly affects our cognitive functions in various ways. For example, consistent reading can boost your communication skills and improve memory retention. As you delve into different narratives and perspectives, you stimulate your creativity and enhance your ability to recall information. Immersing yourself in diverse literary worlds not only entertains but also challenges and refines your mental faculties.</p>
-				<a href="#pricing-section" class="theme-btn mt-35">Join Now <i class="fal fa-long-arrow-right"></i></a>
+				<p>@lang('trans_booksee365.Reading offers more than just relaxation and knowledge. It profoundly affects our cognitive functions in various ways. For example, consistent reading can boost your communication skills and improve memory retention. As you delve into different narratives and perspectives, you stimulate your creativity and enhance your ability to recall information. Immersing yourself in diverse literary worlds not only entertains but also challenges and refines your mental faculties.')</p>
+				<a href="#pricing-section" class="theme-btn mt-35">@lang('trans_booksee365.Join Now') <i class="fal fa-long-arrow-right"></i></a>
 			</div>
 		</div>
 	</div>
@@ -61,7 +61,7 @@
 		<div class="row">
 			<div class="col-12 text-center">
 				<div class="section-title no-bg">
-					<h1>What We Have To Provide You</h1>
+					<h1>@lang('trans_booksee365.What We Have To Provide You')</h1>
 				</div>
 			</div>
 		</div>
@@ -77,9 +77,9 @@
 						</div>
 						<div class="post-content">
 							<div class="post-meta">
-								<a href="#" class="post-author"> Active Life</a>
+								<a href="#" class="post-author"> @lang('trans_booksee365.Active Life')</a>
 							</div>
-							<h3><a href="#">We’ve designed our website with your busy lifestyle in mind, allowing you to read any of our titles whenever you find a moment of free time.</a></h3>
+							<h3><a href="#">@lang('trans_booksee365.We\’ve designed our website with your busy lifestyle in mind, allowing you to read any of our titles whenever you find a moment of free time.')</a></h3>
 						</div>
 					</div>
 				</div>
@@ -92,9 +92,9 @@
 					</div>
 					<div class="post-content">
 						<div class="post-meta">
-							<a href="#" class="post-author"> Active Care</a>
+							<a href="#" class="post-author"> @lang('trans_booksee365.Active Care')</a>
 						</div>
-						<h3><a href="#">Our extensive collection of self-help books provides valuable insights for self-care. Plus, by using our entirely digital library, you’re also contributing to environmental conservation.</a></h3>
+						<h3><a href="#">@lang('trans_booksee365.Our extensive collection of self-help books provides valuable insights for self-care. Plus, by using our entirely digital library, you’re also contributing to environmental conservation.')</a></h3>
 					</div>
 				</div>
 			</div>
@@ -107,9 +107,9 @@
 					</div>
 					<div class="post-content">
 						<div class="post-meta">
-							<a href="#" class="post-author">Active Relaxation</a>
+							<a href="#" class="post-author">@lang('trans_booksee365.Active Relaxation')</a>
 						</div>
-						<h3><a href="#">Reading in our library allows you to unwind while also advancing your personal development and boosting your motivation.</a></h3>
+						<h3><a href="#">@lang('trans_booksee365.Reading in our library allows you to unwind while also advancing your personal development and boosting your motivation.')</a></h3>
 					</div>
 				</div>
 			</div>
@@ -125,7 +125,7 @@
 				<div class="col-12">
 					<div class="top-heading mb-5">
 						<div class="default-heading text-center mb-4">
-							<h3> Contact Information</h3>
+							<h3> @lang('trans_booksee365.Contact Information')</h3>
 						</div>
 					</div>
 				</div>
@@ -133,20 +133,20 @@
 			<div class="row">
 				<div class="col-lg-4">
 					<div class="phone mb-4 mb-lg-0 text-center text-lg-left">
-						<h4><i class="fas fa-phone"></i> Phone</h4>
+						<h4><i class="fas fa-phone"></i> @lang('trans_booksee365.Phone')</h4>
 						<p><a href="tel:{{ config('booksee365com.SUPPORT_PHONE') }}">{{ config('booksee365com.SUPPORT_PHONE') }}</a></p>
 					</div>
 				</div>
 				<div class="col-lg-4">
 					<div class="email mb-4 mb-lg-0 text-center text-lg-left">
-						<h4><i class="fas fa-envelope"></i> Email</h4>
+						<h4><i class="fas fa-envelope"></i> @lang('trans_booksee365.Email')</h4>
 						<p><a href="mailto:{{ config('booksee365com.SUPPORT_EMAIL') }}">{{ config('booksee365com.SUPPORT_EMAIL') }}</a></p>
 					</div>
 				</div>
 				<div class="col-lg-4">
 					<div class="refund text-center text-lg-left">
-						<h4><i class="fas fa-credit-card"></i> Refund Policy</h4>
-						<p>Refund available based on refund policy</p>
+						<h4><i class="fas fa-credit-card"></i> @lang('trans_booksee365.Refund Policy')</h4>
+						<p>@lang('trans_booksee365.Refund available based on refund policy')</p>
 					</div>
 				</div>
 			</div>

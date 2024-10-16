@@ -12,18 +12,18 @@
             <div class="col-md-8">
                 <div class="page-heading">
                     <div class="sub-title">
-                        <p>Welcome to our company</p>
+                        <p>@lang('trans_booksee365.Welcome to our company')</p>
                     </div>
                     <div class="page-title">
-                        <h1>Get In Touch</h1>
+                        <h1>@lang('trans_booksee365.Get In Touch')</h1>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+                        <li class="breadcrumb-item"><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">@lang('trans_booksee365.Home')</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">@lang('trans_booksee365.Contact Us')</li>
                     </ol>
                 </nav>
             </div>
@@ -41,7 +41,7 @@
                             <i class="fal fa-envelope"></i>
                         </div>
                         <div class="title mt-3">
-                            <h4>Email Address</h4>
+                            <h4>@lang('trans_booksee365.Email Address')</h4>
                         </div>
                     </div>
                     <div class="bottom-part">
@@ -61,7 +61,7 @@
                             <i class="fal fa-phone"></i>
                         </div>
                         <div class="title mt-3">
-                            <h4>Phone Number</h4>
+                            <h4>@lang('trans_booksee365.Phone Number')</h4>
                         </div>
                     </div>
                     <div class="bottom-part">
@@ -81,7 +81,7 @@
                             <i class="fal fa-map-marker-alt"></i>
                         </div>
                         <div class="title mt-3">
-                            <h4>Office Address</h4>
+                            <h4>@lang('trans_booksee365.Office Address')</h4>
                         </div>
                     </div>
                     <div class="bottom-part">
@@ -101,7 +101,7 @@
                             <i class="fal fa-clock"></i>
                         </div>
                         <div class="title mt-3">
-                            <h4>Working Hours</h4>
+                            <h4>@lang('trans_booksee365.Working Hours')</h4>
                         </div>
                     </div>
                     <div class="bottom-part">
@@ -121,7 +121,7 @@
                             <i class="fal fa-hashtag"></i>
                         </div>
                         <div class="title mt-3">
-                            <h4>Business Number</h4>
+                            <h4>@lang('trans_booksee365.Business Number')</h4>
                         </div>
                     </div>
                     <div class="bottom-part">
@@ -141,7 +141,7 @@
                             <i class="fal fa-money-check-alt"></i>
                         </div>
                         <div class="title mt-3">
-                            <h4>VAT Number</h4>
+                            <h4>@lang('trans_booksee365.VAT Number')</h4>
                         </div>
                     </div>
                     <div class="bottom-part">
@@ -159,7 +159,7 @@
         <div class="row section-padding pb-0">
             <div class="col-12 text-center mb-20">
                 <div class="section-title no-bg">
-                    <h1>Contact Us</h1>
+                    <h1>@lang('trans_booksee365.Contact Us')</h1>
                 </div>
             </div>
 
@@ -169,36 +169,36 @@
                         @csrf
                         <div class="col-md-6 col-12">
                             <div class="single-personal-info">
-                                <label for="firstname">First Name</label>
+                                <label for="firstname">@lang('trans_booksee365.First Name')</label>
                                 <input type="text" id="firstname"  name="firstname" aria-required="true" aria-invalid="false" required>
                             </div>
                         </div>
                         <div class="col-md-6 col-12">
                             <div class="single-personal-info">
-                                <label for="lastname">Last Name</label>
+                                <label for="lastname">@lang('trans_booksee365.Last Name')</label>
                                 <input type="text" id="lastname" name="lastname" aria-required="true" aria-invalid="false" required>
                             </div>
                         </div>
                         <div class="col-md-6 col-12">
                             <div class="single-personal-info">
-                                <label for="email">Email Address</label>
+                                <label for="email">@lang('trans_booksee365.Email Address')</label>
                                 <input type="email" id="email" name="email" aria-required="true" aria-invalid="false" required>
                             </div>
                         </div>
                         <div class="col-md-6 col-12">
                             <div class="single-personal-info">
-                                <label for="subject">Subject</label>
+                                <label for="subject">@lang('trans_booksee365.Subject')</label>
                                 <input type="text" id="subject"  name="subject" aria-invalid="false" required>
                             </div>
                         </div>
                         <div class="col-md-12 col-12">
                             <div class="single-personal-info">
-                                <label for="subject">Enter Message</label>
+                                <label for="subject">@lang('trans_booksee365.Enter Message')</label>
                                 <textarea id="message" name="message" aria-invalid="false"></textarea>
                             </div>
                         </div>
                         <div class="col-md-12 col-12 text-center">
-                            <input class="submit-btn" type="submit" value="Send Message">
+                            <input class="submit-btn" type="submit" value="@lang('trans_booksee365.Send Message')">
                         </div>
                     </form>
                 </div>

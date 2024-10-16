@@ -2752,7 +2752,7 @@ header.header-1 .main-menu ul>li>a {
     color: #b1b1b1;
     line-height: 1;
     padding: 30px 35px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 @media (max-width: 1280px) {

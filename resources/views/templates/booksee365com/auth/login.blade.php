@@ -12,18 +12,18 @@
             <div class="col-md-8">
                 <div class="page-heading">
                     <div class="sub-title">
-                        <p>Welcome to our company</p>
+                        <p>@lang('trans_booksee365.Welcome to our company')</p>
                     </div>
                     <div class="page-title">
-                        <h1>Login</h1>
+                        <h1>@lang('trans_booksee365.Login')</h1>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Login</li>
+                        <li class="breadcrumb-item"><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">@lang('trans_booksee365.Home')</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">@lang('trans_booksee365.Login')</li>
                     </ol>
                 </nav>
             </div>
@@ -36,7 +36,7 @@
         <div class="row pb-0">
             <div class="col-12 text-center mb-20">
                 <div class="section-title no-bg">
-                    <h1>Sign in to your account</h1>
+                    <h1>@lang('trans_booksee365.Sign in to your account')</h1>
                 </div>
             </div>
 
@@ -46,7 +46,7 @@
                         @csrf
                         <div class="col-12">
                             <div class="single-personal-info">
-                                <label for="email">Email</label>
+                                <label for="email">@lang('trans_booksee365.Email')</label>
 								<input class="{{ $errors->has('email') ? ' is-invalid' : '' }}" type="email" name="email" id="email" value="{{ old('email') }}" required autofocus>
 								@if ($errors->has('email'))
 									<span class="invalid-feedback" role="alert">
@@ -57,7 +57,7 @@
                         </div>
                         <div class="col-12">
                             <div class="single-personal-info">
-                                <label for="password">Password</label>
+                                <label for="password">@lang('trans_booksee365.Password')</label>
 								<input type="password" id="password" name="password" class="{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 								@if ($errors->has('password'))
 									<span class="invalid-feedback" role="alert">
@@ -67,10 +67,10 @@
                             </div>
                         </div>
                         <div class="col-md-12 col-12 mb-4">
-                            <input class="submit-btn" type="submit" value="Login" style="width:100%;">
+                            <input class="submit-btn" type="submit" value="@lang('trans_booksee365.Login')" style="width:100%;">
                         </div>
                         <div class="col-md-12 col-12">
-                            <a class="submit-btn text-center" href="{{ route('password.request') }}" style="width:100%; display:block">{{ __('Forgot Your Password?') }}</a>
+                            <a class="submit-btn text-center" href="{{ route('password.request') }}" style="width:100%; display:block">@lang('trans_booksee365.Forgot Your Password?') </a>
                         </div>
                         
                     </form>
