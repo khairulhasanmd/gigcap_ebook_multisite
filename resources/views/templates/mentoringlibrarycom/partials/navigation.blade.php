@@ -53,7 +53,7 @@
                                         {{ LaravelLocalization::getCurrentLocale() }}
                                         <i class="fa fa-angle-down"></i>
 
-                                        <ul class="dropdown-content " style="margin-top:10px; padding: 10px; width:180px; overflow-y:scroll;overflow-x:hidden;max-height:400px; border:1px solid rgb(49, 48, 48); margin-left:-40px !important;">
+                                        <ul class="dropdown-content " style="margin-top:10px; width:180px; overflow-y:scroll;overflow-x:hidden;max-height:400px; border:1px solid rgb(49, 48, 48);">
                                             @foreach (config('laravellocalization.supportedLocales') as $lng => $lngval)
                                             <?php $localeCode = $lng   ?>
                                                 <li style="padding:0px 10px 0px 10px; border-radius: 25px;">
@@ -127,13 +127,16 @@
         background-color: rgba(0, 0, 0, .15);
     }
     .dropdown-content{
-        margin-left: 10px !important;
+        margin-left: -40px;
     }
     @media (max-width: 991px) {
         #toggle {
             width: 100% !important;
             /* padding-left: 5px !important; */
         }
+        .dropdown-content{
+        margin-left: 10px;
+    }
         }
     @media (max-width: 1090px) {
         .sticky_logo {
