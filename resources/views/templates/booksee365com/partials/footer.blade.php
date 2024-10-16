@@ -21,9 +21,9 @@
 
 								<li><a href="{{ route('about') }}">@lang('trans_booksee365.About Us')</a></li>
 								<li><a href="{{ route('contact') }}">@lang('trans_booksee365.Contact Us')</a></li>
-								<li><a href="{{ route('service', 'privacy_policy') }}">@lang('trans_booksee365.Privacy Policy')</a></li>
-								<li><a href="{{ route('service', 'terms_of_service') }}">@lang('trans_booksee365.Terms & Conditions')</a></li>
-								<li><a href="{{ route('service', 'subscription_policy') }}">@lang('trans_booksee365.Subscription Packages')</a></li>
+								<li><a href="{{ LaravelLocalization::localizeUrl('/service/privacy_policy') }}">@lang('trans_booksee365.Privacy Policy')</a></li>
+								<li><a href="{{ LaravelLocalization::localizeUrl('/service/terms_of_service') }}">@lang('trans_booksee365.Terms & Conditions')</a></li>
+								<li><a href="{{ LaravelLocalization::localizeUrl('/service/subscription_policy') }}">@lang('trans_booksee365.Subscription Packages')</a></li>
                                                                 <li><a href="{{ route('unsubscribe') }}">@lang('trans_booksee365.Cancel Subscription')</a></li>
 							</ul>
 						</div>
