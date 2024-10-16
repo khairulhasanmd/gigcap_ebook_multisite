@@ -56,7 +56,7 @@
                                         <ul class="dropdown-content " style="margin-top:10px; width:180px; overflow-y:scroll;overflow-x:hidden;max-height:400px; border:1px solid rgb(49, 48, 48);">
                                             @foreach (config('laravellocalization.supportedLocales') as $lng => $lngval)
                                             <?php $localeCode = $lng   ?>
-                                                <li style="padding:0px 10px 0px 10px; border-radius: 25px;">
+                                                <li style="border-radius: 25px;">
                                                     <a class="nav-link nav-under d-flex justify-content-center; " href="{{ LaravelLocalization::getLocalizedURL($lng, url(str_replace('/'.app()->getLocale(),'', Request::url()))) }}" style="color:#fff;">
                                                         <img class="flag" style="max-width:30px;" src="{{asset("flags/languages/language_".$lng.".svg")}}" alt="flags">
                                                             @if (config('laravellocalization.supportedLocales')[$lng]['name'] == 'Chinese (Simplified)')
@@ -122,9 +122,10 @@
         font-weight: 500;
         font-size: 16px;
         transition: all 0.2s ease-in-out;
+        width: 100%;
     }
     .single-lang ul li ul li:hover a{
-        background-color: rgba(0, 0, 0, .15);
+        color: rgba(0, 0, 0, .15) !important;
     }
     .dropdown-content{
         margin-left: -40px;
