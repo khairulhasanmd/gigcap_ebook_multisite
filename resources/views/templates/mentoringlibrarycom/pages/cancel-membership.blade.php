@@ -14,10 +14,10 @@
                 <div class="col-12">
                     <div class="customer py-4">
                         <div class="member-name mb-4">
-                            <h2>Cancel Membership</h2>
+                            <h2>('ttt.Cancel Membership')</h2>
                         </div>
                         <div>
-                            <p>We are sad you decided to leave our platform. If you are certain you want to proceed, then click the “Cancel membership" button. <br> Farewell and good luck! We hope you return soon!</p>
+                            <p>('ttt.We are sad you decided to leave our platform. If you are certain you want to proceed, then click the “Cancel membership" button. <br> Farewell and good luck! We hope you return soon!')</p>
                         </div>
                     </div>
                     <div class="subscription-from mx-auto">

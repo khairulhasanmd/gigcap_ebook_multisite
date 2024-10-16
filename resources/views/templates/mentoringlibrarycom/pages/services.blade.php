@@ -19,18 +19,18 @@
 		<div class="page-heading">
 			<h1>
 				@if ($pageName == 'terms_of_service')    
-					Terms & Conditions
+					@lang('trans_mentoringlibrarycom.Terms & Conditions')
 				@elseif ($pageName == 'privacy_policy') 
-					privacy Policy
+					@lang('trans_mentoringlibrarycom.privacy Policy')
 				@else
-					Subscription Policy
+					@lang('trans_mentoringlibrarycom.Subscription Policy')
 				@endif               
 			</h1>
 			<div class="page-header">
 				<ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
 					<li>
 						<a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">
-							Home
+							@lang('trans_mentoringlibrarycom.Home')
 						</a>
 					</li>
 					<li>
@@ -38,12 +38,12 @@
 					</li>
 					<li>
 						@if ($pageName == 'terms_of_service')    
-								Terms & Conditions
-							@elseif ($pageName == 'privacy_policy') 
-								privacy Policy
-							@else
-								Subscription Policy
-							@endif               
+							@lang('trans_mentoringlibrarycom.Terms & Conditions')
+						@elseif ($pageName == 'privacy_policy') 
+							@lang('trans_mentoringlibrarycom.Privacy Policy')
+						@else
+							@lang('trans_mentoringlibrarycom.Subscription Policy')
+						@endif               
 					</li>
 				</ul>
 			</div>

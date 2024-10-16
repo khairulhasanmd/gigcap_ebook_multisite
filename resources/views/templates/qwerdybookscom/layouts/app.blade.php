@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="{{asset('qwerdybookscom/') }}/assets/css/meanmenu.min.css">
   <link rel="stylesheet" href="{{asset('qwerdybookscom/') }}/assets/css/master.css">
   <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 @include('templates.qwerdybookscom.partials.navigation')
