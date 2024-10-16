@@ -10,7 +10,6 @@ return array (
   'shop now' => 'shop now',
   'shop' => 'shop',
   'book' => 'book',
-  'book' => 'book',
   'Unsubscribe' => 'Unsubscribe',
   'We are sad you decided to leave our platform. If you are certain you want to proceed, then click the “Cancel membership" button. <br> Farewell and good luck! We hope you return soon!' => 'We are sad you decided to leave our platform. If you are certain you want to proceed, then click the “Cancel membership" button. <br> Farewell and good luck! We hope you return soon!',
   'Subscription Policy' => 'Subscription Policy',
