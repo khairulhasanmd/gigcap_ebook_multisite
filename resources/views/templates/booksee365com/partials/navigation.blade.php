@@ -105,12 +105,12 @@
                                     <li><a href="{{ route('contact') }}">@lang('trans_booksee365.Contact Us')</a></li>
                                     <li><a href="{{ route('login') }}">@lang('trans_booksee365.Log In')</a></li>
                                     @if(Request::route()->getname() == 'welcome' || Request::route()->getname() == 'about')
-                                        <li><a href="#pricing-section">@lang('trans_booksee365.Sign Up')</a></li>
+                                        <li class="close-nav" style="left: 0px !important"><a href="#pricing-section" >@lang('trans_booksee365.Sign Up')</a></li>
                                     @else
-                                        <li><a href="{{ route('welcome') }}#pricing-section">@lang('trans_booksee365.Sign Up')</a></li>
+                                        <li class="close-nav"  style="left: 0px !important"><a href="{{ route('welcome') }}#pricing-section">@lang('trans_booksee365.Sign Up')</a></li>
                                     @endif
                                 @else
-                                    <li><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">Home</a></li>
+                                    <li><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">@lang('trans_booksee365.Home')</a></li>
                                     <li><a href="{{ route('profile') }}">@lang('trans_booksee365.Profile')</a></li>
                                     <li><a href="{{ route('about') }}">@lang('trans_booksee365.About Us')</a></li>
                                     <li><a href="{{ route('contact') }}">@lang('trans_booksee365.Contact Us')</a></li>
