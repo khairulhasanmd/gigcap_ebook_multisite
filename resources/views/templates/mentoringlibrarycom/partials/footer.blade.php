@@ -10,44 +10,44 @@
 					<div class="col-xl-4 col-lg-4 col-md-12 ps-lg-5 wow fadeInUp" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
 						<div class="single-footer-widget">
 							<div class="widget-head">
-								<h3>Useful Links</h3>
+								<h3>@lang('trans_mentoringlibrarycom.Useful Links')</h3>
 							</div>
 							<ul class="list-area ps-0">
 								<li>
 									<a href="{{ route('about') }}">
 										<i class="bi bi-chevron-right"></i>
-										About Us
+										@lang('trans_mentoringlibrarycom.About Us')
 									</a>
 								</li>
 								
 								<li>
 									<a href="{{ route('contact') }}">
 										<i class="bi bi-chevron-right"></i>
-										Contact Us
+										@lang('trans_mentoringlibrarycom.Contact Us')
 									</a>
 								</li>
 								<li>
-									<a href="{{ route('service', 'privacy_policy') }}">
+									<a href="{{ LaravelLocalization::localizeUrl('/service/privacy_policy') }}">
 										<i class="bi bi-chevron-right"></i>
-										Privacy Policy
+										@lang('trans_mentoringlibrarycom.Privacy Policy')
 									</a>
 								</li>
 								<li>
-									<a href="{{ route('service', 'terms_of_service') }}">
+									<a href="{{ LaravelLocalization::localizeUrl('/service/terms_of_service') }}">
 										<i class="bi bi-chevron-right"></i>
-										Terms & Conditions
+										@lang('trans_mentoringlibrarycom.Terms & Conditions')
 									</a>
 								</li>
 								<li>
-									<a href="{{ route('service', 'subscription_policy') }}">
+									<a href="{{ LaravelLocalization::localizeUrl('/service/subscription_policy') }}">
 										<i class="bi bi-chevron-right"></i>
-										Subscription Packages
+										@lang('trans_mentoringlibrarycom.Subscription Packages')
 									</a>
 								</li>
 								<li>
 									<a href="{{ route('unsubscribe') }}">
 										<i class="bi bi-chevron-right"></i>
-										Cancel Subscription
+										@lang('trans_mentoringlibrarycom.Cancel Subscription')
 									</a>
 								</li>
 							</ul>
@@ -62,7 +62,7 @@
 							</div>
 							<div class="footer-content text-center">
 								<p>
-									Explore our catalog for leadership, marketing, and financial management insights.
+									@lang('trans_mentoringlibrarycom.Explore our catalog for leadership, marketing, and financial management insights.')
 
 								</p>
 								
@@ -72,20 +72,20 @@
 					<div class="col-xl-4 col-lg-4 col-md-12 pe-lg-5 wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
 						<div class="single-footer-widget">
 							<div class="widget-head text-end">
-								<h3>Contacts</h3>
+								<h3>@lang('trans_mentoringlibrarycom.Contacts')</h3>
 							</div>
 							<ul class="list-area text-end text-white">
 								<li>
-									<i class="bi bi-geo-alt me-1"></i> Location: {{ config('mentoringlibrarycom.COMPANY_ADDRESS') }}
+									<i class="bi bi-geo-alt me-1"></i> @lang('trans_mentoringlibrarycom.Location'): {{ config('mentoringlibrarycom.COMPANY_ADDRESS') }}
 								</li>
 								<li>
-									<i class="bi bi-clock me-1"></i> Opening Hours: {{ config('mentoringlibrarycom.SUPPORT_HOURS') }}
+									<i class="bi bi-clock me-1"></i> @lang('trans_mentoringlibrarycom.Opening Hours'): {{ config('mentoringlibrarycom.SUPPORT_HOURS') }}
 								</li>
 								<li>
-									<i class="bi bi-envelope me-1"></i> Mail Us: <a href="mailto:{{ config('mentoringlibrarycom.SUPPORT_EMAIL') }}"> {{ config('mentoringlibrarycom.SUPPORT_EMAIL') }}</a>
+									<i class="bi bi-envelope me-1"></i>@lang('trans_mentoringlibrarycom.Mail Us'): <a href="mailto:{{ config('mentoringlibrarycom.SUPPORT_EMAIL') }}"> {{ config('mentoringlibrarycom.SUPPORT_EMAIL') }}</a>
 								</li>
 								<li>
-									<i class="bi bi-telephone me-1"></i> Call Us: <a href="tel:{{ config('mentoringlibrarycom.SUPPORT_PHONE') }}">{{ config('mentoringlibrarycom.SUPPORT_PHONE') }}</a> 
+									<i class="bi bi-telephone me-1"></i> @lang('trans_mentoringlibrarycom.Call Us'): <a href="tel:{{ config('mentoringlibrarycom.SUPPORT_PHONE') }}">{{ config('mentoringlibrarycom.SUPPORT_PHONE') }}</a> 
 								</li>                              
 							</ul>
 						</div>
@@ -103,7 +103,7 @@
 			<div class="container">
 				<div class="footer-wrapper align-items-center">
 					<p class="wow fadeInLeft p-3 m-0 text-center" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-						Copyright &copy; {{ CONFIG('mentoringlibrarycom.CONCEPT_NAME') }} {{ date('Y') }}. {{ config('mentoringlibrarycom.COMPANY_NAME') }} - {{ config('mentoringlibrarycom.COMPANY_BUSINESS_NUMBER') }} - {{ config('mentoringlibrarycom.COMPANY_ADDRESS') }}, {{ config('mentoringlibrarycom.COMPANY_CITY') }} {{ config('mentoringlibrarycom.COMPANY_POSTCODE')}},  {{ config('mentoringlibrarycom.COMPANY_COUNTRY') }} | @lang('All rights reserved.')
+						@lang('trans_mentoringlibrarycom.Copyright') &copy; {{ CONFIG('mentoringlibrarycom.CONCEPT_NAME') }} {{ date('Y') }}. {{ config('mentoringlibrarycom.COMPANY_NAME') }} - {{ config('mentoringlibrarycom.COMPANY_BUSINESS_NUMBER') }} - {{ config('mentoringlibrarycom.COMPANY_ADDRESS') }}, {{ config('mentoringlibrarycom.COMPANY_CITY') }} {{ config('mentoringlibrarycom.COMPANY_POSTCODE')}},  {{ config('mentoringlibrarycom.COMPANY_COUNTRY') }} | @lang('trans_mentoringlibrarycom.All rights reserved.')
 					</p>
 				</div>
 			</div>

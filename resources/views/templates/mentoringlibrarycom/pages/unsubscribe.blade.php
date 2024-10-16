@@ -16,19 +16,19 @@
     </div>
     <div class="container">
         <div class="page-heading">
-            <h1>Cancel Subscription</h1>
+            <h1>@lang('trans_mentoringlibrarycom.Cancel Subscription')</h1>
             <div class="page-header">
                 <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                     <li>
                         <a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">
-                            Home
+                            @lang('trans_mentoringlibrarycom.Home')
                         </a>
                     </li>
                     <li>
                         <i class="bi bi-chevron-right"></i>
                     </li>
                     <li>
-                        Cancel Subscription
+                        @lang('trans_mentoringlibrarycom.Cancel Subscription')
                     </li>
                 </ul>
             </div>
@@ -51,8 +51,8 @@
                         <form method="POST" action="{{ route('unsubscribeMembership') }}" class="row conact-form">
                             @csrf                          
                             <div class="mb-3">
-                              <label for="email" class="form-label">Email*</label>
-                              <input type="email" class="form-control" id="email" name="email" placeholder="Email*"autofocus required>
+                              <label for="email" class="form-label">@lang('trans_mentoringlibrarycom.Email')*</label>
+                              <input type="email" class="form-control" id="email" name="email" placeholder="@lang('trans_mentoringlibrarycom.email')*"autofocus required>
                               @if ($errors->has('email'))
 									<span class="invalid-feedback" role="alert">
 										<strong>{{ $errors->first('email') }}</strong>
@@ -62,9 +62,9 @@
                           
                             <div class="mb-3">
                               <label for="password" class="form-label">
-                                Last 4 digits of your card
+                                @lang('trans_mentoringlibrarycom.Last 4 digits of your card')
                                 </label>
-                              <input type="password" class="form-control" id="password" name="last4" placeholder="Password"  maxlength="4" required>
+                              <input type="password" class="form-control" id="password" name="last4" placeholder="@lang('trans_mentoringlibrarycom.Last 4 digits of your card')"  maxlength="4" required>
                               @if ($errors->has('password'))
 									<span class="invalid-feedback" role="alert">
 										<strong>{{ $errors->first('password') }}</strong>
@@ -75,7 +75,7 @@
                   
                           
                             <div class="justify-content-between mt-5">
-                              <input class="theme-btn px-1 me-2" type="submit" value="Unsubscribe" >
+                              <input class="theme-btn px-1 me-2" type="submit" value="@lang('trans_mentoringlibrarycom.Unsubscribe')" >
 
                             </div>
                           </form>

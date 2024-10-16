@@ -45,19 +45,19 @@
             </div>
             <div class="container">
                 <div class="page-heading">
-                    <h1>Library</h1>
+                    <h1>@lang('trans_mentoringlibrarycom.Library')</h1>
                     <div class="page-header">
                         <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                             <li>
                                 <a href="@guest {{ route('welcome')}} @else {{route('products')}} @endguest">
-                                    Home
+                                    @lang('trans_mentoringlibrarycom.Home')
                                 </a>
                             </li>
                             <li>
                                 <i class="bi bi-chevron-right"></i>
                             </li>
                             <li>
-                                Library
+                                @lang('trans_mentoringlibrarycom.Library')
                             </li>
                         </ul>
                     </div>
@@ -74,10 +74,10 @@
                     <div class="tab-product-navigation">
 
                         <div class="nav nav-tabs justify-content-center"  role="tablist">
-                            <a class="nav-item nav-link"  href="{{ route('products')}}">All</a>
+                            <a class="nav-item nav-link"  href="{{ route('products')}}">@lang('trans_mentoringlibrarycom.All')</a>
 
                             @foreach($productTags as $productTag)
-                            <a class="nav-item nav-link"  href="{{ route('products', ['tag' => $productTag->tag->name])}}">{{$productTag->tag->name}}</a>
+                            <a class="nav-item nav-link"  href="{{ route('products', ['tag' => $productTag->tag->name])}}">{{__('trans_mentoringlibrarycom.' . $productTag->tag->name)}}</a>
 
                             @endforeach
                           
@@ -103,8 +103,8 @@
                 <div class="row">
                     <div class="col-md-5">
                         <div class="hero-content">
-                            <h3 class="hero-subtitle mb-5">Dear {{ $user->data->first_name}} {{ $user->data->last_name}}</h3>
-                            <h1 class="hero-title">Your subscription has expired.</h1>
+                            <h3 class="hero-subtitle mb-5">@lang('trans_mentoringlibrarycom.Dear') {{ $user->data->first_name}} {{ $user->data->last_name}}</h3>
+                            <h1 class="hero-title">@lang('trans_mentoringlibrarycom.Your subscription has expired.')</h1>
                         </div>
                     </div>
                     <div class="offset-md-7"></div>
@@ -121,10 +121,10 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="more-btn text-center mt-4 mb-5">
-                                <button id="load-more" data-paginate="2">Load More</button>
+                                <button id="load-more" data-paginate="2">@lang('trans_mentoringlibrarycom.Load More')</button>
                                 <button id="load-more-loading" type="button" disabled style="display:none">
                                     <span  class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                    Loading...
+                                    @lang('trans_mentoringlibrarycom.Loading...')
                                 </button>
                             </div>
                         </div>
