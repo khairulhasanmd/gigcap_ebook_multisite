@@ -2785,7 +2785,7 @@ header.header-1 .main-menu ul>li>a::before {
 }
 
 header.header-1 .main-menu ul>li:hover>a {
-    color: #111111;
+    color: #111111 !important;
     background-color: #fff;
 }
 
