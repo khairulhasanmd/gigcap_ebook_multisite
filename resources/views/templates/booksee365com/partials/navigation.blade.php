@@ -7,13 +7,16 @@
         display: inline-block;
         font-size: 18px;
         text-transform: capitalize;
-        color: #b1b1b1;
+        /* color: #b1b1b1; */
         line-height: 1;
         padding: 30px 35px;
         /* overflow: hidden; */
     }
     .mobile-nav .sidebar-nav .metismenu ul a::before{
         display: none !important;
+    }
+    header.header-1 .main-menu ul > li > a :hover{
+        color: #000 !important;
     }
 
 </style>
