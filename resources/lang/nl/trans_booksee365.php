@@ -317,7 +317,7 @@ return array (
   'and transformative stories that resonate with readers everywhere!' => 'en transformerende verhalen die lezers overal aanspreken!',
   'TOP RATED BOOKS' => 'BEST BEOORDEELDE BOEKEN',
   'PRICING PLAN' => 'PRIJSPLAN',
-  'Sign In' => 'Aanmelden',
+  'Sign In' => 'Inloggen',
   'Sign Up' => 'Aanmelden',
   'Sign Out' => 'Afmelden',
   'Contact Us' => 'Neem contact met ons op',
