@@ -16,7 +16,7 @@
     </div>
     <div class="container">
         <div class="page-heading">
-            <h1>Log In</h1>
+            <h1> @lang('trans_mentoringlibrarycom.Log In')</h1>
             <div class="page-header">
                 <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                     <li>

@@ -239,7 +239,11 @@ class UserController extends Controller
         $siteuserid = $logged_user->site_user_id;
         $newpassword = $request->password;
         // dd($logged_user->site_user_id);
+        if(strlen($request->password) < 8) {
+            return redirect()->back()->withErrors(['error' => 'Password must be at least 8 characters long']);
+        }
         if($request->password != $request->password_confirmation){
+
             return redirect()->back()->withErrors(['error' => 'New password is not repeated twice']);
         }
         $logged_user->password = Hash::make($request->password);
@@ -247,7 +251,7 @@ class UserController extends Controller
         $logged_user->update();
         // $this->cmp->updatepassword($siteuserid,$newpassword);
         $status = $this->cmp->updatepassword($siteuserid,$newpassword)->status;
-        // dd($status);
+        // dd($newpassword);
         if($status == 'success'){
             return redirect(app()->getLocale().'/profile')->with('success', 'Password changed');
 

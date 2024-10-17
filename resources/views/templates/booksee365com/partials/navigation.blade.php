@@ -107,7 +107,7 @@
                                     @if(Request::route()->getname() == 'welcome' || Request::route()->getname() == 'about')
                                         <li class="close-nav" style="left: 0px !important"><a href="#pricing-section" >@lang('trans_booksee365.Sign Up')</a></li>
                                     @else
-                                        <li class="close-nav"  style="left: 0px !important"><a href="{{ route('welcome') }}#pricing-section">@lang('trans_booksee365.Sign Up')</a></li>
+                                        <li class="close-nav"><a href="{{ route('welcome') }}#pricing-section">@lang('trans_booksee365.Sign Up')</a></li>
                                     @endif
                                 @else
                                     <li><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">@lang('trans_booksee365.Home')</a></li>

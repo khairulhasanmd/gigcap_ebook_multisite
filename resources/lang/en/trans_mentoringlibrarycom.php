@@ -110,7 +110,7 @@ return array (
   'Please enter your email' => 'Please enter your email',
   'Email' => 'Email',
   'Type' => 'Type',
-  'Type' => 'Type',
+  "We are committed to providing a carefully curated selection of valuable resources specifically designed for today’s entrepreneurs. Our team has handpicked a diverse range of highly regarded titles that are both accessible and relevant to the fast-paced business landscape. Each resource is chosen to help you grow, innovate, and stay ahead in your entrepreneurial journey." => "We are committed to providing a carefully curated selection of valuable resources specifically designed for today’s entrepreneurs. Our team has handpicked a diverse range of highly regarded titles that are both accessible and relevant to the fast-paced business landscape. Each resource is chosen to help you grow, innovate, and stay ahead in your entrepreneurial journey.",
   'Back To Profile' => 'Back To Profile',
   'Change' => 'Change',
   'Repeat Your New Password' => 'Repeat Your New Password',
