@@ -14,7 +14,7 @@
 
             <div class="col-lg-4 col-md-6 mx-auto" data-aos="zoom-in" data-aos-delay="200">
             <div class="pricing-tem">
-                <h3 style="color: #0dcaf0;">{{ strtoupper($products->external_product_id) }}</h3>
+                <h4 style="color: #0dcaf0; padding:20px;">{{ strtoupper($products->name) }}</h4>
                 <div class="price"><sup>{{ $products->pricing_plan->currency }}</sup> {{ $products->pricing_plan->subscription_price }}<span> / {{ $products->pricing_plan->subscription_interval_days }} @lang('trans_mentoringlibrarycom.days')</span></div>
                 <div class="icon">
                     <p>{{ $products->pricing_plan->subscription_trial_days }}-@lang('trans_mentoringlibrarycom.day trial period') /  {{ $products->pricing_plan->price }}  {{ $products->pricing_plan->currency }}</p>

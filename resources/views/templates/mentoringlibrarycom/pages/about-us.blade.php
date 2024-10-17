@@ -15,7 +15,7 @@
             </div>
             <div class="container">
                 <div class="page-heading">
-                    <h1>About Us</h1>
+                    <h1>@lang('trans_mentoringlibrarycom.About Us')</h1>
                     <div class="page-header">
                         <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                             <li>
@@ -64,7 +64,7 @@
                             <div class="book-section-info">
                             
                             <h1>@lang('trans_mentoringlibrarycom.What We Offer')</h1>
-                            <p>@lang('trans_mentoringlibrarycom.We are committed to providing a carefully curated selection of valuable resources specifically designed for today\’s entrepreneurs. Our team has handpicked a diverse range of highly regarded titles that are both accessible and relevant to the fast-paced business landscape. Each resource is chosen to help you grow, innovate, and stay ahead in your entrepreneurial journey.')</p>
+                            <p>@lang("trans_mentoringlibrarycom.We are committed to providing a carefully curated selection of valuable resources specifically designed for today’s entrepreneurs. Our team has handpicked a diverse range of highly regarded titles that are both accessible and relevant to the fast-paced business landscape. Each resource is chosen to help you grow, innovate, and stay ahead in your entrepreneurial journey.")</p>
     
                             <p>@lang('trans_mentoringlibrarycom.Our exclusive online catalog offers a wealth of knowledge aimed at enhancing your skills and expertise. Whether you\'re seeking insights on leadership, marketing, or financial management, our collection is tailored to meet your needs, empowering you to reach your full potential as a business leader.')</p>
                             </div>

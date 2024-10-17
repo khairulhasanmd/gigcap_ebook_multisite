@@ -52,7 +52,7 @@
                             @csrf                          
                             <div class="mb-3">
                               <label for="email" class="form-label">@lang('trans_mentoringlibrarycom.Email')*</label>
-                              <input type="email" class="form-control" id="email" name="email" placeholder="@lang('trans_mentoringlibrarycom.email')*"autofocus required>
+                              <input type="email" class="form-control" id="email" name="email" placeholder="@lang('trans_mentoringlibrarycom.Email')*"autofocus required>
                               @if ($errors->has('email'))
 									<span class="invalid-feedback" role="alert">
 										<strong>{{ $errors->first('email') }}</strong>
@@ -64,7 +64,7 @@
                               <label for="password" class="form-label">
                                 @lang('trans_mentoringlibrarycom.Last 4 digits of your card')
                                 </label>
-                              <input type="password" class="form-control" id="password" name="last4" placeholder="@lang('trans_mentoringlibrarycom.Last 4 digits of your card')"  maxlength="4" required>
+                              <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '');" class="form-control" id="password" name="last4" placeholder="@lang('trans_mentoringlibrarycom.Last 4 digits of your card')"  maxlength="4" required>
                               @if ($errors->has('password'))
 									<span class="invalid-feedback" role="alert">
 										<strong>{{ $errors->first('password') }}</strong>

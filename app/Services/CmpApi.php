@@ -277,7 +277,6 @@ class CmpApi {
     }
     public function updatepassword( $siteuser, $newpassword){
         $url = $this->url."/api/s/v3/users/".$siteuser.".json";
-        // dd($data);
         $postData = [
             "password" => $newpassword,
        ];
