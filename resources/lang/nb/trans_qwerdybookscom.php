@@ -9,6 +9,7 @@ return array (
   'shop now' => 'handle nå',
   'shop' => 'butikk',
   'book' => 'bok',
+  'Money' => 'Penger',
   'children\'s' => 'barn',
   'Mind' => 'Sinn',
   'science' => 'vitenskap',

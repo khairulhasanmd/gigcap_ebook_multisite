@@ -9,6 +9,7 @@ return array (
   'shop now' => 'nakupujte nyní',
   'shop' => 'obchod',
   'book' => 'kniha',
+  'Money' => 'Peníze',
   'children\'s' => 'dětské',
   'Mind' => 'Mysl',
   'science' => 'věda',

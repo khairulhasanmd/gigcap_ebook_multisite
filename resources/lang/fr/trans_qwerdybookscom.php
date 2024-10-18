@@ -9,6 +9,7 @@ return array (
   'shop now' => 'faire des achats',
   'shop' => 'boutique',
   'book' => 'livre',
+  'Money' => 'L\'argent',
   'children\'s' => 'des enfants',
   'Mind' => 'Mind',
   'science' => 'science',

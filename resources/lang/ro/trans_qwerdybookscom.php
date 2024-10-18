@@ -9,6 +9,7 @@ return array (
   'shop now' => 'cumpără acum',
   'shop' => 'magazin',
   'book' => 'carte',
+  'Money' => 'Bani',
   'children\'s' => 'copiilor',
   'Mind' => 'Minte',
   'science' => 'știință',

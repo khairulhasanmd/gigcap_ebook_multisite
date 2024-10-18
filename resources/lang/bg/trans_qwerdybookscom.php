@@ -9,6 +9,7 @@ return array (
   'shop now' => 'пазарувайте сега',
   'shop' => 'магазин',
   'book' => 'книга',
+  'Money' => 'Пари',
   'children\'s' => 'детски',
   'Mind' => 'Ум',
   'science' => 'наука',

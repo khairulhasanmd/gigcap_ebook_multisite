@@ -9,6 +9,7 @@ return array (
   'shop now' => 'apsipirkti dabar',
   'shop' => 'parduotuvė',
   'book' => 'knyga',
+  'Money' => 'Pinigai',
   'children\'s' => 'vaikų',
   'Mind' => 'Protas',
   'science' => 'mokslas',

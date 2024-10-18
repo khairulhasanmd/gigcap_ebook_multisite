@@ -9,6 +9,7 @@ return array (
   'shop now' => 'vásárolj most',
   'shop' => 'shop',
   'book' => 'könyv',
+  'Money' => 'Money',
   'children\'s' => 'gyermekek',
   'Mind' => 'Mind',
   'science' => 'tudomány',

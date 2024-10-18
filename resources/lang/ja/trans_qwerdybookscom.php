@@ -9,6 +9,7 @@ return array (
   'shop now' => '今すぐ購入',
   'shop' => 'ショップ',
   'book' => '書籍',
+  'Money' => 'お金',
   'children\'s' => 'キッズ',
   'Mind' => 'マインド',
   'science' => '科学',

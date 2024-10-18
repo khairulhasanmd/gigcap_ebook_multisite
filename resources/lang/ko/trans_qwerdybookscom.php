@@ -9,6 +9,7 @@ return array (
   'shop now' => '지금 쇼핑하기',
   'shop' => 'shop',
   'book' => '책',
+  'Money' => '돈',
   'children\'s' => '아동용',
   'Mind' => '마음',
   'science' => '과학',

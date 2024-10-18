@@ -9,6 +9,7 @@ return array (
   'shop now' => 'belanja sekarang',
   'shop' => 'toko',
   'book' => 'buku',
+  'Money' => 'Uang',
   'children\'s' => 'anak-anak',
   'Mind' => 'Pikiran',
   'science' => 'ilmu pengetahuan',
