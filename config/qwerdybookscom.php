@@ -2,7 +2,7 @@
 
 return array (
   'SUPPORT_EMAIL' => 'support@qwerdybooks.com',
-  'SUPPORT_PHONE' => '123456789',
+  'SUPPORT_PHONE' => '+353 90 651 3080',
   'SUPPORT_HOURS' => 'Monday - Friday 08:00-24:00 (CET), Weekends 10:00 - 18:00 (CET)',
   'CONCEPT_NAME' => 'Qwerdybooks',
   'COMPANY_NAME' => 'Zenpolaris Limited',
