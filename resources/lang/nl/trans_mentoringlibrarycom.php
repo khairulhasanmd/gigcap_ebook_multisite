@@ -134,7 +134,7 @@ return array (
   'Reset Password' => 'Wachtwoord opnieuw instellen',
   'Forgot your password ?' => 'Wachtwoord vergeten?',
   'Welcome back!' => 'Welkom terug!',
-  'Log In' => 'Aanmelden',
+  'Log In' => 'Inloggen',
   'Last 4 digits of your card' => 'Laatste 4 cijfers van je kaart',
   'Find Your Membership' => 'Vind uw lidmaatschap',
   'Psychology' => 'Psychologie',
