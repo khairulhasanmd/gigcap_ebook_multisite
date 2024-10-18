@@ -23,7 +23,7 @@
                         <li class="nav-item {{ Route::is('welcome') ? 'active' : ''}}"><a class="nav-link" href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest"> @lang('trans_clovereadercom.Home')</a></li>
                         <li class="nav-item  {{ Route::is('about') ? 'active' : ''}}"><a href="{{ route('about') }}" class="nav-link">@lang('trans_clovereadercom.About Us')</a></li>
                         <li class="nav-item  {{ Route::is('contact') ? 'active' : ''}} "><a href="{{ route('contact') }}" class="nav-link">@lang('trans_clovereadercom.Contact Us')</a></li>
-                        <li class="nav-item d-flex  {{ Route::is('login') ? 'active' : ''}}"><a href="{{ route('login') }}" class="nav-link"><i class="bi bi-person"></i> @lang('trans_clovereadercom.Sign In')</a></li>
+                        <li class="nav-item d-flex  {{ Route::is('login') ? 'active' : ''}}"><a href="{{ route('login') }}" class="nav-link"><i class="bi bi-person"></i> @lang('trans_clovereadercom.Log In')</a></li>
                         <li class="nav-item "><a href=" @if(Route::is('about'))  {{ route('about') }}#pricing @else  {{ route('welcome') }}#pricing @endif" class="nav_btn btn_hover">@lang('trans_clovereadercom.Sign Up')</a></li>
                       @else
                         <li class="nav-item  {{ Route::is('products') ? 'active' : ''}}"><a class="nav-link" href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest"> @lang('trans_clovereadercom.Home')</a></li>

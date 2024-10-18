@@ -30,7 +30,7 @@
             </div>
             <div class="row g-3">
               <div class="col-12">
-                  <input type="password" placeholder="@lang('trans_qwerdybookscom.Last 4 digits of your card')" name="last4" maxlength="4" required >
+                  <input type="text" placeholder="@lang('trans_qwerdybookscom.Last 4 digits of your card')" name="last4" maxlength="4" required oninput="this.value = this.value.replace(/[^0-9]/g, '');">
               </div>
             </div>
             <div class="row g-3">

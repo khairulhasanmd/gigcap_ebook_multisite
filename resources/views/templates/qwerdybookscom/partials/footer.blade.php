@@ -58,19 +58,19 @@
                       <ul class="footer-menu menu-anim">
                    
                         <li>
-                          <a href="{{ route('service', 'privacy_policy') }}">
+                          <a href="{{ LaravelLocalization::localizeUrl('service/privacy_policy') }}">
                             <i class="bi bi-chevron-right"></i>
                             @lang('trans_qwerdybookscom.Privacy Policy')
                           </a>
                         </li>
                         <li>
-                          <a href="{{ route('service', 'terms_of_service') }}">
+                          <a href="{{ LaravelLocalization::localizeUrl('service/terms_of_service') }}">
                             <i class="bi bi-chevron-right"></i>
                             @lang('trans_qwerdybookscom.Terms & Conditions')
                           </a>
                         </li>
                         <li>
-                          <a href="{{ route('service', 'subscription_policy') }}">
+                          <a href="{{ LaravelLocalization::localizeUrl('service/subscription_policy') }}">
                             <i class="bi bi-chevron-right"></i>
                            @lang('trans_qwerdybookscom.Subscription Packages')
                           </a>

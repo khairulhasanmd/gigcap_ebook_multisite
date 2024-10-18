@@ -110,7 +110,7 @@
                                                                                 <div class="city common">
                                                                                     <input type="text"
                                                                                        
-                                                                                        id="ci" value="{{ $user->data->city }}">
+                                                                                        id="ci" value="{{ $user->data->city }}" name="city">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-6">

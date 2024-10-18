@@ -10,6 +10,7 @@ return array (
   'shop now' => 'shop now',
   'shop' => 'shop',
   'book' => 'book',
+  'Money' => 'Money',
   'children\'s' => 'children\'s',
   'Mind' => 'Mind',
   'science' => 'science',

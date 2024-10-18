@@ -60,7 +60,7 @@ return array (
   'Reset Password' => 'Wachtwoord opnieuw instellen',
   'Forgot your password ?' => 'Wachtwoord vergeten?',
   'Welcome back!' => 'Welkom terug!',
-  'Log In' => 'Aanmelden',
+  'Log In' => 'Inloggen',
   'I forgot my password' => 'Ik ben mijn wachtwoord vergeten',
   'Last 4 digits of your card' => 'Laatste 4 cijfers van je kaart',
   'Find Your Membership' => 'Vind uw lidmaatschap',

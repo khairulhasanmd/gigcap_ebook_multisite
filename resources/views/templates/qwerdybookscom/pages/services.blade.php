@@ -57,9 +57,9 @@
               <div class="col-xxl-12">
                 <div class="hero__content animation__hero_one">
                   @if ($pageName == 'terms_of_service')    
-                  <h1 class="pt-5 mt-5">Terms & Conditions</h1>
+                  <h1 class="pt-5 mt-5">@lang('trans_qwerdybookscom.Terms & Conditions')</h1>
                     @elseif ($pageName == 'privacy_policy') 
-                    <h1 class="pt-5 mt-5">Privacy Policy</h1>
+                    <h1 class="pt-5 mt-5">@lang('trans_qwerdybookscom.Privacy Policy')</h1>
                     @else
                       {{-- <h1>Subscription Policy</h1> --}}
                     @endif                      

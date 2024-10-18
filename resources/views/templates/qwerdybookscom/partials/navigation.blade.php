@@ -43,7 +43,7 @@
                 <li><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">@lang('trans_qwerdybookscom.Home')</a></li>
                 <li><a href="{{ route('about') }}">@lang('trans_qwerdybookscom.About Us')</a></li>
                 <li><a href="{{ route('contact') }}">@lang('trans_qwerdybookscom.Contact')</a></li>
-                <li><a href="{{ route('login') }}">@lang('trans_qwerdybookscom.Sign In')</a></li>
+                <li><a href="{{ route('login') }}">@lang('trans_qwerdybookscom.Log In')</a></li>
                 <li><a  href="@if(Route::is('about'))  {{ route('about') }}#pricing-section @else  {{ route('welcome') }}#pricing-section @endif" onclick="handleSignUpClick()">@lang('trans_qwerdybookscom.Sign Up')</a></li>
             @else
                 <li><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">@lang('trans_qwerdybookscom.Home')</a></li>
@@ -106,11 +106,11 @@
                 <li><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">@lang('trans_qwerdybookscom.Home')</a></li>
                 <li><a href="{{ route('about') }}">@lang('trans_qwerdybookscom.About Us')</a></li>
                 <li><a href="{{ route('contact') }}">@lang('trans_qwerdybookscom.Contact')</a></li>
-                <li><a href="{{ route('login') }}">@lang('trans_qwerdybookscom.Sign In')</a></li>
+                <li><a href="{{ route('login') }}">@lang('trans_qwerdybookscom.Log In')</a></li>
                 <li><a  href="@if(Route::is('about'))  {{ route('about') }}#pricing-section @else {{ route('welcome') }}#pricing-section @endif"  id="close_offcanvas">@lang('trans_qwerdybookscom.Sign Up')</a></li>
                 @else
                     <li><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">@lang('trans_qwerdybookscom.Home')</a></li>
-                    <li><a href="@guest {{ route('welcome') }} @else {{ route('profile') }} @endguest">(tr.)</a></li>
+                    <li><a href="@guest {{ route('welcome') }} @else {{ route('profile') }} @endguest">@lang('trans_qwerdybookscom.Profile')</a></li>
                     <li><a href="{{ route('about') }}">@lang('trans_qwerdybookscom.About Us')</a></li>
                     <li><a href="{{ route('contact') }}">@lang('trans_qwerdybookscom.Contact Us')</a></li>
                     <li><a href="{{ route('logout') }}">@lang('trans_qwerdybookscom.Sign Out')</a></li>
@@ -148,8 +148,9 @@
           </div>
         </div>
         <div class="offcanvas__close">
-          <button type="button" id="close_offcanvass"><a href="{{url('/')}}"> <i class="fa-solid fa-xmark text-white"></i></a></button>
+          <button type="button" id="close_offcanvass" onclick="();"> <i class="fa-solid fa-xmark text-white"></i></button>
         </div>
+        
       </div>
     </div>
     <!-- Offcanvas area end -->
@@ -301,3 +302,10 @@
       }
   });
 </script>
+
+<script>
+    function hideMenuAndReload() {
+      var menu = document.getElementById('close_offcanvass');
+      window.location.reload(); // Reload the page
+    }
+  </script>

@@ -171,7 +171,7 @@ return array (
   'Reset Password' => 'Wachtwoord opnieuw instellen',
   'Forgot your password ?' => 'Wachtwoord vergeten?',
   'Welcome back!' => 'Welkom terug!',
-  'Log In' => 'Aanmelden',
+  'Log In' => 'Inloggen',
   'Find Your Membership' => 'Vind uw lidmaatschap',
   'Psychology' => 'Psychologie',
   'days days for' => 'dagen dagen voor',
