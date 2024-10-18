@@ -33,7 +33,7 @@
                         <div class="price__icon"><span><i class="fa-solid fa-check"></i></span></div>
                         <div class="price__info">
                           <h2 class="price__type">{{ strtoupper($products->external_product_id) }}</h2>
-                          <h3 class="price__title">{{ $products->pricing_plan->subscription_interval_days }}@lang('trans_qwerdybookscom.days days for') <div class="main-price"> {{ $products->pricing_plan->currency }}  {{ $products->pricing_plan->subscription_price }} </div></h3>
+                          <h3 class="price__title">{{ $products->pricing_plan->subscription_interval_days }} @lang('trans_qwerdybookscom.days for') <div class="main-price"> {{ $products->pricing_plan->currency }}  {{ $products->pricing_plan->subscription_price }} </div></h3>
                           <p>
                             @if (app()->getLocale() === 'fr')
                               période d'essai de {{ $products->pricing_plan->subscription_trial_days }} jours {{ $products->pricing_plan->price }} {{ $products->pricing_plan->currency }}

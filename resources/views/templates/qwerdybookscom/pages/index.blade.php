@@ -83,9 +83,10 @@
                   <a href="@guest #pricing-section @else {{ route('products') }} @endguest">@lang('trans_qwerdybookscom.Increase Your Intellectual Growth With Our Library!')<span>
                     <i class="fa-solid fa-arrow-right"></i></span></a>
                   <div class="hero__title-wrapper">
-                    <h1 class="hero__title">@lang('trans_qwerdybookscom.Explore our top digital literature') </h1> @lang('trans_qwerdybookscom.where you can explore a diverse selection of new ebooks. Immerse yourself in countless stories and expand your knowledge with every turn of the page!')</p>
+                    <h1 class="hero__title">@lang('trans_qwerdybookscom.Explore our top digital literature') </h1>
+                     {{-- @lang('trans_qwerdybookscom.where you can explore a diverse selection of new ebooks. Immerse yourself in countless stories and expand your knowledge with every turn of the page!')</p> --}}
                   </div>
-                    <p class="hero__sub-title">@lang('trans_qwerdybookscom.Unlock daily access to') <span>@lang('trans_qwerdybookscom.our extensive library')</span>,
+                    {{-- <p class="hero__sub-title">@lang('trans_qwerdybookscom.Unlock daily access to') <span>@lang('trans_qwerdybookscom.our extensive library')</span>, --}}
                   <img src="{{ asset ('qwerdybookscom/') }}/assets/imgs/icon/arrow-down-big.png" alt="Arrow Down Icon">
                   {{-- <div class="experience">
                     <h2 class="title">25k+</h2>
@@ -163,7 +164,7 @@
             <div class="row">
               <div class="col-xxl-12">
                 <div class="about__title-wrapper">
-                  <h3 class="sec-title title-anim">@lang('trans_qwerdybookscom.Consistent reading offers a variety of benefits that you\’ll truly appreciate')</h3>
+                  <h3 class="sec-title title-anim">@lang("trans_qwerdybookscom.Consistent reading offers a variety of benefits that you’ll truly appreciate")</h3>
                 </div>
 
                 <div class="about__content-wrapper">

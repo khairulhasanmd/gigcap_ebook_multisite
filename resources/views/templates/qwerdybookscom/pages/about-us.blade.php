@@ -42,7 +42,7 @@
           <div class="container g-0 line pt-140">
             <span class="line-3"></span>
             <div class="sec-title-wrapper">
-              <div class="from-text">@lang('trans_qwerdybookscom.from') <span>@lang('trans_qwerdybookscom.2020')</span></div>
+              {{-- <div class="from-text">@lang('trans_qwerdybookscom.from') <span>@lang('trans_qwerdybookscom.2020')</span></div> --}}
 
               <div class="row">
                 <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5">

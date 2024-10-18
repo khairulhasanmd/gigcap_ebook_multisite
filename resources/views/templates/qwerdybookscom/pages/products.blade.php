@@ -8,8 +8,11 @@
     {{-- <link href="{{ asset ('booksee365com/theme_backup/common/default.css') }}" rel="stylesheet"> --}}
  @endsection
  <style>
-    .download-button{
+    .download-button a{
         /* display: block !important; */
+        color: #c9f31d !important;
+        /* background-color: #c9f31d !important;
+        padding: 5px 10px; */
     }
     .mix-img img {
         width: 100%;
@@ -129,7 +132,7 @@ h4{
 
                     <div class="row">
                         <div class="col-12">
-                            <div class="more-btn text-center mt-4 mb-5">
+                            <div class="more-btn text-center mt-4 mb-5" style="color: #fff !important;">
                                 {{-- <div class="row g-3">
                                     <div class="col-12">
                                       <div class="btn_wrapper">

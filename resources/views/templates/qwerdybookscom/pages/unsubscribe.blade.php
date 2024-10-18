@@ -21,16 +21,12 @@
               <div class="col-12">
                 
                   <input type="email" placeholder="@lang('trans_qwerdybookscom.Email')" name="email"   required >
-                  @if ($errors->has('email'))
-                  <span class="invalid-feedback" role="alert">
-                      <strong>{{ $errors->first('email') }}</strong>
-                  </span>
-              @endif
+                  
               </div>
             </div>
             <div class="row g-3">
               <div class="col-12">
-                  <input type="text" placeholder="@lang('trans_qwerdybookscom.Last 4 digits of your card')" name="last4" maxlength="4" required oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                  <input type="password" placeholder="@lang('trans_qwerdybookscom.Last 4 digits of your card')" name="last4" maxlength="4" required oninput="this.value = this.value.replace(/[^0-9]/g, '');">
               </div>
             </div>
             <div class="row g-3">
