@@ -34,8 +34,13 @@
               <h3 >{{ strtoupper($products->external_product_id) }}</h3>
               <div class="price"><sup>{{ $products->pricing_plan->currency }}</sup>{{ $products->pricing_plan->subscription_price }}<span> / {{ $products->pricing_plan->subscription_interval_days }} @lang('trans_clovereadercom.days')</span></div>
               <div class="icon">
-                  <p>{{ $products->pricing_plan->subscription_trial_days }}-@lang('trans_clovereadercom.day trial period') / 
-                    {{ $products->pricing_plan->price }} {{ $products->pricing_plan->currency }}</p>
+                  <p>
+                      @if (app()->getLocale() === 'fr')
+                        période d'essai de {{ $products->pricing_plan->subscription_trial_days }} jours / {{ $products->pricing_plan->price }}  {{ $products->pricing_plan->currency }}
+                      @else
+                        {{ $products->pricing_plan->subscription_trial_days }}-@lang('trans_clovereadercom.day trial period') /  {{ $products->pricing_plan->price }}  {{ $products->pricing_plan->currency }}
+                      @endif
+</p>
               </div>
               <ul>
                 @foreach ($products->all_benefits as $benefit)
