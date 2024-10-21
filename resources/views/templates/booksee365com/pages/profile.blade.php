@@ -55,27 +55,27 @@ color: #8f8989;
                                     {{ csrf_field() }}
                                         <div class="first-name common">
                                             <label for="fn">@lang('trans_booksee365.First Name')</label>
-                                            <input type="text" placeholder="@lang('First Name')" id="fn" name="first_name" value="{{ $user->data->first_name }}" required>
+                                            <input type="text" placeholder="@lang('trans_booksee365.First Name')" id="fn" name="first_name" value="{{ $user->data->first_name }}" required>
                                         </div>
                                         <div class="last-name common">
                                             <label for="ln">@lang('trans_booksee365.Last Name')</label>
-                                            <input type="text" placeholder="@lang('Last Name')" id="ln" name="last_name" value="{{ $user->data->last_name }}" required>
+                                            <input type="text" placeholder="@lang('trans_booksee365.Last Name')" id="ln" name="last_name" value="{{ $user->data->last_name }}" required>
                                         </div>
                                         <div class="address common">
                                             <label for="add">@lang('trans_booksee365.Address')</label>
-                                            <input type="text" placeholder="@lang('Address')" id="add"  name="address" value="{{ $user->data->address }}" required>
+                                            <input type="text" placeholder="@lang('trans_booksee365.Address')" id="add"  name="address" value="{{ $user->data->address }}" required>
                                         </div>
                                         <div class="city common">
                                             <label for="ci">@lang('trans_booksee365.City')</label>
-                                            <input type="text" placeholder="@lang('City')" id="ci"  name="city" value="{{ $user->data->city }}" required>
+                                            <input type="text" placeholder="@lang('trans_booksee365.City')" id="ci"  name="city" value="{{ $user->data->city }}" required>
                                         </div>
                                         <div class="postcode common">
                                             <label for="pin">@lang('trans_booksee365.Postcode')</label>
-                                            <input type="text" placeholder="@lang('Postcode')" id="pin" name="postcode" value="{{ $user->data->postcode }}" required>
+                                            <input type="text" placeholder="@lang('trans_booksee365.Postcode')" id="pin" name="postcode" value="{{ $user->data->postcode }}" required>
                                         </div>
                                         <div class="phone common">
                                             <label for="fon">@lang('trans_booksee365.Phone Number')</label>
-                                            <input type="text" placeholder="@lang('Phone number')" id="fon" name="phone" value="{{ $user->data->phone }}" required>
+                                            <input type="text" placeholder="@lang('trans_booksee365.Phone number')" id="fon" name="phone" value="{{ $user->data->phone }}" required>
                                         </div>
                                         <div class="s-submit">
                                             <a href="{{ route('changePassword') }}"> @lang('trans_booksee365.Change Password') </a>
@@ -111,7 +111,7 @@ color: #8f8989;
                                         <input type="text" placeholder="@lang('Monthly')" value="{{$subscription->data->interval}}" id="int" class="cnsb-spc" disabled>
                                     </div>
                                     <div class="c-submit">
-                                        <a href="{{ route('cancelMembership') }}">@lang('trans_booksee365.Cancel Subscription')</a>
+                                        <a href="{{ route('cancelSubscription') }}">@lang('trans_booksee365.Cancel Subscription')</a>
                                     </div>
                                 </div>
                             </div>

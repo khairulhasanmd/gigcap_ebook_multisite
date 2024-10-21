@@ -31,7 +31,7 @@
 			<div class="col-md-4">
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">Home</a></li>
+						<li class="breadcrumb-item"><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">@lang('trans_booksee365.Home')</a></li>
 						<li class="breadcrumb-item active" aria-current="page">
 						@if ($pageName == 'terms_of_service')    
 							@lang('trans_booksee365.Terms & Conditions')

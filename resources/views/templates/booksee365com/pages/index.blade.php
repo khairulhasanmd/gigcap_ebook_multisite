@@ -79,7 +79,7 @@
 							<div class="post-meta">
 								<a href="#" class="post-author"> @lang('trans_booksee365.Active Life')</a>
 							</div>
-							<h3><a href="#">@lang('trans_booksee365.We\’ve designed our website with your busy lifestyle in mind, allowing you to read any of our titles whenever you find a moment of free time.')</a></h3>
+							<h3><a href="#">@lang("trans_booksee365.We’ve designed our website with your busy lifestyle in mind, allowing you to read any of our titles whenever you find a moment of free time.")</a></h3>
 						</div>
 					</div>
 				</div>

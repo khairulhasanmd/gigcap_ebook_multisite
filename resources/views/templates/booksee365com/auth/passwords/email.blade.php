@@ -12,18 +12,18 @@
             <div class="col-md-8">
                 <div class="page-heading">
                     <div class="sub-title">
-                        <p>Welcome to our company</p>
+                        <p>@lang('trans_booksee365.Welcome to our company')</p>
                     </div>
                     <div class="page-title">
-                        <h1>Forgot Password</h1>
+                        <h1>@lang('trans_booksee365.Forgot Password')</h1>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Forgot Password</li>
+                        <li class="breadcrumb-item"><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">@lang('trans_booksee365.Home')</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">@lang('trans_booksee365.Forgot Password')</li>
                     </ol>
                 </nav>
             </div>
@@ -36,7 +36,7 @@
         <div class="row pb-0">
             <div class="col-12 text-center mb-20">
                 <div class="section-title no-bg">
-                    <h1>Enter your email</h1>
+                    <h1>@lang('trans_booksee365.Enter your email')</h1>
                 </div>
             </div>
 
@@ -46,8 +46,8 @@
                         @csrf
                         <div class="col-12">
                             <div class="single-personal-info">
-                                <label for="email">Email</label>
-								<input class="{{ $errors->has('email') ? ' is-invalid' : '' }}" type="email" name="email" id="email" value="{{ old('email') }}" required autofocus>
+                                <label for="email">@lang('trans_booksee365.Email')</label>
+								<input class="{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="@lang('trans_booksee365.Email')" type="email" name="email" id="email" value="{{ old('email') }}" required autofocus>
 								@if ($errors->has('email'))
 									<span class="invalid-feedback" role="alert">
 										<strong>{{ $errors->first('email') }}</strong>
@@ -56,7 +56,7 @@
                             </div>
                         </div>
                         <div class="col-md-12 col-12 text-center">
-                            <input class="submit-btn" type="submit" value="Reset Password">
+                            <input class="submit-btn" type="submit" value="@lang('trans_booksee365.Reset Password')">
                         </div>
                     </form>
                 </div>

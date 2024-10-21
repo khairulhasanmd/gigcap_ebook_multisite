@@ -58,7 +58,7 @@
                         <div class="col-12">
                             <div class="single-personal-info">
                                 <label for="last4">@lang('trans_booksee365.Last 4 digits of your card')</label>
-								<input type="password" class="{{ $errors->has('password') ? ' is-invalid' : '' }}" id="last4" name="last4" maxlength="4" placeholder="@lang('Last 4 digits of your card')" required>
+								<input oninput="this.value = this.value.replace(/[^0-9]/g, '');" type="password" class="{{ $errors->has('password') ? ' is-invalid' : '' }}" id="last4" name="last4" maxlength="4" placeholder="@lang('trans_booksee365.Last 4 digits of your card')" required>
 								@if ($errors->has('password'))
 									<span class="invalid-feedback" role="alert">
 										<strong>{{ $errors->first('password') }}</strong>
