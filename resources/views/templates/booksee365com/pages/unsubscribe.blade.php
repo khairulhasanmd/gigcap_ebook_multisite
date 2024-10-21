@@ -47,7 +47,7 @@
                         <div class="col-12">
                             <div class="single-personal-info">
                                 <label for="email">@lang('trans_booksee365.Email')</label>
-								<input type="email" class="{{ $errors->has('email') ? ' is-invalid' : '' }}" id="login_email" name="email" placeholder="@lang('Enter Your Email')" required>
+								<input type="email" class="{{ $errors->has('email') ? ' is-invalid' : '' }}" id="login_email" name="email" placeholder="@lang('trans_booksee365.Enter Your Email')" required>
 								@if ($errors->has('email'))
 									<span class="invalid-feedback" role="alert">
 										<strong>{{ $errors->first('email') }}</strong>
