@@ -20,8 +20,12 @@
                                             {{ $products->pricing_plan->subscription_price }}
                                         </h2>
                                         <h3> / {{ $products->pricing_plan->subscription_interval_days }} @lang('trans_booksee365.days')</h3>
-                                        <p class="price-txt mb-4 mt-3"> {{ $products->pricing_plan->subscription_trial_days }}-@lang('trans_booksee365.day trial period') / 
-                                            {{ $products->pricing_plan->price }} {{ $products->pricing_plan->currency }}
+                                        <p class="price-txt mb-4 mt-3">
+		      @if (app()->getLocale() === 'fr')
+                        période d'essai de {{ $products->pricing_plan->subscription_trial_days }} jours / {{ $products->pricing_plan->price }}  {{ $products->pricing_plan->currency }}
+                      @else
+                        {{ $products->pricing_plan->subscription_trial_days }}-@lang('trans_booksee365.day trial period') /  {{ $products->pricing_plan->price }}  {{ $products->pricing_plan->currency }}
+                      @endif
                                         </p>
                                     </div>
                                     <div class="price-f mb-5">
