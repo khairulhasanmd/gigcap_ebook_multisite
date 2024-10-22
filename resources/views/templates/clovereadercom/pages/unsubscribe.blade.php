@@ -10,7 +10,7 @@
 
           <div class="container">
               <div class="page-heading">
-                  <h1>@lang('trans_clovereadercom.Find Your Membership') 
+                  <h1>@lang('trans_clovereadercom.Cancel Subscription') 
                   </h1>
                   <div class="page-header">
                       <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp; padding-left: 0px;">
@@ -23,7 +23,7 @@
                               <i class="bi bi-chevron-right"></i>
                           </li>
                           <li>
-                            @lang('trans_clovereadercom.Find Membership')
+                            @lang('trans_clovereadercom.Cancel Membership')
                           </li>
                       </ul>
                   </div>
@@ -58,7 +58,7 @@
                               
 
                                   <div class="justify-content-between mt-5">
-                                    <input type="submit" class="nav_btn btn_hover px-1 py-2 me-2" value="@lang('trans_clovereadercom.Search')">
+                                    <input type="submit" class="nav_btn btn_hover px-1 py-2 me-2" value="@lang('trans_clovereadercom.Find Subscription')">
                                     {{-- <a href="{{ route('profile') }}" class=" px-4">@lang('trans_clovereadercom.Back To Profile')</a> --}}
                                   </div>
                                 </form>

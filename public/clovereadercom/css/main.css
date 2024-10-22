@@ -4446,6 +4446,7 @@ span {
     width: 300px;
   }
 }
+}
 @media (max-width: 575px) {
   .offcanvas__wrapper {
     padding: 20px;
@@ -9605,49 +9606,68 @@ ul li {
   background-color: #f79eca ;
   border-radius: 25px;
 }
-.bg-banner_1{
-background: url("../img/banner-1.jpg") no-repeat center center;
+.layout-1{
+  background: url("../img/banner-1.jpg") no-repeat center center;
 background-size: cover;
-padding: 67px 40px;
-border-radius: 25px;
+
+  border-radius: 25px;
+}
+
+.bg-banner_1{
+  background-color: rgba(247, 158, 202, 0.6) ;
+  padding: 67px 40px;
+  border-radius: 25px;
 }
 .layout-2{
-  background-color: #fc5d4a ;
+  background-image: url("https://clovereader.com/clovereadercom/img/banner-2.png");
+  background-color:  #fc5c4a;
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: 300px;
   border-radius: 25px;
 }
 .bg-banner_2{
-  background: url("../img/banner-2.png") no-repeat center left;
-  background-size: 300px;
+  background-color: rgba(252, 92, 74, 0.60) ;
   padding: 98px 40px;
   border-radius: 25px;
 }
 .layout-3{
-  background-color: #a1dcea ;
+
+  background-image: url("../img/banner-3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #a1dcea;
   border-radius: 25px;
 }
 .bg-banner_3{
-  background: url("../img/banner-3.png") no-repeat center center;
-  background-size: cover;
+  background-color: rgba(161, 220, 234, 0.7) ;
   padding: 98px 40px;
   border-radius: 25px;
 }
 .layout-4{
+  background-image: url("https://clovereader.com/clovereadercom/img/banner-4.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 250px;
   background-color: #69ce75 ;
   border-radius: 25px;
 }
 .bg-banner_4{
-  background: url("../img/banner-4.png") no-repeat center right;
-  background-size: 350px;
+  background-color: rgba(105, 206, 117, 0.60) ;
   padding: 250px 40px 43px;
   border-radius: 25px;
 }
 .layout-5{
+  background-image: url("https://clovereader.com/clovereadercom/img/banner-5.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+  /* background-size: 200px; */
   background-color: #d8b789 ;
   border-radius: 25px;
 }
 .bg-banner_5{
-  background: url("../img/banner-5.png") no-repeat center right;
-  background-size: 350px;
+  background-color: rgba(216, 183, 137, 0.8);
   padding: 82px 40px;
   border-radius: 25px;
 }

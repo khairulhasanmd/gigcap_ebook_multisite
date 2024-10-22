@@ -245,7 +245,7 @@
                               </div>
 
                               <div class="post-thumbnail" >
-                                <img fetchpriority="high"  src="{{asset('clovereadercom/') }}/img/book1.png" classs="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" style="margin-left: 20px;margin-bottom: 10px;">
+                                <img fetchpriority="high"  src="{{asset('clovereadercom/') }}/img/book1.png" classs="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" style="margin-bottom: 10px;">
 
                             </div>
                           </div>
@@ -267,7 +267,7 @@
                                   @endguest                              </div>
 
                               <div class="post-thumbnail" >
-                                <img fetchpriority="high"  src="{{asset('clovereadercom/') }}/img/book2.png" classs="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" style="margin-left: 20px;margin-bottom: 1px;">
+                                <img fetchpriority="high"  src="{{asset('clovereadercom/') }}/img/book2.png" classs="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" style="margin-bottom: 1px;">
                               </div>
                           </div>
                       </div>
@@ -289,7 +289,7 @@
                                  </div>
 
                               <div class="post-thumbnail" >
-                                <img fetchpriority="high"  src="{{asset('clovereadercom/') }}/img/book3.png" classs="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" style="margin-left: 20px;margin-bottom: 20px;">
+                                <img fetchpriority="high"  src="{{asset('clovereadercom/') }}/img/book3.png" classs="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" style="margin-bottom: 20px;">
                             </div>
                           </div>
                       </div>
@@ -309,7 +309,7 @@
                               </div>
 
                               <div class="post-thumbnail">
-                                <img fetchpriority="high"  src="{{asset('clovereadercom/') }}/img/book4.png" classs="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" style="margin-left: 25px;margin-bottom: 20px;">
+                                <img fetchpriority="high"  src="{{asset('clovereadercom/') }}/img/book4.png" classs="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" style="margin-bottom: 20px;">
                             </div>
                           </div>
                       </div>
@@ -328,7 +328,7 @@
                                 </div>
 
                               <div class="post-thumbnail" >
-                                <img fetchpriority="high"  src="{{asset('clovereadercom/') }}/img/book5.png" classs="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" style="margin-left: 20px;margin-bottom: 0px;">
+                                <img fetchpriority="high"  src="{{asset('clovereadercom/') }}/img/book5.png" classs="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" style="margin-bottom: 0px;">
                               </div>
                           </div>
                       </div>
@@ -347,7 +347,7 @@
                                     @endguest                              </div>
 
                               <div class="post-thumbnail">
-                                <img fetchpriority="high"  src="{{asset('clovereadercom/') }}/img/book6.png" classs="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" style="margin-left: 20px;margin-bottom: 15px;">
+                                <img fetchpriority="high"  src="{{asset('clovereadercom/') }}/img/book6.png" classs="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" style="margin-bottom: 15px;">
                             </div>
                           </div>
                       </div>
