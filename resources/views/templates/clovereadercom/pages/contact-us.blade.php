@@ -28,7 +28,7 @@
                         </div>
                         <div class="content">
                             <h3>@lang('trans_clovereadercom.Mail Us')</h3>
-                            <p><a href="mailto:{{ config('clovereadercom.SUPPORT_EMAIL') }}">{{ config('clovereadercom.SUPPORT_EMAIL') }}</a></p>
+                            <p><a href="mailto:{{ config($concept->template.'.SUPPORT_EMAIL') }}">{{ config($concept->template.'.SUPPORT_EMAIL') }}</a></p>
                         </div>
                     </div>
                     <div class="feature-box-items wow fadeInUp col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
@@ -37,7 +37,7 @@
                         </div>
                         <div class="content">
                             <h3>@lang('trans_clovereadercom.Location')</h3>
-                            <p>{{ config('clovereadercom.COMPANY_NAME') }}, {{ config('clovereadercom.COMPANY_ADDRESS') }}, <br>{{ config('clovereadercom.COMPANY_POSTCODE')}}, {{ config('clovereadercom.COMPANY_CITY') }},  {{ config('clovereadercom.COMPANY_COUNTRY') }}</p>
+                            <p>{{ config($concept->template.'.COMPANY_NAME') }}, {{ config($concept->template.'.COMPANY_ADDRESS') }}, <br>{{ config($concept->template.'.COMPANY_POSTCODE')}}, {{ config($concept->template.'.COMPANY_CITY') }},  {{ config($concept->template.'.COMPANY_COUNTRY') }}</p>
                         </div>
                     </div>
                     <div class="feature-box-items wow fadeInUp col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
@@ -46,7 +46,7 @@
                         </div>
                         <div class="content">
                             <h3>@lang('trans_clovereadercom.Call Us')</h3>
-                            <p><a href="tel:{{ config('clovereadercom.SUPPORT_PHONE') }}">{{ config('clovereadercom.SUPPORT_PHONE') }}</a></p>
+                            <p><a href="tel:{{ config($concept->template.'.SUPPORT_PHONE') }}">{{ config($concept->template.'.SUPPORT_PHONE') }}</a></p>
                         </div>
                     </div>
                     <div class="feature-box-items wow fadeInUp col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
@@ -55,7 +55,7 @@
                         </div>
                         <div class="content">
                             <h3>@lang('trans_clovereadercom.Working Hour')</h3>
-                            <p>{{ config('clovereadercom.SUPPORT_HOURS') }}</p>
+                            <p>{{ config($concept->template.'.SUPPORT_HOURS') }}</p>
                         </div>
                     </div>
                     <div class="feature-box-items wow fadeInUp col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
@@ -65,7 +65,7 @@
                     
                         <div class="content">
                             <h3>@lang('trans_clovereadercom.Business Number') </h3>
-                            <p>{{ config('clovereadercom.COMPANY_BUSINESS_NUMBER') }}</p>
+                            <p>{{ config($concept->template.'.COMPANY_BUSINESS_NUMBER') }}</p>
                         </div>
                     </div>
                     <div class="feature-box-items wow fadeInUp col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
@@ -74,7 +74,7 @@
                     </div>
                         <div class="content">
                             <h3>@lang('trans_clovereadercom.VAT Number') </h3>
-                            <p>{{ config('clovereadercom.COMPANY_VAT_NUMBER') }}</p>
+                            <p>{{ config($concept->template.'.COMPANY_VAT_NUMBER') }}</p>
                         </div>
                     </div>
                  

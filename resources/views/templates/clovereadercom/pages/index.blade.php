@@ -192,7 +192,7 @@
                   </div>
                   <div class="content">
                       <h3>@lang('trans_clovereadercom.Mail Us')</h3>
-                      <p><a href="mailto:{{ config('clovereadercom.SUPPORT_EMAIL') }}">{{ config('clovereadercom.SUPPORT_EMAIL') }}</a></p>
+                      <p><a href="mailto:{{ config($concept->template.'.SUPPORT_EMAIL') }}">{{ config($concept->template.'.SUPPORT_EMAIL') }}</a></p>
                   </div>
               </div>
               <div class="feature-box-items wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
@@ -201,7 +201,7 @@
                   </div>
                   <div class="content">
                       <h3>@lang('trans_clovereadercom.Call Us')</h3>
-                      <p><a href="tel:{{ config('clovereadercom.SUPPORT_PHONE') }}">{{ config('clovereadercom.SUPPORT_PHONE') }}</a></p>
+                      <p><a href="tel:{{ config($concept->template.'.SUPPORT_PHONE') }}">{{ config($concept->template.'.SUPPORT_PHONE') }}</a></p>
                   </div>
               </div>
               <div class="feature-box-items wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
