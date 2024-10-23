@@ -84,7 +84,7 @@
       <div class="main-content">
          {{-- Complaints and disputes section begin --}}
          <div class="terms-section" style="margin-bottom: 50px; line-height: 22px !important; font: normal 16px 'Open Sans'; background-color: #fff;">
-            <h4 style="color: #333333; margin-bottom: 30px; margin-top: 14px;">@lang('trans_clovereadercom.At') <span style="font-weight: 800;">{{ config('clovereadercom.CONCEPT_NAME') }}</span>, @lang('trans_clovereadercom.we value customer satisfaction and strive to resolve any issues you may encounter promptly. If you have a complaint or dispute regarding our products or services, please follow the process below:')</h4>
+            <h4 style="color: #333333; margin-bottom: 30px; margin-top: 14px;">@lang('trans_clovereadercom.At') <span style="font-weight: 800;">{{ config('clovereadercom.COMPANY_NAME') }}</span>, @lang('trans_clovereadercom.we value customer satisfaction and strive to resolve any issues you may encounter promptly. If you have a complaint or dispute regarding our products or services, please follow the process below:')</h4>
         </div>
         <div class="terms-section" style="margin-bottom: 50px; line-height: 22px !important; font: normal 16px 'Open Sans'; background-color: #fff;">
             <h1 id="en_terms-privacy" class="belong-overview" style="line-height: 38px; color: #222222; margin-bottom: 30px; margin-top: 14px;">@lang('trans_clovereadercom.1. Filing a Complaint')</h1>
