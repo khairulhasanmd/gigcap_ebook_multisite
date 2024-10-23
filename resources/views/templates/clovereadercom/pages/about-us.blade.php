@@ -42,7 +42,7 @@
                             <h3 class="section-title text-start "><span>@lang('trans_clovereadercom.Experience the Future of Reading at CloveReader.')</span></h3>
                         </div>
                         <div class="col-lg-6 py-5">
-                            <a href="@guest {{route('welcome')}}#pricing  @else {{route('products')}} @endguest" class="nav_btn btn_hover py-3" style="font-size: 25px;">@lang('trans_clovereadercom.Start Subsription') <i class="bi bi-arrow-right ms-1"></i></a>
+                            <a href="@guest #pricing  @else {{route('products')}} @endguest" class="nav_btn btn_hover py-3" style="font-size: 25px;">@lang('trans_clovereadercom.Start Subsription') <i class="bi bi-arrow-right ms-1"></i></a>
                         </div>
                         <div class="col-lg-6 ">
                             <p class="text-justify">@lang('trans_clovereadercom.We are dedicated to providing a carefully curated selection of valuable resources tailored for today’s entrepreneurs. Our handpicked titles are accessible and relevant, supporting your growth and success in the business landscape.')</p>

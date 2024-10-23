@@ -64,7 +64,7 @@ class CreateTranslations extends Command
         // $this->makeAllTranslations('trans_08_watchingyoga.php');
         // $this->makeAllTranslations('trans_09_runrhythmtv.php');
         // $this->makeAllTranslations('trans_10_Watchseniorfit.php');
-        $this->makeAllTranslations('trans_booksee365.php');
+        $this->makeAllTranslations('trans_clovereadercom.php');
         // $this->makeAllTranslations('translation.php');
         // $this->makeAllTranslations('validation.php');
     }

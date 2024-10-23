@@ -87,29 +87,29 @@
                                             {{ csrf_field() }}    
                                             <div class="mb-3">
                                                 <label for="name" class="form-label">@lang('trans_clovereadercom.First name')</label>
-                                                <input type="text" class="form-control" id="name" name="first_name" placeholder="First Name" value="{{ $user->data->first_name }}" required>
+                                                <input type="text" class="form-control" id="name" name="first_name" placeholder="@lang('trans_clovereadercom.First name')" value="{{ $user->data->first_name }}" required>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="lastName" class="form-label">@lang('trans_clovereadercom.Last name')</label>
-                                                <input type="text" class="form-control" id="lastName" name="last_name" placeholder="Last Name" value="{{ $user->data->last_name }}" required>
+                                                <input type="text" class="form-control" id="lastName" name="last_name" placeholder="@lang('trans_clovereadercom.Last name')" value="{{ $user->data->last_name }}" required>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="address" class="form-label">@lang('trans_clovereadercom.Address')</label>
-                                                <input type="text" class="form-control" id="address" name="address" placeholder="Address" value="{{ $user->data->address }}" required>
+                                                <input type="text" class="form-control" id="address" name="address" placeholder="@lang('trans_clovereadercom.Address')" value="{{ $user->data->address }}" required>
                                             </div>
                                             <div class="row mb-3">
                                                 <div class="col-sm-8">
                                                     <label for="city" class="form-label">@lang('trans_clovereadercom.City')</label>
-                                                    <input type="text" class="form-control" id="city" name="city" placeholder="City" value="{{ $user->data->city }}" required>
+                                                    <input type="text" class="form-control" id="city" name="city" placeholder="@lang('trans_clovereadercom.City')" value="{{ $user->data->city }}" required>
                                                 </div>
                                                 <div class="col-sm-4">
                                                     <label for="postcode" class="form-label">@lang('trans_clovereadercom.Postcode')</label>
-                                                    <input type="text" class="form-control" id="postcode" name="postcode" placeholder="Postcode" value="{{ $user->data->postcode }}" required>
+                                                    <input type="text" class="form-control" id="postcode" name="postcode" placeholder="@lang('trans_clovereadercom.Postcode')" value="{{ $user->data->postcode }}" required>
                                                 </div>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="phoneNumber" class="form-label">@lang('trans_clovereadercom.Phone number')</label>
-                                                <input type="text" class="form-control" id="phoneNumber" name="phone" placeholder="Phone number" value="{{ $user->data->phone }}" required>
+                                                <input type="text" class="form-control" id="phoneNumber" name="phone" placeholder="@lang('trans_clovereadercom.Phone number')" value="{{ $user->data->phone }}" required>
                                             </div>
                                             <div class="d-flex justify-content-start mb-5">
                                                 <a href="{{ route('changePassword') }}" class="theme_btn mt-4 text-dark">@lang('trans_clovereadercom.Change Password')</a>
@@ -118,6 +118,9 @@
                                         </form>
                                     </div>
                                     <div class="col-md-12 col-lg-6">
+                                    @php
+                                        // dd($subscription->data);
+                                    @endphp
                                         <form>
                                             <div class="mb-3">
                                                 <label for="membershipName" class="form-label">@lang('trans_clovereadercom.Name')</label>
@@ -133,11 +136,11 @@
                                             </div>
                                             <div class="mb-3">
                                                 <label for="price" class="form-label">@lang('trans_clovereadercom.Price')</label>
-                                                <input type="text" class="form-control" id="price" value="{{$subscription->data->price}}" disabled>
+                                                <input type="text" class="form-control" id="price" value="{{$subscription->data->currency}} {{$subscription->data->price}}" disabled> 
                                             </div>
                                             <div class="mb-3">
                                                 <label for="interval" class="form-label">@lang('trans_clovereadercom.Interval')</label>
-                                                <input type="text" class="form-control" id="interval" value="{{$subscription->data->interval}}" disabled>
+                                                <input type="text" class="form-control" id="interval" value="{{$subscription->data->interval}} @lang('trans_clovereadercom.days')" disabled>
                                             </div>
                                             <a href="{{ route('cancelSubscription') }}" class="theme_btn bg-danger text-white mt-4 text-end">@lang('trans_clovereadercom.Cancel Subscription')</a>
                                         </form>
@@ -147,6 +150,9 @@
                         </div>
 
                         <!-- My Orders Tab Content -->
+                        @php
+                            // dd($orders);
+                        @endphp
                         <div class="tab-pane fade" id="myorder" role="tabpanel" aria-labelledby="myorder-tab">
                             <div class="table-responsive">
                                <div class="table_wrap">
@@ -165,7 +171,7 @@
                                         @foreach($orders->data as $order)
                                             <tr class="border-bm">
                                                 <td> {{$order->id}}</td>
-                                                <td> {{ config('clovereadercom.CONCEPT_NAME') }}</td>
+                                                <td> {{$order->product->name}}</td>
                                                 <td> {{$order->type}}</td>
                                                 <td> {{$order->total}} {{$order->currency}}</td>
                                                 <td> {{$order->status}}</td>

@@ -60,18 +60,21 @@
                     </div>
                     <div class="feature-box-items wow fadeInUp col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
                       <div class="icon">
-                        {{-- # --}}
-                    </div>
+                        <i class="bi bi-briefcase"></i>
+                     </div>
+                    
                         <div class="content">
-                            <h3>@lang('trans_clovereadercom.Business Number :') {{ config('clovereadercom.COMPANY_BUSINESS_NUMBER') }}</h3>
+                            <h3>@lang('trans_clovereadercom.Business Number') </h3>
+                            <p>{{ config('clovereadercom.COMPANY_BUSINESS_NUMBER') }}</p>
                         </div>
                     </div>
                     <div class="feature-box-items wow fadeInUp col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
                       <div class="icon">
-                        {{-- # --}}
+                        <i class="bi bi-credit-card-2-front"></i>
                     </div>
                         <div class="content">
-                            <h3>@lang('trans_clovereadercom.VAT Number :') {{ config('clovereadercom.COMPANY_VAT_NUMBER') }}</h3>
+                            <h3>@lang('trans_clovereadercom.VAT Number') </h3>
+                            <p>{{ config('clovereadercom.COMPANY_VAT_NUMBER') }}</p>
                         </div>
                     </div>
                  
