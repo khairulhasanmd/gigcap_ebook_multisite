@@ -78,16 +78,16 @@
                               </div>
                               <ul class="list-area text-end text-white">
                                   <li>
-                                      <i class="bi bi-geo-alt me-1"></i> @lang('trans_clovereadercom.Location:') {{ config('clovereadercom.COMPANY_ADDRESS') }}, <br>  {{ config('clovereadercom.COMPANY_POSTCODE')}},{{ config('clovereadercom.COMPANY_CITY') }}, {{ config('clovereadercom.COMPANY_COUNTRY') }}
+                                      <i class="bi bi-geo-alt me-1"></i> @lang('trans_clovereadercom.Location:') {{ config($concept->template.'.COMPANY_ADDRESS') }}, <br>  {{ config($concept->template.'.COMPANY_POSTCODE')}},{{ config($concept->template.'.COMPANY_CITY') }}, {{ config($concept->template.'.COMPANY_COUNTRY') }}
                                   </li>
                                   <li>
-                                      <i class="bi bi-clock me-1"></i> @lang('trans_clovereadercom.Opening Hours:') {{ config('clovereadercom.SUPPORT_HOURS') }}
+                                      <i class="bi bi-clock me-1"></i> @lang('trans_clovereadercom.Opening Hours:') {{ config($concept->template.'.SUPPORT_HOURS') }}
                                   </li>
                                   <li>
-                                      <i class="bi bi-envelope me-1"></i> @lang('trans_clovereadercom.Mail Us:') <a href="mailto::{{ config('clovereadercom.SUPPORT_EMAIL') }}"> {{ config('clovereadercom.SUPPORT_EMAIL') }}</a>
+                                      <i class="bi bi-envelope me-1"></i> @lang('trans_clovereadercom.Mail Us:') <a href="mailto::{{ config($concept->template.'.SUPPORT_EMAIL') }}"> {{ config($concept->template.'.SUPPORT_EMAIL') }}</a>
                                   </li>
                                   <li>
-                                      <i class="bi bi-telephone me-1"></i> @lang('trans_clovereadercom.Call Us:') <a href="tel::{{ config('clovereadercom.SUPPORT_PHONE') }}">{{ config('clovereadercom.SUPPORT_PHONE') }}</a>
+                                      <i class="bi bi-telephone me-1"></i> @lang('trans_clovereadercom.Call Us:') <a href="tel::{{ config($concept->template.'.SUPPORT_PHONE') }}">{{ config($concept->template.'.SUPPORT_PHONE') }}</a>
                                   </li>
                               </ul>
                           </div>
@@ -105,7 +105,7 @@
               <div class="container">
                   <div class="footer-wrapper align-items-center">
                       <p class="wow fadeInLeft p-3 m-0 text-center" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                        @lang('trans_clovereadercom.Copyright') &copy; {{ CONFIG('clovereadercom.CONCEPT_NAME') }} {{ date('Y') }}. {{ config('clovereadercom.COMPANY_NAME') }} - {{ config('clovereadercom.COMPANY_BUSINESS_NUMBER') }} - {{ config('clovereadercom.COMPANY_ADDRESS') }}, {{ config('clovereadercom.COMPANY_CITY') }} {{ config('clovereadercom.COMPANY_POSTCODE')}},  {{ config('clovereadercom.COMPANY_COUNTRY') }} | @lang('trans_clovereadercom.All rights reserved.')                      </p>
+                        @lang('trans_clovereadercom.Copyright') &copy; {{ CONFIG($concept->template.'.CONCEPT_NAME') }} {{ date('Y') }}. {{ config($concept->template.'.COMPANY_NAME') }} - {{ config($concept->template.'.COMPANY_BUSINESS_NUMBER') }} - {{ config($concept->template.'.COMPANY_ADDRESS') }}, {{ config($concept->template.'.COMPANY_CITY') }} {{ config($concept->template.'.COMPANY_POSTCODE')}},  {{ config($concept->template.'.COMPANY_COUNTRY') }} | @lang('trans_clovereadercom.All rights reserved.')                      </p>
                   </div>
               </div>
           </div>

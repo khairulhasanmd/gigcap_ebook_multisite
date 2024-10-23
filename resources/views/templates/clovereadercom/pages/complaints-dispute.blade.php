@@ -1,7 +1,9 @@
 @extends('templates.clovereadercom.layouts.app')
 
 
-
+@php
+    // dd($concept->template);
+@endphp
 
 <style>
   .terms-section{
@@ -84,14 +86,14 @@
       <div class="main-content">
          {{-- Complaints and disputes section begin --}}
          <div class="terms-section" style="margin-bottom: 50px; line-height: 22px !important; font: normal 16px 'Open Sans'; background-color: #fff;">
-            <h4 style="color: #333333; margin-bottom: 30px; margin-top: 14px;">@lang('trans_clovereadercom.At') <span style="font-weight: 800;">{{ config('clovereadercom.COMPANY_NAME') }}</span>, @lang('trans_clovereadercom.we value customer satisfaction and strive to resolve any issues you may encounter promptly. If you have a complaint or dispute regarding our products or services, please follow the process below:')</h4>
+            <h4 style="color: #333333; margin-bottom: 30px; margin-top: 14px;">@lang('trans_clovereadercom.At') <span style="font-weight: 800;">{{ config($concept->template.'.COMPANY_NAME') }}</span>, @lang('trans_clovereadercom.we value customer satisfaction and strive to resolve any issues you may encounter promptly. If you have a complaint or dispute regarding our products or services, please follow the process below:')</h4>
         </div>
         <div class="terms-section" style="margin-bottom: 50px; line-height: 22px !important; font: normal 16px 'Open Sans'; background-color: #fff;">
             <h1 id="en_terms-privacy" class="belong-overview" style="line-height: 38px; color: #222222; margin-bottom: 30px; margin-top: 14px;">@lang('trans_clovereadercom.1. Filing a Complaint')</h1>
             <p style="font: normal 15px 'Open Sans'; background-color: transparent; line-height: 1.4; margin-bottom: 13px; color: #222222; font-weight: 300;">
                 @lang('trans_clovereadercom.You can submit a complaint through the following methods:')<br><br>
-                <span style="font-weight: 800;">@lang('trans_clovereadercom.Email:')</span> {{ config('clovereadercom.SUPPORT_EMAIL') }}<br>
-                <span style="font-weight: 800;">@lang('trans_clovereadercom.Phone:')</span> {{ config('clovereadercom.SUPPORT_PHONE') }}<br>
+                <span style="font-weight: 800;">@lang('trans_clovereadercom.Email:')</span> {{ config($concept->template.'.SUPPORT_EMAIL') }}<br>
+                <span style="font-weight: 800;">@lang('trans_clovereadercom.Phone:')</span> {{ config($concept->template.'.SUPPORT_PHONE') }}<br>
                 <span style="font-weight: 800;">@lang('trans_clovereadercom.Online Form:')</span> <a href="{{ LaravelLocalization::localizeUrl('/contact') }}" class="text-decoration-underline">@lang('trans_clovereadercom.Link to Contact/Complaint Form')</a>
             </p>
             <p style="font: normal 15px 'Open Sans'; background-color: transparent; line-height: 1.4; margin-bottom: 13px; color: #222222; font-weight: 300;">
@@ -119,10 +121,10 @@
         <div class="terms-section" style="margin-bottom: 50px; line-height: 22px !important; font: normal 16px 'Open Sans'; background-color: #fff;">
             <h1 id="en_terms-privacy" class="belong-overview" style="line-height: 38px; color: #222222; margin-bottom: 30px; margin-top: 14px;">@lang('trans_clovereadercom.5. Legal Rights')</h1>
             <p style="font: normal 15px 'Open Sans'; background-color: transparent; line-height: 1.4; margin-bottom: 13px; color: #222222; font-weight: 300;">
-                @lang('trans_clovereadercom.This policy is governed by the applicable laws of') <span style="font-weight: 800;">{{ config('clovereadercom.COMPANY_COUNTRY') }}</span>, @lang('trans_clovereadercom.and nothing in this policy affects your legal rights as a consumer.')
+                @lang('trans_clovereadercom.This policy is governed by the applicable laws of') <span style="font-weight: 800;">{{ config($concept->template.'.COMPANY_COUNTRY') }}</span>, @lang('trans_clovereadercom.and nothing in this policy affects your legal rights as a consumer.')
             </p>
             <p style="font: normal 15px 'Open Sans'; background-color: transparent; line-height: 1.4; margin-bottom: 13px; color: #222222; font-weight: 300;">
-                @lang('trans_clovereadercom.For further information, please contact us at') <span style="font-weight: 800;">{{ config('clovereadercom.SUPPORT_PHONE') }}</span>.
+                @lang('trans_clovereadercom.For further information, please contact us at') <span style="font-weight: 800;">{{ config($concept->template.'.SUPPORT_PHONE') }}</span>.
             </p>
         </div>
       </div>                     
