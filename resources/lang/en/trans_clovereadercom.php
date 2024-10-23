@@ -151,6 +151,7 @@ return array (
   'Location:' => 'Location:',
   'Call Us:' => 'Call Us:',
   'Location:' => 'Location:',
+  'Complaints and Disputes:' => 'Complaints and Disputes:',
   'Opening Hours:' => 'Opening Hours:',
   'Reading a book takes you on adventures, no movement needed.' => 'Reading a book takes you on adventures, no movement needed.',
   'Subscription Packages' => 'Subscription Packages',
@@ -181,6 +182,32 @@ return array (
   'Reveals insider tips on hidden gems, smart travel budgeting, packing strategies, and maximizing your global adventures.' => 'Reveals insider tips on hidden gems, smart travel budgeting, packing strategies, and maximizing your global adventures.',
   'Expert Travel Insider' => 'Expert Travel Insider',
 
+
+
+  'Complaints and Disputes Policy' => 'Complaints and Disputes Policy',
+  'At' => 'At',
+  'Complaints and Disputes' => 'Complaints and Disputes',
+  'we value customer satisfaction and strive to resolve any issues you may encounter promptly. If you have a complaint or dispute regarding our products or services, please follow the process below:' => 'we value customer satisfaction and strive to resolve any issues you may encounter promptly. If you have a complaint or dispute regarding our products or services, please follow the process below:',
+  '1. Filing a Complaint' => '1. Filing a Complaint',
+  'You can submit a complaint through the following methods:' => 'You can submit a complaint through the following methods:',
+  'Email:' => 'Email:',
+  'Phone:' => 'Phone:',
+  'Online Form:' => 'Online Form:',
+  'Link to Contact/Complaint Form' => 'Link to Contact/Complaint Form',
+  'Please provide as much detail as possible, including your order number, product details, and the nature of your complaint.' => 'Please provide as much detail as possible, including your order number, product details, and the nature of your complaint.',
+  '2. Timeframe for Response' => '2. Timeframe for Response',
+  'We will acknowledge your complaint within' => 'We will acknowledge your complaint within',
+  '24-48 hours' => '24-48 hours',
+  'and aim to provide a full response within' => 'and aim to provide a full response within',
+  '7 working days' => '7 working days',
+  '3. Resolution Process' => '3. Resolution Process',
+  'Once we receive your complaint, our team will thoroughly investigate the issue and work towards a fair resolution. We will keep you informed throughout the process.' => 'Once we receive your complaint, our team will thoroughly investigate the issue and work towards a fair resolution. We will keep you informed throughout the process.',
+  '4. Escalation Procedure' => '4. Escalation Procedure',
+  'If you are not satisfied with the outcome of your complaint, you may request that the matter be escalated. We may refer you to an independent dispute resolution service or applicable regulatory bodies as needed.' => 'If you are not satisfied with the outcome of your complaint, you may request that the matter be escalated. We may refer you to an independent dispute resolution service or applicable regulatory bodies as needed.',
+  '5. Legal Rights' => '5. Legal Rights',
+  'This policy is governed by the applicable laws of' => 'This policy is governed by the applicable laws of',
+  'and nothing in this policy affects your legal rights as a consumer.' => 'and nothing in this policy affects your legal rights as a consumer.',
+  'For further information, please contact us at' => 'For further information, please contact us at',
 
 
 

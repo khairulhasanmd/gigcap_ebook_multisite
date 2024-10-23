@@ -45,6 +45,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
     Route::get('/service', [BasicController::class, 'typeOfService'])->name('type.of.service');
     Route::get('/about-us', [BasicController::class, 'about'])->name('about');
     Route::get('/contact', [BasicController::class, 'contact'])->name('contact');
+    Route::get('/complaints_and_disputes', [BasicController::class, 'complaints_and_disputes'])->name('complaints_and_disputes');
     Route::get('/signin', [UserLoginController::class, 'signin'])->name('login');
     Route::post('/signin', [LoginController::class, 'login'])->name('signin.post');
     Route::get('/signout', [UserLoginController::class, 'signout'])->name('signout');

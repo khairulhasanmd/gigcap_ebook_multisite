@@ -96,6 +96,10 @@ class BasicController extends GlobalController
         
         return view('templates.'.$this->concept->template.'.pages.contact-us');
     }
+    public function complaints_and_disputes(){
+        
+        return view('templates.'.$this->concept->template.'.pages.complaints-dispute');
+    }
 
     public function comingSoon(){
         return view('pages.coming-soon');
