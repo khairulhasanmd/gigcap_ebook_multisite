@@ -42,6 +42,12 @@
                                       </a>
                                   </li>
                                   <li>
+                                    <a href="{{ LaravelLocalization::localizeUrl('/complaints_and_disputes') }}">
+                                      <i class="bi bi-chevron-right"></i>
+                                     @lang('trans_clovereadercom.Complaints and Disputes')
+                                    </a>
+                                  </li>
+                                  <li>
                                       <a href="{{ route('unsubscribe') }}">
                                           <i class="bi bi-chevron-right"></i>
                                           @lang('trans_clovereadercom.Cancel Subscription')
