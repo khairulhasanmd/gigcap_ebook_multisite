@@ -27,6 +27,9 @@ class BasicController extends GlobalController
         $this->domain = env('PC_DOMAIN');
         $this->secret = env('PC_SECRET');
         $this->locale = app()->getLocale();
+        $this->concept_name = $this->template;
+        // dd($this->template);
+
 
         $this->cmp = new CmpApi($this->concept);
     }
@@ -61,10 +64,14 @@ class BasicController extends GlobalController
     }
 
     public function termsLocale(){
+        $lang = app()->getLocale();
+        if($this->concept_name == 'qwerdybookscom'){
+            $lang = 'en';
+        }
 
         // $data = $this->crmApi->get(CrmApi::$routes['webshop_get']);
         // $company = $data->getCompany();
-        $terms = $this->cmp->getTermsLocale($this->locale);
+        $terms = $this->cmp->getTermsLocale($$lang);
         if(!is_null($terms)){
             $this->createTerms($terms);
             return view($this->template.'.pages.terms')->with(['terms' => $terms]);
@@ -74,8 +81,12 @@ class BasicController extends GlobalController
         }
     }
     public function typeOfService(Request $request, $service){
+        $lang = app()->getLocale();
+        if($this->concept_name == 'templates.qwerdybookscom.'){
+            $lang = 'en';
+        }
 
-        $result = $this->cmp->typeOfService($service , $this->locale);
+        $result = $this->cmp->typeOfService($service , $lang);
         // dd($service);
         // return redirect(app()->getLocale().'/pages/services')->with(['service' => $result, 'pageName' => $service]);
         // return redirect('/service/'.$service)->with(['service' => $result, 'pageName' => $service]);

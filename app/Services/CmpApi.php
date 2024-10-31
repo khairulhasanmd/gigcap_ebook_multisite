@@ -330,7 +330,7 @@ class CmpApi {
         }
         curl_close($ch);
         // $responseData = json_decode($responseData);
-        dd($responseData);
+        // dd($responseData);
 
         return $responseData;
     }
@@ -345,6 +345,10 @@ class CmpApi {
     }
 
     public function getTermsLocale($locale) {
+        $lang = app()->getLocale();
+        if($this->concept_name == 'qwerdybookscom'){
+            $lang = 'en';
+        }
         $url = $this->url."/api/s/v3/this/webshop/terms?_locale=".$locale;
         // dd($url);
         $ch = curl_init();
