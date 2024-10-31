@@ -52,7 +52,7 @@
                 <li><a href="{{ route('contact') }}">@lang('trans_qwerdybookscom.Contact Us')</a></li>
                 <li><a href="{{ route('logout') }}">@lang('trans_qwerdybookscom.Sign Out')</a></li>
             @endguest
-            <li class="nav-item single-lang py-1">
+            {{-- <li class="nav-item single-lang py-1">
               <div  id="toggle"  style="width: 130px; margin:auto; "> 
                   <ul id="toggle" style=" list-style: none;">
                       <li class="toggle header-btn text-uppercase" id="toggle" style="color: #fff; margin-left:-7px">
@@ -79,7 +79,7 @@
                       </li>
                   </ul>
               </div>
-          </li>
+          </li> --}}
           </ul>
         </div>
         <div class="header__nav-icon-3">
@@ -115,7 +115,7 @@
                     <li><a href="{{ route('contact') }}">@lang('trans_qwerdybookscom.Contact Us')</a></li>
                     <li><a href="{{ route('logout') }}">@lang('trans_qwerdybookscom.Sign Out')</a></li>
                 @endguest
-                <li class="single-lang py-1">
+                {{-- <li class="single-lang py-1">
                   <div  id="toggle"  style="width: 130px;"> 
                       <ul id="toggle" style=" list-style: none;">
                           <li class="toggle header-btn text-uppercase" id="toggle" style="color: #fff; margin-left:-7px">
@@ -142,7 +142,7 @@
                           </li>
                       </ul>
                   </div>
-              </li>
+              </li> --}}
               </ul>
             </nav>
           </div>
