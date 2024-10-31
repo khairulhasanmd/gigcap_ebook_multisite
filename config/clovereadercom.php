@@ -2,7 +2,7 @@
 
 return array (
   'SUPPORT_EMAIL' => 'support@clovereader.com',
-  'SUPPORT_PHONE' => '00000000000',
+  'SUPPORT_PHONE' => '+44 808 502 0267',
   'SUPPORT_HOURS' => 'Monday - Friday 08:00-24:00 (CET), Weekends 10:00 - 18:00 (CET)',
   'CONCEPT_NAME' => 'Clovereader',
   'COMPANY_NAME' => 'MELEMELE LTD',
