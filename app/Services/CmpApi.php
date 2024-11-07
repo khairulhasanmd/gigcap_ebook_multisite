@@ -228,18 +228,15 @@ class CmpApi {
     }
 
     public function getProducts() {
-        $lang = app()->getLocale();
-        if($this->concept_name == 'qwerdybookscom'){
-            $lang = 'en';
-        }
+    
         $url = $this->url."/api/s/v3/selects/products/websites.json";
 
         $request = [
             "request_ip" => (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? request()->ip() : "49.180.184.133"),
             "request_user_agent" =>  (isset(request()->server()['HTTP_USER_AGENT']) ? request()->server()['HTTP_USER_AGENT'] : "Mozilla/5.0 (Linux; Android 10; SAMSUNG SM-A202F) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36"),
             "request_accept_language" => request()->server('HTTP_ACCEPT_LANGUAGE'),
-            "request_locale"=> $lang
-        ];
+            "request_locale"=> 'en'
+        ];;
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -454,6 +451,7 @@ class CmpApi {
 
     public function getPrice() {
         $url = $this->url."/api/s/v3/selects/clicks/pricings/plans.json";
+        dd($url);
 
         $data = [
             "request.ip" => (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? Request::ip() : "188.6.38.93"),

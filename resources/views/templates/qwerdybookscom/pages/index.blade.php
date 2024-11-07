@@ -80,13 +80,13 @@
             <div class="row">
               <div class="col-xxl-12">
                 <div class="hero__content animation__hero_one">
-                  <a href="@guest #pricing-section @else {{ route('products') }} @endguest">@lang('trans_qwerdybookscom.Increase Your Intellectual Growth With Our Library!')<span>
+                  <a href="@guest #pricing-section @else {{ route('products') }} @endguest">@lang('Increase Your Intellectual Growth With Our Library!')<span>
                     <i class="fa-solid fa-arrow-right"></i></span></a>
                   <div class="hero__title-wrapper">
-                    <h1 class="hero__title">@lang('trans_qwerdybookscom.Explore our top digital literature') </h1>
-                     {{-- @lang('trans_qwerdybookscom.where you can explore a diverse selection of new ebooks. Immerse yourself in countless stories and expand your knowledge with every turn of the page!')</p> --}}
+                    <h1 class="hero__title">@lang('Explore our top digital literature') </h1>
+                     {{-- @lang('where you can explore a diverse selection of new ebooks. Immerse yourself in countless stories and expand your knowledge with every turn of the page!')</p> --}}
                   </div>
-                    {{-- <p class="hero__sub-title">@lang('trans_qwerdybookscom.Unlock daily access to') <span>@lang('trans_qwerdybookscom.our extensive library')</span>, --}}
+                    {{-- <p class="hero__sub-title">@lang('Unlock daily access to') <span>@lang('our extensive library')</span>, --}}
                   <img src="{{ asset ('qwerdybookscom/') }}/assets/imgs/icon/arrow-down-big.png" alt="Arrow Down Icon">
                   {{-- <div class="experience">
                     <h2 class="title">25k+</h2>
@@ -107,49 +107,49 @@
           <div class="swiper roll__slider">
             <div class="swiper-wrapper roll__wrapper">
               <div class="swiper-slide roll__slide">
-                <h2>@lang('trans_qwerdybookscom.Reading')</h2>
+                <h2>@lang('Reading')</h2>
               </div>
               <div class="swiper-slide roll__slide">
-                <h2>@lang('trans_qwerdybookscom.Study')</h2>
+                <h2>@lang('Study')</h2>
               </div>
               <div class="swiper-slide roll__slide">
-                <h2>@lang('trans_qwerdybookscom.Knowledge')</h2>
+                <h2>@lang('Knowledge')</h2>
               </div>
               <div class="swiper-slide roll__slide">
-                <h2>@lang('trans_qwerdybookscom.Ebooks')</h2>
+                <h2>@lang('Ebooks')</h2>
               </div>
               <div class="swiper-slide roll__slide">
-                <h2>@lang('trans_qwerdybookscom.Script')</h2>
+                <h2>@lang('Script')</h2>
               </div>
               <div class="swiper-slide roll__slide">
-                <h2>@lang('trans_qwerdybookscom.Education')</h2>
+                <h2>@lang('Education')</h2>
               </div>
               <div class="swiper-slide roll__slide">
-                <h2>@lang('trans_qwerdybookscom.Learning')</h2>
+                <h2>@lang('Learning')</h2>
               </div>
               <div class="swiper-slide roll__slide">
-                <h2>@lang('trans_qwerdybookscom.Read')</h2>
+                <h2>@lang('Read')</h2>
               </div>
               <div class="swiper-slide roll__slide">
-                <h2>@lang('trans_qwerdybookscom.Lesson')</h2>
+                <h2>@lang('Lesson')</h2>
               </div>
               <div class="swiper-slide roll__slide">
                 <h2>Information</h2>
               </div>
               <div class="swiper-slide roll__slide">
-                <h2>@lang('trans_qwerdybookscom.Wisdom')</h2>
+                <h2>@lang('Wisdom')</h2>
               </div>
               <div class="swiper-slide roll__slide">
-                <h2>@lang('trans_qwerdybookscom.News')</h2>
+                <h2>@lang('News')</h2>
               </div>
               <div class="swiper-slide roll__slide">
                 <h2>experience</h2>
               </div>
               <div class="swiper-slide roll__slide">
-                <h2>@lang('trans_qwerdybookscom.Learn')</h2>
+                <h2>@lang('Learn')</h2>
               </div>
               <div class="swiper-slide roll__slide">
-                <h2>@lang('trans_qwerdybookscom.Exercise Ebook')</h2>
+                <h2>@lang('Exercise Ebook')</h2>
               </div>
             </div>
           </div>
@@ -164,7 +164,7 @@
             <div class="row">
               <div class="col-xxl-12">
                 <div class="about__title-wrapper">
-                  <h3 class="sec-title title-anim">@lang("trans_qwerdybookscom.Consistent reading offers a variety of benefits that you’ll truly appreciate")</h3>
+                  <h3 class="sec-title title-anim">@lang("Consistent reading offers a variety of benefits that you’ll truly appreciate")</h3>
                 </div>
 
                 <div class="about__content-wrapper">
@@ -185,10 +185,10 @@
                   </div>
 
                   <div class="about__content text-anim">
-                    <p>@lang('trans_qwerdybookscom.Reading provides more than just relaxation and knowledge; it significantly influences our cognitive abilities in numerous ways. For instance, regular reading can enhance your communication skills and improve memory retention. Engaging with various narratives and perspectives stimulates creativity and strengthens your recall abilities. By immersing yourself in diverse literary worlds, you not only find entertainment but also challenge and refine your mental faculties.')</p>
+                    <p>@lang('Reading provides more than just relaxation and knowledge; it significantly influences our cognitive abilities in numerous ways. For instance, regular reading can enhance your communication skills and improve memory retention. Engaging with various narratives and perspectives stimulates creativity and strengthens your recall abilities. By immersing yourself in diverse literary worlds, you not only find entertainment but also challenge and refine your mental faculties.')</p>
 
                     <div class="cursor-btn btn_wrapper">
-                      <a class="btn-item wc-btn-primary btn-hover" href="@guest #pricing-section @else {{ route('products') }} @endguest"><span></span> @lang('trans_qwerdybookscom.More About') <i
+                      <a class="btn-item wc-btn-primary btn-hover" href="@guest #pricing-section @else {{ route('products') }} @endguest"><span></span> @lang('More About') <i
                           class="fa-solid fa-arrow-right"></i></a>
 
                     </div>
@@ -208,13 +208,13 @@
             <div class="row">
               <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
                 <div class="sec-title-wrapper wrap">
-                  <h2 class="sec-sub-title title-anim">@lang('trans_qwerdybookscom.Favorite Ebooks')</h2>
-                  <h3 class="sec-title title-anim">@lang('trans_qwerdybookscom.Top Ebook Collection Of All Time')</h3>
+                  <h2 class="sec-sub-title title-anim">@lang('Favorite Ebooks')</h2>
+                  <h3 class="sec-title title-anim">@lang('Top Ebook Collection Of All Time')</h3>
                 </div>
               </div>
               <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5">
                 <div class="service__top-text text-anim">
-                  <p>@lang('trans_qwerdybookscom.Embrace regular reading to unlock benefits like greater knowledge, better focus, lower stress, increased empathy, and expanded vocabulary and creativity.')</p>
+                  <p>@lang('Embrace regular reading to unlock benefits like greater knowledge, better focus, lower stress, increased empathy, and expanded vocabulary and creativity.')</p>
                 </div>
               </div>
               {{-- <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3">
@@ -236,22 +236,22 @@
                     <img src="{{ asset ('qwerdybookscom/') }}/assets/imgs/books/2.png" alt="Service Image" class="service__img @guest blur-img @endguest img-3">
                     <img src="{{ asset ('qwerdybookscom/') }}/assets/imgs/books/3.png" alt="Service Image" class="service__img @guest blur-img @endguest img-4">
 
-                    <span class="shape-box-1 current">@lang('trans_qwerdybookscom.2024')</span>
-                    <span class="shape-box-2">@lang('trans_qwerdybookscom.2022')</span>
-                    <span class="shape-box-3">@lang('trans_qwerdybookscom.2023')</span>
-                    <span class="shape-box-4">@lang('trans_qwerdybookscom.2024')</span>
+                    <span class="shape-box-1 current">@lang('2024')</span>
+                    <span class="shape-box-2">@lang('2022')</span>
+                    <span class="shape-box-3">@lang('2023')</span>
+                    <span class="shape-box-4">@lang('2024')</span>
                   </div>
                 </div>
                 <div class="col-xxl-8 col-xl-8 col-lg-12 col-md-12">
                   <div class="service__list">
                     <a href="@guest #pricing-section @else {{ route('products') }} @endguest">
                       <div class="service__item animation_home1_service" data-service="1">
-                        <div class="service__number"><span>@lang('trans_qwerdybookscom.01')</span></div>
+                        <div class="service__number"><span>@lang('01')</span></div>
                         <div class="service__title-wrapper">
-                          <h4 class="service__title  @guest blur-txt @endguest">@lang('trans_qwerdybookscom.Personal Enrichment')</h4>
+                          <h4 class="service__title  @guest blur-txt @endguest">@lang('Personal Enrichment')</h4>
                         </div>
                         <div class="service__text">
-                          <p>@lang('trans_qwerdybookscom.Discover practical strategies to boost self-growth, expand knowledge, enhance skills, and achieve personal fulfillment.')</p>
+                          <p>@lang('Discover practical strategies to boost self-growth, expand knowledge, enhance skills, and achieve personal fulfillment.')</p>
                         </div>
                         <div class="service__link">
                           <p><i class="fa-solid fa-arrow-right"></i></p>
@@ -261,12 +261,12 @@
 
                     <a href="@guest #pricing-section @else {{ route('products') }} @endguest">
                       <div class="service__item  animation_home1_service" data-service="2">
-                        <div class="service__number"><span>@lang('trans_qwerdybookscom.02')</span></div>
+                        <div class="service__number"><span>@lang('02')</span></div>
                         <div class="service__title-wrapper">
-                          <h4 class="service__title  @guest blur-txt @endguest">@lang('trans_qwerdybookscom.An Introduction To Drones')</h4>
+                          <h4 class="service__title  @guest blur-txt @endguest">@lang('An Introduction To Drones')</h4>
                         </div>
                         <div class="service__text">
-                          <p>@lang('trans_qwerdybookscom.Explore the basics, types, and uses of drones in various fields, from recreation to industry.')</p>
+                          <p>@lang('Explore the basics, types, and uses of drones in various fields, from recreation to industry.')</p>
                         </div>
                         <div class="service__link">
                           <p><i class="fa-solid fa-arrow-right"></i></p>
@@ -276,12 +276,12 @@
 
                     <a href="@guest #pricing-section @else {{ route('products') }} @endguest">
                       <div class="service__item  animation_home1_service" data-service="3">
-                        <div class="service__number"><span>@lang('trans_qwerdybookscom.03')</span></div>
+                        <div class="service__number"><span>@lang('03')</span></div>
                         <div class="service__title-wrapper">
                           <h4 class="service__title  @guest blur-txt @endguest">Functional Training Manua</h4>
                         </div>
                         <div class="service__text">
-                          <p>@lang('trans_qwerdybookscom.A comprehensive guide to exercises that enhance strength, balance, and mobility for everyday activities and sports performance.')</p>
+                          <p>@lang('A comprehensive guide to exercises that enhance strength, balance, and mobility for everyday activities and sports performance.')</p>
                         </div>
                         <div class="service__link">
                           <p><i class="fa-solid fa-arrow-right"></i></p>
@@ -293,10 +293,10 @@
                       <div class="service__item  animation_home1_service" data-service="4">
                         <div class="service__number"><span>04</span></div>
                         <div class="service__title-wrapper">
-                          <h4 class="service__title  @guest blur-txt @endguest">@lang('trans_qwerdybookscom.Understanding Your Lifes') </h4>
+                          <h4 class="service__title  @guest blur-txt @endguest">@lang('Understanding Your Lifes') </h4>
                         </div>
                         <div class="service__text">
-                          <p>@lang('trans_qwerdybookscom.A guide to self-reflection, personal growth, and finding balance in relationships, work, and overall well-being.')</p>
+                          <p>@lang('A guide to self-reflection, personal growth, and finding balance in relationships, work, and overall well-being.')</p>
                         </div>
                         <div class="service__link">
                           <p><i class="fa-solid fa-arrow-right"></i></p>

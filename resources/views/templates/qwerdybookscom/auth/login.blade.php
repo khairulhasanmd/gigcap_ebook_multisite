@@ -12,14 +12,14 @@
         <div class="row justify-content-center">
             <div class="col-lg-6 order-2 px-5 my-auto">
                 <div class="login-page__left">
-                    <h1 class="text-white">@lang('trans_qwerdybookscom.Welcome back!')</h1>
-                    <h3 class="login-page__title text-white">@lang('trans_qwerdybookscom.Sign Into Your Account')</h3>
+                    <h1 class="text-white">@lang('Welcome back!')</h1>
+                    <h3 class="login-page__title text-white">@lang('Sign Into Your Account')</h3>
                     <div class="login-page__form-box">
                         <form action="{{ route('signin.post') }}" method="post" class="login-page__form mt-5">
                             @csrf                          
                             <div class="mb-3">
-                              <label for="email" class="form-label text-white">@lang('trans_qwerdybookscom.Email')*</label>
-                              <input type="email" class="form-control" id="email" name="email" placeholder="@lang('trans_qwerdybookscom.Email')*" autocomplete="email" autofocus required>
+                              <label for="email" class="form-label text-white">@lang('Email')*</label>
+                              <input type="email" class="form-control" id="email" name="email" placeholder="@lang('Email')*" autocomplete="email" autofocus required>
                               @if ($errors->has('email'))
                                 <span class="invalid-feedback" role="alert">
                                   <strong>{{ $errors->first('email') }}</strong>
@@ -28,8 +28,8 @@
                             </div>
                           
                             <div class="mb-3">
-                              <label for="password" class="form-label text-white">@lang('trans_qwerdybookscom.Password')</label>
-                              <input type="password" class="form-control" id="password" name="password" placeholder="@lang('trans_qwerdybookscom.Password')" autocomplete="current-password" required>
+                              <label for="password" class="form-label text-white">@lang('Password')</label>
+                              <input type="password" class="form-control" id="password" name="password" placeholder="@lang('Password')" autocomplete="current-password" required>
                               @if ($errors->has('password'))
                               <span class="invalid-feedback" role="alert">
                                 <strong>{{ $errors->first('password') }}</strong>
@@ -41,10 +41,10 @@
                               <div class="row">
                                 <div class="col-6">
                                   <input type="checkbox" class="form-check-input" id="remember" name="remember" value="1">
-                                  <label class="form-check-label text-white" for="remember">@lang('trans_qwerdybookscom.Remember me')</label>
+                                  <label class="form-check-label text-white" for="remember">@lang('Remember me')</label>
                                 </div>
                                 <div class="col-6 text-end">
-                                  <a href="{{route('welcome')}}#pricing-section" class="text-decoration-none">@lang('trans_qwerdybookscom.Don\'t have an account?')</a>
+                                  <a href="{{route('welcome')}}#pricing-section" class="text-decoration-none">@lang('Don\'t have an account?')</a>
                                 </div>
                               </div>
                             </div>
@@ -52,12 +52,12 @@
                             <div class="row g-3">
                               <div class="col-6">
                                 <div class="btn_wrapper">
-                                  <button type="submit" class="wc-btn-pink btn-hover btn-item"><span></span> @lang('trans_qwerdybookscom.Login') <i class="fa-solid fa-arrow-right"></i></button>
+                                  <button type="submit" class="wc-btn-pink btn-hover btn-item"><span></span> @lang('Login') <i class="fa-solid fa-arrow-right"></i></button>
                                 </div>
                               </div>
                               <div class="col-6">
                                   <div class="btn_wrapper">
-                                      <a class="forget-pass" href="{{ route('password.request') }}">@lang('trans_qwerdybookscom.Forgot Password?')</a>
+                                      <a class="forget-pass" href="{{ route('password.request') }}">@lang('Forgot Password?')</a>
                                     
                                   </div>
                                 </div>

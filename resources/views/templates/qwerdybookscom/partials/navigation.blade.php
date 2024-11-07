@@ -40,17 +40,17 @@
         <div class="header__nav-2">
           <ul class="main-menu-3 menu-anim">
             @guest
-                <li><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">@lang('trans_qwerdybookscom.Home')</a></li>
-                <li><a href="{{ route('about') }}">@lang('trans_qwerdybookscom.About Us')</a></li>
-                <li><a href="{{ route('contact') }}">@lang('trans_qwerdybookscom.Contact Us')</a></li>
-                <li><a href="{{ route('login') }}">@lang('trans_qwerdybookscom.Log In')</a></li>
-                <li><a  href="@if(Route::is('about'))  {{ route('about') }}#pricing-section @else  {{ route('welcome') }}#pricing-section @endif" onclick="handleSignUpClick()">@lang('trans_qwerdybookscom.Sign Up')</a></li>
+                <li><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">@lang('Home')</a></li>
+                <li><a href="{{ route('about') }}">@lang('About Us')</a></li>
+                <li><a href="{{ route('contact') }}">@lang('Contact Us')</a></li>
+                <li><a href="{{ route('login') }}">@lang('Log In')</a></li>
+                <li><a  href="@if(Route::is('about'))  {{ route('about') }}#pricing-section @else  {{ route('welcome') }}#pricing-section @endif" onclick="handleSignUpClick()">@lang('Sign Up')</a></li>
             @else
-                <li><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">@lang('trans_qwerdybookscom.Home')</a></li>
-                <li><a href="@guest {{ route('welcome') }} @else {{ route('profile') }} @endguest">@lang('trans_qwerdybookscom.Profile')</a></li>
-                <li><a href="{{ route('about') }}">@lang('trans_qwerdybookscom.About')</a></li>
-                <li><a href="{{ route('contact') }}">@lang('trans_qwerdybookscom.Contact Us')</a></li>
-                <li><a href="{{ route('logout') }}">@lang('trans_qwerdybookscom.Sign Out')</a></li>
+                <li><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">@lang('Home')</a></li>
+                <li><a href="@guest {{ route('welcome') }} @else {{ route('profile') }} @endguest">@lang('Profile')</a></li>
+                <li><a href="{{ route('about') }}">@lang('About')</a></li>
+                <li><a href="{{ route('contact') }}">@lang('Contact Us')</a></li>
+                <li><a href="{{ route('logout') }}">@lang('Sign Out')</a></li>
             @endguest
             {{-- <li class="nav-item single-lang py-1">
               <div  id="toggle"  style="width: 130px; margin:auto; "> 
@@ -103,17 +103,17 @@
             <nav class="offcanvas__menu">
               <ul class="menu-anim">
                  @guest
-                <li><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">@lang('trans_qwerdybookscom.Home')</a></li>
-                <li><a href="{{ route('about') }}">@lang('trans_qwerdybookscom.About Us')</a></li>
-                <li><a href="{{ route('contact') }}">@lang('trans_qwerdybookscom.Contact Us')</a></li>
-                <li><a href="{{ route('login') }}">@lang('trans_qwerdybookscom.Log In')</a></li>
-                <li><a  href="@if(Route::is('about'))  {{ route('about') }}#pricing-section @else {{ route('welcome') }}#pricing-section @endif"  id="close_offcanvas">@lang('trans_qwerdybookscom.Sign Up')</a></li>
+                <li><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">@lang('Home')</a></li>
+                <li><a href="{{ route('about') }}">@lang('About Us')</a></li>
+                <li><a href="{{ route('contact') }}">@lang('Contact Us')</a></li>
+                <li><a href="{{ route('login') }}">@lang('Log In')</a></li>
+                <li><a  href="@if(Route::is('about'))  {{ route('about') }}#pricing-section @else {{ route('welcome') }}#pricing-section @endif"  id="close_offcanvas">@lang('Sign Up')</a></li>
                 @else
-                    <li><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">@lang('trans_qwerdybookscom.Home')</a></li>
-                    <li><a href="@guest {{ route('welcome') }} @else {{ route('profile') }} @endguest">@lang('trans_qwerdybookscom.Profile')</a></li>
-                    <li><a href="{{ route('about') }}">@lang('trans_qwerdybookscom.About Us')</a></li>
-                    <li><a href="{{ route('contact') }}">@lang('trans_qwerdybookscom.Contact Us')</a></li>
-                    <li><a href="{{ route('logout') }}">@lang('trans_qwerdybookscom.Sign Out')</a></li>
+                    <li><a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">@lang('Home')</a></li>
+                    <li><a href="@guest {{ route('welcome') }} @else {{ route('profile') }} @endguest">@lang('Profile')</a></li>
+                    <li><a href="{{ route('about') }}">@lang('About Us')</a></li>
+                    <li><a href="{{ route('contact') }}">@lang('Contact Us')</a></li>
+                    <li><a href="{{ route('logout') }}">@lang('Sign Out')</a></li>
                 @endguest
                 {{-- <li class="single-lang py-1">
                   <div  id="toggle"  style="width: 130px;"> 

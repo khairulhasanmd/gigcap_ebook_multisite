@@ -81,12 +81,8 @@ class BasicController extends GlobalController
         }
     }
     public function typeOfService(Request $request, $service){
-        $lang = app()->getLocale();
-        if($this->concept_name == 'templates.qwerdybookscom.'){
-            $lang = 'en';
-        }
-
-        $result = $this->cmp->typeOfService($service , $lang);
+      
+        $result = $this->cmp->typeOfService($service , $lang='en');
         // dd($service);
         // return redirect(app()->getLocale().'/pages/services')->with(['service' => $result, 'pageName' => $service]);
         // return redirect('/service/'.$service)->with(['service' => $result, 'pageName' => $service]);

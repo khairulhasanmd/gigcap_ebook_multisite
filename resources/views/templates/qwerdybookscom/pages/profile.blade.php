@@ -26,16 +26,16 @@
                                                         <button class="nav-link active" id="nav-welcome-tab"
                                                             data-bs-toggle="tab" data-bs-target="#profile" type="button"
                                                             role="tab" aria-controls="welcome"
-                                                            aria-selected="true"><span>@lang('trans_qwerdybookscom.Profile')</span></button>
+                                                            aria-selected="true"><span>@lang('Profile')</span></button>
                                                         <button class="nav-link" id="nav-faq-tab" data-bs-toggle="tab"
                                                             data-bs-target="#my-order" type="button" role="tab"
                                                             aria-controls="nav-faq" aria-selected="false">
-                                                            <span>@lang('trans_qwerdybookscom.Order')</span></button>
+                                                            <span>@lang('Order')</span></button>
                                                         <button class="nav-link" id="nav-contact-tab"
                                                             data-bs-toggle="tab" data-bs-target="#cancelation"
                                                             type="button" role="tab" aria-controls="nav-contact"
                                                             aria-selected="false">
-                                                            <span>@lang('trans_qwerdybookscom.Cancel')</span></button>
+                                                            <span>@lang('Cancel')</span></button>
                                                     </div>
                                                 </nav>
                                                 <div class="tab-content" id="nav-tabContent">
@@ -45,7 +45,7 @@
                                                         <div class="row">
                                                             <div class="col-lg-4">
                                                                 <div class="mem-hdd mb-5">
-                                                                    <h1>@lang('trans_qwerdybookscom.User Profile')</h1>
+                                                                    <h1>@lang('User Profile')</h1>
                                                                 </div>
                                                                 <div class="prf-info mb-5">
                                                                     {{-- <img src="{{ asset ('qwerdybookscom/') }}/assets/imgs/user.png" alt="Fitsebook"> --}}
@@ -61,7 +61,7 @@
                                                                 <form action="{{ route( 'update-profile' )}}" method="post" >
                                                                     {{ csrf_field() }}                                                                       <div class="contact-info mb-5">
                                                                         <div class="contact-text mb-5 mb-lg-0 text-white">
-                                                                            <h6>@lang('trans_qwerdybookscom.Basic info')</h6>
+                                                                            <h6>@lang('Basic info')</h6>
                                                                         </div>
                                                                         <div class="row">
                                                                             <div class="col-md-6">
@@ -94,7 +94,7 @@
                                                                     </div>
                                                                     <div class="address-area mb-4">
                                                                         <div class="contact-text mb-5 mb-lg-0 text-white">
-                                                                            <h6>@lang('trans_qwerdybookscom.Address')</h6>
+                                                                            <h6>@lang('Address')</h6>
                                                                         </div>
                                                                         <div class="row">
                                                                             <div class="col-12">
@@ -127,13 +127,13 @@
                                                                     <div class="row">
                                                                         <div class="col-sm-6 mb-5 mb-sm-0">
                                                                             <div class="btn_wrapper">
-                                                                              <a href="{{ route('changePassword') }}" class="wc-btn-pink btn-hover btn-item"><span></span>@lang('trans_qwerdybookscom.Change') <br>@lang('trans_qwerdybookscom.Password')
+                                                                              <a href="{{ route('changePassword') }}" class="wc-btn-pink btn-hover btn-item"><span></span>@lang('Change') <br>@lang('Password')
                                                                                 <i class="fa-solid fa-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-sm-6">
                                                                             <div class="btn_wrapper">
-                                                                                <button class="wc-btn-pink btn-hover btn-item"><span></span>@lang('trans_qwerdybookscom.Edit') <br>@lang('trans_qwerdybookscom.Profile') <i
+                                                                                <button class="wc-btn-pink btn-hover btn-item"><span></span>@lang('Edit') <br>@lang('Profile') <i
                                                                                   class="fa-solid fa-arrow-right"></i></button>
                                                                             </div>
                                                                         </div>
@@ -148,7 +148,7 @@
                                                         <div class="row">
                                                             <div class="col-12">
                                                                 <div class="mem-hdd mb-5">
-                                                                    <h1>@lang('trans_qwerdybookscom.My Order')</h1>
+                                                                    <h1>@lang('My Order')</h1>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -158,12 +158,12 @@
                                                                     <table class="table w-100 text-center">
                                                                         <tbody>
                                                                             <tr class="border-bm">
-                                                                                <td class="llh">@lang('trans_qwerdybookscom.Order Id')</td>
-                                                                                <td>@lang('trans_qwerdybookscom.Product')</td>
-                                                                                <td>@lang('trans_qwerdybookscom.Type')</td>
-                                                                                <td>@lang('trans_qwerdybookscom.Total')</td>
-                                                                                <td>@lang('trans_qwerdybookscom.Status')</td>
-                                                                                <td>@lang('trans_qwerdybookscom.Created at')</td>
+                                                                                <td class="llh">@lang('Order Id')</td>
+                                                                                <td>@lang('Product')</td>
+                                                                                <td>@lang('Type')</td>
+                                                                                <td>@lang('Total')</td>
+                                                                                <td>@lang('Status')</td>
+                                                                                <td>@lang('Created at')</td>
                                                                                 <td></td>
                                                                             </tr>
                                                                             @foreach($orders->data as $order)
@@ -174,7 +174,7 @@
                                                                                     <td>{{$order->total}} {{$order->currency}}</td>
                                                                                     <td>{{$order->status}}</td>
                                                                                     <td>{{\Carbon\Carbon::parse($order->created_at)->format('d/m/Y H:i:s')}}</td>
-                                                                                    <td><a href="{{\Illuminate\Support\Facades\URL::to('/get-order/'.$order->id)}}">@lang('trans_qwerdybookscom.Get Invoice')</a></td>
+                                                                                    <td><a href="{{\Illuminate\Support\Facades\URL::to('/get-order/'.$order->id)}}">@lang('Get Invoice')</a></td>
                                                                                 </tr>
                                                                             @endforeach
                                                                         </tbody>
@@ -190,14 +190,14 @@
                                                         <div class="row">
                                                             <div class="col-12">
                                                                 <div class="mem-hdd cancl-hdd mb-5">
-                                                                    <h1>@lang('trans_qwerdybookscom.Cancelation')</h1>
+                                                                    <h1>@lang('Cancelation')</h1>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="row mb-5">
                                                             <div class="col-lg-4">
                                                                 <div class="s-number-hdd text-white">
-                                                                    <p>@lang('trans_qwerdybookscom.Subscription number'):</p>
+                                                                    <p>@lang('Subscription number'):</p>
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-8">
@@ -212,13 +212,13 @@
                                                             <div class="col-lg-8">
                                                                 <form>
                                                                     <div class="contact-text mb-5 mb-lg-0 text-white">
-                                                                        <h6>@lang('trans_qwerdybookscom.Membership info')</h6>
+                                                                        <h6>@lang('Membership info')</h6>
                                                                     </div>
                                                                     <div class="cancel-form our-form">
                                                                         <div class="row">
                                                                             <div class="col-12">
                                                                                 <div class="name common">
-                                                                                    <label for="nn">@lang('trans_qwerdybookscom.Name')</label>
+                                                                                    <label for="nn">@lang('Name')</label>
                                                                                     <input type="text"
                                                                                         placeholder="Premium Membership"
                                                                                         id="nn" value="{{$subscription->data->name}}" disabled>
@@ -228,14 +228,14 @@
                                                                         <div class="row">
                                                                             <div class="col-md-6">
                                                                                 <div class="type common">
-                                                                                    <label for="tp">@lang('trans_qwerdybookscom.Type')</label>
+                                                                                    <label for="tp">@lang('Type')</label>
                                                                                     <input type="text"
                                                                                         placeholder="trial" id="tp" value="{{$subscription->data->type}}" disabled>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-6">
                                                                                 <div class="status common">
-                                                                                    <label for="sts">@lang('trans_qwerdybookscom.Status')</label>
+                                                                                    <label for="sts">@lang('Status')</label>
                                                                                     <input type="text"
                                                                                         placeholder="active" id="sts" value="{{$subscription->data->status}}" disabled>
                                                                                 </div>
@@ -244,14 +244,14 @@
                                                                         <div class="row">
                                                                             <div class="col-md-6">
                                                                                 <div class="price common">
-                                                                                    <label for="pr">@lang('trans_qwerdybookscom.Price')</label>
+                                                                                    <label for="pr">@lang('Price')</label>
                                                                                     <input type="text"
                                                                                         placeholder="65.00" id="pr" value="{{$subscription->data->price}}" disabled>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-6">
                                                                                 <div class="interval common">
-                                                                                    <label for="int">@lang('trans_qwerdybookscom.Interval')</label>
+                                                                                    <label for="int">@lang('Interval')</label>
                                                                                     <input type="text" placeholder="30"
                                                                                         id="int" value="{{$subscription->data->interval}}" disabled>
                                                                                 </div>
@@ -260,7 +260,7 @@
                                                                         <div class="row">
                                                                             <div class="col-sm-6 mb-5 mb-sm-0">
                                                                                 <div class="btn_wrapper">
-                                                                                  <a href="{{ route('cancelSubscription') }}" class="wc-btn-pink btn-hover btn-item"><span></span> @lang('trans_qwerdybookscom.Cancel') <br>@lang('trans_qwerdybookscom.Subscription')
+                                                                                  <a href="{{ route('cancelSubscription') }}" class="wc-btn-pink btn-hover btn-item"><span></span> @lang('Cancel') <br>@lang('Subscription')
                                                                                     <i class="fa-solid fa-arrow-right"></i></a>
                                                                                 </div>
                                                                             </div>

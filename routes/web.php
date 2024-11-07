@@ -33,7 +33,7 @@ Route::get('/fp', function () {
 
 // Route::view('/wlc', 'email.welcome', ['fname' => 'Taylor', 'password' => '123', 'email' => 'marko@marko.com', 'terms' => 'terms']);
 
-Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
+
     Auth::routes();
     Route::get('/', [BasicController::class, 'welcome'])->name('welcome');
     Route::get('/return-policy', [BasicController::class, 'returnPolicy'])->name('return');
@@ -75,7 +75,6 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
 
 
 
-});
 
 Route::post('/contact-us', [BasicController::class, 'contactUs'])->name('contact-us');
 

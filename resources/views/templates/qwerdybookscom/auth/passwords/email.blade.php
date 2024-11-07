@@ -10,7 +10,7 @@
     <div class="row contact__btm">
       <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5">
         <div class="contact__info">
-          <h1 class="sub-title-anim-top animation__word_come text-white">@lang('trans_qwerdybookscom.Reset your') <br>@lang('trans_qwerdybookscom.password')</h1>
+          <h1 class="sub-title-anim-top animation__word_come text-white">@lang('Reset your') <br>@lang('password')</h1>
         </div>
       </div>
       <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7">
@@ -19,18 +19,18 @@
             @csrf
             <div class="row g-3">
               <div class="col-12">
-                  <input type="email" placeholder="@lang('trans_qwerdybookscom.Email')" name="email" class=" "  autocomplete="email" autofocus required >
+                  <input type="email" placeholder="@lang('Email')" name="email" class=" "  autocomplete="email" autofocus required >
               </div>
             </div>
             <div class="row g-3">
               <div class="col-6">
                 <div class="btn_wrapper">
-                  <button type="submit" class="wc-btn-pink btn-hover btn-item"><span></span> @lang('trans_qwerdybookscom.Submit') <i class="fa-solid fa-arrow-right"></i></button>
+                  <button type="submit" class="wc-btn-pink btn-hover btn-item"><span></span> @lang('Submit') <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
               </div>
               <div class="col-6">
                   <div class="btn_wrapper">
-                      <a class="forget-pass" href="{{ route('login') }}">@lang('trans_qwerdybookscom.Login')</a>
+                      <a class="forget-pass" href="{{ route('login') }}">@lang('Login')</a>
                     
                   </div>
                 </div>

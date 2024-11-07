@@ -86,10 +86,10 @@ h4{
                     <div class="tab-product-navigation">
 
                         <div class="nav nav-tabs justify-content-center"  role="tablist">
-                            <a class="nav-item nav-link"  href="{{ route('products')}}">@lang('trans_qwerdybookscom.All')</a>
+                            <a class="nav-item nav-link"  href="{{ route('products')}}">@lang('All')</a>
 
                             @foreach($productTags as $productTag)
-                            <a class="nav-item nav-link"  href="{{ route('products', ['tag' => $productTag->tag->name])}}">{{ __('trans_qwerdybookscom.'.$productTag->tag->name) }}</a>
+                            <a class="nav-item nav-link"  href="{{ route('products', ['tag' => $productTag->tag->name])}}">{{ __(''.$productTag->tag->name) }}</a>
 
                             @endforeach
                           
@@ -115,8 +115,8 @@ h4{
                 <div class="row">
                     <div class="col-md-5">
                         <div class="hero-content">
-                            <h3 class="hero-subtitle mb-5">@lang('trans_qwerdybookscom.Dear') {{ $user->data->first_name}} {{ $user->data->last_name}}</h3>
-                            <h1 class="hero-title">@lang('trans_qwerdybookscom.Your subscription has expired.')</h1>
+                            <h3 class="hero-subtitle mb-5">@lang('Dear') {{ $user->data->first_name}} {{ $user->data->last_name}}</h3>
+                            <h1 class="hero-title">@lang('Your subscription has expired.')</h1>
                         </div>
                     </div>
                     <div class="offset-md-7"></div>
@@ -144,7 +144,7 @@ h4{
                                 <button class="btn_wrappers" id="load-more" data-paginate="2">Load More</button>
                                 <button  id="load-more-loading" type="button" disabled style="display:none">
                                     <span  class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                    @lang('trans_qwerdybookscom.Loading...')
+                                    @lang('Loading...')
                                 </button>
                             </div>
                         </div>

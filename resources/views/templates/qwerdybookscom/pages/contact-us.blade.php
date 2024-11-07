@@ -14,7 +14,7 @@
           <div class="row">
             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
               <div class="sec-title-wrapper">
-                <h2 class="sec-title-2 animation__char_come">@lang("trans_qwerdybookscom.Let’s get in touch")</h2>
+                <h2 class="sec-title-2 animation__char_come">@lang("Let’s get in touch")</h2>
               </div>
             </div>
             {{-- <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
@@ -26,13 +26,13 @@
           <div class="row contact__btm">
             <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5">
               <div class="contact__info">
-                <h3 class="sub-title-anim-top animation__word_come">@lang('trans_qwerdybookscom.Don\'t be afraid man !') <br>@lang('trans_qwerdybookscom.say hello')</h3>
+                <h3 class="sub-title-anim-top animation__word_come">@lang('Don\'t be afraid man !') <br>@lang('say hello')</h3>
                 <ul>
                   <li><a href="tel:{{ config('qwerdybookscom.SUPPORT_PHONE') }}">{{ config('qwerdybookscom.SUPPORT_PHONE') }}</a></li>
                   <li><a href="mailto:{{ config('qwerdybookscom.SUPPORT_EMAIL') }}">{{ config('qwerdybookscom.SUPPORT_EMAIL') }}</a></li>
                   <li><span>{{ config('qwerdybookscom.COMPANY_NAME') }}, {{ config('qwerdybookscom.COMPANY_ADDRESS') }}, <br>{{ config('qwerdybookscom.COMPANY_POSTCODE')}}, {{ config('qwerdybookscom.COMPANY_CITY') }},  {{ config('qwerdybookscom.COMPANY_COUNTRY') }}</span></li>
-                  <li><span>@lang('trans_qwerdybookscom.Business Number') : {{ config('qwerdybookscom.COMPANY_BUSINESS_NUMBER') }}</span></a></li>
-                  <li><span>@lang('trans_qwerdybookscom.VAT Number') : {{ config('qwerdybookscom.COMPANY_VAT_NUMBER') }}</span></a></li>
+                  <li><span>@lang('Business Number') : {{ config('qwerdybookscom.COMPANY_BUSINESS_NUMBER') }}</span></a></li>
+                  <li><span>@lang('VAT Number') : {{ config('qwerdybookscom.COMPANY_VAT_NUMBER') }}</span></a></li>
 
 
                 </ul>
@@ -44,29 +44,29 @@
                   @csrf
                    <div class="row g-3">
                     <div class="col-xxl-6 col-xl-6 col-12">
-                      <input type="text" name="firstname" placeholder="@lang('trans_qwerdybookscom.First name') *">
+                      <input type="text" name="firstname" placeholder="@lang('First name') *">
                     </div>
                     <div class="col-xxl-6 col-xl-6 col-12">
-                      <input type="text" name="lastname" placeholder="@lang('trans_qwerdybookscom.Last name') *">
+                      <input type="text" name="lastname" placeholder="@lang('Last name') *">
                     </div>
                   </div>
                   <div class="row g-3">
                     <div class="col-xxl-6 col-xl-6 col-12">
-                      <input type="email" name="email" placeholder="@lang('trans_qwerdybookscom.Email') *">
+                      <input type="email" name="email" placeholder="@lang('Email') *">
                     </div>
                     <div class="col-xxl-6 col-xl-6 col-12">
-                      <input type="text" name="subject" placeholder="@lang('trans_qwerdybookscom.Subject') *">
+                      <input type="text" name="subject" placeholder="@lang('Subject') *">
                     </div>
                   </div>
                   <div class="row g-3">
                     <div class="col-12">
-                      <textarea name="message" placeholder="@lang('trans_qwerdybookscom.Message') *"></textarea>
+                      <textarea name="message" placeholder="@lang('Message') *"></textarea>
                     </div>
                   </div>
                   <div class="row g-3">
                     <div class="col-12">
                       <div class="btn_wrapper">
-                        <button class="wc-btn-primary btn-hover btn-item"><span></span> @lang('trans_qwerdybookscom.Send') <br>@lang('trans_qwerdybookscom.Message') <i
+                        <button class="wc-btn-primary btn-hover btn-item"><span></span> @lang('Send') <br>@lang('Message') <i
                             class="fa-solid fa-arrow-right"></i></button>
                       </div>
                     </div>
