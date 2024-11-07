@@ -84,7 +84,7 @@ class BasicController extends GlobalController
       
         $result = $this->cmp->typeOfService($service , $lang='en');
         // dd($service);
-        // return redirect(app()->getLocale().'/pages/services')->with(['service' => $result, 'pageName' => $service]);
+        // return redirect('/pages/services')->with(['service' => $result, 'pageName' => $service]);
         // return redirect('/service/'.$service)->with(['service' => $result, 'pageName' => $service]);
 
         return view($this->template.'.pages.services')->with(['service' => $result, 'pageName' => $service]);

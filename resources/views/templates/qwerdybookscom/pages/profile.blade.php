@@ -70,7 +70,7 @@
                                                                                     
                                                                                     <input type="text" name="first_name"
                                                                                         
-                                                                                        id="fn" value="{{ $user->data->first_name }}">
+                                                                                        id="fn" placeholder="First Name" value="{{ $user->data->first_name }}">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-6">
@@ -78,7 +78,7 @@
                                                                                     class="last-name common">
                                                                                     <input type="text" name="last_name"
                                                                                         
-                                                                                        id="ln" value="{{ $user->data->last_name }}">
+                                                                                        id="ln" placeholder="Last Name" value="{{ $user->data->last_name }}">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -87,7 +87,7 @@
                                                                                 <div class="phone common">
                                                                                     <input type="text" name="phone"
                                                                                         
-                                                                                        id="fon" value="{{ $user->data->phone }}">
+                                                                                        id="fon" placeholder="Phone Number" value="{{ $user->data->phone }}">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -101,7 +101,7 @@
                                                                                 <div class="address common">
                                                                                     <input type="text" name="address"
                                                                                        
-                                                                                        id="add" value="{{ $user->data->address }}">
+                                                                                        id="add" placeholder="Address" value="{{ $user->data->address }}">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -110,7 +110,7 @@
                                                                                 <div class="city common">
                                                                                     <input type="text"
                                                                                        
-                                                                                        id="ci" value="{{ $user->data->city }}" name="city">
+                                                                                        id="ci" placeholder="City" value="{{ $user->data->city }}" name="city">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-6">
@@ -118,7 +118,7 @@
                                                                                     class="postcode common">
                                                                                     <input type="text" name="postcode"
                                                                                        
-                                                                                        id="pin" value="{{ $user->data->postcode }}">
+                                                                                        id="pin" placeholder="Postcode" value="{{ $user->data->postcode }}">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
