@@ -58,14 +58,41 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.all.min.js"></script>
 
 
-        <script type="text/javascript">
-            @if ($errors->any())
-                Swal.fire({title:"Ooops", html: "@php echo implode("<br>", $errors->all()) @endphp" , type: "error"});
-            @endif
-            @if(session('success'))
-                Swal.fire({title:"@lang('All good')", html: "@php echo session('success') @endphp" , type: "success"});
-            @endif
-        </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script type="text/javascript">
+    @if ($errors->any())
+            swal({
+                icon: "error",
+                title:"Ooops",
+                text: "@php echo implode("<br>", $errors->all()) @endphp",
+            });
+        @endif
+
+        @if(session('success'))
+            swal({
+                
+                title:"All good",
+                text: "@php echo session('success') @endphp",
+                icon: "success"
+            });
+        @endif
+
+        @if(session('info'))
+            swal({
+                title:"Notice",
+                text: "@php echo session('info') @endphp",
+                icon: "info"
+            });
+        @endif
+        @if(session('error'))
+            swal({
+                title:"error",
+                text: "@php echo session('error') @endphp",
+                icon: "error",
+            });
+        @endif
+</script>
         
 </body>
 <script src="{{asset('qwerdybookscom/') }}/assets/js/main.js"></script>
