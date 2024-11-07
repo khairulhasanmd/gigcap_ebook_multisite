@@ -29,6 +29,11 @@
   <link rel="stylesheet" href="{{asset('qwerdybookscom/') }}/assets/css/master.css">
   <!-- <link rel="stylesheet" href="style.css"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .swal-footer {
+      text-align: center !important;
+    }
+  </style>
 </head>
 <body>
 @include('templates.qwerdybookscom.partials.navigation')

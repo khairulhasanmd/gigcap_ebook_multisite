@@ -27,6 +27,11 @@
   <link rel="stylesheet" href="{{asset('qwerdybookscom/') }}/assets/css/progressbar.css">
   <link rel="stylesheet" href="{{asset('qwerdybookscom/') }}/assets/css/meanmenu.min.css">
   <link rel="stylesheet" href="{{asset('qwerdybookscom/') }}/assets/css/master.css">
+  <style>
+    .swal-footer {
+      text-align: center !important;
+    }
+  </style>
 
 </head>
 <body>
