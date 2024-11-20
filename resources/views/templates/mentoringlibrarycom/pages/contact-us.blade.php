@@ -16,19 +16,19 @@
     </div>
     <div class="container">
         <div class="page-heading">
-            <h1>@lang('trans_mentoringlibrarycom.Contact Us')</h1>
+            <h1>@lang('Contact Us')</h1>
             <div class="page-header">
                 <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                     <li>
                         <a href="@guest {{ route('welcome')}} @else {{route('products')}} @endguest">
-                            @lang('trans_mentoringlibrarycom.Home')
+                            @lang('Home')
                         </a>
                     </li>
                     <li>
                         <i class="bi bi-chevron-right"></i>
                     </li>
                     <li>
-                        @lang('trans_mentoringlibrarycom.Contact Us')
+                        @lang('Contact Us')
                     </li>
                 </ul>
             </div>
@@ -46,8 +46,8 @@
     <div class="row">
         <div class="col-12">
             <div class="section__title-wrapper text-center mb-30">
-                <h6 class="section__title-wrapper-subtitle mb-10 wow fadeInLeft animated" data-wow-delay=".2s">@lang('trans_mentoringlibrarycom.Contact Information')</h6>
-                <h2 class="section__title-wrapper-title wow fadeInLeft animated" data-wow-delay=".3s">@lang('trans_mentoringlibrarycom.Get in Touch  for') </br>@lang('trans_mentoringlibrarycom.Professional Book Buying Guidance and Support')</h2>
+                <h6 class="section__title-wrapper-subtitle mb-10 wow fadeInLeft animated" data-wow-delay=".2s">@lang('Contact Information')</h6>
+                <h2 class="section__title-wrapper-title wow fadeInLeft animated" data-wow-delay=".3s">@lang('Get in Touch  for') </br>@lang('Professional Book Buying Guidance and Support')</h2>
             </div>
         </div>
     </div>
@@ -62,20 +62,20 @@
             @csrf
           <div class="messages"></div>
           <div class="controls p-5">
-            <h2 class="contact__title">@lang('trans_mentoringlibrarycom.Online Inquiry')</h2>
-            <p>@lang('trans_mentoringlibrarycom.Get in touch with us for any questions or inquiries. We\’re here to assist you and provide the information you need.')</p>
+            <h2 class="contact__title">@lang('Online Inquiry')</h2>
+            <p>@lang('Get in touch with us for any questions or inquiries. We’re here to assist you and provide the information you need.')</p>
             <div class="row pt-3">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="form_name">@lang('trans_mentoringlibrarycom.First Name') *</label>
-                  <input id="form_name" type="text" name="firstname" class="form-control" placeholder="@lang('trans_mentoringlibrarycom.Please enter your firstname') *" required="required" data-error="Firstname is required.">
+                  <label for="form_name">@lang('First Name') *</label>
+                  <input id="form_name" type="text" name="firstname" class="form-control" placeholder="@lang('Please enter your firstname') *" required="required" data-error="Firstname is required.">
                   <div class="help-block with-errors"></div>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="form_lastname">@lang('trans_mentoringlibrarycom.Last Name') *</label>
-                  <input id="form_lastname" type="text" name="lastname" class="form-control" placeholder="@lang('trans_mentoringlibrarycom.Please enter your lastname') *" required="required" data-error="Lastname is required.">
+                  <label for="form_lastname">@lang('Last Name') *</label>
+                  <input id="form_lastname" type="text" name="lastname" class="form-control" placeholder="@lang('Please enter your lastname') *" required="required" data-error="Lastname is required.">
                   <div class="help-block with-errors"></div>
                 </div>
               </div>
@@ -83,16 +83,16 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group">
-                  <label for="form_email">@lang('trans_mentoringlibrarycom.Email') *</label>
-                  <input id="form_email" type="email" name="email" class="form-control" placeholder="@lang('trans_mentoringlibrarycom.Please enter your email') *" required="required" data-error="Valid email is required.">
+                  <label for="form_email">@lang('Email') *</label>
+                  <input id="form_email" type="email" name="email" class="form-control" placeholder="@lang('Please enter your email') *" required="required" data-error="Valid email is required.">
                   <div class="help-block with-errors"></div>
                 </div>
               </div>
               
               <div class="col-md-12">
                 <div class="form-group">
-                  <label for="form_subject">@lang('trans_mentoringlibrarycom.Subject')</label>
-                  <input id="form_subject" type="tel" name="subject" class="form-control" placeholder="@lang('trans_mentoringlibrarycom.Please enter your subject')">
+                  <label for="form_subject">@lang('Subject')</label>
+                  <input id="form_subject" type="tel" name="subject" class="form-control" placeholder="@lang('Please enter your subject')">
                   <div class="help-block with-errors"></div>
                 </div>
               </div>
@@ -100,13 +100,13 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group">
-                  <label for="form_message">@lang('trans_mentoringlibrarycom.Message') *</label>
-                  <textarea id="form_message" name="message" class="form-control" placeholder="@lang('trans_mentoringlibrarycom.Message') *" rows="4" required data-error="Please,leave us a message."></textarea>
+                  <label for="form_message">@lang('Message') *</label>
+                  <textarea id="form_message" name="message" class="form-control" placeholder="@lang('Message') *" rows="4" required data-error="Please,leave us a message."></textarea>
                   <div class="help-block with-errors"></div>
                 </div>
               </div>
               <div class="col-md-12">
-                <input type="submit" class=" theme-btn mt-3" value="@lang('trans_mentoringlibrarycom.Send message')">
+                <input type="submit" class=" theme-btn mt-3" value="@lang('Send message')">
               </div>
             </div>
            
@@ -118,8 +118,8 @@
         <div class="col-lg-6">
             
             <div class="media-content has--line wow fadeInLeft animated py-5" data-wow-delay=".2s">
-                <h2 class="contact__title">@lang('trans_mentoringlibrarycom.Contact Details')</h2>
-                <p>@lang('trans_mentoringlibrarycom.Reach us easily through our contact details below. We look forward to hearing from you and assisting with your needs!')</p>
+                <h2 class="contact__title">@lang('Contact Details')</h2>
+                <p>@lang('Reach us easily through our contact details below. We look forward to hearing from you and assisting with your needs!')</p>
                 <div class="latest-contact-us-2-media-content-contact d-flex">
                     <div class="latest-contact-us-2-media-content-contact-icon my-auto">
                         
@@ -128,7 +128,7 @@
                             </svg>
                     </div>
                     <div class="latest-contact-us-2-media-content-contact-text">
-                        <span>@lang('trans_mentoringlibrarycom.Call'):</span>
+                        <span>@lang('Call'):</span>
                         <a href="tel:{{ config('mentoringlibrarycom.SUPPORT_PHONE') }}">
                             <h6>{{ config('mentoringlibrarycom.SUPPORT_PHONE') }}</h6>
                         </a>
@@ -141,7 +141,7 @@
                             </svg>
                     </div>
                     <div class="latest-contact-us-2-media-content-contact-text">
-                        <span>@lang('trans_mentoringlibrarycom.E-mail')</span>
+                        <span>@lang('E-mail')</span>
                         <a href="mailto:{{ config('mentoringlibrarycom.SUPPORT_EMAIL') }}">
                             <h6  style="text-transform: lowercase;">{{ config('mentoringlibrarycom.SUPPORT_EMAIL') }}</h6>
                         </a>
@@ -157,7 +157,7 @@
                         
                     </div>
                     <div class="latest-contact-us-2-media-content-contact-text">
-                        <span>@lang('trans_mentoringlibrarycom.Location')</span>
+                        <span>@lang('Location')</span>
                        
                             <h6>{{ config('mentoringlibrarycom.COMPANY_NAME') }}, {{ config('mentoringlibrarycom.COMPANY_ADDRESS') }}, <br> {{ config('mentoringlibrarycom.COMPANY_CITY') }}, {{ config('mentoringlibrarycom.COMPANY_POSTCODE')}} {{ config('mentoringlibrarycom.COMPANY_COUNTRY') }}</h6>
                         
@@ -172,7 +172,7 @@
                         </a>
                     </div>
                     <div class="latest-contact-us-2-media-content-contact-text">
-                        <span>@lang('trans_mentoringlibrarycom.Time')</span>
+                        <span>@lang('Time')</span>
                        
                             <h6>{{ config('mentoringlibrarycom.SUPPORT_HOURS') }}</h6>
                         
