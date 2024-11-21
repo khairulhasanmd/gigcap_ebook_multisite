@@ -207,7 +207,7 @@
                             
                                 <h3><a class="@guest blur-txt-blue @else @endguest" href="@guest {{route('welcome')}}#pricing @else {{route('products')}} @endguest">@lang('Developing Emotional Inte')</a></h3>
                                 <p class="@guest blur-txt @else @endguest">@lang('Enhance emotional intelligence by increasing self-awareness, managing emotions, fostering empathy, and building deeper, more meaningful relationships.')</p>
-                                <a class="@guest blur-txt @else @endguest" href="@guest {{ route('welcome')}}#pricing @else {{route('products')}} @endguest" class="theme-btn-2">R@lang('ead More') <i class="bi bi-arrow-right"></i></a>
+                                <a class="@guest blur-txt @else @endguest" href="@guest {{ route('welcome')}}#pricing @else {{route('products')}} @endguest" class="theme-btn-2">@lang('Read More') <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
