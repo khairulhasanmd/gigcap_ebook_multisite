@@ -82,9 +82,10 @@ class BasicController extends GlobalController
     }
     public function typeOfService(Request $request, $service){
         $lang = app()->getLocale();
-        if($this->concept_name == 'templates.qwerdybookscom.'){
+        if($this->concept_name == 'templates.qwerdybookscom.' || $this->concept_name == 'templates.mentoringlibrarycom.'){
             $lang = 'en';
         }
+        // dd($lang);
 
         $result = $this->cmp->typeOfService($service , $lang);
         // dd($service);

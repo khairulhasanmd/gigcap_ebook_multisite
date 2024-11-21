@@ -27,25 +27,25 @@
             </a>
             <div class="navbar-collapse collapse" id="navbarSupportedContent" style="">
                 <ul class="navbar-nav menu ms-lg-auto me-lg-auto">
-                    <li class="nav-item active"> <a class="nav-link" href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest"> @lang('trans_mentoringlibrarycom.Home')</a></li>
+                    <li class="nav-item active"> <a class="nav-link" href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest"> @lang('Home')</a></li>
                     @guest
                     @else
-                    <li class="nav-item active"> <a class="nav-link" href=" {{ route('profile') }}"> @lang('trans_mentoringlibrarycom.Profile')</a></li>
+                    <li class="nav-item active"> <a class="nav-link" href=" {{ route('profile') }}"> @lang('Profile')</a></li>
 
                     @endguest
-                    <li class="nav-item "><a href=" {{ route('about') }}" class="nav-link">@lang('trans_mentoringlibrarycom.About Us')</a></li>
-                    <li class="nav-item "><a href=" {{ route('contact') }}" class="nav-link">@lang('trans_mentoringlibrarycom.Contact Us')</a></li>
+                    <li class="nav-item "><a href=" {{ route('about') }}" class="nav-link">@lang('About Us')</a></li>
+                    <li class="nav-item "><a href=" {{ route('contact') }}" class="nav-link">@lang('Contact Us')</a></li>
                 </ul>
                 <ul class="list-unstyled alter_nav alter_nav_color_btn  d-flex d-lg-block">
                     <div class="modified-buttons">
                         @guest
-                            <li class="nav-item "><a href="{{ route('login') }}" class="nav-link login-btn"><i class="bi bi-person"></i> @lang('trans_mentoringlibrarycom.Log In')</a></li>
-                            <li><a href=" @if(Route::is('about'))  {{ route('about') }}#pricing @else  {{ route('welcome') }}#pricing @endif" class="nav_btn btn_hover">@lang('trans_mentoringlibrarycom.Sign Up')</a></li>
+                            <li class="nav-item "><a href="{{ route('login') }}" class="nav-link login-btn"><i class="bi bi-person"></i> @lang('Log In')</a></li>
+                            <li><a href=" @if(Route::is('about'))  {{ route('about') }}#pricing @else  {{ route('welcome') }}#pricing @endif" class="nav_btn btn_hover">@lang('Sign Up')</a></li>
                         @else
-                        <li><a href="{{ route('signout') }}#pricing" class="nav_btn btn_hover"@lang>@lang('trans_mentoringlibrarycom.Sign Out')</a></li>
+                        <li><a href="{{ route('signout') }}#pricing" class="nav_btn btn_hover"@lang>@lang('Sign Out')</a></li>
 
                         @endguest
-                        <li class="single-lang py-1">
+                        {{-- <li class="single-lang py-1">
                             <div  id="toggle"  style="width: 130px;"> 
                                 <ul id="toggle" style=" list-style: none;">
                                     <li class="toggle header-btn text-uppercase" id="toggle" style="color: #000; margin-left:-7px">
@@ -73,7 +73,7 @@
                                     </li>
                                 </ul>
                             </div>
-                        </li>   
+                        </li>    --}}
                     </div>
                 </ul>
             </div>
