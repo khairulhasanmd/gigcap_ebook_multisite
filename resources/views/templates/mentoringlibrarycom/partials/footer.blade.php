@@ -56,7 +56,7 @@
 					<div class="col-xl-4 col-lg-4 col-md-12 wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
 						<div class="single-footer-widget">
 							<div class="widget-head text-center">
-								<a href="{{ route('welcome') }}">
+								<a href="@guest {{ route('welcome') }} @else {{ route('products') }} @endguest">
 									<img src="{{ asset ('mentoringlibrarycom/') }}/img/logo.png" class="justify-content-center footer_logo" alt="logo-img">
 								</a>
 							</div>

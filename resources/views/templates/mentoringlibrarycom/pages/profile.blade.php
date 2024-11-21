@@ -118,7 +118,7 @@
                                             </div>
                                             <div class="mb-3">
                                                 <label for="interval" class="form-label">@lang('Interval')</label>
-                                                <input type="text" class="form-control" id="interval" value="{{$subscription->data->interval}}" disabled>
+                                                <input type="text" class="form-control" id="interval" value="{{$subscription->data->interval}} days" disabled>
                                             </div>
                                             <a href="{{ route('cancelSubscription') }}" class="theme-btn bg-danger text-white mt-4 text-end">@lang('Cancel Subscription')</a>
                                         </form>
