@@ -601,5 +601,46 @@ class CmpApi {
 
     }
 
+    public function resetUserPassword($email, $locale = 'en', $overrideReceiverEmail = false)
+    {
+
+        $url = $this->url."/api/s/v3/users/resets/passwords.json";
+        $postData = [
+            'email' => $email,
+            'override_receiver_email' => $overrideReceiverEmail,
+            '_locale' => $locale
+        ];
+        // only use this for testing purposes, will be disabled for non demo users
+        if ($overrideReceiverEmail) {
+            $postData['override_receiver_email'] = $overrideReceiverEmail;
+        }
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postData));
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'x-api-key:'.$this->apiKey,
+            'Content-Type: application/json'
+        ));
+        $responseData = curl_exec($ch);
+
+        if(curl_errno($ch)) {
+            return curl_error($ch);
+        }
+        curl_close($ch);
+        $responseData = json_decode($responseData);
+        // dd($responseData);
+        return $responseData;
+
+      
+        // if ($responseData->status === 'success') {
+        //     session()->flash('success', $responseData->data);
+        // } elseif ($responseData->status === 'error') {
+        //     session()->flash('error', $responseData->errors);
+        // }
+    }
+
 
 }

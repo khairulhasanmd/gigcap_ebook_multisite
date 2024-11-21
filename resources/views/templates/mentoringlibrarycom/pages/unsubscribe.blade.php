@@ -64,7 +64,7 @@
                               <label for="password" class="form-label">
                                 @lang('Last 4 digits of your card')
                                 </label>
-                              <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '');" class="form-control" id="password" name="last4" placeholder="@lang('Last 4 digits of your card')"  maxlength="4" required>
+                              <input type="password" oninput="this.value = this.value.replace(/[^0-9]/g, '');" class="form-control" id="password" name="last4" placeholder="@lang('Last 4 digits of your card')"  maxlength="4" required>
                               @if ($errors->has('password'))
 									<span class="invalid-feedback" role="alert">
 										<strong>{{ $errors->first('password') }}</strong>

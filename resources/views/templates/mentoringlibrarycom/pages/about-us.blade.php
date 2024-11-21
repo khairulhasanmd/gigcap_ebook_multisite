@@ -66,7 +66,7 @@
                             <h1>@lang('What We Offer')</h1>
                             <p>@lang("We are committed to providing a carefully curated selection of valuable resources specifically designed for today’s entrepreneurs. Our team has handpicked a diverse range of highly regarded titles that are both accessible and relevant to the fast-paced business landscape. Each resource is chosen to help you grow, innovate, and stay ahead in your entrepreneurial journey.")</p>
     
-                            <p>@lang('Our exclusive online catalog offers a wealth of knowledge aimed at enhancing your skills and expertise. Whether you're seeking insights on leadership, marketing, or financial management, our collection is tailored to meet your needs, empowering you to reach your full potential as a business leader.')</p>
+                            <p>@lang('Our exclusive online catalog offers a wealth of knowledge aimed at enhancing your skills and expertise. Whether youre seeking insights on leadership, marketing, or financial management, our collection is tailored to meet your needs, empowering you to reach your full potential as a business leader.')</p>
                             </div>
                             <img src="{{ asset ('mentoringlibrarycom/') }}/img/about1.jpg" class="img-fluid about_img" alt="">
                         </div>

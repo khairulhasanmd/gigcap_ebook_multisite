@@ -84,7 +84,7 @@ Route::get('/subscriptions', [UserController::class, 'showSubscriptions'])->name
 Route::get('/get-order/{orderId}', [UserController::class, 'getOrder']);
 Route::post('/unsubscribe-membership', [BasicController::class, 'unsubscribeMembership'])->name('unsubscribeMembership');
 
-Route::post('password/email', [App\Http\Controllers\Auth\ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
+Route::post('password/email', [App\Http\Controllers\Auth\ResetPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
 Route::get('password/reset/{token}', [App\Http\Controllers\Auth\ResetPasswordController::class, 'showResetForm'])->name('password.reset');
 Route::post('password/reset', [App\Http\Controllers\Auth\ResetPasswordController::class, 'reset'])->name('password.update');
 Route::get('/check-lang-file', [BasicController::class, 'checkLangFile'])->name('checkLangFile');

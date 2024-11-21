@@ -2,9 +2,15 @@
 @extends('templates.mentoringlibrarycom.welcome.main')
 
 
-@section('styles-files')
+{{-- @section('styles-files')
  	
- @endsection
+ @endsection --}}
+ <style>
+	.dataTables_wrapper{
+		overflow: scroll;
+
+	}
+ </style>
  
 @section('content')
 
