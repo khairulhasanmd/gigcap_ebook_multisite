@@ -63,7 +63,7 @@
                             <div class="profile-section">
                                 <small class="sub-number"><b>@lang('Subscription number'):</b> {{$subscription->data->id}}</small>
                                 <div class="row pt-3">
-                                    <div class="col-md-6">
+                                    <div class="col-md-12 col-lg-6">
                                         <form action="{{ route( 'update-profile' )}}" method="post" >
                                             {{ csrf_field() }}                                            
                                             <div class="mb-3">
@@ -92,13 +92,13 @@
                                                 <label for="phoneNumber" class="form-label">@lang('Phone number')</label>
                                                 <input type="text" class="form-control" id="phoneNumber" name="phone" placeholder="@lang('Phone number')" value="{{ $user->data->phone }}" required>
                                             </div>
-                                            <div class="d-flex justify-content-start">
-                                                <a href="{{ route('changePassword') }}" class="theme-btn mt-4">@lang('Change Password')</a>
+                                            <div class="d-flex flex-wrap justify-content-start">
+                                                                                                <a href="{{ route('changePassword') }}" class="theme-btn mt-4">@lang('Change Password')</a>
                                                 <button class="theme-btn mx-3 mt-4" type="submit">@lang('Edit Profile')</button>
                                             </div>
                                         </form>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-12 col-lg-6">
                                         <form>
                                             <div class="mb-3">
                                                 <label for="membershipName" class="form-label">@lang('Name')</label>

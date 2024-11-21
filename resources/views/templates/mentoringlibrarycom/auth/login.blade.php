@@ -76,16 +76,16 @@
                                   <input type="checkbox" class="form-check-input" id="remember" name="remember" value="1">
                                   <label class="form-check-label" for="remember">@lang('Remember me')</label>
                                 </div>
-                                <div class="col-6 text-end">
+                                <div class="col-6 ">
                                   <a href="{{route('welcome')}}#pricing" class="text-decoration-none">@lang('Don\'t have an account?')</a>
                                 </div>
                               </div>
                             </div>
                           
-                            <div class="justify-content-between mt-5">
-                              <input class="theme-btn px-1 me-2" type="submit" value="@lang('Sign In')" >
+                            <div class="justify-content-between mt-2">
+                              <input class="theme-btn px-1 me-2 mt-2" type="submit" value="@lang('Sign In')" >
 
-                              <a href="{{ route('password.request') }}" class="theme-btn px-4">@lang('I forgot my password')</a>
+                              <a href="{{ route('password.request') }}" class="theme-btn  mt-2">@lang('I forgot my password')</a>
                             </div>
                           </form>
                           
