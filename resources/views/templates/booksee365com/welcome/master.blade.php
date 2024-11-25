@@ -5,6 +5,16 @@
         @include('templates.booksee365com.layouts.favicon')
         @include('templates.booksee365com.welcome.styles')
         @include('templates.booksee365com.layouts.head-scripts')
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Q9LEMSQ8H"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-9Q9LEMSQ8H');
+        </script>
+
     </head>
 
     <body>
