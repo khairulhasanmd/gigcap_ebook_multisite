@@ -59,6 +59,7 @@
         <div class="col-lg-6 col-lg-offset-2 mx-auto" id="contact-form">   
        
           <form  method="post" action="{{ route('contact-us') }}" role="form">
+            <?php echo $recaptcha->render(); ?>
             @csrf
           <div class="messages"></div>
           <div class="controls p-5">
