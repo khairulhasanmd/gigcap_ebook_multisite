@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Admin\Product;
+use Anhskohbo\NoCaptcha\NoCaptcha;
 
 class BasicController extends GlobalController
 {
@@ -100,8 +101,19 @@ class BasicController extends GlobalController
     }
 
     public function contact(){
+        $siteKey = $this->concept->recaptcha_sitekey;
+        $secretKey = $this->concept->recaptcha_secretkey;
+
+        $options = [
+            'hideBadge' => false,
+            'dataBadge' => 'bottomleft',
+            'timeout' => 5,
+            'debug' => false
+        ];
+
+        $captcha = new NoCaptcha($secretKey, $siteKey, $options);
         
-        return view('templates.'.$this->concept->template.'.pages.contact-us');
+        return view('templates.'.$this->concept->template.'.pages.contact-us')->with('captcha', $captcha);
     }
     public function complaints_and_disputes(){
         
@@ -118,6 +130,36 @@ class BasicController extends GlobalController
 
 
      public function contactUs(Request $request) {
+        // Validate reCAPTCHA response
+        $response = $request->input('g-recaptcha-response');
+        $secretKey = $this->concept->recaptcha_secretkey;
+
+        // Verify reCAPTCHA
+        $data = [
+            'secret' => $secretKey,
+            'response' => $response,
+        ];
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, 'https://www.google.com/recaptcha/api/siteverify');
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+        $response = curl_exec($ch);
+        if ($response === false) {
+            // Handle cURL error
+            curl_close($ch);
+            return false;
+        }
+
+        $responseData = json_decode($response, true);
+        curl_close($ch);
+        $captchaValid = $responseData['success'];
+
+        if (!$captchaValid) {
+            return back()->withErrors(['captcha' => 'CAPTCHA Error. Please try again.']);
+        }
         // $this->validate($request, [
         //     'g-recaptcha-response' => 'required|captcha'
         // ]);

@@ -44,26 +44,28 @@
                   @csrf
                    <div class="row g-3">
                     <div class="col-xxl-6 col-xl-6 col-12">
-                      <input type="text" name="firstname" placeholder="@lang('First name') *">
+                      <input type="text" name="firstname" placeholder="@lang('First name') *" required>
                     </div>
                     <div class="col-xxl-6 col-xl-6 col-12">
-                      <input type="text" name="lastname" placeholder="@lang('Last name') *">
+                      <input type="text" name="lastname" placeholder="@lang('Last name') *" required>
                     </div>
                   </div>
                   <div class="row g-3">
                     <div class="col-xxl-6 col-xl-6 col-12">
-                      <input type="email" name="email" placeholder="@lang('Email') *">
+                      <input type="email" name="email" placeholder="@lang('Email') *" required>
                     </div>
                     <div class="col-xxl-6 col-xl-6 col-12">
-                      <input type="text" name="subject" placeholder="@lang('Subject') *">
+                      <input type="text" name="subject" placeholder="@lang('Subject') *" required>
                     </div>
                   </div>
                   <div class="row g-3">
                     <div class="col-12">
-                      <textarea name="message" placeholder="@lang('Message') *"></textarea>
+                      <textarea name="message" placeholder="@lang('Message') *" required></textarea>
                     </div>
                   </div>
                   <div class="row g-3">
+                    {!! $captcha->display() !!}
+                    {!! $captcha->renderJs() !!}
                     <div class="col-12">
                       <div class="btn_wrapper">
                         <button class="wc-btn-primary btn-hover btn-item"><span></span> @lang('Send') <br>@lang('Message') <i
