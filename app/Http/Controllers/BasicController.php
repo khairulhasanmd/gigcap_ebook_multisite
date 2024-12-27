@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Admin\Product;
+use App\Services\InvisibleReCaptcha;
+
 
 class BasicController extends GlobalController
 {
@@ -29,6 +31,16 @@ class BasicController extends GlobalController
         $this->locale = app()->getLocale();
         $this->concept_name = $this->template;
         // dd($this->template);
+        $this->recaptcha = new InvisibleReCaptcha(
+            $this->concept->recaptcha_sitekey,
+            $this->concept->recaptcha_secretkey,
+            [
+                'hideBadge' => false,
+                'dataBadge' => 'bottomleft',
+                'timeout' => 5,
+                'debug' => false
+            ],
+        );
 
 
         $this->cmp = new CmpApi($this->concept);
@@ -106,7 +118,9 @@ class BasicController extends GlobalController
 
     public function contact(){
         
-        return view('templates.'.$this->concept->template.'.pages.contact-us');
+        // return view('templates.'.$this->concept->template.'.pages.contact-us');
+        return view('templates.'.$this->concept->template.'.pages.contact-us', ['recaptcha' => $this->recaptcha]);
+
     }
     public function complaints_and_disputes(){
         

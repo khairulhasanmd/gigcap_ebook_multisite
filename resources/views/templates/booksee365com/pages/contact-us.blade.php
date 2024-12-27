@@ -166,6 +166,7 @@
             <div class="col-12 col-lg-12">
                 <div class="contact-form">
                     <form action="{{ route('contact-us') }}" method="post" class="row conact-form">
+                        <?php echo $recaptcha->render(); ?>
                         @csrf
                         <div class="col-md-6 col-12">
                             <div class="single-personal-info">
