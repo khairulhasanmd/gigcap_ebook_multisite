@@ -52,9 +52,8 @@
                                         <th class="min-w-125px">Concept Name</th>
                                         <th class="min-w-125px">Domain</th>
                                         <th class="min-w-125px">Company</th>
-                                        <th class="min-w-125px">CRM</th>
                                         <th class="min-w-125px">API Key</th>
-                                        <th class="text-end min-w-70px">Actions</th>
+                                        <th class="min-w-125px ">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody class="fw-semibold text-gray-600">
@@ -63,19 +62,20 @@
                                         <td>{{ $row->concept_name }}</td>
                                         <td>{{ $row->domain_name }}</td>
                                         <td>{{ $row->company_name }}</td>
-                                        {{-- <td>{{ $row->crm->name }}</td> --}}
                                         <td>{{ $row->crm_api_key }}</td>
-                                        <td class="text-end d-flex">
-                                            <a href="#" class="btn btn-sm btn-light btn-flex btn-center btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions <i class="ki-duotone ki-down fs-5 ms-1"></i></a>
+                                        <td class="">
+                                            <a href="#" class="btn btn-sm btn-light btn-flex  btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions <i class="ki-duotone ki-down fs-5 ms-1"></i></a>
                                             <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
                                                 <div class="menu-item px-3"> <a href="{{url('/').'/'.Request::path().'/edit/'.$row->id}}" class="menu-link px-3">Edit</a> </div>
                                                 <div class="menu-item px-3"> <a href="{{url('/').'/'.Request::path().'/delete/'.$row->id}}" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a> </div>
                                             </div>
                                         </td>
-                                        <td>
-                                            <a class="btn btn-primary m-1" href="{{ route('concept.company.info', $row->id) }}">Get Company Info</a>
+                                        {{-- <td>
+                                            <a class="btn btn-primary" href="{{ route('concept.company.info', $row->id) }}">Get Company Info</a>
 
-                                        </td>
+                                        </td> --}}
+                                        <td><a class="btn btn-primary" href="{{ route('concept.company.info', $row->id) }}">Get Company Info</a></td>
+
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -108,16 +108,16 @@
                                                 <div class="col-md-6">
                                                     <div class="fv-row mb-7">
                                                         <label class="required fs-6 fw-semibold mb-2">Domain Name </label>
-                                                        <input type="text" class="form-control form-control-solid @error('domain_name') is-invalid @enderror" placeholder="demo.com" name="domain_name" value="{{ (isset($detail)) ? $detail->domain_name : '' }}" />
+                                                        <input required type="text" class="form-control form-control-solid @error('domain_name') is-invalid @enderror" placeholder="demo.com" name="domain_name" value="{{ (isset($detail)) ? $detail->domain_name : '' }}" />
                                                         @error('domain_name')
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong>{{ $message }}</strong>
                                                         </span>
                                                         @enderror
                                                     </div>
-                                                    <div class="fv-row mb-7">
+                                                    <div class="fv-row mb-7 d-none">
                                                         <label class="required fs-6 fw-semibold mb-2">CRM</label>
-                                                        <input type="number" name="crm_id" value="0">
+                                                        <input required type="number" name="crm_id" value="0">
                                                         @error('crm_id')
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong>{{ $message }}</strong>
@@ -126,7 +126,7 @@
                                                     </div>
                                                     <div class="fv-row mb-7">
                                                         <label class="fs-6 fw-semibold mb-2">CRM API Key </label>
-                                                        <input type="text" class="form-control form-control-solid @error('crm_api_key') is-invalid @enderror" placeholder="AABBCC112233" name="crm_api_key" id="crm_api_key" value="{{ (isset($detail)) ? $detail->crm_api_key : '' }}" />
+                                                        <input required type="text" class="form-control form-control-solid @error('crm_api_key') is-invalid @enderror" placeholder="AABBCC112233" name="crm_api_key" id="crm_api_key" value="{{ (isset($detail)) ? $detail->crm_api_key : '' }}" />
                                                         @error('crm_api_key')
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong>{{ $message }}</strong>
@@ -135,7 +135,7 @@
                                                     </div>
                                                     <div class="fv-row mb-7">
                                                         <label class="fs-6 fw-semibold mb-2">Recaptcha Site Key</label>
-                                                        <input type="text" class="form-control form-control-solid @error('recaptcha_sitekey') is-invalid @enderror" placeholder="AABBCC112233" name="recaptcha_sitekey" id="recaptcha_sitekey" value="{{ (isset($detail)) ? $detail->recaptcha_sitekey : '' }}" />
+                                                        <input required type="text" class="form-control form-control-solid @error('recaptcha_sitekey') is-invalid @enderror" placeholder="AABBCC112233" name="recaptcha_sitekey" id="recaptcha_sitekey" value="{{ (isset($detail)) ? $detail->recaptcha_sitekey : '' }}" />
                                                         @error('recaptcha_sitekey')
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong>{{ $message }}</strong>
@@ -144,7 +144,7 @@
                                                     </div>
                                                     <div class="fv-row mb-7">
                                                         <label class="fs-6 fw-semibold mb-2">Recaptcha Secret Key</label>
-                                                        <input type="text" class="form-control form-control-solid @error('recaptcha_secretkey') is-invalid @enderror" placeholder="AABBCC112233" name="recaptcha_secretkey" id="recaptcha_secretkey" value="{{ (isset($detail)) ? $detail->recaptcha_secretkey : '' }}" />
+                                                        <input required type="text" class="form-control form-control-solid @error('recaptcha_secretkey') is-invalid @enderror" placeholder="AABBCC112233" name="recaptcha_secretkey" id="recaptcha_secretkey" value="{{ (isset($detail)) ? $detail->recaptcha_secretkey : '' }}" />
                                                         @error('recaptcha_secretkey')
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong>{{ $message }}</strong>
@@ -168,7 +168,7 @@
                                                             @foreach ($directories as $key => $value)
                                                                 <div class="col-sm-6">
                                                                     <div class="app-radio-group p-1">
-                                                                        <input type="radio" id="{{ $value }}" name="template" value="{{ $value }}" style="widows: 30px;height:30px;" {{ (isset($detail) && ($value == $detail->template)) ? 'checked' : '' }}>
+                                                                        <input required type="radio" id="{{ $value }}" name="template" value="{{ $value }}" style="widows: 30px;height:30px;" {{ (isset($detail) && ($value == $detail->template)) ? 'checked' : '' }}>
                                                                         <label for="{{ $value }}"> <img src="{{asset($value.'/preview.png')}}" style="max-width: 200px;">
                                                                         </label><span class="outside"><span class="inside"></span></span>
                                                                     </div>

@@ -154,7 +154,9 @@ class ConceptController extends GlobalController
             $data->update($request->only(
                 ['crm_id', 'company_id', 'domain_name', 'crm_api_key', 'service_id', 'product_id', 'service_name', 'mail_from_address', 'template', 'recaptcha_sitekey', 'recaptcha_secretkey', 'extra_codes']));
             $this->update_command_config_extra_data($data->id);
-            return redirect('admin/concepts')->with("success","Concept Updated successfully!");
+            $data = $this->getCompanyInfo->getCompanyInfo($data);
+
+            return redirect('admin/concepts')->with("success",$data->data->name. " Updated successfully!");
         }
     }
 
@@ -173,8 +175,9 @@ class ConceptController extends GlobalController
         // dd($concept->id);
         // update config files for concepts
         $data = $this->getCompanyInfo->getCompanyInfo($concept);
+        // dd($data->data->name);
         // return redirect()->route('concept.index')->with('success','Company Information '.$data->getCompany()['name'].' Has Been updated successfully');
-        return redirect('admin/concepts')->with("success",'Company Information '.$data->getCompany()['name'].' Has Been updated successfully');
+        return redirect('admin/concepts')->with("success", $data->data->name.' Has Been updated successfully');
 
     }
 

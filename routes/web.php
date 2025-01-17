@@ -135,7 +135,7 @@ Route::group(['prefix'=>'admin'], function () {
     Route::post('crms/edit/{id}', [CrmController::class, 'update']);
     Route::get('crms/delete/{id}', [CrmController::class, 'destroy']);
 
-    Route::get('concepts', [ConceptController::class, 'index']);
+    Route::get('concepts', [ConceptController::class, 'concepts']);
     Route::post('concepts', [ConceptController::class, 'store']);
     Route::get('concepts/edit/{id}', [ConceptController::class, 'edit']);
     Route::post('concepts/edit/{id}', [ConceptController::class, 'update']);
@@ -144,7 +144,6 @@ Route::group(['prefix'=>'admin'], function () {
     Route::get('concept/info/{id}',  [ConceptController::class, 'getInfo'])->name('concept.company.info');
 
 
-     Route::name("admin.")->prefix("admin")->group(function ($router) { });
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('profile', [UserProfileController::class, 'index'])->name('admin.profile');
     Route::Patch('profile/update/{id}', [UserProfileController::class, 'update'])->name('admin.profile.update');

@@ -141,16 +141,12 @@ class LoginController extends Controller
 {  
     $username = request()->get('email');
     $password = request()->get('password');
-    // First attempt with domain_name check
     if (Auth::attempt(['email' => $username, 'password' => $password, 'domain_name' => $this->currentDomain])) { 
 
-        // dd((Auth::user()->is_admin));
 
         if(Auth::user()->is_admin == 1){
-            // dd('redirect to dashbord');
-            return redirect()->route('admin.dashboard');
+            return redirect()->route('concepts');
         }else{
-            // dd($password);
 
             return redirect()->route('products');
         
