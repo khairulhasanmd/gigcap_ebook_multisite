@@ -46,9 +46,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
     Route::get('/about-us', [BasicController::class, 'about'])->name('about');
     Route::get('/contact', [BasicController::class, 'contact'])->name('contact');
     Route::get('/complaints_and_disputes', [BasicController::class, 'complaints_and_disputes'])->name('complaints_and_disputes');
-    Route::get('/signin', [UserLoginController::class, 'signin'])->name('login');
     Route::post('/signin', [LoginController::class, 'login'])->name('signin.post');
-    Route::get('/signout', [UserLoginController::class, 'signout'])->name('signout');
+    Route::get('/signout', [LoginController::class, 'signout'])->name('signout');
     Route::get('/signup', [BasicController::class, 'signup'])->name('signup');
     Route::get('/courses-info', [BasicController::class, 'courses_info'])->name('courses-info');
     Route::get('/courses', [UserController::class, 'courses'])->name('courses');
@@ -109,17 +108,54 @@ Route::group(['prefix' => '/api'], function () {
 //     Route::get('concept/clone/{id}',  [ConceptController::class, 'cloneInfo'])->name('concept.clone');
 // });
 
-Route::prefix('/administrator')->namespace('App\\Http\\Controllers')->group(function () {
-    Route::get('/login',[LoginController::class,'showAdminLoginForm'])->name('admin.login-view');
-    // Route::get('/dashboard', [DashboardController::class, 'home'])->name('admin.dashboard');
-    // Route::resource('companies', CompanyController::class);
-    // Route::resource('crm', CrmController::class);
-    // Route::resource('concept', ConceptController::class);
-    // Route::get('concept/info/{id}',  [ConceptController::class, 'getInfo'])->name('concept.company.info');
-    // Route::get('concept/clone/{id}',  [ConceptController::class, 'cloneInfo'])->name('concept.clone');
-    // Route::get('concept/translate/{id}',  [ConceptController::class, 'getTranslationLang'])->name('concept.company.translate.lang');
-    // Route::post('concept/translate/{id}',  [ConceptController::class, 'getTranslation'])->name('concept.company.translate');
-})->middleware(['auth', 'admin']);
+Route::group(['prefix'=>'admin'], function () {
+    //admin routes
+    Route::get('categories', [CategoryController::class, 'index'])->name('admin.categories');
+    Route::post('categories', [CategoryController::class, 'store'])->name('admin.categories.store');
+    Route::get('categories/edit/{id}', [CategoryController::class, 'edit']);
+    Route::post('categories/edit/{id}', [CategoryController::class, 'update']);
+    Route::get('categories/delete/{id}', [CategoryController::class, 'destroy']);
+
+
+    Route::get('tags', [TagController::class, 'index'])->name('admin.tags');
+    Route::post('tags', [TagController::class, 'store'])->name('admin.tags.store');
+    Route::get('tags/edit/{id}', [TagController::class, 'edit']);
+    Route::post('tags/edit/{id}', [TagController::class, 'update']);
+    Route::get('tags/delete/{id}', [TagController::class, 'destroy']);
+
+    Route::get('contents/{categorySlug}', [ContentController::class, 'index']);
+    Route::post('contents/{categorySlug}', [ContentController::class, 'store']);
+    Route::get('contents/{categorySlug}/edit/{id}', [ContentController::class, 'edit']);
+    Route::post('contents/{categorySlug}/edit/{id}', [ContentController::class, 'update']);
+    Route::get('contents/{categorySlug}/delete/{id}', [ContentController::class, 'destroy']);
+
+    Route::get('crms', [CrmController::class, 'index']);
+    Route::post('crms', [CrmController::class, 'store']);
+    Route::get('crms/edit/{id}', [CrmController::class, 'edit']);
+    Route::post('crms/edit/{id}', [CrmController::class, 'update']);
+    Route::get('crms/delete/{id}', [CrmController::class, 'destroy']);
+
+    Route::get('concepts', [ConceptController::class, 'index']);
+    Route::post('concepts', [ConceptController::class, 'store']);
+    Route::get('concepts/edit/{id}', [ConceptController::class, 'edit']);
+    Route::post('concepts/edit/{id}', [ConceptController::class, 'update']);
+    Route::get('concepts/delete/{id}', [ConceptController::class, 'destroy']);
+    Route::get('templates/list', [ConceptController::class, 'get_templates_list']);
+    Route::get('concept/info/{id}',  [ConceptController::class, 'getInfo'])->name('concept.company.info');
+
+
+     Route::name("admin.")->prefix("admin")->group(function ($router) { });
+    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('profile', [UserProfileController::class, 'index'])->name('admin.profile');
+    Route::Patch('profile/update/{id}', [UserProfileController::class, 'update'])->name('admin.profile.update');
+    Route::get('password', [UpdatePasswordController::class, 'index'])->name('admin.update.password');
+    Route::patch('update-password/{id}', [UpdatePasswordController::class, 'update'])->name('admin.new.password');
+
+    Route::resource('roles', UserRoleController::class)->names('admin.roles');
+    Route::resource('users', UserController::class)->names('admin.users');
+});
+
+
 
 
 Route::get('/where_am_i', function(){

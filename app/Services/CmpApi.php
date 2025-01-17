@@ -41,6 +41,26 @@ class CmpApi {
         // dd($responseData);
         return $responseData;
     }
+    public function getCompanyData($concept) {
+        $url = $this->url."/api/s/v3/this/webshop.json";
+        // dd($concept->crm_api_key);
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'x-api-key:'.$concept->crm_api_key,
+            'Content-Type: application/json'
+        ));
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $responseData = curl_exec($ch);
+        if(curl_errno($ch)) {
+            return curl_error($ch);
+        }
+        curl_close($ch);
+        $responseData = json_decode($responseData);
+        // dd($responseData);
+        return $responseData;
+    }
 
 
     function sendEmailViaAPI($email, $replyTo, $subject, $htmlContent, $locale) {

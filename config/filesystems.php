@@ -57,6 +57,15 @@ return [
             'throw' => false,
         ],
 
+        'templates' => [
+            'driver' => 'local',
+            'root' => base_path('resources/views/templates'),
+            // 'url' => env('APP_URL') . '/storage',
+            'visibility' => 'public',
+        ],
+
+
+
     ],
 
     /*

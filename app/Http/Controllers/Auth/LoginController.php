@@ -121,6 +121,12 @@ class LoginController extends Controller
 
     }
 
+
+    public function signout(){
+        Auth::logout();
+        return redirect()->route('login');
+    }
+
     public function showAdminLoginForm() {
         return view('admin.auth.login');
 
