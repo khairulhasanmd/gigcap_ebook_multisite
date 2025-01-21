@@ -2,7 +2,7 @@
 
 <div id="kt_app_sidebar" class="app-sidebar flex-column" data-kt-drawer="true" data-kt-drawer-name="app-sidebar" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="225px" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
     <!--begin::Logo-->
-    <div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
+    {{-- <div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
         <!--begin::Logo image-->
         <a href="{{route('dashboard')}}">
             
@@ -22,7 +22,7 @@
             </i>
         </div>
         <!--end::Sidebar toggle-->
-    </div>
+    </div> --}}
     <!--end::Logo-->
     <!--begin::sidebar menu-->
     <div class="app-sidebar-menu overflow-hidden flex-column-fluid">
@@ -48,7 +48,7 @@
                         <span class="menu-heading fw-bold text-uppercase fs-7">Settings</span>
                     </div>
                 </div>
-                    <div class="menu-item {{ str_contains(Request::path(), 'admin/crms') ? 'here show' : ''}}">
+                    {{-- <div class="menu-item {{ str_contains(Request::path(), 'admin/crms') ? 'here show' : ''}}">
                         <a class="menu-link" href="{{ url('admin/crms') }}">
                             <span class="menu-icon">
                                 <i class="ki-duotone ki-bank fs-2">
@@ -58,7 +58,7 @@
                             </span>
                             <span class="menu-title">CRM's</span>
                         </a>
-                    </div>
+                    </div> --}}
                     <div class="menu-item {{ str_contains(Request::path(), 'admin/concepts') ? 'here show' : ''}}">
                         <a class="menu-link" href="{{ url('admin/concepts') }}">
                             <span class="menu-icon">

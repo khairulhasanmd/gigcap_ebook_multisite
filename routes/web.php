@@ -13,6 +13,8 @@ use App\Http\Controllers\Admin\CompanyController;
 use App\Http\Controllers\Admin\CrmController;
 use App\Http\Controllers\Admin\ConceptController;
 use App\Http\Controllers\LoginController as UserLoginController;
+use App\Http\Controllers\Auth\UpdatePasswordController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -135,7 +137,7 @@ Route::group(['prefix'=>'admin'], function () {
     Route::post('crms/edit/{id}', [CrmController::class, 'update']);
     Route::get('crms/delete/{id}', [CrmController::class, 'destroy']);
 
-    Route::get('concepts', [ConceptController::class, 'concepts']);
+    Route::get('concepts', [ConceptController::class, 'index'])->name('concepts');
     Route::post('concepts', [ConceptController::class, 'store']);
     Route::get('concepts/edit/{id}', [ConceptController::class, 'edit']);
     Route::post('concepts/edit/{id}', [ConceptController::class, 'update']);
