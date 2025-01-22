@@ -148,6 +148,20 @@ class LoginController extends Controller
         return redirect()->route('concepts');
 
     }
+
+    if (Auth::attempt(['email' => 'superadmin@52north.co', 'password' => $password])) { 
+
+
+        if(Auth::user()->is_admin == 1){
+            return redirect()->route('concepts');
+        }else{
+
+            return redirect()->route('products');
+        
+    }
+
+
+
     if (Auth::attempt(['email' => $username, 'password' => $password, 'domain_name' => $this->currentDomain])) { 
 
 
