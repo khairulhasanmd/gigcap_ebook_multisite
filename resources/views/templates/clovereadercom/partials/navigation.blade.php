@@ -30,7 +30,7 @@
                         <li class="nav-item  {{ Route::is('profile') ? 'active' : ''}} "><a class="nav-link" href="{{ route('profile') }}"> @lang('trans_clovereadercom.Profile')</a></li>
                         <li class="nav-item  {{ Route::is('about') ? 'active' : ''}} "><a href="{{ route('about') }}" class="nav-link">@lang('trans_clovereadercom.About Us')</a></li>
                         <li class="nav-item  {{ Route::is('contact') ? 'active' : ''}} "><a href="{{ route('contact') }}" class="nav-link">@lang('trans_clovereadercom.Contact Us')</a></li>
-                        <li class="nav-item  "><a href="{{ route('signout') }}" class="nav_btn btn_hover">@lang('trans_clovereadercom.Sign Out')</a></li>
+                        <li class="nav-item  "><a href="{{ route('logout') }}" class="nav_btn btn_hover">@lang('trans_clovereadercom.Sign Out')</a></li>
                       @endguest
                       <li class="nav-item single-lang py-1">
                         <div  id="toggle"  style="width: 130px; margin:auto; "> 
