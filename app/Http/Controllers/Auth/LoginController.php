@@ -146,7 +146,7 @@ class LoginController extends Controller
         // dd('working');
 
    
-        if (Auth::attempt(['email' => $username, 'password' => $password, 'domain_name' => $this->currentDomain])) { 
+        if (Auth::attempt(['email' => $username, 'password' => $password])) { 
 
 
             if(Auth::user()->is_admin == 1){
