@@ -44,27 +44,28 @@
                   @csrf
                    <div class="row g-3">
                     <div class="col-xxl-6 col-xl-6 col-12">
-                      <input type="text" name="firstname" placeholder="@lang('trans_qwerdybookscom.First name') *">
+                      <input type="text" name="firstname" placeholder="@lang('trans_qwerdybookscom.First name') *" required>
                     </div>
                     <div class="col-xxl-6 col-xl-6 col-12">
-                      <input type="text" name="lastname" placeholder="@lang('trans_qwerdybookscom.Last name') *">
+                      <input type="text" name="lastname" placeholder="@lang('trans_qwerdybookscom.Last name') *" required>
                     </div>
                   </div>
                   <div class="row g-3">
                     <div class="col-xxl-6 col-xl-6 col-12">
-                      <input type="email" name="email" placeholder="@lang('trans_qwerdybookscom.Email') *">
+                      <input type="email" name="email" placeholder="@lang('trans_qwerdybookscom.Email') *" required>
                     </div>
                     <div class="col-xxl-6 col-xl-6 col-12">
-                      <input type="text" name="subject" placeholder="@lang('trans_qwerdybookscom.Subject') *">
-                    </div>
-                  </div>
-                  <div class="row g-3">
-                    <div class="col-12">
-                      <textarea name="message" placeholder="@lang('trans_qwerdybookscom.Message') *"></textarea>
+                      <input type="text" name="subject" placeholder="@lang('trans_qwerdybookscom.Subject') *" required>
                     </div>
                   </div>
                   <div class="row g-3">
                     <div class="col-12">
+                      <textarea name="message" placeholder="@lang('trans_qwerdybookscom.Message') *" required></textarea>
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <?php echo $recaptcha->render(); ?>
                       <div class="btn_wrapper">
                         <button class="wc-btn-primary btn-hover btn-item"><span></span> @lang('trans_qwerdybookscom.Send') <br>@lang('trans_qwerdybookscom.Message') <i
                             class="fa-solid fa-arrow-right"></i></button>

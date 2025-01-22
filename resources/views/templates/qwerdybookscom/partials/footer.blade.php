@@ -8,7 +8,9 @@
             <div></div>
             <div></div>
           </div>
-
+          {{-- @php
+              dd($concepts);
+          @endphp --}}
           <div class="row pt-150">
             <div class="col-lg-4">
               <div class="footer__tol">

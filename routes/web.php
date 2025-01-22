@@ -6,13 +6,13 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BasicController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ForgotPasswordController;
-use App\Http\Controllers\Auth\ResetPasswordController;
-use App\Http\Controllers\PropelController;
 use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\CompanyController;
 use App\Http\Controllers\Admin\CrmController;
 use App\Http\Controllers\Admin\ConceptController;
-use App\Http\Controllers\LoginController as UserLoginController;
+use App\Http\Controllers\Auth\UpdatePasswordController;
+use App\Http\Middleware\AdminCheck;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,19 +26,11 @@ use App\Http\Controllers\LoginController as UserLoginController;
 */
 
 
-
-Route::get('/fp', function () {
-    return view('email.password', ['fname' => 'Taylor', 'password' => '123', 'email' => 'marko@marko.com']);
-});
-
-// Route::view('/wlc', 'email.welcome', ['fname' => 'Taylor', 'password' => '123', 'email' => 'marko@marko.com', 'terms' => 'terms']);
-
 Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
     Auth::routes();
     Route::get('/', [BasicController::class, 'welcome'])->name('welcome');
     Route::get('/return-policy', [BasicController::class, 'returnPolicy'])->name('return');
     Route::get('/coming-soon', [BasicController::class, 'comingSoon'])->name('coming-soon');
-// Route::get('/terms', [BasicController::class, 'terms'])->name('terms');
     Route::get('/terms', [BasicController::class, 'termsLocale'])->name('terms');
     Route::get('/subscription-policy', [BasicController::class, 'subscription'])->name('subscription');
     Route::get('/privacy-policy', [BasicController::class, 'privacy'])->name('privacy');
@@ -46,15 +38,13 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
     Route::get('/about-us', [BasicController::class, 'about'])->name('about');
     Route::get('/contact', [BasicController::class, 'contact'])->name('contact');
     Route::get('/complaints_and_disputes', [BasicController::class, 'complaints_and_disputes'])->name('complaints_and_disputes');
-    Route::get('/signin', [UserLoginController::class, 'signin'])->name('login');
     Route::post('/signin', [LoginController::class, 'login'])->name('signin.post');
-    Route::get('/signout', [UserLoginController::class, 'signout'])->name('signout');
+    Route::get('/signout', [LoginController::class, 'signout'])->name('signout');
     Route::get('/signup', [BasicController::class, 'signup'])->name('signup');
     Route::get('/courses-info', [BasicController::class, 'courses_info'])->name('courses-info');
     Route::get('/courses', [UserController::class, 'courses'])->name('courses');
     Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboard');
     Route::get('/profile', [UserController::class, 'profile'])->name('profile');
-    // Route::get('/file/{filename}', [FileController::class, 'getFile'])->where('filename', '^[^/]+$');
     Route::get('/cancel-membership', [UserController::class, 'cancelMembership'])->name('cancelMembership');
     Route::get('/change-password', [UserController::class, 'changePassword'])->name('changePassword');
     Route::get('password/reset', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
@@ -90,36 +80,27 @@ Route::post('password/reset', [App\Http\Controllers\Auth\ResetPasswordController
 Route::get('/check-lang-file', [BasicController::class, 'checkLangFile'])->name('checkLangFile');
 Route::get('/service/{service}', [BasicController::class, 'typeOfService'])->name('service');
 
+Route::group(['prefix'=>'admin'], function () {
 
-// Route::get('/send-forgot-password', [PropelController::class, 'forgotPassword'])->name('forgotPassword');
-// Route::post('/send-forgot-password', [PropelController::class, 'sendForgotPassword'])->name('sendForgotPassword');
 
-Route::group(['prefix' => '/api'], function () {
-    // Route::any('/s/v1/subscription/success.json', [PropelController::class, 'postSubscriptionSuccessAction']);
-    // Route::post('/s/v1/subscription/cancel', [PropelController::class, 'cancelSubscriptionAction']);
-});
 
-// Route::group(['prefix' => '/administrator'], function () {
-//     Route::get('/login',[LoginController::class,'showAdminLoginForm'])->name('admin.login-view');
-//     Route::get('/dashboard', [DashboardController::class, 'home'])->name('admin.dashboard');
-//     Route::resource('companies', CompanyController::class);
-//     Route::resource('crm', CrmController::class);
-//     Route::resource('concept', ConceptController::class);
-//     Route::get('concept/info/{id}',  [ConceptController::class, 'getInfo'])->name('concept.company.info');
-//     Route::get('concept/clone/{id}',  [ConceptController::class, 'cloneInfo'])->name('concept.clone');
-// });
+    Route::get('concepts', [ConceptController::class, 'index'])->name('concepts');
+    Route::post('concepts', [ConceptController::class, 'store']);
+    Route::get('concepts/edit/{id}', [ConceptController::class, 'edit']);
+    Route::post('concepts/edit/{id}', [ConceptController::class, 'update']);
+    Route::get('concepts/delete/{id}', [ConceptController::class, 'destroy']);
+    Route::get('templates/list', [ConceptController::class, 'get_templates_list']);
+    Route::get('concept/info/{id}',  [ConceptController::class, 'getInfo'])->name('concept.company.info');
 
-Route::prefix('/administrator')->namespace('App\\Http\\Controllers')->group(function () {
-    Route::get('/login',[LoginController::class,'showAdminLoginForm'])->name('admin.login-view');
-    // Route::get('/dashboard', [DashboardController::class, 'home'])->name('admin.dashboard');
-    // Route::resource('companies', CompanyController::class);
-    // Route::resource('crm', CrmController::class);
-    // Route::resource('concept', ConceptController::class);
-    // Route::get('concept/info/{id}',  [ConceptController::class, 'getInfo'])->name('concept.company.info');
-    // Route::get('concept/clone/{id}',  [ConceptController::class, 'cloneInfo'])->name('concept.clone');
-    // Route::get('concept/translate/{id}',  [ConceptController::class, 'getTranslationLang'])->name('concept.company.translate.lang');
-    // Route::post('concept/translate/{id}',  [ConceptController::class, 'getTranslation'])->name('concept.company.translate');
-})->middleware(['auth', 'admin']);
+
+    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    Route::get('password', [UpdatePasswordController::class, 'index'])->name('admin.update.password');
+    Route::patch('update-password/{id}', [UpdatePasswordController::class, 'update'])->name('admin.new.password');
+    Route::resource('users', UserController::class)->names('admin.users');
+})->middleware(CheckAdminLevel::class);
+
+
 
 
 Route::get('/where_am_i', function(){
