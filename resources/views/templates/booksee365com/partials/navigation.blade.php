@@ -84,7 +84,7 @@
                         <a href="{{ route('welcome') }}#pricing-section" class="theme-btn promo-btn">@lang('trans_booksee365.Sign Up')</a>
                     @endif
                 @else
-                    <a href="{{ route('signout') }}" class="theme-btn promo-btn">@lang('trans_booksee365.Sign Out')</a>
+                    <a href="{{ route('logout') }}" class="theme-btn promo-btn">@lang('trans_booksee365.Sign Out')</a>
                 @endguest
             </div>
             <div class="col-6 d-lg-none d-block pl-0">
