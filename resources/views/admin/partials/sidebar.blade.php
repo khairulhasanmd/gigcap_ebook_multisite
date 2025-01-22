@@ -85,6 +85,19 @@
                         <span class="menu-title">Update password</span>
                     </a>
                 </div>
+                <div class="menu-item">
+                    <a class="menu-link" href="{{route('logout')}}">
+                        <span class="menu-icon">
+                            <i class="ki-duotone ki-key " style="font-size: 25px;color: #747488 !important;">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                                <span class="path3"></span>
+                                <span class="path4"></span>
+                            </i>
+                        </span>
+                        <span class="menu-title">Sign Out</span>
+                    </a>
+                </div>
 
                 {{-- update password end --}}
             </div>
