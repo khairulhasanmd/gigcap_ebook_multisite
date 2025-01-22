@@ -33,7 +33,7 @@
                 <div class="menu-item {{ Route::is('dashboard') ? 'here show' : ''}}">
                     <a class="menu-link" href="{{route('dashboard')}}">
                         <span class="menu-icon">
-                            <i class="ki-duotone ki-element-11 fs-2">
+                            <i class="ki-outline ki-graph-up text-success" style="font-size: 30px;color: #747488 !important;"></i>
                                 <span class="path1"></span>
                                 <span class="path2"></span>
                                 <span class="path3"></span>
@@ -62,9 +62,9 @@
                     <div class="menu-item {{ str_contains(Request::path(), 'admin/concepts') ? 'here show' : ''}}">
                         <a class="menu-link" href="{{ url('admin/concepts') }}">
                             <span class="menu-icon">
-                                <i class="ki-duotone ki-bank fs-2">
-                                    <span class="path1"></span>
-                                    <span class="path2"></span>
+                                <i class="ki-duotone ki-abstract-39" style="font-size: 25px;color: #747488 !important;">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
                                 </i>
                             </span>
                             <span class="menu-title">Concepts</span>
@@ -75,7 +75,7 @@
                 <div class="menu-item">
                     <a class="menu-link" href="{{route('admin.update.password')}}">
                         <span class="menu-icon">
-                            <i class="ki-duotone ki-key fs-2">
+                            <i class="ki-duotone ki-key " style="font-size: 25px;color: #747488 !important;">
                                 <span class="path1"></span>
                                 <span class="path2"></span>
                                 <span class="path3"></span>
@@ -97,10 +97,14 @@
     <div class="app-sidebar-footer flex-column-auto pt-2 pb-6 px-6" id="kt_app_sidebar_footer">
         <a href="" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn-flex flex-center btn-custom btn-primary overflow-hidden text-nowrap px-0 h-40px w-100" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss-="click" title="Log Out">
             <span class="btn-label" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</span>
-            <i class="ki-duotone ki-document btn-icon fs-2 m-0">
-                <span class="path1"></span>
-                <span class="path2"></span>
-            </i>
+            <span class="menu-icon">
+                <i class="ki-duotone ki-exit-right" style="font-size: 25px;color: #747488 !important;  margin-left: 2px;">
+                    <span class="path1"></span>
+                    <span class="path2"></span>
+                    <span class="path3"></span>
+                    <span class="path4"></span>
+                </i>
+            </span>
         </a>
     </div>
     <!--end::Footer-->

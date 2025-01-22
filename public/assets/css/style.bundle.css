@@ -49000,7 +49000,7 @@ body,
   }
 }
 [data-kt-app-layout=dark-sidebar] .app-sidebar {
-  background-color: #222;
+  background-color: #1e1e2d;
   border-right: 0 !important;
 }
 [data-kt-app-layout=dark-sidebar] .app-sidebar .hover-scroll-overlay-y {

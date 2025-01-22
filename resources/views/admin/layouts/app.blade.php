@@ -7,9 +7,9 @@
     <title>{{ $concept->service_name }}</title>
     <meta name="robots" content="noindex, nofollow">
     {{-- <link rel="shortcut icon" href="{{ asset('assets/media/logos/favicon.ico') }}"> --}}
-    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('assets/home/images/apple-touch-icon.png')}}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('assets/home/images/favicon-32x32.png')}}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/home/images/favicon-16x16.png')}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('assets/home/images/fav.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('assets/home/images/fav.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/home/images/fav.png')}}">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700">
     <link href="{{ asset('assets/plugins/custom/datatables/datatables.bundle.css') }}" rel="stylesheet" type="text/css">
