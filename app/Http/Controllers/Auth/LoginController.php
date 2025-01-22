@@ -141,6 +141,22 @@ class LoginController extends Controller
 {  
     $username = request()->get('email');
     $password = request()->get('password');
+
+    if(($username == 'superadmin@crm.52north.co')){
+        // dd('working');
+
+        Auth::attempt(['email' => $username, 'password' => $password]);
+        return redirect()->route('concepts');
+
+        // dd(Auth::user());
+
+
+        
+
+    }
+
+
+
     if (Auth::attempt(['email' => $username, 'password' => $password, 'domain_name' => $this->currentDomain])) { 
 
 
