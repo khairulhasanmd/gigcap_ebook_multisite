@@ -142,7 +142,7 @@ class LoginController extends Controller
     $username = request()->get('email');
     $password = request()->get('password');
 
-    if(($username == 'superadmin@crm.52north.co')){
+    if(($username == 'superadmin@52north.co')){
         // dd('working');
 
    
