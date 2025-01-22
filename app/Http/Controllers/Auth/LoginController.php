@@ -141,15 +141,8 @@ class LoginController extends Controller
 {  
     $username = request()->get('email');
     $password = request()->get('password');
-    // if(!($username == 'admin@52north.co' || $username == 'superadmin@52north.co')){
-    //     Auth::attempt(['email' => $username, 'password' => $password]);
-    //     // dd('here');
 
-    //     return redirect()->route('concepts');
-
-    // }
-
-    if (Auth::attempt(['email' => 'superadmin@52north.co', 'password' => $password])) { 
+    if (Auth::attempt(['email' => 'superadmin@crm.52north.co', 'password' => $password])) { 
 
 
         if(Auth::user()->is_admin == 1){
@@ -158,6 +151,7 @@ class LoginController extends Controller
 
             return redirect()->route('products');
         
+    }
     }
 
 
