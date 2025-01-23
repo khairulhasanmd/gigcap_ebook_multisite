@@ -13,6 +13,8 @@ use App\Http\Controllers\Admin\CompanyController;
 use App\Http\Controllers\Admin\CrmController;
 use App\Http\Controllers\Admin\ConceptController;
 use App\Http\Controllers\LoginController as UserLoginController;
+use App\Http\Controllers\Auth\UpdatePasswordController;
+
 
 /*
 |--------------------------------------------------------------------------
