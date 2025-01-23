@@ -1,0 +1,27 @@
+<?php
+
+return array (
+  'SUPPORT_EMAIL' => 'support@mentoringlibrary.com',
+  'SUPPORT_PHONE' => '+44 800 069 8742',
+  'SUPPORT_HOURS' => 'Monday - Friday 08:00-24:00 (CET), Weekends 10:00 - 18:00 (CET)',
+  'SUPPORT_LANGUAGES' => 'French, Italian, English',
+  'CONCEPT_NAME' => 'MentoringLibrary',
+  'COMPANY_NAME' => 'DALMARKO TECHNOLOGY LTD',
+  'COMPANY_BUSINESS_NUMBER' => 'HE463444',
+  'COMPANY_VAT_NUMBER_AREA' => 'EU',
+  'COMPANY_VAT_NUMBER' => 'CY60088878Y',
+  'COMPANY_ADDRESS' => 'Sotiri Tsangari, 2 MELANDRINA 2, BLOCK D, Flat/Office 101 Agioi omologites',
+  'COMPANY_POSTCODE' => '1095',
+  'COMPANY_CITY' => 'Nicosia',
+  'COMPANY_COUNTRY' => 'Cyprus',
+  'COMPANY_COUNTRY_CODE' => 'CY',
+  'COMPANY_REGISTRATION_DATE' => '2024-07-31',
+  'CONCEPT_WEBSITE_NAME' => 'mentoringlibrary.com',
+  'CAMPAIGN_DOMAIN' => 'https://join.mentoringlibrary.com/en/c/mentoring-library-signup',
+  'CAMPAIGN_DOMAIN_URL' => 'https://join.mentoringlibrary.com',
+  'SERVICE_UNIQUE_ID_TOKEN' => '335ac954e96d',
+  'COMPANY_VAT_NUMBER_AREA_1' => 'EU',
+  'COMPANY_VAT_NUMBER_EU' => 'CY60088878Y',
+  'COMPANY_VAT_NUMBER_AREA_2' => 'GB',
+  'COMPANY_VAT_NUMBER_GB' => 'GB00000000',
+);

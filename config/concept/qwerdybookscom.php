@@ -1,0 +1,27 @@
+<?php
+
+return array (
+  'SUPPORT_EMAIL' => 'support@qwerdybooks.com',
+  'SUPPORT_PHONE' => '+353 1 270 9345',
+  'SUPPORT_HOURS' => 'Monday - Friday 08:00-24:00 (CET), Weekends 10:00 - 18:00 (CET)',
+  'SUPPORT_LANGUAGES' => 'French, Italian, English',
+  'CONCEPT_NAME' => 'Qwerdybooks',
+  'COMPANY_NAME' => 'Zenpolaris Limited',
+  'COMPANY_BUSINESS_NUMBER' => '753620',
+  'COMPANY_VAT_NUMBER_AREA' => 'EU',
+  'COMPANY_VAT_NUMBER' => '4261060PH',
+  'COMPANY_ADDRESS' => '16 SILVERDALE ESTATE',
+  'COMPANY_POSTCODE' => 'R35 RR22',
+  'COMPANY_CITY' => 'CLARA, OFFALY',
+  'COMPANY_COUNTRY' => 'Republic of Ireland',
+  'COMPANY_COUNTRY_CODE' => 'IE',
+  'COMPANY_REGISTRATION_DATE' => '2023-12-11',
+  'CONCEPT_WEBSITE_NAME' => 'qwerdybooks.com',
+  'CAMPAIGN_DOMAIN' => 'https://join.qwerdybooks.com/en/c/zenpolaris_signup',
+  'CAMPAIGN_DOMAIN_URL' => 'https://join.qwerdybooks.com',
+  'SERVICE_UNIQUE_ID_TOKEN' => '4a1c77c72ccf',
+  'COMPANY_VAT_NUMBER_AREA_1' => 'EU',
+  'COMPANY_VAT_NUMBER_EU' => '4261060PH',
+  'COMPANY_VAT_NUMBER_AREA_2' => 'GB',
+  'COMPANY_VAT_NUMBER_GB' => '473145591',
+);
