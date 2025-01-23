@@ -23,7 +23,7 @@ class ConceptController extends GlobalController
     public function __construct()
     {
         parent::__construct();
-        $this->middleware('auth');//requires login
+        $this->middleware('admin');
         $domain = url()->current();
         $this->domain = parse_url($domain)['host'];
         $this->concept = Concept::where('domain_name', $this->domain)->first();

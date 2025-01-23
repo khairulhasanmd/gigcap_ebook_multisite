@@ -14,7 +14,7 @@ class UpdatePasswordController extends GlobalController
     public function __construct()
     {
         parent::__construct();
-        $this->middleware('auth');
+        $this->middleware('admin');
     }
 
     public function index(){

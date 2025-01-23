@@ -3,19 +3,32 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\Auth;
 
 class AdminCheck
 {
     /**
      * Handle an incoming request.
      *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Closure  $next
+     * @return mixed
      */
-    public function handle(Request $request, Closure $next): Response
+    public function handle($request, Closure $next)
     {
-        dd('here');
-        // return $next($request);
+
+        // dd('here working');
+        if (Auth::check()) {
+            // dd(Auth::user());
+            if (Auth::user()->is_admin == 1) {
+                return $next($request);
+            } else {
+                // return $next($request);
+                return redirect('/products');
+                // return view('admin.unauthorized');
+            }
+        }
+        return redirect('/login');
+       
     }
 }
