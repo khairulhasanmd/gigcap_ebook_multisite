@@ -4,14 +4,9 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\GlobalController;
-use App\Providers\RouteServiceProvider;
-use Illuminate\Foundation\Auth\ResetsPasswords;
+use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 use Illuminate\Http\Request;
-use App\Models\User;
-use Illuminate\Support\Facades\Password;
-use App\Services\CmpApi;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Validator;
 
 class ForgotPasswordController extends GlobalController
 {
@@ -20,30 +15,29 @@ class ForgotPasswordController extends GlobalController
     | Password Reset Controller
     |--------------------------------------------------------------------------
     |
-    | This controller is responsible for handling password reset requests
-    | and uses a simple trait to include this behavior. You're free to
-    | explore this trait and override any methods you wish to tweak.
+    | This controller is responsible for handling password reset emails and
+    | includes a trait which assists in sending these notifications from
+    | your application to your users. Feel free to explore this trait.
     |
     */
 
-    use ResetsPasswords;
+    use SendsPasswordResetEmails;
 
     /**
-     * Where to redirect users after resetting their password.
+     * Create a new controller instance.
      *
-     * @var string
+     * @return void
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
-
-    public $crmApi;
-    public $cmp;
-
     public function __construct()
     {
         parent::__construct();
-        $this->cmp = new CmpApi($this->concept);
+        $this->middleware('guest');
     }
 
+    public function showLinkRequestForm()
+    {
+        return view($this->themeDir.'auth.password_reset_email');
+    }
 
     public function sendResetLinkEmail(Request $request)
     {
@@ -58,22 +52,12 @@ class ForgotPasswordController extends GlobalController
             $overrideReceiverEmail = $test_email;
         }
 
-        $response = $this->cmp->resetUserPassword($userEmail, 'en', $overrideReceiverEmail);
-        // dd($response);
-    
-        if($response->status=='success') {
-            // dd($response);
-
-            return Redirect::route('welcome')->with('success', $response->data);
+        $response = $this->crmApi->resetUserPassword($userEmail, 'en', $overrideReceiverEmail);
+        // dd($response->getStatus()=='success');
+        if($response->getStatus()=='success') {
+            // dd('works fine');
+            return Redirect::route('welcome')->with('success', $response->getMessage());
         }
-        // dd($response);
-        return Redirect::back()->with(['error' => $response->errors]);
-        }
-
-        protected function validateEmail(Request $request)
-        {
-            $request->validate(['email' => 'required|email']);
-        }
-
-    
+        return Redirect::back()->withErrors(['error' => $response->getMessage()]);
+    }
 }

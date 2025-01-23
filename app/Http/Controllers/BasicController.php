@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Admin\Product;
-use Anhskohbo\NoCaptcha\NoCaptcha;
+use App\Services\InvisibleReCaptcha;
+
 
 class BasicController extends GlobalController
 {
@@ -30,6 +31,16 @@ class BasicController extends GlobalController
         $this->locale = app()->getLocale();
         $this->concept_name = $this->template;
         // dd($this->template);
+        $this->recaptcha = new InvisibleReCaptcha(
+            $this->concept->recaptcha_sitekey,
+            $this->concept->recaptcha_secretkey,
+            [
+                'hideBadge' => false,
+                'dataBadge' => 'bottomleft',
+                'timeout' => 5,
+                'debug' => false
+            ],
+        );
 
 
         $this->cmp = new CmpApi($this->concept);
@@ -82,10 +93,15 @@ class BasicController extends GlobalController
         }
     }
     public function typeOfService(Request $request, $service){
-      
-        $result = $this->cmp->typeOfService($service , $lang='en');
+        $lang = app()->getLocale();
+        if($this->concept_name == 'templates.qwerdybookscom.' || $this->concept_name == 'templates.mentoringlibrarycom.'){
+            $lang = 'en';
+        }
+        // dd($lang);
+
+        $result = $this->cmp->typeOfService($service , $lang);
         // dd($service);
-        // return redirect('/pages/services')->with(['service' => $result, 'pageName' => $service]);
+        // return redirect(app()->getLocale().'/pages/services')->with(['service' => $result, 'pageName' => $service]);
         // return redirect('/service/'.$service)->with(['service' => $result, 'pageName' => $service]);
 
         return view($this->template.'.pages.services')->with(['service' => $result, 'pageName' => $service]);
@@ -101,19 +117,10 @@ class BasicController extends GlobalController
     }
 
     public function contact(){
-        $siteKey = $this->concept->recaptcha_sitekey;
-        $secretKey = $this->concept->recaptcha_secretkey;
-
-        $options = [
-            'hideBadge' => false,
-            'dataBadge' => 'bottomleft',
-            'timeout' => 5,
-            'debug' => false
-        ];
-
-        $captcha = new NoCaptcha($secretKey, $siteKey, $options);
         
-        return view('templates.'.$this->concept->template.'.pages.contact-us')->with('captcha', $captcha);
+        // return view('templates.'.$this->concept->template.'.pages.contact-us');
+        return view('templates.'.$this->concept->template.'.pages.contact-us', ['recaptcha' => $this->recaptcha]);
+
     }
     public function complaints_and_disputes(){
         
@@ -130,36 +137,6 @@ class BasicController extends GlobalController
 
 
      public function contactUs(Request $request) {
-        // Validate reCAPTCHA response
-        $response = $request->input('g-recaptcha-response');
-        $secretKey = $this->concept->recaptcha_secretkey;
-
-        // Verify reCAPTCHA
-        $data = [
-            'secret' => $secretKey,
-            'response' => $response,
-        ];
-
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, 'https://www.google.com/recaptcha/api/siteverify');
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-        $response = curl_exec($ch);
-        if ($response === false) {
-            // Handle cURL error
-            curl_close($ch);
-            return false;
-        }
-
-        $responseData = json_decode($response, true);
-        curl_close($ch);
-        $captchaValid = $responseData['success'];
-
-        if (!$captchaValid) {
-            return back()->withErrors(['captcha' => 'CAPTCHA Error. Please try again.']);
-        }
         // $this->validate($request, [
         //     'g-recaptcha-response' => 'required|captcha'
         // ]);

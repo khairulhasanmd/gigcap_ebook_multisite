@@ -139,7 +139,7 @@ class UserController extends Controller
         $user = auth()->user();
         $product = Product::find($product_id);
         if(!$user || !$product || !$product->pdf_url) {
-            return redirect('/products');
+            return redirect(app()->getLocale().'/products');
         }
         $fileNameArr = explode('?', basename($product->pdf_url));
         $mediaName = $fileNameArr[0];
@@ -253,7 +253,7 @@ class UserController extends Controller
         $status = $this->cmp->updatepassword($siteuserid,$newpassword)->status;
         // dd($newpassword);
         if($status == 'success'){
-            return redirect('/profile')->with('success', 'Password changed');
+            return redirect(app()->getLocale().'/profile')->with('success', 'Password changed');
 
         }else{
             return redirect()->back()->withErrors(['error' => 'New password is not repeated twice']);
@@ -280,11 +280,11 @@ class UserController extends Controller
         $canceled_subscription = $this->cmp->cancelSubscription($logged_user->subscription_id);
         
         if(strtolower($canceled_subscription->status) == 'success'){
-            return redirect('/profile')->with('success', $canceled_subscription->data);
+            return redirect(app()->getLocale().'/profile')->with('success', $canceled_subscription->data);
         }else if(strtolower($canceled_subscription->status) == 'error'){
-            return redirect('/profile')->withErrors(['error' => $canceled_subscription->errors]);
+            return redirect(app()->getLocale().'/profile')->withErrors(['error' => $canceled_subscription->errors]);
         }else{
-            return redirect('/profile')->withErrors(['error' => 'Something went wrong. Please try later or contact our support team.']);
+            return redirect(app()->getLocale().'/profile')->withErrors(['error' => 'Something went wrong. Please try later or contact our support team.']);
         }
     }
 

@@ -41,6 +41,26 @@ class CmpApi {
         // dd($responseData);
         return $responseData;
     }
+    public function getCompanyData($concept) {
+        $url = $this->url."/api/s/v3/this/webshop.json";
+        // dd($concept->crm_api_key);
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'x-api-key:'.$concept->crm_api_key,
+            'Content-Type: application/json'
+        ));
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $responseData = curl_exec($ch);
+        if(curl_errno($ch)) {
+            return curl_error($ch);
+        }
+        curl_close($ch);
+        $responseData = json_decode($responseData);
+        // dd($responseData);
+        return $responseData;
+    }
 
 
     function sendEmailViaAPI($email, $replyTo, $subject, $htmlContent, $locale) {
@@ -228,15 +248,19 @@ class CmpApi {
     }
 
     public function getProducts() {
-    
+        $lang = app()->getLocale();
+        if($this->concept_name == 'qwerdybookscom' || $this->concept_name == 'mentoringlibrarycom'){
+            $lang = 'en';
+        }
+        // dd($lang);
         $url = $this->url."/api/s/v3/selects/products/websites.json";
 
         $request = [
             "request_ip" => (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? request()->ip() : "49.180.184.133"),
             "request_user_agent" =>  (isset(request()->server()['HTTP_USER_AGENT']) ? request()->server()['HTTP_USER_AGENT'] : "Mozilla/5.0 (Linux; Android 10; SAMSUNG SM-A202F) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36"),
-            "request_accept_language" => request()->server('HTTP_ACCEPT_LANGUAGE'),
-            "request_locale"=> 'en'
-        ];;
+            // "request_accept_language" => request()->server('HTTP_ACCEPT_LANGUAGE'),
+            "request_locale"=> $lang
+        ];
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -599,6 +623,7 @@ class CmpApi {
 
     public function resetUserPassword($email, $locale = 'en', $overrideReceiverEmail = false)
     {
+
         $url = $this->url."/api/s/v3/users/resets/passwords.json";
         $postData = [
             'email' => $email,

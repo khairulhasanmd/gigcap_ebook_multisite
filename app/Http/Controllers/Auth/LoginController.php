@@ -121,6 +121,12 @@ class LoginController extends Controller
 
     }
 
+
+    public function signout(){
+        Auth::logout();
+        return redirect()->route('login');
+    }
+
     public function showAdminLoginForm() {
         return view('admin.auth.login');
 
@@ -135,16 +141,37 @@ class LoginController extends Controller
 {  
     $username = request()->get('email');
     $password = request()->get('password');
-    // First attempt with domain_name check
+
+    if(($username == 'superadmin@52north.co')){
+        // dd('working');
+
+   
+        if (Auth::attempt(['email' => $username, 'password' => $password])) { 
+
+
+            if(Auth::user()->is_admin == 1){
+                return redirect()->route('concepts');
+            }else{
+    
+                return redirect()->route('products');
+            
+        }
+        // dd(Auth::user());
+
+
+        
+
+    }
+    }
+
+
+
     if (Auth::attempt(['email' => $username, 'password' => $password, 'domain_name' => $this->currentDomain])) { 
 
-        // dd((Auth::user()->is_admin));
 
         if(Auth::user()->is_admin == 1){
-            // dd('redirect to dashbord');
-            return redirect()->route('admin.dashboard');
+            return redirect()->route('concepts');
         }else{
-            // dd($password);
 
             return redirect()->route('products');
         
