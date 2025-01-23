@@ -21,6 +21,7 @@ class CheckAdminLevel
         // Check if the user is authenticated and has the required admin level
         
         // Redirect to some page if the admin level is not sufficient
+        dd('working');
         return redirect()->route('home'); // or any other route you want to redirect to
     }
 }

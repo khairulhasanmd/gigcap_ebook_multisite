@@ -22,7 +22,7 @@ class DashboardController extends GlobalController
     public function __construct()
     {
         parent::__construct();
-        // $this->middleware('auth');
+        $this->middleware('admin');
 
     }
 

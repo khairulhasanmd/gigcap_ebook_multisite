@@ -14,6 +14,7 @@ use App\Http\Middleware\AdminCheck;
 
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -80,10 +81,9 @@ Route::post('password/reset', [App\Http\Controllers\Auth\ResetPasswordController
 Route::get('/check-lang-file', [BasicController::class, 'checkLangFile'])->name('checkLangFile');
 Route::get('/service/{service}', [BasicController::class, 'typeOfService'])->name('service');
 
-Route::group(['prefix'=>'admin'], function () {
 
 
-
+Route::group(['prefix' => 'admin'], function () {
     Route::get('concepts', [ConceptController::class, 'index'])->name('concepts');
     Route::post('concepts', [ConceptController::class, 'store']);
     Route::get('concepts/edit/{id}', [ConceptController::class, 'edit']);
@@ -92,14 +92,12 @@ Route::group(['prefix'=>'admin'], function () {
     Route::get('templates/list', [ConceptController::class, 'get_templates_list']);
     Route::get('concept/info/{id}',  [ConceptController::class, 'getInfo'])->name('concept.company.info');
 
-
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::get('password', [UpdatePasswordController::class, 'index'])->name('admin.update.password');
     Route::patch('update-password/{id}', [UpdatePasswordController::class, 'update'])->name('admin.new.password');
     Route::resource('users', UserController::class)->names('admin.users');
-})->middleware(CheckAdminLevel::class);
-
+})->middleware(AdminCheck::class);
 
 
 
