@@ -152,14 +152,7 @@ class LoginController extends Controller
             if(Auth::user()->is_admin == 1){
                 return redirect()->route('concepts');
             }else{
-                $customerId = Auth::user()->customer_id;
-                $customerName = Auth::user()->name;
-                $customerEmail = Auth::user()->email;
-                $subData = $this->cmp->getSubscriptionDetailByCustomerId($customerId);
-                if ($subData->status == 'success') {
-                    Auth::logout();
-                    return redirect()->route('login')->withErrors(['error' => "Dear {$customerName}, Your subscription associated with the email address {$customerEmail} has ended."]);
-                }
+              
                     
                 return redirect()->route('products');
             
@@ -180,7 +173,15 @@ class LoginController extends Controller
         if(Auth::user()->is_admin == 1){
             return redirect()->route('concepts');
         }else{
-
+            
+            $customerId = Auth::user()->customer_id;
+            $customerName = Auth::user()->name;
+            $customerEmail = Auth::user()->email;
+            $subData = $this->cmp->getSubscriptionDetailByCustomerId($customerId);
+            if ($subData->status !== 'success') {
+                Auth::logout();
+                return redirect()->route('login')->withErrors(['error' => "Dear {$customerName}, Your subscription associated with the email address {$customerEmail} has ended."]);
+            }
             return redirect()->route('products');
         
     }
