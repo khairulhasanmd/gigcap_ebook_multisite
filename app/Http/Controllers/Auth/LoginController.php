@@ -178,7 +178,7 @@ class LoginController extends Controller
             $customerName = Auth::user()->name;
             $customerEmail = Auth::user()->email;
             $subData = $this->cmp->getSubscriptionDetailByCustomerId($customerId);
-            if ($subData->data[0]->status !== 'active') {
+             if ($subData->data[0]->status !== 'active') {
                 Auth::logout();
                 return redirect()->route('login')->withErrors(['error' => "Dear {$customerName}, Your subscription associated with the email address {$customerEmail} has ended."]);
             }
