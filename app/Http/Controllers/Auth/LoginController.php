@@ -181,7 +181,6 @@ class LoginController extends Controller
                 Auth::logout();
                 return redirect()->route('login')->withErrors(['error' => "Dear {$customerName}, Your subscription associated with the email address {$customerEmail} has ended."]);
             }
-
             return redirect()->route('products');
         
     }
