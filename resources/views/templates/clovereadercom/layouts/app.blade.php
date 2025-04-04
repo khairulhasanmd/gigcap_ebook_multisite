@@ -43,17 +43,15 @@
     }
   </style>
 
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-27CN5PG3CY"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XQC6835JP1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-27CN5PG3CY');
+  gtag('config', 'G-XQC6835JP1');
 </script>
-
-
 
 </head>
 <body>
