@@ -10,15 +10,6 @@
                 display: none;
             }
         </style>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJKNNKJYWS"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-QJKNNKJYWS');
-        </script>
 
     </head>
 
@@ -37,55 +28,6 @@
                 Swal.fire({title:"@lang('All good')", html: "@php echo session('success') @endphp" , type: "success"});
             @endif
         </script>
-        <script type="text/javascript">
-            // $('.js-toggle').click(function() {
-            //     $('.navbar-collapse').toggleClass('is-hidden is-visible');
-            //     $('.navbar-toggle ').toggleClass('is-closed is-shown');
-            //     $('body').toggleClass('disable-scroll')
-            // });
-
-            // $(".js-loginModal").animatedModal({
-			// 	modalTarget: 'loginModal',
-            //     animatedIn:'zoomIn',
-            //     animatedOut:'bounceOut',
-            //     color:'#fff',
-            // });
-            // $(".js-changePasswordModal").animatedModal({
-			// 	modalTarget: 'changePassword',
-            //     animatedIn:'zoomIn',
-            //     animatedOut:'bounceOut',
-            //     color:'#fff',
-            // });
-
-            // $('.slider-for').slick({
-            //     slidesToShow: 1,
-            //     slidesToScroll: 1,
-            //     arrows: false,
-            //     fade: true,
-            //     asNavFor: '.slider-nav'
-            // });
-            // $('.slider-nav').slick({
-            //     slidesToShow: 4,
-            //     slidesToScroll: 1,
-            //     asNavFor: '.slider-for',
-            //     dots: false,
-            //     centerMode: false,
-            //     focusOnSelect: true,
-            //     responsive: [
-            //     {
-            //         breakpoint: 768,
-            //         settings: {
-            //             slidesToShow: 1,
-            //             slidesToScroll: 1,
-            //             infinite: true,
-            //             dots: true,
-            //             centerMode: true,
-
-            //         }
-            //     },
-            // ]
-            // });
-        </script>
-<script src="{{ asset('js/getdata.js') }}"></script>
+	<script src="{{ asset('js/getdata.js') }}"></script>
     </body>
 </html>
