@@ -84,9 +84,9 @@
 								<li>
 									<i class="bi bi-envelope me-1"></i>@lang('Mail Us'): <a href="mailto:{{ config('mentoringlibrarycom.SUPPORT_EMAIL') }}"> {{ config('mentoringlibrarycom.SUPPORT_EMAIL') }}</a>
 								</li>
-								<li>
+								{{-- <li>
 									<i class="bi bi-telephone me-1"></i> @lang('Call Us'): <a href="tel:{{ config('mentoringlibrarycom.SUPPORT_PHONE') }}">{{ config('mentoringlibrarycom.SUPPORT_PHONE') }}</a> 
-								</li>                              
+								</li>                               --}}
 							</ul>
 						</div>
 					</div>
