@@ -118,5 +118,5 @@ Route::group(['prefix' => 'admin'], function () {
 
 
 Route::get('/where_am_i', function(){
-    return response()->json(['server' => '52North Multisite']);
+    return response()->json(['server' => '52North Multisite En only ']);
 });
