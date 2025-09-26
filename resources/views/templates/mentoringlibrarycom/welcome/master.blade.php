@@ -28,6 +28,6 @@
                 Swal.fire({title:"@lang('All good')", html: "@php echo session('success') @endphp" , type: "success"});
             @endif
         </script>
-	<script src="{{ asset('js/getdata.js') }}"></script>
+	{{-- <script src="{{ asset('js/getdata.js') }}"></script> --}}
     </body>
 </html>
