@@ -81,6 +81,7 @@
 								{{-- <li>
 									<i class="bi bi-clock me-1"></i> @lang('Opening Hours'): {{ config('mentoringlibrarycom.SUPPORT_HOURS') }}
 								</li> --}}
+								
 								<li>
 									<i class="bi bi-envelope me-1"></i>@lang('Mail Us'): <a href="mailto:{{ config('mentoringlibrarycom.SUPPORT_EMAIL') }}"> {{ config('mentoringlibrarycom.SUPPORT_EMAIL') }}</a>
 								</li>
