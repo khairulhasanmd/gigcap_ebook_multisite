@@ -78,9 +78,9 @@
 								<li>
 									<i class="bi bi-geo-alt me-1"></i> @lang('Location'): {{ config('mentoringlibrarycom.COMPANY_ADDRESS') }}
 								</li>
-								<li>
+								{{-- <li>
 									<i class="bi bi-clock me-1"></i> @lang('Opening Hours'): {{ config('mentoringlibrarycom.SUPPORT_HOURS') }}
-								</li>
+								</li> --}}
 								<li>
 									<i class="bi bi-envelope me-1"></i>@lang('Mail Us'): <a href="mailto:{{ config('mentoringlibrarycom.SUPPORT_EMAIL') }}"> {{ config('mentoringlibrarycom.SUPPORT_EMAIL') }}</a>
 								</li>

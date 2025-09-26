@@ -121,7 +121,7 @@
             <div class="media-content has--line wow fadeInLeft animated py-5" data-wow-delay=".2s">
                 <h2 class="contact__title">@lang('Contact Details')</h2>
                 <p>@lang('Reach us easily through our contact details below. We look forward to hearing from you and assisting with your needs!')</p>
-                <div class="latest-contact-us-2-media-content-contact d-flex">
+                {{-- <div class="latest-contact-us-2-media-content-contact d-flex">
                     <div class="latest-contact-us-2-media-content-contact-icon my-auto">
                         
                             <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -134,7 +134,7 @@
                             <h6>{{ config('mentoringlibrarycom.SUPPORT_PHONE') }}</h6>
                         </a>
                     </div>
-                </div>
+                </div> --}}
                 <div class="latest-contact-us-2-media-content-contact d-flex align-item-center">
                     <div class="latest-contact-us-2-media-content-contact-icon my-auto">
                             <svg width="25" height="19" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">

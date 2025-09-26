@@ -53,6 +53,7 @@ class ForgotPasswordController extends GlobalController
         }
 
         $response = $this->crmApi->resetUserPassword($userEmail, 'en', $overrideReceiverEmail);
+        dd($response);
         // dd($response->getStatus()=='success');
         if($response->getStatus()=='success') {
             // dd('works fine');
